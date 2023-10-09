@@ -1,5 +1,6 @@
 import streamlit_authenticator as stauth
 import yaml
+import toml
 from yaml.loader import SafeLoader
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
@@ -76,9 +77,10 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-
-with open('/Users/celenap/Desktop/Website_CSVs/mobile_practice/pages/info.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
+python_dict=toml.loads(st.secrets[yaml.info])
+config=yaml.dump(python_dict, Loader=SafeLoader)
+# with open('/Users/celenap/Desktop/Website_CSVs/mobile_practice/pages/info.yaml') as file:
+#     config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
     config['credentials'],
