@@ -77,10 +77,9 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-python_dict=toml.loads(st.secrets['yaml.info'])
-config=yaml.dump(python_dict, Loader=SafeLoader)
-# with open('/Users/celenap/Desktop/Website_CSVs/mobile_practice/pages/info.yaml') as file:
-#     config = yaml.load(file, Loader=SafeLoader)
+
+with open(''../config.yaml'') as file:
+    config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
     config['credentials'],
