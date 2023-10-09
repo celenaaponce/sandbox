@@ -78,7 +78,7 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
 
-with open(''../info.yaml'') as file:
+with open('../info.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
