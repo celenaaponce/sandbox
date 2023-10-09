@@ -77,8 +77,8 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-url = f'https://drive.google.com/uc?id={file_id}'
 file_id = st.secrets['yaml']
+url = f'https://drive.google.com/uc?id={file_id}'
 gdown.download(url, 'info.yaml', quiet=False)
 with open('info.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
