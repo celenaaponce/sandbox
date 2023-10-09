@@ -91,43 +91,43 @@ if 'downloaded' not in st.session_state:
         config = download_yaml()
         st.session_state.downloaded = True
         st.write(st.session_state.downloaded)
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
-
-name, authentication_status, username = authenticator.login('Entrar', 'main')
-
-if authentication_status:
-    authenticator.logout('Salir', 'main')
-    st.title(f'Bienvenido *{name}*')
-    if username in classes['ASL1']:
-        login_sidebar()
-        st.header("Bienvenido a la clase de ASL 1.  Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
-        with tab1:
-             Primera_Semana.primera_semana()
-    elif username in classes['ASL2']:
-        login_sidebar()
-        st.header("Bienvenido a la clase de ASL 2.  Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
-        with tab1:
-             Primera_Semana.primera_semana()
-
-    else:
-        login_sidebar()
-        st.header("Bienvenido a la clase de ASL En Casa.  Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
-        with tab1:
-             Primera_Semana.primera_semana()
-
-elif authentication_status == False:
-    st.error('Nombre/contraseña es mal')
-    regular_sidebar()
-elif authentication_status == None:
-    st.warning('Escriba su nombre de usario y contraseña.')
-    regular_sidebar()
+        authenticator = stauth.Authenticate(
+            config['credentials'],
+            config['cookie']['name'],
+            config['cookie']['key'],
+            config['cookie']['expiry_days'],
+            config['preauthorized']
+        )
+        
+        name, authentication_status, username = authenticator.login('Entrar', 'main')
+        
+        if authentication_status:
+            authenticator.logout('Salir', 'main')
+            st.title(f'Bienvenido *{name}*')
+            if username in classes['ASL1']:
+                login_sidebar()
+                st.header("Bienvenido a la clase de ASL 1.  Se puede mirar nuestro curiculo aqui:")
+                tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
+                with tab1:
+                     Primera_Semana.primera_semana()
+            elif username in classes['ASL2']:
+                login_sidebar()
+                st.header("Bienvenido a la clase de ASL 2.  Se puede mirar nuestro curiculo aqui:")
+                tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
+                with tab1:
+                     Primera_Semana.primera_semana()
+        
+            else:
+                login_sidebar()
+                st.header("Bienvenido a la clase de ASL En Casa.  Se puede mirar nuestro curiculo aqui:")
+                tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
+                with tab1:
+                     Primera_Semana.primera_semana()
+        
+        elif authentication_status == False:
+            st.error('Nombre/contraseña es mal')
+            regular_sidebar()
+        elif authentication_status == None:
+            st.warning('Escriba su nombre de usario y contraseña.')
+            regular_sidebar()
 
