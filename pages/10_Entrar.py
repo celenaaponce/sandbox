@@ -90,6 +90,7 @@ def download_yaml():
 if 'downloaded' not in st.session_state:
         config = download_yaml()
         st.session_state.downloaded = True
+        st.write(st.session_state.downloaded)
 authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
