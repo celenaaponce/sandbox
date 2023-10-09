@@ -43,9 +43,4 @@ def primera_semana():
             st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
 
 
-        with outer_col_2[1]:
-            inner_col_2 = st.columns([1, 3, 1])
-            with inner_col_2[1]:
-                st.image(image2)
-
 primera_semana()
