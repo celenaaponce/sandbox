@@ -89,7 +89,7 @@ def download_yaml():
             config = yaml.load(file, Loader=SafeLoader)
         return config
 
-
+config = download_yaml()
 authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
