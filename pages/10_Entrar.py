@@ -105,21 +105,21 @@ if authentication_status:
     st.title(f'Bienvenido *{name}*')
     if username in classes['ASL1']:
         login_sidebar()
-        st.header("Bienvenido a la clase de ASL 1.  Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
+        st.header("Bienvenido a la clase de ASL 1. \n Se puede mirar nuestro curiculo aqui:")
+        tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              Primera_Semana.primera_semana()
     elif username in classes['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.  Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
+        tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              Primera_Semana.primera_semana()
 
     else:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL En Casa.  Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3 = st.tabs(["Primera Semana", "Segunda Semana", "Tercera Semana"])
+        tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              Primera_Semana.primera_semana()
 
