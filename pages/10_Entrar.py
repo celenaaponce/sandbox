@@ -77,12 +77,17 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-file_id = st.secrets['yaml']
-url = f'https://drive.google.com/uc?id={file_id}'
-gdown.download(url, 'info.yaml', quiet=False)
-with open('info.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
 
+def download_yaml():
+        file_id = st.secrets['yaml']
+        url = f'https://drive.google.com/uc?id={file_id}'
+        gdown.download(url, 'info.yaml', quiet=False)
+        with open('info.yaml') as file:
+            config = yaml.load(file, Loader=SafeLoader)
+
+if 'downloaded' not in st.session_state:
+        download_yaml()
+        st.session_state.downloaded = True
 authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
