@@ -9,7 +9,7 @@ from st_pages import Page, Section,show_pages, add_page_title
 from streamlit.source_util import get_pages
 import streamlit.components.v1 as components
 from pages import Primera_Semana
-config = ''
+
 def regular_sidebar():
         show_pages(
     [
@@ -68,6 +68,7 @@ def ChangeButtonColour(widget_label, font_color, background_color='transparent')
 classes = {'ASL1': ['allelugo2009@hotmail.com', 'Maria789sy@gmail.com', 'prepez.2013@gmail.com', 'hernandezmarili64@icloud.com', 'ivonnemercadoj@yahoo.com', 'Yetzabelcerrada831@gmail.com','arbe0320@gmail.com'], 
            'ASL2': 'rbriggs',
            'ASL En Casa': ['santyortega588@gmail.com', 'groisabel17@gmail.com', 'carinad1989@gmail.com', 'eloinar493@gmail.com']}
+
 def set_styles():
     st.write("""
         <style>
@@ -87,10 +88,10 @@ def download_yaml():
             config = yaml.load(file, Loader=SafeLoader)
         return config
 
-if 'downloaded' not in st.session_state:
-        config = download_yaml()
-        st.session_state.downloaded = True
-        st.write(st.session_state.downloaded)
+def start_process():
+        if 'downloaded' not in st.session_state:
+                config = download_yaml()
+                st.session_state.downloaded = True
         authenticator = stauth.Authenticate(
             config['credentials'],
             config['cookie']['name'],
