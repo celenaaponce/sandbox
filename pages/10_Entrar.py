@@ -9,6 +9,7 @@ from st_pages import Page, Section,show_pages, add_page_title
 from streamlit.source_util import get_pages
 import streamlit.components.v1 as components
 from pages import Primera_Semana
+config = ''
 def regular_sidebar():
         show_pages(
     [
