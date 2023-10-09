@@ -43,6 +43,6 @@ def primera_semana():
             st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
             st.divider()
             
-            st.iframe('https://docs.google.com/presentation/d/14a7XcXV6gh1fdI1GF8oiUIc2uywg9Jdkz3XCsydQ1b8/edit?usp=sharingembed?start=false&loop=false&delayms=3000", height=480)
+            components.iframe('https://docs.google.com/presentation/d/14a7XcXV6gh1fdI1GF8oiUIc2uywg9Jdkz3XCsydQ1b8/edit?usp=sharingembed?start=false&loop=false", height=480)
 
 primera_semana()
