@@ -131,4 +131,4 @@ def start_process():
         elif authentication_status == None:
             st.warning('Escriba su nombre de usario y contraseña.')
             regular_sidebar()
-
+start_process()
