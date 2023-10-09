@@ -15,7 +15,7 @@ def set_styles():
     """, unsafe_allow_html=True)
 
 def primera_semana():
-    # set_styles()
+    set_styles()
     # if st.button("Salir"):
     #     switch_page('Pagina Principal')
     st.subheader('Primera Semana: Introducción')
