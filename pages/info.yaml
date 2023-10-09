@@ -1,0 +1,54 @@
+credentials:
+  usernames:
+    allelugo2009@hotmail.com:
+      email: allelugo2009@hotmail.com
+      name: Alejandra Lugo
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    Maria789sy@gmail.com:
+      email: Maria789sy@gmail.com
+      name: Maria Guzmán
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    prepez.2013@gmail.com:
+      email: prepez.2013@gmail.com
+      name: Julia Perez
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    hernandezmarili64@icloud.com:
+      email: hernandezmarili64@icloud.com
+      name: Julia Perez
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    ivonnemercadoj@yahoo.com:
+      email: ivonnemercadoj@yahoo.com
+      name: Ivonne Jimenez 
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    Yetzabelcerrada831@gmail.com:
+      email: Yetzabelcerrada831@gmail.com
+      name: Yetzabel
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    arbe0320@gmail.com:
+      email: arbe0320@gmail.com
+      name: Azucena Rodriguez-Becerra
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    santyortega588@gmail.com:
+      email: santyortega588@gmail.com
+      name: Federico
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    carinad1989@gmail.com:
+      email: carinad1989@gmail.com
+      name: Carina Hernandez 
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    eloinar493@gmail.com:
+      email: eloinar493@gmail.com
+      name: Eloina Ramos 
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+    groisabel17@gmail.com:
+      email: groisabel17@gmail.com
+      name: Ivonne
+      password: $2b$12$.sc4/y964pUggwD5vKx5mOaG4fh0Q9AN24SUzpf30Ipslq35p8GM.
+
+cookie:
+  expiry_days: 30
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - celena.a.ponce@gmail.com
