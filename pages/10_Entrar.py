@@ -84,9 +84,10 @@ def download_yaml():
         gdown.download(url, 'info.yaml', quiet=False)
         with open('info.yaml') as file:
             config = yaml.load(file, Loader=SafeLoader)
+        return config
 
 if 'downloaded' not in st.session_state:
-        download_yaml()
+        config = download_yaml()
         st.session_state.downloaded = True
 authenticator = stauth.Authenticate(
     config['credentials'],
