@@ -99,7 +99,7 @@ name, authentication_status, username = authenticator.login('Entrar', 'main')
 if authentication_status:
     authenticator.logout('Salir', 'main')
     st.title(f'Bienvenido *{name}*')
-    if username in st.secrets['ASL1']:
+    if username in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1. \n Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
