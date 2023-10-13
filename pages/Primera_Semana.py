@@ -16,10 +16,7 @@ def set_styles():
 
 def primera_semana():
     set_styles()
-    # if st.button("Salir"):
-    #     switch_page('Pagina Principal')
     st.subheader('Primera Semana: Introducción')
-    image2 = Image.open('asl_one.png')
     cont_2 = st.container()
 
     outer_col_2 = st.columns([4, 1])            
@@ -45,4 +42,31 @@ def primera_semana():
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
 
-primera_semana()
+def segunda_semana():
+    set_styles()
+    st.subheader('Segunda Semana: Conocer La Familia Bravo')
+    cont_2 = st.container()
+
+    outer_col_2 = st.columns([4, 1])            
+    with cont_2:
+        
+        with outer_col_2[0]:
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/SITwK-RY11c' target='_blank'>Introduccion a La Familia (sin subtitlos)</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/gK3cUfN1Lfw' target='_blank'>Introduccion a La Familia (con subtitlos)</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/TnwmFK1Odqo' target='_blank'>Repaso y Explicacion</a></h5>", unsafe_allow_html=True)     
+            st.markdown("<h5> <a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'>Conversacion (sin subtitulos)</a> </h5>", unsafe_allow_html=True)     
+            st.markdown("<h5> <a href='https://youtu.be/5gYPPZFOO6M' target='_blank'>Conversacion (con subtitulos)</a> </h5>", unsafe_allow_html=True)  
+            st.markdown("<h5> <a href='https://youtu.be/tKMpJxq7wNk' target='_blank'>Cultura Sorda</a> </h5>", unsafe_allow_html=True)
+
+            st.divider()
+
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+        
+            st.markdown("<h5> <a href='https://youtu.be/WsoxPTw9j9U' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://edpuzzle.com/media/633642ed68206040f25bc382' target='_blank'>Practica 1</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://edpuzzle.com/media/633750f5389ee741763d8d57' target='_blank'>Practica 2</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://edpuzzle.com/media/63375bff25e87940d4c32e08' target='_blank'>Practica 3</a></h5>", unsafe_allow_html=True)
+            st.divider()
+            
+            components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQpQR_5yo1obXuwbLzsl0JwlE6Dy7e0DqccmZVYGo1UVH7WWIQanTYVvLH71NWPvk7SD_pSQDFVwIs3/embed?start=false&loop=false&delayms=3000", height=480)
