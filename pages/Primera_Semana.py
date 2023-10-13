@@ -69,4 +69,4 @@ def segunda_semana():
             st.markdown("<h5> <a href='https://edpuzzle.com/media/63375bff25e87940d4c32e08' target='_blank'>Practica 3</a></h5>", unsafe_allow_html=True)
             st.divider()
             
-            components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQpQR_5yo1obXuwbLzsl0JwlE6Dy7e0DqccmZVYGo1UVH7WWIQanTYVvLH71NWPvk7SD_pSQDFVwIs3/embed?start=false&loop=false&delayms=3000", height=480)
+            components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQd8Y-xcWg9rS517V1gkm3m7O_sEKq_OSo4nQxS2RI2TFew0eR1yjqb1_mhLUfZ9CW1hrApe8mbHNLj/embed?start=false&loop=false&delayms=3000", height=480)
