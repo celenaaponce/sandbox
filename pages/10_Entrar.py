@@ -9,6 +9,8 @@ from st_pages import Page, Section,show_pages, add_page_title
 from streamlit.source_util import get_pages
 import streamlit.components.v1 as components
 from pages import ASL1
+from pages import ASL2
+from pages import ASLAtHome
 
 def regular_sidebar():
         show_pages(
@@ -112,14 +114,14 @@ if authentication_status:
         st.header("Bienvenido a la clase de ASL 2.  Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
-             Primera_Semana.primera_semana()
+             ASL2.primera_semana()
 
     else:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL En Casa.  Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
-             Primera_Semana.primera_semana()
+             ASLAtHome.primera_semana()
 
 elif authentication_status == False:
     st.error('Nombre/contraseña es mal')
