@@ -8,7 +8,7 @@ from PIL import Image
 from st_pages import Page, Section,show_pages, add_page_title
 from streamlit.source_util import get_pages
 import streamlit.components.v1 as components
-from pages import Primera_Semana
+from pages import ASL1
 
 def regular_sidebar():
         show_pages(
@@ -104,9 +104,9 @@ if authentication_status:
         st.header("Bienvenido a la clase de ASL 1. \n Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
-             Primera_Semana.primera_semana()
+             ASL1.primera_semana()
         with tab2:
-             Primera_Semana.segunda_semana()
+             ASL1.segunda_semana()
     elif username in st.secrets['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.  Se puede mirar nuestro curiculo aqui:")
