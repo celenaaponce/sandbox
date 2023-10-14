@@ -25,11 +25,7 @@ def set_styles():
             color: white;
 
             }
-        a:link {
-          color: white;
-          background-color: #94387f;
-          text-decoration: none;
-        }
+
         </style>
     """, unsafe_allow_html=True)
 
