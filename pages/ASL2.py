@@ -44,14 +44,14 @@ def primera_semana():
 
 def segunda_semana():
     set_styles()
-    st.subheader('Segunda Semana: Repaso')
+    st.subheader('Repaso')
     cont_2 = st.container()
 
     outer_col_2 = st.columns([4, 1])            
     with cont_2:
         
         with outer_col_2[0]:
-            st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/c1T1CoU0luo' target='_blank'>Introducción</a> </h5>", unsafe_allow_html=True)
             st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/CD9CUAlcRW4' target='_blank'>Vocabulario y Frases</a> </h5>", unsafe_allow_html=True)    
