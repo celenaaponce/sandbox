@@ -115,6 +115,8 @@ if authentication_status:
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              ASL2.primera_semana()
+        with tab2:
+             ASL2.segunda_semana()
 
     else:
         login_sidebar()
