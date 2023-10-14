@@ -41,3 +41,55 @@ def primera_semana():
             st.divider()
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
+
+def segunda_semana():
+    set_styles()
+    st.subheader('Segunda Semana: Repaso')
+    cont_2 = st.container()
+
+    outer_col_2 = st.columns([4, 1])            
+    with cont_2:
+        
+        with outer_col_2[0]:
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/c1T1CoU0luo' target='_blank'>Introducción</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/CD9CUAlcRW4' target='_blank'>Vocabulario y Frases</a> </h5>", unsafe_allow_html=True)    
+            st.markdown("<h5> <a href='https://youtu.be/a6bMKje9kOY' target='_blank'>Diálogo (sin subtítlos)</a> </h5>", unsafe_allow_html=True)     
+            st.markdown("<h5> <a href='https://youtu.be/fVmnEqqhlpw' target='_blank'>Diálogo (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'>Conversación (sin subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/5gYPPZFOO6M' target='_blank'>Conversación (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/qxd4OUEOCJg' target='_blank'>Vocabulario y Frases</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/_SDd08h_UEM' target='_blank'>Diálogo (sin subtítlos)</a> </h5>", unsafe_allow_html=True)     
+            st.markdown("<h5> <a href='https://youtu.be/KOUtXRQ3kFw' target='_blank'>Diálogo (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/JHFhfpjI3CE' target='_blank'>Conversación (sin subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/x494aKUmEKM' target='_blank'>Conversación (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 3</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/_kva3v4OB2E' target='_blank'>Vocabulario</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/IQyhNdrhuR8' target='_blank'>Frases</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/z1EEtsE79-w' target='_blank'>Diálogo (sin subtítlos)</a> </h5>", unsafe_allow_html=True)     
+            st.markdown("<h5> <a href='https://youtu.be/5QM2LGdQWvs' target='_blank'>Diálogo (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/8-9YtAezNAE' target='_blank'>Conversación (sin subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/XeXLA8-rWyo' target='_blank'>Conversación (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 4</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/OZL7UyN6wSw' target='_blank'>Vocabulario</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/ZABG-Zl5qzE' target='_blank'>Frases</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/beZlTXitb0g' target='_blank'>Diálogo (sin subtítlos)</a> </h5>", unsafe_allow_html=True)     
+            st.markdown("<h5> <a href='https://youtu.be/beZlTXitb0g' target='_blank'>Diálogo (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/qktiKSw2kpQ' target='_blank'>Conversación (sin subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/9sbNxysfxx0' target='_blank'>Conversación (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.divider()
+            st.markdown("<h5> <a href='https://youtu.be/t7HzlXNmFJc' target='_blank'>Cultura</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/nBCvy22r6bo' target='_blank'>Gramática</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/a0s8Zw6T3Fw' target='_blank'>Cuento (sin subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/GLXz2s5jBAw' target='_blank'>Cuento (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.divider()
+
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+        
+            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
+            st.divider()
+            
+            components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
+
