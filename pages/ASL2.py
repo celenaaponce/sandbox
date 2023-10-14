@@ -11,6 +11,11 @@ def set_styles():
             color: white;
 
             }
+        a:link {
+          color: white;
+          background-color: transparent;
+          text-decoration: none;
+        }
         </style>
     """, unsafe_allow_html=True)
 
@@ -44,7 +49,6 @@ def primera_semana():
 
 def segunda_semana():
     set_styles()
-    st.subheader('Repaso')
     cont_2 = st.container()
 
     outer_col_2 = st.columns([4, 1])            
