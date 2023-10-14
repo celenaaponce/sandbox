@@ -49,11 +49,6 @@ def primera_semana():
             st.markdown("<h5> <a href='https://youtu.be/Pt2_EjmtUp8' target='_blank'>Historia de ASL</a></h5>", unsafe_allow_html=True)
 
             st.divider()
-
-            st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
-        
-            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
-            st.divider()
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
 
@@ -98,6 +93,11 @@ def segunda_semana():
             st.markdown("<h5> <a href='https://youtu.be/nBCvy22r6bo' target='_blank'>Gramática</a> </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/a0s8Zw6T3Fw' target='_blank'>Cuento (sin subtítulos)</a> </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/GLXz2s5jBAw' target='_blank'>Cuento (con subtítulos)</a> </h5>", unsafe_allow_html=True)
+            st.divider()
+
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+        
+            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
             st.divider()
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ1DBN424b45UbbrNNEHmSvzFqMDfsnLSR2nLK2eS93kdLU3bdQep_btALoKoWxZu0K644csijPRwuP/embed?start=false&loop=false&delayms=3000", height=480)
