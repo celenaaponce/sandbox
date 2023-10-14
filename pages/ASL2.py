@@ -13,7 +13,7 @@ def set_styles():
             }
         a:link {
           color: white;
-          background-color: transparent;
+          background-color: #94387f;
           text-decoration: none;
         }
         </style>
