@@ -53,7 +53,7 @@ def segunda_semana():
             st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/F_TOHsNTfwo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='100' height='100'/>Vocabulario</a></h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Screenshot%202023-10-18%20at%209.41.36%20PM.png' alt='Libro' width='100' height='100'/>Libro</a></h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Vocabulario Extra</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/kLiRtHD1Oqc' target='_blank'><img src='https://i9.ytimg.com/vi_webp/kLiRtHD1Oqc/mq2.webp?sqp=CKDmwqkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDSgFEAmOs8OJ_grJt-IdKgsHcy1A' width='100' height='100'/>Vocabulario Extra</a></h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Conversacion (sin subtitlos)</a></h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Conversacion (con subtitulos)</a></h5>", unsafe_allow_html=True)
 
