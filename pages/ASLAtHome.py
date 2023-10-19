@@ -51,9 +51,14 @@ def segunda_semana():
     with cont_2:
         
         with outer_col_2[0]:
+            st.markdown("<a href="https://youtu.be/F_TOHsNTfwo"><img src="Dictionary-amico.png" alt="Vocabulario"/>Vocabulario</a>", unsafe_allow_html=True)
             st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/F_TOHsNTfwo' target='_blank'>Vocabulario</a></h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Libro</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Vocabulario Extra</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Conversacion (sin subtitlos)</a></h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'>Conversacion (con subtitulos)</a></h5>", unsafe_allow_html=True)
+
 
             st.divider()
 
