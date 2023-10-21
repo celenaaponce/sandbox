@@ -21,7 +21,7 @@ def set_styles():
     st.write("""
         <style>
         .tab {
-            display: block;
+            display: flex;
             margin-left: 1em;
         }
 
