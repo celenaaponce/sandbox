@@ -54,29 +54,18 @@ def primera_semana():
 def segunda_semana():
     cont_2 = st.container()
 
-    outer_col_2 = st.columns([1, 1])            
+    outer_col_2 = st.columns([4, 1])            
     with cont_2:
-        st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
-
+        
         with outer_col_2[0]:
-            st.markdown("<h5> <a href='https://youtu.be/c1T1CoU0luo' target='_blank'><img src = 'https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_1intro.png' width='200' height='100'/></a></h5>", unsafe_allow_html=True)
-        with outer_col_2[1]:
-            st.markdown("<h5>Introducción</h5>", unsafe_allow_html=True)
-
-        st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
-        with outer_col_2[0]:
-            st.markdown("<h5> <a href='https://youtu.be/CD9CUAlcRW4' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a> Vocabulario y Frases</h5>", unsafe_allow_html=True)    
+            st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/c1T1CoU0luo' target='_blank'><img src = 'https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_1intro.png' width='200' height='100'/></a>Introducción</h5>", unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/CD9CUAlcRW4' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>&#09;Vocabulario y Frases</h5>", unsafe_allow_html=True)    
             st.markdown("<h5> <a href='https://youtu.be/a6bMKje9kOY' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
             st.markdown("<h5> <a href='https://youtu.be/fVmnEqqhlpw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>Diálogo (con subtítulos) </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>Conversación (sin subtítulos) </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/5gYPPZFOO6M' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>Conversación (con subtítulos) </h5>", unsafe_allow_html=True)
-        with outer_col_2[1]:
-            st.markdown("<h5>Vocabulario y Frases</h5>", unsafe_allow_html=True)    
-            st.markdown("<h5>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
-            st.markdown("<h5>Diálogo (con subtítulos) </h5>", unsafe_allow_html=True)
-            st.markdown("<h5>Conversación (sin subtítulos) </h5>", unsafe_allow_html=True)
-            st.markdown("<h5>Conversación (con subtítulos) </h5>", unsafe_allow_html=True)
-        
             st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/qxd4OUEOCJg' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>Vocabulario y Frases </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/_SDd08h_UEM' target='_blank'><img src ='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_5dialogo2.png' width='200' height='100'/></a>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
@@ -110,4 +99,3 @@ def segunda_semana():
             st.divider()
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ1DBN424b45UbbrNNEHmSvzFqMDfsnLSR2nLK2eS93kdLU3bdQep_btALoKoWxZu0K644csijPRwuP/embed?start=false&loop=false&delayms=3000", height=480)
-
