@@ -51,14 +51,14 @@ def primera_semana():
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
 
 def segunda_semana():
-    # cont_2 = st.container()
+    cont_2 = st.container()
             
-    # with cont_2:
+    with cont_2:
             set_styles()
             st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/c1T1CoU0luo' target='_blank'><img src = 'https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_1intro.png' width='200' height='100'/></a>Introducción</h5>", unsafe_allow_html=True)
             st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
-            st.markdown("<a href='https://youtu.be/CD9CUAlcRW4' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a><h5 class='tab'>Vocabulario y Frases</h5>", unsafe_allow_html=True)    
+            st.markdown("<a href='https://youtu.be/CD9CUAlcRW4' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a><h5 style='text-align: center;'>Vocabulario y Frases</h5>", unsafe_allow_html=True)    
             st.markdown("<h5> <a href='https://youtu.be/a6bMKje9kOY' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
             st.markdown("<h5> <a href='https://youtu.be/fVmnEqqhlpw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>Diálogo (con subtítulos) </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>Conversación (sin subtítulos) </h5>", unsafe_allow_html=True)
