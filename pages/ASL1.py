@@ -37,7 +37,7 @@ def primera_semana():
 
             st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
         
-            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>Vocabulario para la semana que viene</h5>", unsafe_allow_html=True)
             st.divider()
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
@@ -63,7 +63,7 @@ def segunda_semana():
 
             st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
         
-            st.markdown("<h5> <a href='https://youtu.be/WsoxPTw9j9U' target='_blank'>Vocabulario</a> para la semana que viene</h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/WsoxPTw9j9U' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a> Vocabulario para la semana que viene</h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://edpuzzle.com/media/633642ed68206040f25bc382' target='_blank'>Practica 1</a></h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://edpuzzle.com/media/633750f5389ee741763d8d57' target='_blank'>Practica 2</a></h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://edpuzzle.com/media/63375bff25e87940d4c32e08' target='_blank'>Practica 3</a></h5>", unsafe_allow_html=True)
