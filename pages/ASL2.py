@@ -30,7 +30,6 @@ def set_styles():
     """, unsafe_allow_html=True)
 
 def primera_semana():
-    set_styles()
     st.subheader('Primera Semana: Introducción')
     cont_2 = st.container()
 
@@ -53,7 +52,6 @@ def primera_semana():
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
 
 def segunda_semana():
-    set_styles()
     cont_2 = st.container()
 
     outer_col_2 = st.columns([4, 1])            
