@@ -37,7 +37,7 @@ def primera_semana():
 
             st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
         
-            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='100' height='100'/></a>Vocabulario para la semana que viene</h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/dJBLpQFhujo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>Vocabulario para la semana que viene</h5>", unsafe_allow_html=True)
             st.divider()
             
             components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
