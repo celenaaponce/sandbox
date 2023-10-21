@@ -22,7 +22,7 @@ def set_styles():
         <style>
         .tab {
             display: inline-block;
-            margin-left: 4em;
+            margin-left: 2em;
         }
 
         </style>
