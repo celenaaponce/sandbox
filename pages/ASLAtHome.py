@@ -31,7 +31,7 @@ def primera_semana():
             st.markdown("<h5> <a href='https://purplevrs.com/espanol' target='_blank'><img src='https://www.purplevrs.com/media/1282/video-quality-slide-v2-450x450.png' width='200' height = '100'/></a>Teléfono de Vídeo para personas Sordos </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://apps.apple.com/us/app/intersign-asl-learn-now/id1567327543' target='_blank'><img src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height='100' width='100'/></a>App para aprender para iPhone </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://play.google.com/store/apps/details?id=intersign.learn.asl&hl=en_US&gl=US' target='_blank'><img src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height='100' width='100'/></a>App para aprender para Android </h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/Pt2_EjmtUp8' target='_blank'><img src='https://i9.ytimg.com/vi_webp/Pt2_EjmtUp8/mq2.webp?sqp=CPC0x6kG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGF4gXiheMA8=&rs=AOn4CLB4oku4CDofhN-RDdGZ_EsbyhYB5A' width='200' height='100'/></a>Historia de ASL</h5>", unsafe_allow_html=True)
+            st.markdown("<h5> <a href='https://youtu.be/Pt2_EjmtUp8' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%204.59.14%20PM.png' width='200' height='100'/></a>Historia de ASL</h5>", unsafe_allow_html=True)
 
             st.divider()
 
