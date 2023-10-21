@@ -21,7 +21,7 @@ def set_styles():
     st.write("""
         <style>
         .tab {
-            display: inline-block;
+            display: block;
             margin-left: 1em;
         }
 
