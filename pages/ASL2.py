@@ -54,7 +54,7 @@ def segunda_semana():
     cont_2 = st.container()
             
     with cont_2:
-            set_style()
+            set_styles()
             st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://youtu.be/c1T1CoU0luo' target='_blank'><img src = 'https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_1intro.png' width='200' height='100'/></a>Introducción</h5>", unsafe_allow_html=True)
             st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
