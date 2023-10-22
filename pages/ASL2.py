@@ -57,7 +57,7 @@ def segunda_semana():
     with clms2[0]:
       st.title('')
       st.title('')
-      st.header('Introducción')
+      st.subheader('Introducción')
     with clms2[1]:
       st.video('https://youtu.be/c1T1CoU0luo')
 
@@ -66,21 +66,21 @@ def segunda_semana():
     with clms3[0]:
       st.title('')
       st.title('')
-      st.header('Vocabulario y Frases')
+      st.subheader('Vocabulario y Frases')
     with clms3[1]:
       st.video('https://youtu.be/CD9CUAlcRW4')
     clms4 = st.columns([1,1])
     with clms4[0]:
       st.title('')
       st.title('')
-      st.header('Diálogo (sin subtítlos)')
+      st.subheader('Diálogo (sin subtítlos) 🔇')
     with clms4[1]:
       st.video('https://youtu.be/a6bMKje9kOY')
     clms5 = st.columns([1,1])
     with clms5[0]:
       st.title('')
       st.title('')
-      st.header('Diálogo (con subtítulos)')
+      st.subheader('Diálogo (con subtítulos) 🔈')
     with clms5[1]:
       st.video('https://youtu.be/fVmnEqqhlpw')
 
@@ -88,14 +88,14 @@ def segunda_semana():
     with clms6[0]:
       st.title('')
       st.title('')
-      st.header('Conversación (sin subtítulos)')
+      st.subheader('Conversación (sin subtítulos) 🔇')
     with clms6[1]:
       st.video('https://youtu.be/tZk1fKC_7hQ')
     clms7 = st.columns([1,1])
     with clms7[0]:
       st.title('')
       st.title('')
-      st.header('Conversación (con subtítulos)')
+      st.subheader('Conversación (con subtítulos) 🔈')
     with clms7[1]:
       st.video('https://youtu.be/5gYPPZFOO6M')
 
@@ -112,28 +112,28 @@ def segunda_semana():
     with clms9[0]:
         st.title('')
         st.title('')
-        st.subheader('Diálogo (sin subtítlos)')  
+        st.subheader('Diálogo (sin subtítlos) 🔇')  
     with clms9[1]:
         st.video('https://youtu.be/_SDd08h_UEM')
     clms10=st.columns([1,1])
     with clms10[0]:
       st.title('')
       st.title('')
-      st.subheader('Diálogo (con subtítulos)')
+      st.subheader('Diálogo (con subtítulos) 🔈')
     with clms10[1]:
       st.video('https://youtu.be/KOUtXRQ3kFw')
     clms11=st.columns([1,1])
     with clms11[0]:
       st.title('')
       st.title('')
-      st.subheader('Conversación (sin subtítulos)')
+      st.subheader('Conversación (sin subtítulos) 🔇')
     with clms11[1]:
       st.video('https://youtu.be/JHFhfpjI3CE')
     clms12=st.columns([1,1])
     with clms12[0]:
       st.title('')
       st.title('')
-      st.subheader('Conversación (con subtítulos)')
+      st.subheader('Conversación (con subtítulos) 🔈')
     with clms12[1]:
       st.video('https://youtu.be/x494aKUmEKM')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 3</u></h4>", unsafe_allow_html=True)
@@ -155,37 +155,31 @@ def segunda_semana():
     with clms15[0]:
       st.title('')
       st.title('')
-      st.subheader('Diálogo (sin subtítlos)')
+      st.subheader('Diálogo (sin subtítlos) 🔇')
     with clms15[1]:
       st.video('https://youtu.be/z1EEtsE79-w')
     clms16=st.columns([1,1])
     with clms16[0]:
       st.title('')
       st.title('')
-      st.subheader('Diálogo (con subtítlos)')
+      st.subheader('Diálogo (con subtítlos) 🔈')
     with clms16[1]:
       st.video('https://youtu.be/5QM2LGdQWvs')
     clms17=st.columns([1,1])
     with clms17[0]:
       st.title('')
       st.title('')
-      st.subheader('Conversación (sin subtítulos)')
+      st.subheader('Conversación (sin subtítulos) 🔇')
     with clms17[1]:
       st.video('https://youtu.be/8-9YtAezNAE')
     clms18=st.columns([1,1])
     with clms18[0]:
       st.title('')
       st.title('')
-      st.subheader('Conversación (con subtítulos)')
+      st.subheader('Conversación (con subtítulos) 🔈')
     with clms18[1]:
       st.video('https://youtu.be/XeXLA8-rWyo')
     clms19=st.columns([1,1])
-    with clms19[0]:
-      st.title('')
-      st.title('')
-      st.subheader('Conversación (con subtítulos)')
-    with clms19[1]:
-      st.video('https://youtu.be/XeXLA8-rWyo')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 4</u></h4>", unsafe_allow_html=True)
     clms20=st.columns([1,1])
     with clms20[0]:
@@ -205,7 +199,7 @@ def segunda_semana():
     with clms22[0]:
       st.title('')
       st.title('')
-      st.subheader('Diálogo (sin subtítlos)')
+      st.subheader('Diálogo (sin subtítlos) 🔇')
     with clms22[1]:
       st.video('https://youtu.be/z1EEtsE79-w')
     clms23=st.columns([1,1])
@@ -219,14 +213,14 @@ def segunda_semana():
     with clms24[0]:
       st.title('')
       st.title('')
-      st.subheader('Conversación (sin subtítulos)')
+      st.subheader('Conversación (sin subtítulos) 🔇')
     with clms24[1]:
       st.video('https://youtu.be/qktiKSw2kpQ')
     clms25=st.columns([1,1])
     with clms25[0]:
       st.title('')
       st.title('')
-      st.subheader('Conversación (con subtítulos)')
+      st.subheader('Conversación (con subtítulos) 🔈')
     with clms25[1]:
       st.video('https://youtu.be/9sbNxysfxx0')
     st.divider()
@@ -248,14 +242,14 @@ def segunda_semana():
     with clms28[0]:
       st.title('')
       st.title('')
-      st.subheader('Cuento (sin subtítulos)')
+      st.subheader('Cuento (sin subtítulos) 🔇')
     with clms28[1]:
       st.video('https://youtu.be/a0s8Zw6T3Fw')  
     clms29=st.columns([1,1])
     with clms29[0]:
       st.title('')
       st.title('')
-      st.subheader('Cuento (con subtítulos)')
+      st.subheader('Cuento (con subtítulos) 🔈')
     with clms29[1]:
       st.video('https://youtu.be/GLXz2s5jBAw')    
     st.divider()
