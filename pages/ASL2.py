@@ -101,8 +101,8 @@ def segunda_semana():
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
     clms8 = st.columns([1,1])
     with clms8[0]:
-        st.write('')
-        st.write('')
+        st.subheader('')
+        st.subheader('')
         st.subheader('Vocabulario')
     with clms8[1]:
         st.video('https://youtu.be/qxd4OUEOCJg')
