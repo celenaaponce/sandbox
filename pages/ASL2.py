@@ -29,12 +29,11 @@ def set_styles():
     """, unsafe_allow_html=True)
 
 def primera_semana():
-    st.subheader('Primera Semana: Introducción')
+    st.header('Primera Semana: Introducción')
 
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
     with clms[0]:
-        st.title('')
         st.title('')
         st.subheader('Escuelas para los Sordos en EEUU')
     with clms[1]:
