@@ -99,7 +99,7 @@ def segunda_semana():
             st.markdown("<h5>Conversación (con subtítulos) </h5>", unsafe_allow_html=True)
 
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
-    st.markdown('<h5 style="float: left;">Vocabulario y Frases</h5><a href="https://youtu.be/qxd4OUEOCJg" target="_blank"><img style="float: right;" src="https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png" width="150" height="150" /></a>', unsafe_allow_html=True)
+    st.markdown('<a href="https://youtu.be/qxd4OUEOCJg" target="_blank"><img style="float: left;" src="https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png" width="150" height="150" /></a><h5 style="float: right;">Vocabulario y Frases</h5>', unsafe_allow_html=True)
     st.markdown("<h5> <a href='https://youtu.be/qxd4OUEOCJg' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>Vocabulario y Frases </h5>", unsafe_allow_html=True)
     st.markdown("<h5> <a href='https://youtu.be/_SDd08h_UEM' target='_blank'><img src ='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_5dialogo2.png' width='200' height='100'/></a>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
     st.markdown("<h5> <a href='https://youtu.be/KOUtXRQ3kFw' target='_blank'><img src ='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_5dialogo2.png' width='200' height='100'/></a>Diálogo (con subtítulos) </h5>", unsafe_allow_html=True)
