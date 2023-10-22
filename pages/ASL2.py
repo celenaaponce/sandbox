@@ -49,13 +49,13 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Timbre con luz para personas Sordos</h5>', unsafe_allow_html=True)
     with clms32[1]:    
-        st.markdown("<a href='https://www.diglo.com/shop-by-alert-trigger/doorbell-and-door-knock;d=3;c=32;s=323' target='_blank'><img style='float: right;' src = 'https://m.media-amazon.com/images/I/310R2UqXt0L._AC_.jpg' width = '200' height = '100/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://www.diglo.com/shop-by-alert-trigger/doorbell-and-door-knock;d=3;c=32;s=323' target='_blank'><img style='float: right;' src = 'https://m.media-amazon.com/images/I/310R2UqXt0L._AC_.jpg' width = '200' height = '100'/></a>", unsafe_allow_html=True)     
     clms33 = st.columns([1,1])
     with clms33[0]:
         st.title('')
         st.markdown('<h5>Alarma de Incendios para personas Sordos</h5>', unsafe_allow_html=True)
     with clms33[1]:     
-        st.markdown("<a href='https://www.diglo.com/shop-by-alert-trigger/smoke-and-fire;d=3;c=32;s=328' target='_blank'><img src='https://m.media-amazon.com/images/I/41JvpGHNyKL.__AC_SX300_SY300_QL70_FMwebp_.jpg' width='200' height = '100/></a>", unsafe_allow_html=True)
+        st.markdown("<a href='https://www.diglo.com/shop-by-alert-trigger/smoke-and-fire;d=3;c=32;s=328' target='_blank'><img src='https://m.media-amazon.com/images/I/41JvpGHNyKL.__AC_SX300_SY300_QL70_FMwebp_.jpg' width='200' height = '100'/></a>", unsafe_allow_html=True)
     clms34 = st.columns([1,1])
     with clms34[0]:
         st.title('')
