@@ -35,7 +35,7 @@ def primera_semana():
     clms = st.columns([1,1])
     with clms[0]:
         st.title('')
-        st.markdown('<h5>Escuelas para los Sordos en EEUU</h5>')
+        st.markdown('<h5>Escuelas para los Sordos en EEUU</h5>', unsafe_allow_html=True)
     with clms[1]:
         st.markdown("<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= '200' height = '100' /></a>", unsafe_allow_html=True)
 
