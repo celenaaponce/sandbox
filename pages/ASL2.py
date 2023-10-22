@@ -194,21 +194,21 @@ def segunda_semana():
       st.title('')
       st.subheader('Diálogo (sin subtítlos) 🔇')
     with clms22[1]:
-      st.video('https://youtu.be/ZABG-Zl5qzE')
+      st.video('https://youtu.be/beZlTXitb0g')
     clms23=st.columns([1,1])
     with clms23[0]:
       st.title('')
       st.title('')
       st.subheader('Diálogo (con subtítlos)')
     with clms23[1]:
-      st.video('https://youtu.be/z1EEtsE79-w')
+      st.video('https://youtu.be/ZABG-Zl5qzE?si=JW6JDpHmrYmp_pRt')
     clms24=st.columns([1,1])
     with clms24[0]:
       st.title('')
       st.title('')
       st.subheader('Conversación (sin subtítulos) 🔇')
     with clms24[1]:
-      st.video('https://youtu.be/beZlTXitb0g')
+      st.video('https://youtu.be/qktiKSw2kpQ')
     clms25=st.columns([1,1])
     with clms25[0]:
       st.title('')
