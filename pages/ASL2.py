@@ -52,7 +52,7 @@ def primera_semana():
 
 def segunda_semana():
     set_styles()
-    st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: white;'><u>Videos</u></h2>", unsafe_allow_html=True)
     clms2 = st.columns([1,1])
     with clms2[0]:
       st.title('')
@@ -61,7 +61,7 @@ def segunda_semana():
     with clms2[1]:
       st.video('https://youtu.be/c1T1CoU0luo')
 
-    st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: white;'><u>Lección 1</u></h3>", unsafe_allow_html=True)
     clms3 = st.columns([1,1])
     with clms3[0]:
       st.title('')
