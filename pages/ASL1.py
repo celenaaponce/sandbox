@@ -83,28 +83,61 @@ def primera_semana():
 def segunda_semana():
     set_styles()
     st.subheader('Segunda Semana: Conocer La Familia Bravo')
-    cont_2 = st.container()
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+    clms21 = st.columns([1,1])
+    with clms21[0]:
+        st.title('')
+        st.markdown('<h5>Introduccion a La Familia (sin subtitlos) 🔇</h5>', unsafe_allow_html=True)
+    with clms21[1]:
+        st.video('https://youtu.be/SITwK-RY11c')
+    clms22 = st.columns([1,1])
+    with clms22[0]:
+        st.title('')
+        st.markdown('<h5>Introduccion a La Familia (con subtitlos) 🔈</h5>', unsafe_allow_html=True)
+    with clms22[1]:
+        st.video('https://youtu.be/gK3cUfN1Lfw')
+    clms23 = st.columns([1,1])
+    with clms23[0]:
+        st.title('')
+        st.markdown('<h5>Repaso y Explicacion</h5>', unsafe_allow_html=True)
+    with clms23[1]:
+        st.video('https://youtu.be/TnwmFK1Odqo')
+    clms24 = st.columns([1,1])
+    with clms24[0]:
+        st.title('')
+        st.markdown('<h5>Conversacion (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+    with clms24[1]:    
+        st.video('https://youtu.be/tZk1fKC_7hQ')
+    clms25 = st.columns([1,1])
+    with clms25[0]:
+        st.title('')
+        st.markdown('<h5>Conversacion (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+    with clms25[1]: 
+        st.video('https://youtu.be/5gYPPZFOO6M')
+    clms26 = st.columns([1,1])
+    with clms26[0]:
+        st.title('')
+        st.markdown('<h5>Cultura Sorda</h5>', unsafe_allow_html=True)
+    with clms26[1]:
+        st.video('https://youtu.be/tKMpJxq7wNk')
 
-    outer_col_2 = st.columns([4, 1])            
-    with cont_2:
-        
-        with outer_col_2[0]:
-            st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/SITwK-RY11c' target='_blank'>Introduccion a La Familia (sin subtitlos)</a></h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/gK3cUfN1Lfw' target='_blank'>Introduccion a La Familia (con subtitlos)</a></h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/TnwmFK1Odqo' target='_blank'>Repaso y Explicacion</a></h5>", unsafe_allow_html=True)     
-            st.markdown("<h5> <a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'>Conversacion (sin subtitulos)</a> </h5>", unsafe_allow_html=True)     
-            st.markdown("<h5> <a href='https://youtu.be/5gYPPZFOO6M' target='_blank'>Conversacion (con subtitulos)</a> </h5>", unsafe_allow_html=True)  
-            st.markdown("<h5> <a href='https://youtu.be/tKMpJxq7wNk' target='_blank'>Cultura Sorda</a> </h5>", unsafe_allow_html=True)
+    st.divider()
 
-            st.divider()
-
-            st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
-        
-            st.markdown("<h5> <a href='https://youtu.be/WsoxPTw9j9U' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a> Vocabulario para la semana que viene</h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://edpuzzle.com/media/633642ed68206040f25bc382' target='_blank'>Practica 1</a></h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://edpuzzle.com/media/633750f5389ee741763d8d57' target='_blank'>Practica 2</a></h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://edpuzzle.com/media/63375bff25e87940d4c32e08' target='_blank'>Practica 3</a></h5>", unsafe_allow_html=True)
-            st.divider()
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+    clms27 = st.columns([1,1])
+    with clms27[0]:
+        st.title('')
+        st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
+    with clms27[1]:
+        st.video('https://youtu.be/WsoxPTw9j9U')
+    clms28 = st.columns([1,1])
+    with clms28[0]:
+        st.title('')
+        st.markdown('<h5>Practica</h5>', unsafe_allow_html=True)
+    with clms28[1]:
+        st.video('https://edpuzzle.com/media/633642ed68206040f25bc382')
+        st.video('https://edpuzzle.com/media/633750f5389ee741763d8d57')
+        st.video('https://edpuzzle.com/media/63375bff25e87940d4c32e08')
+    st.divider()
             
-            components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQd8Y-xcWg9rS517V1gkm3m7O_sEKq_OSo4nQxS2RI2TFew0eR1yjqb1_mhLUfZ9CW1hrApe8mbHNLj/embed?start=false&loop=false&delayms=3000", height=480)
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQd8Y-xcWg9rS517V1gkm3m7O_sEKq_OSo4nQxS2RI2TFew0eR1yjqb1_mhLUfZ9CW1hrApe8mbHNLj/embed?start=false&loop=false&delayms=3000", height=480)
