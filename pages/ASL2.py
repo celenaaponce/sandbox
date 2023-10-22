@@ -185,16 +185,9 @@ def segunda_semana():
     with clms20[0]:
       st.title('')
       st.title('')
-      st.subheader('Vocabulario')
+      st.subheader('Vocabulario y Frases')
     with clms20[1]:
       st.video('https://youtu.be/OZL7UyN6wSw')
-    clms21=st.columns([1,1])
-    with clms21[0]:
-      st.title('')
-      st.title('')
-      st.subheader('Frases')
-    with clms21[1]:
-      st.video('https://youtu.be/ZABG-Zl5qzE')
     clms22=st.columns([1,1])
     with clms22[0]:
       st.title('')
@@ -215,14 +208,14 @@ def segunda_semana():
       st.title('')
       st.subheader('Conversación (sin subtítulos) 🔇')
     with clms24[1]:
-      st.video('https://youtu.be/qktiKSw2kpQ')
+      st.video('https://youtu.be/beZlTXitb0g')
     clms25=st.columns([1,1])
     with clms25[0]:
       st.title('')
       st.title('')
       st.subheader('Conversación (con subtítulos) 🔈')
     with clms25[1]:
-      st.video('https://youtu.be/9sbNxysfxx0')
+      st.video('https://youtu.be/qktiKSw2kpQ')
     st.divider()
     clms26=st.columns([1,1])
     with clms26[0]:
