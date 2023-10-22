@@ -101,7 +101,7 @@ def segunda_semana():
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
     clms8 = st.columns([1,1])
     with clms8[0]:
-        st.write('Vocabulario')
+        st.write('\n\nVocabulario')
     with clms8[1]:
         st.video('https://youtu.be/qxd4OUEOCJg')
     st.markdown('<a href="https://youtu.be/qxd4OUEOCJg" target="_blank"><img style="float: left;" src="https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png" width="150" height="150" /></a><h5 style="text-align: center;">Vocabulario y Frases</h5>', unsafe_allow_html=True)
