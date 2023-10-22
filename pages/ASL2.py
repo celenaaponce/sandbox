@@ -103,7 +103,6 @@ def segunda_semana():
     with clms8[0]:
         st.title('')
         st.title('')
-        st.title('')
         st.subheader('Vocabulario')
         st.title('')
         st.title('')
