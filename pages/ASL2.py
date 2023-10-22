@@ -99,7 +99,7 @@ def segunda_semana():
     with clms7[1]:
       st.video('https://youtu.be/5gYPPZFOO6M')
 
-    st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: white;'><u>Lección 2</u></h3>", unsafe_allow_html=True)
     clms8 = st.columns([1,1])
     with clms8[0]:
         st.title('')
@@ -136,7 +136,7 @@ def segunda_semana():
       st.subheader('Conversación (con subtítulos) 🔈')
     with clms12[1]:
       st.video('https://youtu.be/x494aKUmEKM')
-    st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 3</u></h4>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: white;'><u>Lección 3</u></h3>", unsafe_allow_html=True)
     clms13=st.columns([1,1])
     with clms13[0]:
       st.title('')
@@ -180,7 +180,7 @@ def segunda_semana():
     with clms18[1]:
       st.video('https://youtu.be/XeXLA8-rWyo')
     clms19=st.columns([1,1])
-    st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 4</u></h4>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: white;'><u>Lección 4</u></h3>", unsafe_allow_html=True)
     clms20=st.columns([1,1])
     with clms20[0]:
       st.title('')
