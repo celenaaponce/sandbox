@@ -110,6 +110,7 @@ def segunda_semana():
         st.title('')
         st.title('')
         st.title('')
+        st.title('')
         st.subheader('Diálogo (sin subtítlos)')
     with clms8[1]:
         st.video('https://youtu.be/_9KvKa8GMGc')
