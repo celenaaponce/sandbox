@@ -103,7 +103,8 @@ if authentication_status:
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
         login_sidebar()
-        st.header("Bienvenido a la clase de ASL 1. \nSe puede mirar nuestro curiculo aqui:")
+        st.header("Bienvenido a la clase de ASL 1.")
+        st.header("Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              ASL1.primera_semana()
@@ -111,7 +112,8 @@ if authentication_status:
              ASL1.segunda_semana()
     elif username in st.secrets['ASL2']:
         login_sidebar()
-        st.header("Bienvenido a la clase de ASL 2.  \nSe puede mirar nuestro curiculo aqui:")
+        st.header("Bienvenido a la clase de ASL 2.")
+        st.header("Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3, tab4 = st.tabs(["Primera Semana", "Repaso", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              ASL2.primera_semana()
@@ -120,7 +122,8 @@ if authentication_status:
 
     else:
         login_sidebar()
-        st.header("Bienvenido a la clase de ASL En Casa.  \nSe puede mirar nuestro curiculo aqui:")
+        st.header("Bienvenido a la clase de ASL En Casa.")
+        st.header("Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3 = st.tabs(["Primera Semana", "🔒Segunda Semana", "🔒Tercera Semana"])
         with tab1:
              ASLAtHome.primera_semana()
