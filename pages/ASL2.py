@@ -30,12 +30,12 @@ def set_styles():
 
 def primera_semana():
     st.subheader('Primera Semana: Introducción')
-    cont_2 = st.container()
+    cont_1 = st.container()
 
-    outer_col_2 = st.columns([4, 1])            
-    with cont_2:
+    outer_col_1 = st.columns([4, 1])            
+    with cont_1:
         
-        with outer_col_2[0]:
+        with outer_col_1[0]:
             st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= '200' height = '100' /></a>Escuelas para los Sordos en EEUU </h5>", unsafe_allow_html=True)
             st.markdown("<h5> <a href='https://www.diglo.com/vibrating-clocks-and-watches/alarm-clocks;d=3;c=31;s=311' target='_blank'><img src='https://m.media-amazon.com/images/I/7100+aehKvL._AC_SY300_SX300_.jpg' width='200' height='100'/></a>Alarma de Reloj para personas Sordos </h5>", unsafe_allow_html=True)     
@@ -52,35 +52,54 @@ def primera_semana():
 
 def segunda_semana():
     set_styles()
-
-
     st.markdown("<h3 style='text-align: center; color: white;'><u>Videos</u></h3>", unsafe_allow_html=True)
-    cont_3 = st.container()
-    clms = st.columns([1,1])
-    with cont_3:
-        with clms[0]:
+    cont_2 = st.container()
+    clms2 = st.columns([1,1])
+    with cont_2:
+        with clms2[0]:
             st.markdown("<a href='https://youtu.be/c1T1CoU0luo' target='_blank'><img src = 'https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_1intro.png' width='200' height='100'/></a>", unsafe_allow_html=True)
-        with clms[1]:
+        with clms2[1]:
             st.markdown("<h5>Introducción</h5>", unsafe_allow_html=True)
 
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 1</u></h4>", unsafe_allow_html=True)
-    cont_4 = st.container()
-    clms2 = st.columns([1,1])
-    with cont_4:
-        with clms2[0]:
+    cont_3 = st.container()
+    clms3 = st.columns([1,1])
+    with cont_3:
+        with clms3[0]:
             st.markdown("<a href='https://youtu.be/CD9CUAlcRW4' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>", unsafe_allow_html=True)    
-            st.markdown("<a href='https://youtu.be/a6bMKje9kOY' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>", unsafe_allow_html=True)     
-            st.markdown("<a href='https://youtu.be/fVmnEqqhlpw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>", unsafe_allow_html=True)
-            st.markdown("<a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>", unsafe_allow_html=True)
-            st.markdown("<a href='https://youtu.be/5gYPPZFOO6M' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>", unsafe_allow_html=True)
-        with clms2[1]:
+        with clms3[1]:
             st.markdown("<h5>Vocabulario y Frases</h5>", unsafe_allow_html=True)    
-            st.markdown("<h5>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
+    cont_4 = st.container()
+    clms4 = st.columns([1,1])
+    with cont_4:
+        with clms4[0]:
+            st.markdown("<a href='https://youtu.be/a6bMKje9kOY' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>", unsafe_allow_html=True)     
+        with clms4[1]:
+            st.markdown("<h5>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)
+    cont_5 = st.container()
+    clms5 = st.columns([1,1])
+    with cont_5:
+        with clms5[0]:
+            st.markdown("<a href='https://youtu.be/fVmnEqqhlpw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_3dialogo.png' width='200' height='100'/></a>", unsafe_allow_html=True)
+        with clms5[1]:
             st.markdown("<h5>Diálogo (con subtítulos) </h5>", unsafe_allow_html=True)
+    cont_6 = st.container()
+    clms6 = st.columns([1,1])
+    with cont_6:
+        with clms6[0]:
+            st.markdown("<a href='https://youtu.be/tZk1fKC_7hQ' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>", unsafe_allow_html=True)
+        with clms6[1]:
             st.markdown("<h5>Conversación (sin subtítulos) </h5>", unsafe_allow_html=True)
+    cont_7 = st.container()
+    clms7 = st.columns([1,1])
+    with cont_7:
+        with clms7[0]:
+            st.markdown("<a href='https://youtu.be/5gYPPZFOO6M' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_4convo1.png' width='200' height='100'/></a>", unsafe_allow_html=True)
+        with clms7[1]:
             st.markdown("<h5>Conversación (con subtítulos) </h5>", unsafe_allow_html=True)
-            
+
     st.markdown("<h4 style='text-align: center; color: white;'><u>Lección 2</u></h4>", unsafe_allow_html=True)
+    st.markdown('<h5 style="float: left;">Vocabulario y Frases</h5><a href='https://youtu.be/qxd4OUEOCJg' target='_blank'><img style="float: right;" src="https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png" /></a>', unsafe_allow_html=True)
     st.markdown("<h5> <a href='https://youtu.be/qxd4OUEOCJg' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='150' height='150'/></a>Vocabulario y Frases </h5>", unsafe_allow_html=True)
     st.markdown("<h5> <a href='https://youtu.be/_SDd08h_UEM' target='_blank'><img src ='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_5dialogo2.png' width='200' height='100'/></a>Diálogo (sin subtítlos) </h5>", unsafe_allow_html=True)     
     st.markdown("<h5> <a href='https://youtu.be/KOUtXRQ3kFw' target='_blank'><img src ='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/5_5dialogo2.png' width='200' height='100'/></a>Diálogo (con subtítulos) </h5>", unsafe_allow_html=True)
