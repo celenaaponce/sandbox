@@ -201,14 +201,14 @@ def segunda_semana():
       st.title('')
       st.subheader('Diálogo (sin subtítlos) 🔇')
     with clms22[1]:
-      st.video('https://youtu.be/z1EEtsE79-w')
+      st.video('https://youtu.be/ZABG-Zl5qzE')
     clms23=st.columns([1,1])
     with clms23[0]:
       st.title('')
       st.title('')
       st.subheader('Diálogo (con subtítlos)')
     with clms23[1]:
-      st.video('https://youtu.be/beZlTXitb0g')
+      st.video('https://youtu.be/z1EEtsE79-w')
     clms24=st.columns([1,1])
     with clms24[0]:
       st.title('')
