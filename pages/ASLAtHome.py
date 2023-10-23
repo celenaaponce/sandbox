@@ -95,7 +95,7 @@ def segunda_semana():
         st.title('')
         st.markdown('<h5>Libro</h5>', unsafe_allow_html=True)
     with clms11[1]:  
-        st.video('https://youtu.be/UaxbOjwRDDw')
+        st.video('https://youtu.be/q7QTDovFA74')
     clms12 = st.columns([1,1])
     with clms12[0]:
         st.title('')
@@ -118,8 +118,12 @@ def segunda_semana():
     st.divider()
 
     st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
-
-    st.markdown("<h5> <a href='https://youtu.be/F_TOHsNTfwo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='100' height='100'/></a>Practicar Vocabulario</h5>", unsafe_allow_html=True)
+    clms15 = st.columns([1,1])
+    with clms15[0]:
+        st.title('')
+        st.markdown('<h5>Practicar Vocabulario</h5>', unsafe_allow_html=True)
+    with clms15[1]:
+        st.video('https://youtu.be/F_TOHsNTfwo')
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vSb2QAbLy6AheIEJ30YPF-RYjE5gw1Yt7Ovw2wO8Mz2XFUc_MGg2P-8E2i4tlHoiwxXYPGFRE3y1HQn/embed?start=false&loop=false&delayms=3000", height=480)
