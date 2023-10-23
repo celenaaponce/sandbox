@@ -327,7 +327,7 @@ def segunda_semana_6():
         st.title('')
         st.markdown('<h5>Cultura Sorda</h5>', unsafe_allow_html=True)
     with clms26[1]:
-        st.video('')
+        st.video('https://youtu.be/LUPeVp1Kbwg')
 
     st.divider()
 
@@ -343,9 +343,9 @@ def segunda_semana_6():
         st.title('')
         st.markdown('<h5>Practica</h5>', unsafe_allow_html=True)
     with clms28[1]:
-        st.markdown("<a href='' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
-        st.markdown("<a href='' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
-        st.markdown("<a href='' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/6535ed2547faa53fdf53a7b9' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/6535ed4ea59f3e4030d8a224' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/6535f557ac44ed3fd6871438' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
 
     st.divider()
             
