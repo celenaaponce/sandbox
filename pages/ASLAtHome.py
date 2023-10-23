@@ -82,25 +82,44 @@ def primera_semana():
 
 def segunda_semana():
     st.subheader('Segunda Semana: Capitulo 1')
-    cont_2 = st.container()
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
 
-    outer_col_2 = st.columns([4, 1])            
-    with cont_2:
-        
-        with outer_col_2[0]:
-            st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/F_TOHsNTfwo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='100' height='100'/></a>Vocabulario</h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/UaxbOjwRDDw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Screenshot%202023-10-18%20at%209.41.36%20PM.png' alt='Libro' width='100' height='100'/></a>Libro</h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/kLiRtHD1Oqc' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.01.26%20PM.png' width='200' height='100'/></a>Vocabulario Extra</h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/YzButzmbrTw' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.02.11%20PM.png' width='200' height='100'/></a>Conversación (sin subtítlos)</h5>", unsafe_allow_html=True)
-            st.markdown("<h5> <a href='https://youtu.be/BtEIgRvVGg8' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.02.11%20PM.png' width='200' height='100'/></a>Conversación (con subtítulos)</h5>", unsafe_allow_html=True)
+    clms1 = st.columns([1,1])
+    with clms1[0]:
+        st.title('')
+        st.markdown('<h5>Vocabulario</h5>', unsafe_allow_html=True)
+    with clms1[1]:
+        st.video('https://youtu.be/F_TOHsNTfwo')
+    clms11 = st.columns([1,1])
+    with clms11[0]:
+        st.title('')
+        st.markdown('<h5>Libro</h5>', unsafe_allow_html=True)
+    with clms11[1]:  
+        st.video('https://youtu.be/UaxbOjwRDDw')
+    clms12 = st.columns([1,1])
+    with clms12[0]:
+        st.title('')
+        st.markdown('<h5>Vocabulario Extra</h5>', unsafe_allow_html=True)
+    with clms12[1]: 
+        st.video('https://youtu.be/kLiRtHD1Oqc')
+    clms13 = st.columns([1,1])
+    with clms13[0]:
+        st.title('')
+        st.markdown('<h5>Conversación (sin subtítlos) 🔇</h5>', unsafe_allow_html=True)
+    with clms13[1]: 
+        st.video('https://youtu.be/YzButzmbrTw')
+    clms14 = st.columns([1,1])
+    with clms14[0]:
+        st.title('')
+        st.markdown('<h5>Conversación (con subtítlos) 🔈</h5>', unsafe_allow_html=True)
+    with clms14[1]: 
+        st.video('https://youtu.be/BtEIgRvVGg8')
 
+    st.divider()
 
-            st.divider()
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
 
-            st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
-        
-            st.markdown("<h5> <a href='https://youtu.be/F_TOHsNTfwo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='100' height='100'/></a>Practicar Vocabulario</h5>", unsafe_allow_html=True)
-            st.divider()
-            
-            components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vSb2QAbLy6AheIEJ30YPF-RYjE5gw1Yt7Ovw2wO8Mz2XFUc_MGg2P-8E2i4tlHoiwxXYPGFRE3y1HQn/embed?start=false&loop=false&delayms=3000", height=480)
+    st.markdown("<h5> <a href='https://youtu.be/F_TOHsNTfwo' target='_blank'><img src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/Dictionary-amico.png' alt='Vocabulario' width='100' height='100'/></a>Practicar Vocabulario</h5>", unsafe_allow_html=True)
+    st.divider()
+    
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vSb2QAbLy6AheIEJ30YPF-RYjE5gw1Yt7Ovw2wO8Mz2XFUc_MGg2P-8E2i4tlHoiwxXYPGFRE3y1HQn/embed?start=false&loop=false&delayms=3000", height=480)
