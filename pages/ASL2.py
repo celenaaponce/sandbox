@@ -112,7 +112,7 @@ def segunda_semana():
     
         with clms8[1]:
             st.video('https://youtu.be/qxd4OUEOCJg')
-               clms13=st.columns([1,1])
+        clms13=st.columns([1,1])
         with clms13[0]:
           st.title('')
           st.title('')
