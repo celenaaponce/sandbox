@@ -117,7 +117,8 @@ if authentication_status:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
         st.header("Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3, tab4 = st.tabs(["Primera Semana", "Segunda Semana", "Halloween/Dia de los Muertos", "🔒Tercera Semana"])
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Primera Semana", "Repaso General", "Repaso Leccion 1", "Repaso Leccion 2", 
+                                          "Repaso Leccion 3", "Repaso Leccion 4", "Halloween/Dia de los Muertos", "🔒Tercera Semana"])
         with tab1:
              ASL2.primera_semana()
         with tab2:
