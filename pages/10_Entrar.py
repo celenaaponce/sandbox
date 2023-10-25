@@ -122,8 +122,16 @@ if authentication_status:
         with tab1:
              ASL2.primera_semana()
         with tab2:
-             ASL2.segunda_semana()
+             ASL2.repaso_general()
         with tab3:
+             ASL2.repaso_lecc1()
+        with tab4:
+             ASL2.repaso_lecc2()
+        with tab5:
+             ASL2.repaso_lecc3()
+        with tab6:
+             ASL2.repaso_lecc4()
+        with tab7:
              holidays.halloween()
 
     else:
