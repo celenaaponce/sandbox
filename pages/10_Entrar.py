@@ -107,13 +107,13 @@ if authentication_status:
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curiculo aqui:")
         tab1, tab2, tab3, tab4 = st.tabs(["Primera Semana", "Segunda Semana", "Halloween/Dia de los Muertos", "🔒Tercera Semana"])
-
+        with tab1:
+             ASL1.primera_semana()
         with tab2:
              ASL1.segunda_semana()
         with tab3:
              holidays.halloween()
-        with tab1:
-             ASL1.primera_semana()
+
     elif username in st.secrets['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
@@ -122,16 +122,17 @@ if authentication_status:
                                           "Repaso Leccion 3", "Repaso Leccion 4", "Halloween/Dia de los Muertos", "🔒Tercera Semana"])
         with tab1:
              ASL2.primera_semana()
-        with tab2:
-             ASL2.repaso_general()
-        with tab3:
-             ASL2.repaso_lecc1()
-        with tab4:
-             ASL2.repaso_lecc2()
-        with tab5:
-             ASL2.repaso_lecc3()
-        with tab6:
-             ASL2.repaso_lecc4()
+        with st.expander("Repaso"):
+                with tab2:
+                     ASL2.repaso_general()
+                with tab3:
+                     ASL2.repaso_lecc1()
+                with tab4:
+                     ASL2.repaso_lecc2()
+                with tab5:
+                     ASL2.repaso_lecc3()
+                with tab6:
+                     ASL2.repaso_lecc4()
         with tab7:
              holidays.halloween()
 
