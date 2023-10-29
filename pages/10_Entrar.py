@@ -113,6 +113,8 @@ if authentication_status:
              ASL1.segunda_semana()
         with tab3:
              holidays.halloween()
+        with tab4:
+             ASL1.tercera_semana()
     elif username in st.secrets['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
