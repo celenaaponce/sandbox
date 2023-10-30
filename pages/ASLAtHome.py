@@ -80,6 +80,48 @@ def primera_semana():
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
 
+def tercera_semana():
+    st.subheader('Tercera Semana: Capitulo 1')
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+
+    clms1 = st.columns([1,1])
+    with clms1[0]:
+        st.title('')
+        st.markdown('<h5>Vocabulario</h5>', unsafe_allow_html=True)
+    with clms1[1]:
+        st.video('https://youtu.be/F_TOHsNTfwo')
+    clms11 = st.columns([1,1])
+    with clms11[0]:
+        st.title('')
+        st.markdown('<h5>Frases</h5>', unsafe_allow_html=True)
+    with clms11[1]:  
+        st.video('https://youtu.be/9h0xg41ytx4')
+    clms12 = st.columns([1,1])
+    with clms12[0]:
+        st.title('')
+        st.markdown('<h5>Más Frases</h5>', unsafe_allow_html=True)
+    with clms12[1]: 
+        st.video('https://youtu.be/sR9PfilyJ54')
+    clms13 = st.columns([1,1])
+    with clms13[0]:
+        st.title('')
+        st.markdown('<h5>Aun Más Frases</h5>', unsafe_allow_html=True)
+    with clms13[1]: 
+        st.video('https://youtu.be/IwDGq8ZdXeg')
+
+    st.divider()
+
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+    clms15 = st.columns([1,1])
+    with clms15[0]:
+        st.title('')
+        st.markdown('<h5>Practicar Vocabulario</h5>', unsafe_allow_html=True)
+    with clms15[1]:
+        st.video('https://youtu.be/F_TOHsNTfwo')
+    st.divider()
+    
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vSUy7ujstNW4DmMo_nsX34FvycNSLUA8C8UI8Vrp59GzkF4dJloCFW9qmiYwwV2SaYKVzkW5PFZ7MHy/embed?start=false&loop=false&delayms=3000", height=480)
+
 def segunda_semana():
     st.subheader('Segunda Semana: Capitulo 1')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
