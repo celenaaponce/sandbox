@@ -135,6 +135,8 @@ if authentication_status:
              ASL2.repaso_lecc4()
         with tab7:
              holidays.halloween()
+        with tab8:
+             ASL2.tercera_semana()
 
     else:
         login_sidebar()
