@@ -147,6 +147,8 @@ if authentication_status:
              ASLAtHome.segunda_semana()
         with tab3:
              holidays.halloween()
+        with tab4:
+             ASLAtHome.tercera_semana()
 
 elif authentication_status == False:
     st.error('Nombre/contraseña es mal')
