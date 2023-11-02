@@ -5,4 +5,4 @@ streamlit==1.27.0
 streamlit_authenticator
 st_pages
 Pillow
-text_highlighter
+text_highlighter==0.0.11
