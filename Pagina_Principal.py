@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import streamlit.components.v1 as components
 from streamlit_extras.switch_page_button import switch_page
+from text_highlighter import text_highlighter
 
 
 def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
@@ -52,7 +53,10 @@ cont_3 = st.container()
 cont_4 = st.container()
 cont_5 = st.container()
 outer_cols = st.columns([1, 1])
-
+result = text_highlighter(
+text="John Doe is the founder of MyComp Inc. and lives in New York with his wife Jane Doe.",
+labels=[("PERSON", "red"), ("ORG", "#0000FF")])
+st.write(result)
 with cont_1:
     with outer_cols[0]:
         set_styles()
