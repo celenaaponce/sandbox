@@ -66,7 +66,7 @@ if st.button("Get Selected Text"):
     js_code = """
     <script>
     function getSelectedText() {
-        var text = "";
+        var text = "Hello I am here";
         if (window.getSelection) {
             text = window.getSelection().toString();
         }
