@@ -53,7 +53,41 @@ cont_3 = st.container()
 cont_4 = st.container()
 cont_5 = st.container()
 outer_cols = st.columns([1, 1])
+st.title("Select and Return Text")
 
+# Text input field for user to enter text
+user_text = st.text_area("Enter text:", height=100)
+
+# Button to trigger the action of returning the selected text
+if st.button("Get Selected Text"):
+    selected_text = st.empty()
+    
+    # JavaScript code to capture the selected text
+    js_code = """
+    <script>
+    function getSelectedText() {
+        var text = "";
+        if (window.getSelection) {
+            text = window.getSelection().toString();
+        }
+        return text;
+    }
+    
+    document.onmouseup = function() {
+        var selectedText = getSelectedText();
+        if (selectedText) {
+            // Send the selected text back to Streamlit
+            const stCommand = {"type": "custom", "payload": selectedText};
+            parent.postMessage(stCommand, "*");
+        }
+    }
+    </script>
+    """
+    st.write(js_code, unsafe_allow_html=True)
+
+# Handle the selected text using Streamlit's st.session_state
+if "custom" in st.session_state:
+    selected_text.markdown(f"**Selected Text:** {st.session_state.custom}")
 with cont_1:
     with outer_cols[0]:
         set_styles()
