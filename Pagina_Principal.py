@@ -56,7 +56,7 @@ outer_cols = st.columns([1, 1])
 st.title("Select and Return Text")
 
 # Text input field for user to enter text
-user_text = st.text_area("Enter text:", height=100)
+user_text = st.write("Here is my text")
 
 # Button to trigger the action of returning the selected text
 if st.button("Get Selected Text"):
