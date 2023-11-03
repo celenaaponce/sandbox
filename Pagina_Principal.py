@@ -83,7 +83,7 @@ if st.button("Get Selected Text"):
     }
     </script>
     """
-    st.write(js_code, unsafe_allow_html=True)
+    components.html(f"{js_code}")
 
 # Handle the selected text using Streamlit's st.session_state
 if "custom" in st.session_state:
