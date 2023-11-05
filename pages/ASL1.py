@@ -212,7 +212,6 @@ def tercera_semana():
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTxPJGXEYZG_-N-G7ypLyhScw07aukwDGxidek6zeh1iCQYRaRfuyTZ76xHec4iOGFz9fjTX31aICJ1/embed?start=false&loop=false&delayms=3000", height=480)
 
 def cuarta_semana():
-    def segunda_semana():
     set_styles()
     st.subheader('Cuarta Semana: Desayuno')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
