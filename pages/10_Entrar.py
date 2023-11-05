@@ -96,9 +96,11 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days'],
     config['preauthorized']
 )
-
-name, authentication_status, username = authenticator.login('Entrar', 'main')
-
+try:
+        name, authentication_status, username = authenticator.login('Entrar', 'main')
+except:
+        _, authentication_status, username = authenticator.login('Entrar', 'main')
+        name = ""
 if authentication_status:
     authenticator.logout('Salir', 'main')
     st.title(f'Bienvenido *{name}*')
