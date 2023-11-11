@@ -4,7 +4,6 @@ import streamlit.components.v1 as components
 from streamlit_extras.switch_page_button import switch_page
 from text_highlighter import text_highlighter
 
-st.markdown("""<iframe width="433" height="218" src="https://www.youtube.com/embed/DL10IzwqQwA?list=TLGGJzkPDOUDalsxMTExMjAyMw" title="Klaus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>""", unsafe_allow_html = True)
 def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
     htmlstr = f"""
         <script>
