@@ -247,7 +247,18 @@ def quinta_semana():
         st.markdown('<h5>Aun Más Frases</h5>', unsafe_allow_html=True)
     with clms13[1]: 
         st.video('https://youtu.be/ldSbwWtKf6A?si=QSiW_7Rc-mJXZCHM')
-
+    clms14 = st.columns([1,1])
+    with clms14[0]:
+        st.title('')
+        st.markdown('<h5>Libro</h5>', unsafe_allow_html=True)
+    with clms14[1]: 
+        st.video('https://youtu.be/BlPrDMZUzkY')    
+    clms15 = st.columns([1,1])
+    with clms15[0]:
+        st.title('')
+        st.markdown('<h5>Otra Frases</h5>', unsafe_allow_html=True)
+    with clms15[1]: 
+        st.video('https://youtu.be/CcxmBTfDlMo')   
     st.divider()
 
     st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
@@ -256,7 +267,7 @@ def quinta_semana():
         st.title('')
         st.markdown('<h5>Nuevo Vocabulario</h5>', unsafe_allow_html=True)
     with clms15[1]:
-        st.video('')
+        st.video('https://youtu.be/9q4e_fQB6No')
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQDz2mgnEZK_yCCscpVGqeYxXX1ZYHPER5m1VkECKBv_IPBkdw-RHUf-0kLOI2gBkwx94Cj0reBjJ4W/embed?start=false&loop=false&delayms=3000", height=480)
