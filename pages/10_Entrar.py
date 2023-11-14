@@ -124,8 +124,8 @@ if authentication_status:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
         st.header("Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([":red[Primera Semana]", ":orange[Repaso General]", ":orange[Repaso Leccion 1]", ":orange[Repaso Leccion 2]", 
-                                          ":orange[Repaso Leccion 3]", ":orange[Repaso Leccion 4]", ":orange[Halloween/Dia de los Muertos]", ":green[Tercera Semana]"])
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":red[Primera Semana]", ":orange[Repaso General]", ":orange[Repaso Leccion 1]", ":orange[Repaso Leccion 2]", 
+                                          ":orange[Repaso Leccion 3]", ":orange[Repaso Leccion 4]", ":orange[Halloween/Dia de los Muertos]", ":green[Colores]", ":blue[Deletrear]"])
         with tab1:
              ASL2.primera_semana()
         with tab2:
@@ -141,7 +141,9 @@ if authentication_status:
         with tab7:
              holidays.halloween()
         with tab8:
-             ASL2.tercera_semana()
+             ASL2.colores()
+        with tab9:
+             ASL2.deletrear()
 
     else:
         login_sidebar()
