@@ -73,7 +73,7 @@ def ChangeButtonColour(widget_label, font_color, background_color='transparent')
     }}
         </script>
         """
-    components.html(f"{htmlstr}", height=0, width=0)
+    com.html(f"{htmlstr}", height=0, width=0)
 
 @st.cache_data
 def load_words_completo():  
