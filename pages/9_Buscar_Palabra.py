@@ -75,7 +75,7 @@ st.header("Buscar Palabra")
 word = st.text_input("Buscar Palabra", label_visibility="hidden")
 
 if word != "":
-    word_list = word_data[word_data['Palabra'].str.contains(word)]
+    word_list = word_data[word_data['Palabra'].str.startswith(word)]
     
     if not word_list.empty:
         table = word_list.to_html(classes='mystyle', escape=False, index=False)
