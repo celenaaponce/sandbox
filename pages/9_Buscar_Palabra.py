@@ -74,6 +74,7 @@ st.write("")
 st.header("Buscar Palabra")
 word = st.text_input("Buscar Palabra", label_visibility="hidden")
 
+st.write(word)
 word_list = word_data.loc[word_data['Palabra']==word]
 
 if not word_list.empty:
