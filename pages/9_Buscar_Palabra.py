@@ -74,50 +74,50 @@ st.write("")
 st.header("Buscar Palabra")
 word = st.text_input("Buscar Palabra", label_visibility="hidden")
 
-st.write(word)
-word_list = word_data[word_data['Palabra'].str.contains(word)]
-
-if not word_list.empty:
-    table = word_list.to_html(classes='mystyle', escape=False, index=False)
-
-    html_string = f'''
-
-        <body>
-            {table}
-        </body>
-        '''
-    st.markdown(
-            html_string,
-        unsafe_allow_html=True)
+if word != "":
+    word_list = word_data[word_data['Palabra'].str.contains(word)]
     
-else:
-    word_data['Palabra'] = word_data['Palabra'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
-    word_list = word_data.loc[word_data['Palabra']==word]
-    table = word_list.to_html(classes='mystyle', escape=False, index=False)
-
-    html_string = f'''
-
-        <body>
-            {table}
-        </body>
-        '''
-    st.markdown(
-            html_string,
-        unsafe_allow_html=True)
+    if not word_list.empty:
+        table = word_list.to_html(classes='mystyle', escape=False, index=False)
     
-if word_list.empty and word != "":
-    filePath = "pages/10000_frecuencias.txt"
-
-    spanishWords = SpanishWordFreq(filePath)
+        html_string = f'''
     
-    wordChecker = WordChecker(spanishWords.words, spanishWords.totalFreq)
-         
-    list = wordChecker.getCorrection(word.lower())
-
-    st.write(f"La palabra {word} no exista en este diccionario")
-    suggestions = ""
-    for item in list:
-        if item != word:
-            suggestions += item + ' o '
-    if suggestions[:-3] != "":
-        st.write(f"¿Usted quiere buscar {suggestions[:-3]}?")
+            <body>
+                {table}
+            </body>
+            '''
+        st.markdown(
+                html_string,
+            unsafe_allow_html=True)
+        
+    else:
+        word_data['Palabra'] = word_data['Palabra'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+        word_list = word_data.loc[word_data['Palabra']==word]
+        table = word_list.to_html(classes='mystyle', escape=False, index=False)
+    
+        html_string = f'''
+    
+            <body>
+                {table}
+            </body>
+            '''
+        st.markdown(
+                html_string,
+            unsafe_allow_html=True)
+        
+    if word_list.empty and word != "":
+        filePath = "pages/10000_frecuencias.txt"
+    
+        spanishWords = SpanishWordFreq(filePath)
+        
+        wordChecker = WordChecker(spanishWords.words, spanishWords.totalFreq)
+             
+        list = wordChecker.getCorrection(word.lower())
+    
+        st.write(f"La palabra {word} no exista en este diccionario")
+        suggestions = ""
+        for item in list:
+            if item != word:
+                suggestions += item + ' o '
+        if suggestions[:-3] != "":
+            st.write(f"¿Usted quiere buscar {suggestions[:-3]}?")
