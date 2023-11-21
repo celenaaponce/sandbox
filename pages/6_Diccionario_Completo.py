@@ -53,6 +53,28 @@ def download_csv(file_id, output_file):
 if st.session_state.download_completo == False:
     download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
 
+def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
+    htmlstr = f"""
+        <script>
+            var elements = window.parent.document.querySelectorAll('button');
+            for (var i = 0; i < elements.length; ++i) {{ 
+                if (elements[i].innerText == '{widget_label}') {{ 
+                    elements[i].style.color ='{font_color}';
+                    elements[i].style.background = '{background_color}'
+                }}
+            }}
+        function goTo(page) {{
+        page_links = parent.document.querySelectorAll('[data-testid="stSidebarNav"] ul li a')
+        page_links.forEach((link) => {{
+            if (link.text == page) {{
+                link.click()
+            }}
+        }})
+    }}
+        </script>
+        """
+    components.html(f"{htmlstr}", height=0, width=0)
+
 @st.cache_data
 def load_words_completo():  
   for chunk in pd.read_csv('Small Preview2.csv', names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
@@ -86,8 +108,13 @@ start += offset
 col1, col2, col3 = st.columns([1,1,1])
 if start == offset:
     increment = col3.button("Proximas Palabras", on_click=set_start, args=[start])
+    ChangeButtonColour('Proximas Palabras', '#fffff', '#407bff') 
 
 else:              
     increment = col3.button("Proximas Palabras", on_click=set_start, args=[start])
     reset1 = col2.button("Empezar de Nuevo", on_click=set_start, args=[0])
     reset2 = col1.button("Palabras Anteriores", on_click=back_start, args=[start])
+    ChangeButtonColour('Proximas Palabras', '#fffff', '#407bff') 
+    ChangeButtonColour('Empezar de Nuevo', '#fffff', '#407bff') 
+    ChangeButtonColour('Palabras Anteriores', '#fffff', '#407bff') 
+
