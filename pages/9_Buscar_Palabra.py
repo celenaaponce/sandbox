@@ -39,7 +39,7 @@ st.markdown(
 )
 
 def download_csv(file_id, output_file):
-    st.write('downloading')
+
     url = f'https://drive.google.com/uc?id={file_id}'
     gdown.download(url, output_file, quiet=False)
     st.session_state.download = True
