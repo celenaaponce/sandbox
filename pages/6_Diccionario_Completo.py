@@ -108,13 +108,13 @@ start += offset
 col1, col2, col3 = st.columns([1,1,1])
 if start == offset:
     increment = col3.button("Proximas Palabras", on_click=set_start, args=[start])
-    ChangeButtonColour('Proximas Palabras', '#fffff', '#407bff') 
+    ChangeButtonColour('Proximas Palabras', '#fffff', '#94387f') 
 
 else:              
     increment = col3.button("Proximas Palabras", on_click=set_start, args=[start])
     reset1 = col2.button("Empezar de Nuevo", on_click=set_start, args=[0])
     reset2 = col1.button("Palabras Anteriores", on_click=back_start, args=[start])
-    ChangeButtonColour('Proximas Palabras', '#fffff', '#407bff') 
-    ChangeButtonColour('Empezar de Nuevo', '#fffff', '#407bff') 
-    ChangeButtonColour('Palabras Anteriores', '#fffff', '#407bff') 
+    ChangeButtonColour('Proximas Palabras', '#fffff', '#94387f') 
+    ChangeButtonColour('Empezar de Nuevo', '#fffff', '#94387f') 
+    ChangeButtonColour('Palabras Anteriores', '#fffff', '#94387f') 
 
