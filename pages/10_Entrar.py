@@ -119,7 +119,8 @@ def authenticate_user():
 
 enter = authenticate_user()
 if enter:
-    st.title(f'Bienvenido *{st.session_state['name']}*')
+    name = st.session_state['name']
+    st.title(f'Bienvenido *{name}*')
     email = st.session_state['correo_electronico']
     if email in st.secrets.ASL1:
         login_sidebar()
