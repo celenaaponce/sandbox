@@ -90,16 +90,16 @@ def creds_entered():
         for key in emails:
                 if st.session_state['correo_electronico'].strip() == key and st.session_state['password'].strip() == password:
                         st.session_state['authenticated'] = True
-                        break
+                        return
                         
-                else:
-                        st.session_state['authenticated'] = False
-                        if not st.session_state['password']:
-                                st.warning("Haga el favor de entrar su contraseña")
-                        elif not st.session_state['correo_electronico']:
-                                st.warning("Haga el favor de entrar su correo electronico")
-                        else:
-                                st.error('Nombre/contraseña es mal')
+
+        st.session_state['authenticated'] = False
+        if not st.session_state['password']:
+                st.warning("Haga el favor de entrar su contraseña")
+        elif not st.session_state['correo_electronico']:
+                st.warning("Haga el favor de entrar su correo electronico")
+        else:
+                st.error('Nombre/contraseña es mal')
 
 def authenticate_user():
         if 'authenticated' not in st.session_state:
