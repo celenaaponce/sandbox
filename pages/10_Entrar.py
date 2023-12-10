@@ -85,26 +85,24 @@ def creds_entered():
                 
         else:
                 st.session_state['authenticated'] = False
-                st.session_state['correo_electronico'] = ""
                 st.error('Nombre/contraseña es mal')
 
 def authenticate_user():
         if 'authenticated' not in st.session_state:
                 st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
-                email = st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
-                return False, email
+                st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
+                return False
         else:
                 if st.session_state['authenticated']:
-                        email = st.session_state['correo_electronico']
-                        return True, email
+                        return True
                 else:
                         st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
-                        email = st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
-                        return False, email
+                        return False
 
-enter, email = authenticate_user()
+enter = authenticate_user()
 if enter:
     st.title(f'Bienvenido')
+    email = ""
     if email in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
