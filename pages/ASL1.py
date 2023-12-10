@@ -17,8 +17,11 @@ def set_styles():
     """, unsafe_allow_html=True)
 
     @st.cache_data
-    screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
-  
+    def find_screenwidth():
+        screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
+        return screen_width
+        
+    screen_width = find_screenwidth()
     if screen_width != None:
       if screen_width < 400:
           st.session_state['phone'] = True
