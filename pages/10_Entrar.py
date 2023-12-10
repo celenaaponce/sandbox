@@ -79,30 +79,31 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
 
-@st.cache_data
-def download_yaml():
-        file_id = st.secrets['yaml']
-        url = f'https://drive.google.com/uc?id={file_id}'
-        gdown.download(url, 'info.yaml', quiet=False)
-        with open('info.yaml') as file:
-            config = yaml.load(file, Loader=SafeLoader)
-        return config
+def cred_entered():
+        if st.session_state['correo_electronico'].strip() == 'admin' and st.session_state['password'].strip() == 'admin':
+                st.session_state['authenticated'] = True
+                
+        else:
+                st.session_state['authenticated'] = False
+                st.error('Nombre/contraseña es mal')
 
-config = download_yaml()
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
+def authenticate_user():
+        if 'authenticated' not in st.session_state:
+                st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
+                st.text_input(label="Contraseña :", value ="", key="", type="password", on_changed=creds_entered)
+                return False, ""
+        else:
+                if st.session_state['authenticated']:
+                        return True, st.state_session['correo_electronico']
+                else:
+                        st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
+                        st.text_input(label="Contraseña :", value ="", key="", type="password", on_changed=creds_entered)
+                        return False, ""
 
-name, authentication_status, username = authenticator.login('Entrar', 'main')
-
-if authentication_status:
-    authenticator.logout('Salir', 'main')
-    st.title(f'Bienvenido *{name}*')
-    if username in st.secrets.ASL1:
+enter, email = authenticate_user()
+if enter:
+    st.title(f'Bienvenido')
+    if email in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
@@ -127,7 +128,7 @@ if authentication_status:
              ASL1.sexta_semana()
         with tab9:
              ASL1.septima_semana()
-    elif username in st.secrets['ASL2']:
+    elif email in st.secrets['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
         st.header("Se puede mirar nuestro curriculo aqui:")
@@ -178,9 +179,3 @@ if authentication_status:
         with tab7:
             holidays.thanksgiving()
 
-elif authentication_status == False:
-    st.error('Nombre/contraseña es mal')
-    regular_sidebar()
-elif authentication_status == None:
-    st.warning('Escriba su nombre de usario y contraseña.')
-    regular_sidebar()
