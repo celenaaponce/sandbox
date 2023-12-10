@@ -2,7 +2,15 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
+from streamlit_js_eval import streamlit_js_eval
 
+screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
+
+if screen_width != None:
+  if screen_width < 400:
+      st.session_state['phone'] = True
+  else:
+      st.session_state['phone'] = False
 def set_styles():
     st.write("""
         <style>
@@ -13,6 +21,7 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
+    
 
 def primera_semana():
     set_styles()
