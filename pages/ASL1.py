@@ -3,6 +3,7 @@ from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from streamlit_js_eval import streamlit_js_eval
+import tracemalloc
 
 screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
 
@@ -24,6 +25,8 @@ def set_styles():
     
 
 def primera_semana():
+  tracemalloc.start()
+
     set_styles()
     if st.session_state['phone'] == True:
       size = 50
@@ -93,6 +96,8 @@ def primera_semana():
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
+    st.write(tracemalloc.get_traced_memory())
+    tracemalloc.stop()
 
 def segunda_semana():
     set_styles()
