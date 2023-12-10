@@ -90,7 +90,7 @@ def creds_entered():
         for key in emails:
                 if st.session_state['correo_electronico'].strip() == key and st.session_state['password'].strip() == password:
                         st.session_state['authenticated'] = True
-                        st.session_state['name'] = config['credentials']['username'][key]['name']
+                        st.session_state['name'] = config['credentials']['usernames'][key]['name']
                         return
                         
 
