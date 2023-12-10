@@ -25,7 +25,7 @@ def set_styles():
     
 
 def primera_semana():
-    tracemalloc.start()
+    tracemalloc.resetpeak()
 
     set_styles()
     if st.session_state['phone'] == True:
@@ -82,8 +82,7 @@ def primera_semana():
         st.markdown('<h5>Historia de ASL</h5>', unsafe_allow_html=True)
     with clms37[1]: 
         components.iframe("https://youtu.be/Pt2_EjmtUp8", height=480)
-        snapshot = tracemalloc.take_snapshot() 
-        top_stats = snapshot.statistics('lineno')
+        
 
     st.divider()
 
@@ -98,8 +97,8 @@ def primera_semana():
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
-    snapshot = tracemalloc.take_snapshot() 
-    top_stats = snapshot.statistics('lineno')
+    st.write(tracemalloc.get_traced_memory())
+    tracemalloc.stop()
 
 def segunda_semana():
     set_styles()
