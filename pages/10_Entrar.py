@@ -85,6 +85,7 @@ def creds_entered():
                 
         else:
                 st.session_state['authenticated'] = False
+                st.session_state['correo_electronico'] = ""
                 st.error('Nombre/contraseña es mal')
 
 def authenticate_user():
