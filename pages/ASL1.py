@@ -44,7 +44,7 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Escuelas para los Sordos en EEUU</h5>', unsafe_allow_html=True)
     with clms[1]:
-        st.markdown("<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= f'size*2' height = f'size' /></a>", unsafe_allow_html=True)
+        st.markdown("<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= size*2 height = size /></a>", unsafe_allow_html=True)
     clms31 = st.columns([1,1])
     with clms31[0]:
         st.title('')
@@ -86,7 +86,7 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Historia de ASL</h5>', unsafe_allow_html=True)
     with clms37[1]: 
-        st.video("https://youtu.be/Pt2_EjmtUp8", height=480)
+        st.video("https://youtu.be/Pt2_EjmtUp8")
         
 
     st.divider()
@@ -97,7 +97,7 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
     with clms38[1]: 
-        st.video("https://youtu.be/dJBLpQFhujo", height=480)
+        st.video("https://youtu.be/dJBLpQFhujo")
 
     st.divider()
     
