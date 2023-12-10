@@ -128,7 +128,7 @@ if enter:
     st.title(f'Bienvenido *{name}*')
     email = st.session_state['correo_electronico']
     st.write(tracemalloc.get_traced_memory())
-    tracemalloc.stop()
+    tracemalloc.reset_peak()
     if email in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
@@ -138,7 +138,7 @@ if enter:
                                                                  ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
         with tab1:
              ASL1.primera_semana()
-
+             st.write(tracemalloc.get_traced_memory())
         with tab2:
              ASL1.segunda_semana()
         with tab3:
