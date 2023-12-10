@@ -25,6 +25,10 @@ def set_styles():
 
 def primera_semana():
     set_styles()
+    if st.session_state['phone'] == True:
+      size = 50
+    else:
+      size = 100
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
@@ -32,7 +36,7 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Escuelas para los Sordos en EEUU</h5>', unsafe_allow_html=True)
     with clms[1]:
-        st.markdown("<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= '200' height = '100' /></a>", unsafe_allow_html=True)
+        st.markdown("<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= f'size*2' height = f'size' /></a>", unsafe_allow_html=True)
     clms31 = st.columns([1,1])
     with clms31[0]:
         st.title('')
