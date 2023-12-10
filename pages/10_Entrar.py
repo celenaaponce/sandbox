@@ -98,16 +98,17 @@ authenticator = stauth.Authenticate(
 )
 
 name, authentication_status, username = authenticator.login('Entrar', 'main')
-st.write('n', name, 'a', authentication_status, 'u', username)
+
 if authentication_status:
     authenticator.logout('Salir', 'main')
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
-        st.header("Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([":red[Primera Semana]", ":orange[Segunda Semana]", ":orange[Halloween/Dia de los Muertos]", ":green[Tercera Semana]", ":blue[Cuarta Semana]",
-                                                     ":purple[Quinta Semana]"])
+        st.header("Se puede mirar nuestro curriculo aqui:")
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+                                                            ":white[Conocer la Familia Bravo Pt 2]", ":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
+                                                                 ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
         with tab1:
              ASL1.primera_semana()
         with tab2:
@@ -120,12 +121,19 @@ if authentication_status:
              ASL1.cuarta_semana()
         with tab6:
              ASL1.quinta_semana()
+        with tab7:
+             holidays.thanksgiving()
+        with tab8:
+             ASL1.sexta_semana()
+        with tab9:
+             ASL1.septima_semana()
     elif username in st.secrets['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
-        st.header("Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":red[Primera Semana]", ":orange[Repaso General]", ":orange[Repaso Leccion 1]", ":orange[Repaso Leccion 2]", 
-                                          ":orange[Repaso Leccion 3]", ":orange[Repaso Leccion 4]", ":orange[Halloween/Dia de los Muertos]", ":green[Colores]", ":blue[Deletrear]"])
+        st.header("Se puede mirar nuestro curriculo aqui:")
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([":white[Primera Semana]", ":white[Repaso General]", ":white[Repaso Leccion 1]", ":white[Repaso Leccion 2]", 
+                                                                               ":white[Repaso Leccion 3]", ":white[Repaso Leccion 4]", ":white[Halloween/Dia de los Muertos]", 
+                                                                               ":white[Colores]", ":white[Deletrear]", ":white[Dia de Accion de Gracias]", ":white[Escuela Pt 1]"])
         with tab1:
              ASL2.primera_semana()
         with tab2:
@@ -144,12 +152,17 @@ if authentication_status:
              ASL2.colores()
         with tab9:
              ASL2.deletrear()
+        with tab10:
+             holidays.thanksgiving()
+        with tab11:
+             ASL2.escuela1()
 
     else:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL En Casa.")
-        st.header("Se puede mirar nuestro curiculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([":red[Primera Semana]", ":orange[Segunda Semana]", ":orange[Halloween/Dia de los Muertos]", ":green[Tercera Semana]", ":blue[Cuarta Semana]", ":purple[Quinta Semana]"])
+        st.header("Se puede mirar nuestro curriculo aqui:")
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([":white[Primera Semana]", ":white[Capitulo 1 Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+                                                            ":white[Capitulo 1 Pt 2]", ":white[Capitulo 2 Pt 1]", ":white[Capitulo 2 Pt 2]", ":white[Dia de Accion de Gracias]"])
         with tab1:
              ASLAtHome.primera_semana()
         with tab2:
@@ -162,6 +175,8 @@ if authentication_status:
              ASLAtHome.cuarta_semana()
         with tab6:
              ASLAtHome.quinta_semana()
+        with tab7:
+            holidays.thanksgiving()
 
 elif authentication_status == False:
     st.error('Nombre/contraseña es mal')
