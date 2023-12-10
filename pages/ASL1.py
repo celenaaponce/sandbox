@@ -82,36 +82,36 @@ def primera_semana():
 
 def segunda_semana():
     set_styles()
-    st.subheader('Segunda Semana: Conocer La Familia Bravo')
+    st.subheader('Conocer La Familia Bravo Pt 1')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms21 = st.columns([1,1])
     with clms21[0]:
         st.title('')
-        st.markdown('<h5>Introduccion a La Familia (sin subtitlos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Introducción a La Familia (sin subtitlos) 🔇</h5>', unsafe_allow_html=True)
     with clms21[1]:
         st.video('https://youtu.be/SITwK-RY11c')
     clms22 = st.columns([1,1])
     with clms22[0]:
         st.title('')
-        st.markdown('<h5>Introduccion a La Familia (con subtitlos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Introducción a La Familia (con subtitlos) 🔈</h5>', unsafe_allow_html=True)
     with clms22[1]:
         st.video('https://youtu.be/gK3cUfN1Lfw')
     clms23 = st.columns([1,1])
     with clms23[0]:
         st.title('')
-        st.markdown('<h5>Repaso y Explicacion</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Repaso y Explicación</h5>', unsafe_allow_html=True)
     with clms23[1]:
         st.video('https://youtu.be/TnwmFK1Odqo')
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
     with clms24[1]:    
         st.video('https://youtu.be/tZk1fKC_7hQ')
     clms25 = st.columns([1,1])
     with clms25[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms25[1]: 
         st.video('https://youtu.be/5gYPPZFOO6M')
     clms26 = st.columns([1,1])
@@ -143,27 +143,26 @@ def segunda_semana():
             
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQd8Y-xcWg9rS517V1gkm3m7O_sEKq_OSo4nQxS2RI2TFew0eR1yjqb1_mhLUfZ9CW1hrApe8mbHNLj/embed?start=false&loop=false&delayms=3000", height=480)
 
-
 def tercera_semana():
     set_styles()
-    st.subheader('Tercera Semana: Conocer La Familia Bravo')
+    st.subheader('Conocer La Familia Bravo Pt 2')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms23 = st.columns([1,1])
     with clms23[0]:
         st.title('')
-        st.markdown('<h5>Repaso y Explicacion</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Repaso y Explicación</h5>', unsafe_allow_html=True)
     with clms23[1]:
         st.video('https://youtu.be/35oau3bfsnY')
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
     with clms24[1]:    
         st.video('https://youtu.be/RAoRBgN_BaQ')
     clms25 = st.columns([1,1])
     with clms25[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms25[1]: 
         st.video('https://youtu.be/M9k6WcksVp0')
     clms26 = st.columns([1,1])
@@ -181,13 +180,13 @@ def tercera_semana():
     clms30 = st.columns([1,1])
     with clms30[0]:
         st.title('')
-        st.markdown('<h5>Cuento (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Cuento (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
     with clms30[1]:    
         st.video('https://youtu.be/__ZXhLplISE')
     clms31 = st.columns([1,1])
     with clms31[0]:
         st.title('')
-        st.markdown('<h5>Cuento (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Cuento (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms31[1]: 
         st.video('https://youtu.be/NDjz2eiNOv0')        
     st.divider()
@@ -208,35 +207,34 @@ def tercera_semana():
         st.markdown("<a href='https://edpuzzle.com/media/6340a73092852240f8ac3087' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
 
     st.divider()
-            
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTxPJGXEYZG_-N-G7ypLyhScw07aukwDGxidek6zeh1iCQYRaRfuyTZ76xHec4iOGFz9fjTX31aICJ1/embed?start=false&loop=false&delayms=3000", height=480)
 
 def cuarta_semana():
     set_styles()
-    st.subheader('Cuarta Semana: Desayuno')
+    st.subheader('Desayuno Pt 1')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms21 = st.columns([1,1])
     with clms21[0]:
         st.title('')
-        st.markdown('<h5>Introduccion a La Lección</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Introducción a La Lección</h5>', unsafe_allow_html=True)
     with clms21[1]:
         st.video('https://youtu.be/69GxKWg_Sfw')
     clms23 = st.columns([1,1])
     with clms23[0]:
         st.title('')
-        st.markdown('<h5>Repaso y Explicacion</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Repaso y Explicación</h5>', unsafe_allow_html=True)
     with clms23[1]:
         st.video('https://youtu.be/UITBHk6W-Vg')
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
     with clms24[1]:    
         st.video('https://youtu.be/NpfgnYPpxT0')
     clms25 = st.columns([1,1])
     with clms25[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms25[1]: 
         st.video('https://youtu.be/PdDmd0emQ40')
     clms26 = st.columns([1,1])
@@ -270,7 +268,7 @@ def cuarta_semana():
 
 def quinta_semana():
     set_styles()
-    st.subheader('Quinta Semana: Desayuno')
+    st.subheader('Desayuno Pt 2')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms23 = st.columns([1,1])
     with clms23[0]:
@@ -281,13 +279,13 @@ def quinta_semana():
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
     with clms24[1]:    
         st.video('https://youtu.be/qM8_5FGazmA')
     clms25 = st.columns([1,1])
     with clms25[0]:
         st.title('')
-        st.markdown('<h5>Conversacion (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms25[1]: 
         st.video('https://youtu.be/6Hxpc-49B3Q')
     clms26 = st.columns([1,1])
@@ -305,13 +303,13 @@ def quinta_semana():
     clms30 = st.columns([1,1])
     with clms30[0]:
         st.title('')
-        st.markdown('<h5>Cuento (sin subtitulos) 🔇</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Cuento (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
     with clms30[1]:    
         st.video('https://youtu.be/V0pH_yLWG00')
     clms31 = st.columns([1,1])
     with clms31[0]:
         st.title('')
-        st.markdown('<h5>Cuento (con subtitulos) 🔈</h5>', unsafe_allow_html=True)
+        st.markdown('<h5>Cuento (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms31[1]: 
         st.video('https://youtu.be/QLsApezec98')        
     st.divider()
@@ -334,3 +332,120 @@ def quinta_semana():
     st.divider()
             
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTSFKvUdTSTKb6VdPLTwvsTT4Pzn0L_DH_lfc6GBTp-mgi3uNN8GZZyL-AnDGrpNkLlFy2K4TfGIqvc/embed?start=false&loop=false&delayms=3000", height=480)
+
+def sexta_semana():
+    set_styles()
+    st.subheader('¿Dónde está el contról? Pt 1')
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+    clms21 = st.columns([1,1])
+    with clms21[0]:
+        st.title('')
+        st.markdown('<h5>Introducción a La Lección</h5>', unsafe_allow_html=True)
+    with clms21[1]:
+        st.video('https://youtu.be/X0FjuzzV7Cc')
+    clms23 = st.columns([1,1])
+    with clms23[0]:
+        st.title('')
+        st.markdown('<h5>Repaso y Explicación</h5>', unsafe_allow_html=True)
+    with clms23[1]:
+        st.video('https://youtu.be/tfz66mCa1V4')
+    clms24 = st.columns([1,1])
+    with clms24[0]:
+        st.title('')
+        st.markdown('<h5>Conversación (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
+    with clms24[1]:    
+        st.video('https://youtu.be/Dkbed5OSVh8')
+    clms25 = st.columns([1,1])
+    with clms25[0]:
+        st.title('')
+        st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
+    with clms25[1]: 
+        st.video('https://youtu.be/c32td3f85Mc')
+    clms26 = st.columns([1,1])
+    with clms26[0]:
+        st.title('')
+        st.markdown('<h5>Gramatica</h5>', unsafe_allow_html=True)
+    with clms26[1]:
+        st.video('https://youtu.be/vas3L7L0Y_I')
+
+    st.divider()
+
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+    clms27 = st.columns([1,1])
+    with clms27[0]:
+        st.title('')
+        st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
+    with clms27[1]:
+        st.video('https://youtu.be/3KzhHmN2iQQ')
+    clms28 = st.columns([1,1])
+    with clms28[0]:
+        st.title('')
+        st.markdown('<h5>Practica</h5>', unsafe_allow_html=True)
+    with clms28[1]:
+        st.markdown("<a href='https://edpuzzle.com/media/63f44c53815430414f6aa6b3' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/63f45261eaf221415bb8ccf3' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+
+    st.divider()
+            
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vRNtQCOLJbGm47vieTI6GLxfSgh-IdCzw5yKa6EArwBS2_rKsnr78pV3r9SksJW2gzF2Fuf7E8jzkzM/embed?start=false&loop=false&delayms=3000", height=480)
+
+def septima_semana():
+    set_styles()
+    st.subheader('¿Dónde está el contról? Pt 2')
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
+    clms23 = st.columns([1,1])
+    with clms23[0]:
+        st.title('')
+        st.markdown('<h5>Vocabulario</h5>', unsafe_allow_html=True)
+    with clms23[1]:
+        st.video('https://youtu.be/wH6DQEvPg3w')
+    clms24 = st.columns([1,1])
+    with clms24[0]:
+        st.title('')
+        st.markdown('<h5>Conversación (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
+    with clms24[1]:    
+        st.video('https://youtu.be/DPWS7MuTJTA')
+    clms25 = st.columns([1,1])
+    with clms25[0]:
+        st.title('')
+        st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
+    with clms25[1]: 
+        st.video('https://youtu.be/pz2z8UP7We8')
+    clms26 = st.columns([1,1])
+    with clms26[0]:
+        st.title('')
+        st.markdown('<h5>Cultura Sorda</h5>', unsafe_allow_html=True)
+    with clms26[1]:
+        st.video('https://youtu.be/OZu28_eeDq0')
+    clms29 = st.columns([1,1])
+    with clms29[0]:
+        st.title('')
+        st.markdown('<h5>Frases</h5>', unsafe_allow_html=True)
+    with clms29[1]:
+        st.video('https://youtu.be/mKKM5c5B27U')
+    clms30 = st.columns([1,1])
+    with clms30[0]:
+        st.title('')
+        st.markdown('<h5>Cuento (sin subtítulos) 🔇</h5>', unsafe_allow_html=True)
+    with clms30[1]:    
+        st.video('https://youtu.be/qkIXqIf9oNs')
+    clms31 = st.columns([1,1])
+    with clms31[0]:
+        st.title('')
+        st.markdown('<h5>Cuento (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
+    with clms31[1]: 
+        st.video('https://youtu.be/EPMDpOO-lDI')        
+    st.divider()
+
+    st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
+    clms28 = st.columns([1,1])
+    with clms28[0]:
+        st.title('')
+        st.markdown('<h5>Practica</h5>', unsafe_allow_html=True)
+    with clms28[1]:
+        st.markdown("<a href='https://edpuzzle.com/media/640bd6c89bbb9e42a124866b' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/640e37f0b6a56042bd07b94c' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+
+    st.divider()
+            
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ8stRFQOfu2FuAFsKrcmFSnmB6MZv4hPdR5FLOoKKik-VRNJE8Py2PHiJ-7B2JXBEie2I_CvnwShjR/embed?start=false&loop=false&delayms=3000", height=480)
