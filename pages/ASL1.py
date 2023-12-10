@@ -65,7 +65,7 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Historia de ASL</h5>', unsafe_allow_html=True)
     with clms37[1]: 
-        st.video('https://youtu.be/Pt2_EjmtUp8')
+        components.iframe("https://youtu.be/Pt2_EjmtUp8", height=480)
 
     st.divider()
 
@@ -75,7 +75,8 @@ def primera_semana():
         st.title('')
         st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
     with clms38[1]: 
-        st.video('https://youtu.be/dJBLpQFhujo')
+        components.iframe("https://youtu.be/dJBLpQFhujo", height=480)
+
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
