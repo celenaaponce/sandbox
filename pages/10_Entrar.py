@@ -90,10 +90,12 @@ def creds_entered():
         for key in emails:
                 if st.session_state['correo_electronico'].strip() == key and st.session_state['password'].strip() == password:
                         st.session_state['authenticated'] = True
+                        st.session_state['name'] = config['credentials']['username'][key]['name']
                         return
                         
 
         st.session_state['authenticated'] = False
+        st.session_state['name'] = ""
         if not st.session_state['password']:
                 st.warning("Haga el favor de entrar su contraseña")
         elif not st.session_state['correo_electronico']:
