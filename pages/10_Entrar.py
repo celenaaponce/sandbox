@@ -98,7 +98,7 @@ authenticator = stauth.Authenticate(
 )
 
 name, authentication_status, username = authenticator.login('Entrar', 'main')
-st.write(name, authentication_status, username)
+st.write('n', name, 'a', authentication_status, 'u', username)
 if authentication_status:
     authenticator.logout('Salir', 'main')
     st.title(f'Bienvenido *{name}*')
