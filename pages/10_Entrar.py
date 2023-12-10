@@ -86,7 +86,7 @@ def creds_entered():
         with open('info.yaml') as file:
             config = yaml.load(file, Loader=SafeLoader)
         emails = config['credentials']['usernames'].keys()
-        password = st.secrets['password']
+        password = 'ASL'
         for key in emails:
                 if st.session_state['correo_electronico'].strip() == key and st.session_state['password'].strip() == password:
                         st.session_state['authenticated'] = True
