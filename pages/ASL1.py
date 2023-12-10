@@ -25,7 +25,7 @@ def set_styles():
     
 
 def primera_semana():
-  tracemalloc.start()
+    tracemalloc.start()
 
     set_styles()
     if st.session_state['phone'] == True:
