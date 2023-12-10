@@ -93,6 +93,8 @@ def primera_semana():
         st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
     with clms38[1]: 
         components.iframe("https://youtu.be/dJBLpQFhujo", height=480)
+        st.write('memory', tracemalloc.get_traced_memory())
+        tracemalloc.stop()
 
     st.divider()
     
