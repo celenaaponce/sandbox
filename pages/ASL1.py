@@ -5,8 +5,6 @@ import streamlit.components.v1 as components
 from streamlit_js_eval import streamlit_js_eval
 import tracemalloc
 
-if 'phone' not in st.session_state:
-  st.session_state['phone'] = False
 
 screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
 
@@ -15,6 +13,8 @@ if screen_width != None:
       st.session_state['phone'] = True
   else:
       st.session_state['phone'] = False
+else:
+  st.session_state['phone'] = False
 def set_styles():
     st.write("""
         <style>
