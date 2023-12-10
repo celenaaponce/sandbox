@@ -79,7 +79,7 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
 
-def cred_entered():
+def creds_entered():
         if st.session_state['correo_electronico'].strip() == 'admin' and st.session_state['password'].strip() == 'admin':
                 st.session_state['authenticated'] = True
                 
