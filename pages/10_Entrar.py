@@ -82,7 +82,6 @@ def set_styles():
 def creds_entered():
         if st.session_state['correo_electronico'].strip() == 'admin' and st.session_state['password'].strip() == 'admin':
                 st.session_state['authenticated'] = True
-                email = st.session_state['correo_electronico']
                 
         else:
                 st.session_state['authenticated'] = False
