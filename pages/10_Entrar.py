@@ -111,6 +111,8 @@ def authenticate_user():
                         return True
                 else:
                         st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
+                        st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
+
                         return False
 
 enter = authenticate_user()
