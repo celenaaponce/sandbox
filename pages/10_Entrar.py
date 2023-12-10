@@ -85,7 +85,12 @@ def creds_entered():
                 
         else:
                 st.session_state['authenticated'] = False
-                st.error('Nombre/contraseña es mal')
+                if not st.session_state['password']:
+                        st.warning("Haga el favor de entrar su contraseña")
+                elif not st.session_state['correo_electronico']:
+                        st.warning("Haga el favor de entrar su correo electronico")
+                else:
+                        st.error('Nombre/contraseña es mal')
 
 def authenticate_user():
         if 'authenticated' not in st.session_state:
