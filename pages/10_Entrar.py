@@ -130,7 +130,6 @@ if enter:
     st.write(tracemalloc.get_traced_memory())
     tracemalloc.stop()
     if email in st.secrets.ASL1:
-        tracemalloc.start()
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
@@ -139,8 +138,7 @@ if enter:
                                                                  ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
         with tab1:
              ASL1.primera_semana()
-             st.write(tracemalloc.get_traced_memory())
-             tracemalloc.stop()
+
         with tab2:
              ASL1.segunda_semana()
         with tab3:
