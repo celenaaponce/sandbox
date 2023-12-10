@@ -95,6 +95,7 @@ def authenticate_user():
                 return False, email
         else:
                 if st.session_state['authenticated']:
+                        email = st.session_state['correo_electronico']
                         return True, email
                 else:
                         st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
