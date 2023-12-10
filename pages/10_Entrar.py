@@ -12,6 +12,7 @@ from pages import ASL1
 from pages import ASL2
 from pages import ASLAtHome
 from pages import holidays
+import tracemalloc
 
 def regular_sidebar():
         show_pages(
@@ -120,13 +121,16 @@ def authenticate_user():
                         st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
 
                         return False
-
+tracemalloc.start()
 enter = authenticate_user()
 if enter:
     name = st.session_state['name']
     st.title(f'Bienvenido *{name}*')
     email = st.session_state['correo_electronico']
+    st.write(tracemalloc.get_traced_memory())
+    tracemalloc.stop()
     if email in st.secrets.ASL1:
+        tracemalloc.start()
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
@@ -135,6 +139,8 @@ if enter:
                                                                  ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
         with tab1:
              ASL1.primera_semana()
+             st.write(tracemalloc.get_traced_memory())
+             tracemalloc.stop()
         with tab2:
              ASL1.segunda_semana()
         with tab3:
