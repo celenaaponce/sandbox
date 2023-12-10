@@ -88,6 +88,7 @@ def creds_entered():
                 if st.session_state['correo_electronico'].strip() == key and st.session_state['password'].strip() == password:
                         st.session_state['authenticated'] = True
                         st.session_state['name'] = config['credentials']['usernames'][key]['name']
+                        st.session_state['email'] = config['credentials']['usernames'][key]['email']
                         return
                         
 
@@ -126,7 +127,7 @@ enter = authenticate_user()
 if enter:
     name = st.session_state['name']
     st.title(f'Bienvenido *{name}*')
-    email = st.session_state['correo_electronico']
+    email = st.session_state['email']
     st.write(tracemalloc.get_traced_memory())
     tracemalloc.reset_peak()
     if email in st.secrets.ASL1:
