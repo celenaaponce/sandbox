@@ -90,7 +90,7 @@ def creds_entered():
 def authenticate_user():
         if 'authenticated' not in st.session_state:
                 st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
-                st.text_input(label="Contraseña :", value ="", key="", type="password", on_change=creds_entered)
+                st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
                 return False, ""
         else:
                 if st.session_state['authenticated']:
