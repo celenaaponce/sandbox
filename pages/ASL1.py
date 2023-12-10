@@ -82,8 +82,8 @@ def primera_semana():
         st.markdown('<h5>Historia de ASL</h5>', unsafe_allow_html=True)
     with clms37[1]: 
         components.iframe("https://youtu.be/Pt2_EjmtUp8", height=480)
-        st.write(tracemalloc.get_traced_memory())
-        tracemalloc.stop()
+        snapshot = tracemalloc.take_snapshot() 
+        top_stats = snapshot.statistics('lineno')
 
     st.divider()
 
@@ -98,8 +98,8 @@ def primera_semana():
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
-    st.write(tracemalloc.get_traced_memory())
-    tracemalloc.stop()
+    snapshot = tracemalloc.take_snapshot() 
+    top_stats = snapshot.statistics('lineno')
 
 def segunda_semana():
     set_styles()
@@ -165,6 +165,7 @@ def segunda_semana():
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQd8Y-xcWg9rS517V1gkm3m7O_sEKq_OSo4nQxS2RI2TFew0eR1yjqb1_mhLUfZ9CW1hrApe8mbHNLj/embed?start=false&loop=false&delayms=3000", height=480)
 
 def tercera_semana():
+    tracemalloc.start()
     set_styles()
     st.subheader('Conocer La Familia Bravo Pt 2')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
@@ -229,6 +230,8 @@ def tercera_semana():
 
     st.divider()
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTxPJGXEYZG_-N-G7ypLyhScw07aukwDGxidek6zeh1iCQYRaRfuyTZ76xHec4iOGFz9fjTX31aICJ1/embed?start=false&loop=false&delayms=3000", height=480)
+    snapshot = tracemalloc.take_snapshot() 
+    top_stats = snapshot.statistics('lineno')
 
 def cuarta_semana():
     set_styles()
