@@ -80,6 +80,12 @@ def set_styles():
     """, unsafe_allow_html=True)
 
 def creds_entered():
+        file_id = st.secrets['yaml']
+        url = f'https://drive.google.com/uc?id={file_id}'
+        gdown.download(url, 'info.yaml', quiet=False)
+        with open('info.yaml') as file:
+            config = yaml.load(file, Loader=SafeLoader)
+        st.write(config)
         if st.session_state['correo_electronico'].strip() == 'admin' and st.session_state['password'].strip() == 'admin':
                 st.session_state['authenticated'] = True
                 
