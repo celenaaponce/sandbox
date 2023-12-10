@@ -82,6 +82,8 @@ def primera_semana():
         st.markdown('<h5>Historia de ASL</h5>', unsafe_allow_html=True)
     with clms37[1]: 
         components.iframe("https://youtu.be/Pt2_EjmtUp8", height=480)
+        st.write(tracemalloc.get_traced_memory())
+       tracemalloc.stop()
 
     st.divider()
 
