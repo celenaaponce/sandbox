@@ -100,7 +100,7 @@ def authenticate_user():
                         st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
                         return False
 
-enter, email = authenticate_user()
+enter = authenticate_user()
 if enter:
     st.title(f'Bienvenido')
     if email in st.secrets.ASL1:
