@@ -80,11 +80,7 @@ def set_styles():
     """, unsafe_allow_html=True)
 
 def creds_entered():
-        file_id = st.secrets['yaml']
-        url = f'https://drive.google.com/uc?id={file_id}'
-        gdown.download(url, 'info.yaml', quiet=False)
-        with open('info.yaml') as file:
-            config = yaml.load(file, Loader=SafeLoader)
+        config = download_yaml()
         emails = config['credentials']['usernames'].keys()
         password = 'ASL'
         for key in emails:
@@ -102,7 +98,15 @@ def creds_entered():
                 st.warning("Haga el favor de entrar su correo electronico")
         else:
                 st.error('Nombre/contraseña es mal')
-
+@st.cache_data
+def download_yaml():
+        file_id = st.secrets['yaml']
+        url = f'https://drive.google.com/uc?id={file_id}'
+        gdown.download(url, 'info.yaml', quiet=False)
+        with open('info.yaml') as file:
+            config = yaml.load(file, Loader=SafeLoader)
+        return config
+        
 def authenticate_user():
         if 'authenticated' not in st.session_state:
                 st.text_input(label="Correo Electronico :", value ="", key="correo_electronico", on_change=creds_entered)
