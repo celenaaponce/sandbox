@@ -28,7 +28,8 @@ def set_styles():
     
 if screenD != None:
     screen_d = screenD.st_screen_data_window_top()
-    st.session_state['screen_width'] = screen_d['innerWidth'] 
+    if screen_d != None:
+        st.session_state['screen_width'] = screen_d['innerWidth'] 
              
 if st.session_state['screen_width'] != None:
     if st.session_state['screen_width'] < 400:
