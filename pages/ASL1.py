@@ -6,6 +6,15 @@ from streamlit_js_eval import streamlit_js_eval
 import tracemalloc
 from st_screen_stats import ScreenData
 
+if 'screen_width' not in st.session_state:
+    st.session_state['screen_width'] = None
+    
+def get_screen_size():
+    screenD = ScreenData()
+    return screenD
+        
+screenD = get_screen_size() 
+
 def set_styles():
     st.write("""
         <style>
@@ -16,15 +25,6 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-    
-if 'screen_width' not in st.session_state:
-    st.session_state['screen_width'] = None
-        
-def get_screen_size():
-    screenD = ScreenData()
-    return screenD
-        
-screenD = get_screen_size()  
     
 if screenD != None:
     screen_d = screenD.st_screen_data_window_top()
