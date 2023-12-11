@@ -19,7 +19,7 @@ def set_styles():
     if 'screen_width' not in st.session_state:
         screenD = ScreenData()
         screen_d = screenD.st_screen_data_window_top()
-        st.session_state['screen_width'] = screen_d['inner_width']
+        st.session_state['screen_width'] = screen_d['innerWidth']
 
         
 
