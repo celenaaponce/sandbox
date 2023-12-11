@@ -93,8 +93,6 @@ def primera_semana(session):
         st.title('')
         st.markdown(f'<{header}>Historia de ASL</{header}>', unsafe_allow_html=True)
     with clms37[1]: 
-        st.video("https://youtu.be/Pt2_EjmtUp8")
-        
 
     st.divider()
 
@@ -104,7 +102,6 @@ def primera_semana(session):
         st.title('')
         st.markdown(f'<{header}>Vocabulario para la semana que viene</{header}>', unsafe_allow_html=True)
     with clms38[1]: 
-        st.video("https://youtu.be/dJBLpQFhujo")
 
     st.divider()
     
