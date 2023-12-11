@@ -24,6 +24,7 @@ def primera_semana(session):
     else:
       size = 100
     header = session['font']
+    st.write(session['screen_width'])
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
