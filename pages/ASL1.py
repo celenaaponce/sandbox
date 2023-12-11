@@ -18,7 +18,6 @@ def set_styles():
     """, unsafe_allow_html=True)
     
     if 'screen_width' not in st.session_state:
-        st.session_state['screen_width'] = None
         screenD = ScreenData()
         screen_d = screenD.st_screen_data_window_top()
         if screen_d != None:
