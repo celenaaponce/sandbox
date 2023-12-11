@@ -48,43 +48,43 @@ def primera_semana(session):
         st.title('')
         st.markdown(f'<{header}>Escuelas para los Sordos en EEUU</{header}>', unsafe_allow_html=True)
     with clms[1]:
-        st.markdown(f"<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= {size*2} height = {size} /></a>", unsafe_allow_html=True)
+        st.markdown(f"<a href='https://www.asd-1817.org/deaf-schools' target='_blank'></a>", unsafe_allow_html=True)
     clms31 = st.columns([1,1])
     with clms31[0]:
         st.title('')
         st.markdown(f'<{header}>Alarma de Reloj para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms31[1]:
-        st.markdown(f"<a href='https://www.diglo.com/vibrating-clocks-and-watches/alarm-clocks;d=3;c=31;s=311' target='_blank'><img style='float: right;' src='https://m.media-amazon.com/images/I/7100+aehKvL._AC_SY300_SX300_.jpg' width={size*2} height={size}/></a>", unsafe_allow_html=True)     
+        st.markdown(f"<a href='https://www.diglo.com/vibrating-clocks-and-watches/alarm-clocks;d=3;c=31;s=311' target='_blank'></a>", unsafe_allow_html=True)     
     clms32 = st.columns([1,1])
     with clms32[0]:
         st.title('')
         st.markdown(f'<{header}>Timbre con luz para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms32[1]:    
-        st.markdown(f"<a href='https://www.diglo.com/shop-by-alert-trigger/doorbell-and-door-knock;d=3;c=32;s=323' target='_blank'><img style='float: right;' src = 'https://m.media-amazon.com/images/I/310R2UqXt0L._AC_.jpg' width = {size*2} height = {size}/></a>", unsafe_allow_html=True)     
+        st.markdown(f"<a href='https://www.diglo.com/shop-by-alert-trigger/doorbell-and-door-knock;d=3;c=32;s=323' target='_blank'></a>", unsafe_allow_html=True)     
     clms33 = st.columns([1,1])
     with clms33[0]:
         st.title('')
         st.markdown(f'<{header}>Alarma de Incendios para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms33[1]:     
-        st.markdown(f"<a href='https://www.diglo.com/shop-by-alert-trigger/smoke-and-fire;d=3;c=32;s=328' target='_blank'><img style='float: right;' src='https://m.media-amazon.com/images/I/41JvpGHNyKL.__AC_SX300_SY300_QL70_FMwebp_.jpg' width={size*2} height = {size}/></a>", unsafe_allow_html=True)
+        st.markdown(f"<a href='https://www.diglo.com/shop-by-alert-trigger/smoke-and-fire;d=3;c=32;s=328' target='_blank'></a>", unsafe_allow_html=True)
     clms34 = st.columns([1,1])
     with clms34[0]:
         st.title('')
         st.markdown(f'<{header}>Teléfono de Vídeo para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms34[1]:         
-        st.markdown(f"<a href='https://purplevrs.com/espanol' target='_blank'><img style='float: right;' src='https://www.purplevrs.com/media/1282/video-quality-slide-v2-450x450.png' width={size*1.5} height = {size}/></a>", unsafe_allow_html=True)
+        st.markdown(f"<a href='https://purplevrs.com/espanol' target='_blank'></a>", unsafe_allow_html=True)
     clms35 = st.columns([1,1])
     with clms35[0]:
         st.title('')
         st.markdown(f'<{header}>App para aprender para iPhone </{header}>', unsafe_allow_html=True)
     with clms35[1]:      
-        st.markdown(f"<a href='https://apps.apple.com/us/app/intersign-asl-learn-now/id1567327543' target='_blank'><img style='float: right;' src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height={size} width={size}/></a>", unsafe_allow_html=True)
+        st.markdown(f"<a href='https://apps.apple.com/us/app/intersign-asl-learn-now/id1567327543' target='_blank'></a>", unsafe_allow_html=True)
     clms36 = st.columns([1,1])
     with clms36[0]:
         st.title('')
         st.markdown(f'<{header}>App para aprender para Android</{header}>', unsafe_allow_html=True)
     with clms36[1]:     
-        st.markdown(f"<a href='https://play.google.com/store/apps/details?id=intersign.learn.asl&hl=en_US&gl=US' target='_blank'><img style='float: right;' src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height={size} width={size}/></a>", unsafe_allow_html=True)
+        st.markdown(f"<a href='https://play.google.com/store/apps/details?id=intersign.learn.asl&hl=en_US&gl=US' target='_blank'></a>", unsafe_allow_html=True)
     current, peak = tracemalloc.get_traced_memory()
     st.write(current, peak)
     tracemalloc.reset_peak()
