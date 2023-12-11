@@ -24,13 +24,13 @@ def set_styles():
     if st.session_state['screen_width'] != None:
       if st.session_state['screen_width'] < 400:
           st.session_state['phone'] = True
-          st.session_state['font'] = h6
+          st.session_state['font'] = 'h6'
       else:
           st.session_state['phone'] = False
-          st.session_state['font'] = h5
+          st.session_state['font'] = 'h5'
     else:
       st.session_state['phone'] = False
-      st.session_state['font'] = h5
+      st.session_state['font'] = 'h5'
     
 
 def primera_semana():
