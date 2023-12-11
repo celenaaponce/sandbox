@@ -18,10 +18,11 @@ def set_styles():
     """, unsafe_allow_html=True)
     
     if 'screen_width' not in st.session_state:
-        screenD = ScreenData()
-        screen_d = screenD.st_screen_data_window_top()
-        if screen_d != None:
-            st.session_state['screen_width'] = screen_d['innerWidth']        
+        st.session_state['screen_width'] = None
+    screenD = ScreenData()
+    screen_d = screenD.st_screen_data_window_top()
+    if screen_d != None:
+        st.session_state['screen_width'] = screen_d['innerWidth']  
 
     if st.session_state['screen_width'] != None:
       if st.session_state['screen_width'] < 400:
