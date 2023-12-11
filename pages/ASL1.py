@@ -4,6 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from streamlit_js_eval import streamlit_js_eval
 import tracemalloc
+from st_screen_stats import ScreenData, StreamlitNativeWidgetScreen, WindowQuerySize, WindowScreenRange
 
 def set_styles():
     st.write("""
@@ -15,12 +16,11 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-    screen_width = None
-    cnt = 0
-    while screen_width == None:
-        cnt += 1
-        screen_width = streamlit_js_eval(js_expressions='screen.width', key = f'SCR_{cnt}')
-    st.session_state['screen_width'] = screen_width
+    if 'screen_width' not in st.session_state:
+        screenD = ScreenData()
+        screen_d = screenD.st_screen_data_window_top()
+        st.session_state['screen_width'] = screen_d['inner_width']
+
         
 
     if st.session_state['screen_width'] != None:
