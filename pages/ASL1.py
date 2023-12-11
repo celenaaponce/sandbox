@@ -34,10 +34,10 @@ def primera_semana():
 
     set_styles()
     if st.session_state['phone'] == True:
-      st.write('phone')
       size = 25
     else:
       size = 100
+    st.subheader(st.session_state['phone'])
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
