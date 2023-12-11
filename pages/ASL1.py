@@ -34,6 +34,7 @@ def primera_semana():
 
     set_styles()
     if st.session_state['phone'] == True:
+      st.write('phone')
       size = 25
     else:
       size = 100
