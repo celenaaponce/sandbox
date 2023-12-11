@@ -92,7 +92,7 @@ def primera_semana(session):
     with clms37[0]:
         st.title('')
         st.markdown(f'<{header}>Historia de ASL</{header}>', unsafe_allow_html=True)
-    with clms37[1]: 
+
 
     st.divider()
 
