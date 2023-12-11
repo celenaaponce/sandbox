@@ -20,6 +20,7 @@ def set_styles():
         screenD = ScreenData()
         screen_d = screenD.st_screen_data_window_top()
         st.session_state['screen_width'] = screen_d['innerWidth']
+        st.write(screen_d['innerWidth'])
 
         
 
