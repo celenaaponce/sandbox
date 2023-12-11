@@ -19,10 +19,7 @@ def set_styles():
     if 'screen_width' not in st.session_state:
         screenD = ScreenData()
         screen_d = screenD.st_screen_data_window_top()
-        st.session_state['screen_width'] = screen_d['innerWidth']
-        st.write(screen_d['innerWidth'])
-
-        
+        st.session_state['screen_width'] = screen_d['innerWidth']        
 
     if st.session_state['screen_width'] != None:
       if st.session_state['screen_width'] < 400:
@@ -38,6 +35,7 @@ def set_styles():
 
 def primera_semana():
     set_styles()
+    st.write(st.session_state['screen_width'])
     if st.session_state['phone'] == True:
       size = 100
     else:
