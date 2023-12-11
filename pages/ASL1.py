@@ -24,10 +24,13 @@ def set_styles():
     def get_screen_size():
         screenD = ScreenData()
         screen_d = screenD.st_screen_data_window_top()
-        if screen_d != None:
-            st.session_state['screen_width'] = screen_d['innerWidth'] 
-            
-    get_screen_size()
+        return screen_d
+        
+    screen_d = get_screen_size()  
+    
+    if screen_d != None:
+        st.session_state['screen_width'] = screen_d['innerWidth'] 
+             
     if st.session_state['screen_width'] != None:
       if st.session_state['screen_width'] < 400:
           st.session_state['phone'] = True
