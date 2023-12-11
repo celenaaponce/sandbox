@@ -18,13 +18,18 @@ def set_styles():
     
 
 def primera_semana(session):
-
+    tracemalloc.start()
     set_styles()
+    current, peak = tracemalloc.get_traced_memory()
+    st.write(current, peak)
+    tracemalloc.reset_peak()
     if session['phone'] == True:
       size = 50
     else:
       size = 100
-    tracemalloc.start()
+    current, peak = tracemalloc.get_traced_memory()
+    st.write(current, peak)
+    tracemalloc.reset_peak()
     header = session['font']
     st.write(session['screen_width'])
     current, peak = tracemalloc.get_traced_memory()
@@ -32,6 +37,9 @@ def primera_semana(session):
     tracemalloc.reset_peak()
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
+    current, peak = tracemalloc.get_traced_memory()
+    st.write(current, peak)
+    tracemalloc.reset_peak()
     clms = st.columns([1,1])
     with clms[0]:
         st.title('')
