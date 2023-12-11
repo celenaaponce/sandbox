@@ -37,7 +37,7 @@ def primera_semana():
 
     set_styles()
     if st.session_state['phone'] == True:
-      size = 50
+      size = 75
     else:
       size = 100
     header = st.session_state['font']
