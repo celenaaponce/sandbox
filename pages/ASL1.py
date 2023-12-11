@@ -20,6 +20,7 @@ def set_styles():
     if 'screen_width' not in st.session_state:
         st.session_state['screen_width'] = None
         
+    @st.cache(allow_output_mutation=True)    
     def get_screen_size():
         screenD = ScreenData()
         screen_d = screenD.st_screen_data_window_top()
