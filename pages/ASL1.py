@@ -4,16 +4,6 @@ from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from streamlit_js_eval import streamlit_js_eval
 import tracemalloc
-from st_screen_stats import ScreenData
-
-if 'screen_width' not in st.session_state:
-    st.session_state['screen_width'] = None
-    
-def get_screen_size():
-    screenD = ScreenData()
-    return screenD
-        
-screenD = get_screen_size() 
 
 def set_styles():
     st.write("""
@@ -26,29 +16,14 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
     
-if screenD != None:
-    screen_d = screenD.st_screen_data_window_top()
-    st.session_state['screen_width'] = screen_d['innerWidth'] 
-             
-if st.session_state['screen_width'] != None:
-    if st.session_state['screen_width'] < 400:
-        st.session_state['phone'] = True
-        st.session_state['font'] = 'h6'
-    else:
-        st.session_state['phone'] = False
-        st.session_state['font'] = 'h5'
-else:
-    st.session_state['phone'] = False
-    st.session_state['font'] = 'h5'
-    
 
-def primera_semana():
+def primera_semana(session):
     set_styles()
-    if st.session_state['phone'] == True:
+    if session['phone'] == True:
       size = 100
     else:
       size = 100
-    header = st.session_state['font']
+    header = session['font']
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
