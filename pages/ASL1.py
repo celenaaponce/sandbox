@@ -19,10 +19,10 @@ def set_styles():
 
 def primera_semana(session):
     tracemalloc.start()
-    set_styles()
-    current, peak = tracemalloc.get_traced_memory()
-    st.write(current, peak)
-    tracemalloc.reset_peak()
+    # set_styles()
+    # current, peak = tracemalloc.get_traced_memory()
+    # st.write(current, peak)
+    # tracemalloc.reset_peak()
     if session['phone'] == True:
       size = 50
     else:
