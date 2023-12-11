@@ -18,12 +18,13 @@ def set_styles():
     
 
 def primera_semana(session):
-    tracemalloc.start()
+
     set_styles()
     if session['phone'] == True:
       size = 50
     else:
       size = 100
+    tracemalloc.start()
     header = session['font']
     st.write(session['screen_width'])
     current, peak = tracemalloc.get_traced_memory()
