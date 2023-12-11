@@ -44,7 +44,6 @@ else:
 
 def primera_semana():
     set_styles()
-    st.write(st.session_state['screen_width'])
     if st.session_state['phone'] == True:
       size = 100
     else:
