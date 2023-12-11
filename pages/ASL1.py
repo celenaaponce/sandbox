@@ -92,7 +92,7 @@ def primera_semana(session):
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
     snapshot = tracemalloc.take_snapshot()
-top_stats = snapshot.statistics('traceback')
+    top_stats = snapshot.statistics('traceback')
 
     # pick the biggest memory block
     stat = top_stats[0]
