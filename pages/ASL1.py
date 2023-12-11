@@ -27,7 +27,7 @@ def primera_semana(session):
     st.write(current, peak)
     tracemalloc.reset_peak()
     if session['phone'] == True:
-      size = 50
+      size = 10
     else:
       size = 100
     current, peak = tracemalloc.get_traced_memory()
