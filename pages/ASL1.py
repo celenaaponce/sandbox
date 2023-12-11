@@ -20,15 +20,14 @@ def set_styles():
     if 'screen_width' not in st.session_state:
         st.session_state['screen_width'] = None
         
-    @st.cache_resource  
     def get_screen_size():
         screenD = ScreenData()
-        screen_d = screenD.st_screen_data_window_top()
-        return screen_d
+        return screenD
         
-    screen_d = get_screen_size()  
+    screenD = get_screen_size()  
     
-    if screen_d != None:
+    if screenD != None:
+        screen_d = screenD.st_screen_data_window_top()
         st.session_state['screen_width'] = screen_d['innerWidth'] 
              
     if st.session_state['screen_width'] != None:
