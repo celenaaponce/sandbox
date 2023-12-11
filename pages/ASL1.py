@@ -4,7 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from streamlit_js_eval import streamlit_js_eval
 import tracemalloc
-from st_screen_stats import ScreenData, StreamlitNativeWidgetScreen, WindowQuerySize, WindowScreenRange
+from st_screen_stats import ScreenData
 
 def set_styles():
     st.write("""
