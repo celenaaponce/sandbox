@@ -16,10 +16,8 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
     screen_width = None
-    count = 0
     while screen_width == None:
-        screen_width = streamlit_js_eval(js_expressions='screen.width', key = f'SCR_{count}')
-        count += 1
+        screen_width = streamlit_js_eval(js_expressions='screen.width')
     st.session_state['screen_width'] = screen_width
         
 
