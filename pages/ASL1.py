@@ -19,7 +19,7 @@ def set_styles():
     cnt = 0
     while screen_width == None:
         cnt += 1
-        screen_width = streamlit_js_eval(js_expressions='screen.width', key = f'{cnt}')
+        screen_width = streamlit_js_eval(js_expressions='screen.width', key = f'SCR_{cnt}')
     st.session_state['screen_width'] = screen_width
         
 
