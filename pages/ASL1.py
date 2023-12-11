@@ -15,10 +15,10 @@ def set_styles():
             }
         </style>
     """, unsafe_allow_html=True)
-
-    if 'screen_width' not in st.session_state:
+    screen_width = None:
+    while screen_width == None:
         screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
-        st.session_state['screen_width'] = screen_width
+    st.session_state['screen_width'] = screen_width
         
 
     if st.session_state['screen_width'] != None:
