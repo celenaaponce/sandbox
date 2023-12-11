@@ -18,7 +18,7 @@ def set_styles():
     
 
 def primera_semana(session):
-    tracemalloc.start(25)
+    tracemalloc.start()
     set_styles()
     if session['phone'] == True:
       size = 50
@@ -26,6 +26,9 @@ def primera_semana(session):
       size = 100
     header = session['font']
     st.write(session['screen_width'])
+    current, peak = tracemalloc.get_traced_memory()
+    st.write(current, peak)
+    tracemalloc.reset_peak()
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
@@ -70,6 +73,9 @@ def primera_semana(session):
         st.markdown(f'<{header}>App para aprender para Android</{header}>', unsafe_allow_html=True)
     with clms36[1]:     
         st.markdown(f"<a href='https://play.google.com/store/apps/details?id=intersign.learn.asl&hl=en_US&gl=US' target='_blank'><img style='float: right;' src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height={size} width={size}/></a>", unsafe_allow_html=True)
+    current, peak = tracemalloc.get_traced_memory()
+    st.write(current, peak)
+    tracemalloc.reset_peak()
     clms37 = st.columns([1,1])
     with clms37[0]:
         st.title('')
@@ -91,14 +97,8 @@ def primera_semana(session):
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
-    snapshot = tracemalloc.take_snapshot()
-    top_stats = snapshot.statistics('traceback')
-
-    # pick the biggest memory block
-    stat = top_stats[0]
-    st.write("%s memory blocks: %.1f KiB" % (stat.count, stat.size / 1024))
-    for line in stat.traceback.format():
-        st.write(line)
+    current, peak = tracemalloc.get_traced_memory()
+    st.write(current, peak)
 def segunda_semana():
     set_styles()
     st.subheader('Conocer La Familia Bravo Pt 1')
