@@ -101,7 +101,7 @@ def primera_semana(session):
     with clms38[0]:
         st.title('')
         st.markdown(f'<{header}>Vocabulario para la semana que viene</{header}>', unsafe_allow_html=True)
-    with clms38[1]: 
+
 
     st.divider()
     
