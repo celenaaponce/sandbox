@@ -122,14 +122,11 @@ def authenticate_user():
                         st.text_input(label="Contraseña :", value ="", key="password", type="password", on_change=creds_entered)
 
                         return False
-tracemalloc.start()
 enter = authenticate_user()
 if enter:
     name = st.session_state['name']
     st.title(f'Bienvenido *{name}*')
     email = st.session_state['email']
-    st.write(tracemalloc.get_traced_memory())
-    tracemalloc.reset_peak()
     if email in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
