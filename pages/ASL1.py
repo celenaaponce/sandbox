@@ -34,7 +34,7 @@ def primera_semana():
 
     set_styles()
     if st.session_state['phone'] == True:
-      size = 50
+      size = 25
     else:
       size = 100
     st.subheader('Primera Semana: Introducción')
