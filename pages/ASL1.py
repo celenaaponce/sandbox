@@ -18,7 +18,7 @@ def set_styles():
     
 
 def primera_semana(session):
-    tracemalloc.start()
+
     # set_styles()
     # current, peak = tracemalloc.get_traced_memory()
     # st.write(current, peak)
@@ -27,6 +27,7 @@ def primera_semana(session):
       size = 50
     else:
       size = 100
+    tracemalloc.start()
     current, peak = tracemalloc.get_traced_memory()
     st.write(current, peak)
     tracemalloc.reset_peak()
