@@ -136,7 +136,6 @@ if enter:
                                                                  ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
         with tab1:
              ASL1.primera_semana()
-             st.write(tracemalloc.get_traced_memory())
         with tab2:
              ASL1.segunda_semana()
         with tab3:
