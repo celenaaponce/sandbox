@@ -24,10 +24,13 @@ def set_styles():
     if st.session_state['screen_width'] != None:
       if st.session_state['screen_width'] < 400:
           st.session_state['phone'] = True
+          st.session_state['font'] = h6
       else:
           st.session_state['phone'] = False
+          st.session_state['font'] = h5
     else:
       st.session_state['phone'] = False
+      st.session_state['font'] = h5
     
 
 def primera_semana():
@@ -37,55 +40,55 @@ def primera_semana():
       size = 25
     else:
       size = 100
-    st.subheader(st.session_state['screen_width'])
+    header = st.session_state['font']
     st.subheader('Primera Semana: Introducción')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Recursos</u></h4>", unsafe_allow_html=True)
     clms = st.columns([1,1])
     with clms[0]:
         st.title('')
-        st.markdown('<h5>Escuelas para los Sordos en EEUU</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Escuelas para los Sordos en EEUU</{header}>', unsafe_allow_html=True)
     with clms[1]:
         st.markdown(f"<a href='https://www.asd-1817.org/deaf-schools' target='_blank'><img style='float: right;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-20%20at%205.21.38%20PM.png' width= {size*2} height = {size} /></a>", unsafe_allow_html=True)
     clms31 = st.columns([1,1])
     with clms31[0]:
         st.title('')
-        st.markdown('<h5>Alarma de Reloj para personas Sordos</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Alarma de Reloj para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms31[1]:
         st.markdown(f"<a href='https://www.diglo.com/vibrating-clocks-and-watches/alarm-clocks;d=3;c=31;s=311' target='_blank'><img style='float: right;' src='https://m.media-amazon.com/images/I/7100+aehKvL._AC_SY300_SX300_.jpg' width={size*2} height={size}/></a>", unsafe_allow_html=True)     
     clms32 = st.columns([1,1])
     with clms32[0]:
         st.title('')
-        st.markdown('<h5>Timbre con luz para personas Sordos</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Timbre con luz para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms32[1]:    
         st.markdown(f"<a href='https://www.diglo.com/shop-by-alert-trigger/doorbell-and-door-knock;d=3;c=32;s=323' target='_blank'><img style='float: right;' src = 'https://m.media-amazon.com/images/I/310R2UqXt0L._AC_.jpg' width = {size*2} height = {size}/></a>", unsafe_allow_html=True)     
     clms33 = st.columns([1,1])
     with clms33[0]:
         st.title('')
-        st.markdown('<h5>Alarma de Incendios para personas Sordos</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Alarma de Incendios para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms33[1]:     
         st.markdown(f"<a href='https://www.diglo.com/shop-by-alert-trigger/smoke-and-fire;d=3;c=32;s=328' target='_blank'><img style='float: right;' src='https://m.media-amazon.com/images/I/41JvpGHNyKL.__AC_SX300_SY300_QL70_FMwebp_.jpg' width={size*2} height = {size}/></a>", unsafe_allow_html=True)
     clms34 = st.columns([1,1])
     with clms34[0]:
         st.title('')
-        st.markdown('<h5>Teléfono de Vídeo para personas Sordos</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Teléfono de Vídeo para personas Sordos</{header}>', unsafe_allow_html=True)
     with clms34[1]:         
         st.markdown(f"<a href='https://purplevrs.com/espanol' target='_blank'><img style='float: right;' src='https://www.purplevrs.com/media/1282/video-quality-slide-v2-450x450.png' width={size*1.5} height = {size}/></a>", unsafe_allow_html=True)
     clms35 = st.columns([1,1])
     with clms35[0]:
         st.title('')
-        st.markdown('<h5>App para aprender para iPhone </h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>App para aprender para iPhone </{header}>', unsafe_allow_html=True)
     with clms35[1]:      
         st.markdown(f"<a href='https://apps.apple.com/us/app/intersign-asl-learn-now/id1567327543' target='_blank'><img style='float: right;' src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height={size} width={size}/></a>", unsafe_allow_html=True)
     clms36 = st.columns([1,1])
     with clms36[0]:
         st.title('')
-        st.markdown('<h5>App para aprender para Android</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>App para aprender para Android</{header}>', unsafe_allow_html=True)
     with clms36[1]:     
         st.markdown(f"<a href='https://play.google.com/store/apps/details?id=intersign.learn.asl&hl=en_US&gl=US' target='_blank'><img style='float: right;' src='https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/25/02/e4/2502e491-82e5-8ee1-b462-78f521e117f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp' height={size} width={size}/></a>", unsafe_allow_html=True)
     clms37 = st.columns([1,1])
     with clms37[0]:
         st.title('')
-        st.markdown('<h5>Historia de ASL</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Historia de ASL</{header}>', unsafe_allow_html=True)
     with clms37[1]: 
         st.video("https://youtu.be/Pt2_EjmtUp8")
         
@@ -96,15 +99,13 @@ def primera_semana():
     clms38 = st.columns([1,1])
     with clms38[0]:
         st.title('')
-        st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
+        st.markdown(f'<{header}>Vocabulario para la semana que viene</{header}>', unsafe_allow_html=True)
     with clms38[1]: 
         st.video("https://youtu.be/dJBLpQFhujo")
 
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
-    st.write('memory', tracemalloc.get_traced_memory())
-    tracemalloc.stop()
 
 def segunda_semana():
     set_styles()
