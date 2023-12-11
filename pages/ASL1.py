@@ -18,6 +18,7 @@ def set_styles():
     
 
 def primera_semana(session):
+    tracemalloc.start(25)
     set_styles()
     if session['phone'] == True:
       size = 50
@@ -90,7 +91,14 @@ def primera_semana(session):
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
+    snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('traceback')
 
+    # pick the biggest memory block
+    stat = top_stats[0]
+    st.write("%s memory blocks: %.1f KiB" % (stat.count, stat.size / 1024))
+    for line in stat.traceback.format():
+        st.write(line)
 def segunda_semana():
     set_styles()
     st.subheader('Conocer La Familia Bravo Pt 1')
