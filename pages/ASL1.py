@@ -20,7 +20,7 @@ def set_styles():
 def primera_semana(session):
     set_styles()
     if session['phone'] == True:
-      size = 100
+      size = 50
     else:
       size = 100
     header = session['font']
