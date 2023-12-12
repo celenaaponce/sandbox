@@ -138,9 +138,6 @@ def authenticate_user():
         if 'authenticated' not in st.session_state:
                 st.text_input(label="Correo Electronico :", value ="", key="correo_electronico")
                 st.text_input(label="Contraseña :", value ="", key="password", type="password")
-                entrar = st.button("Entrar")
-                if entrar:
-                    creds_entered()
                 return False
         else:
                 if st.session_state['authenticated']:
