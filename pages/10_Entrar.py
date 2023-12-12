@@ -161,11 +161,9 @@ if enter:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+        tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
                                                             ":white[Conocer la Familia Bravo Pt 2]", ":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
                                                                  ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
-        with tab1:
-             ASL1.primera_semana(st.session_state)
         with tab2:
              ASL1.segunda_semana()
         with tab3:
