@@ -144,8 +144,7 @@ def authenticate_user():
                 return False
         else:
                 if st.session_state['authenticated']:
-                        if entrar:
-                            return True
+                    return True
                 else:
                         st.text_input(label="Correo Electronico :", value ="", key="correo_electronico")
                         st.text_input(label="Contraseña :", value ="", key="password", type="password")
