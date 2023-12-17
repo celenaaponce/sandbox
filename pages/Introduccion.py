@@ -4,8 +4,32 @@ from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from pages import holidays
 from st_pages import Page, Section,show_pages, add_page_title
+import gdown
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
+
+@st.cache_data
+def download_yaml():
+        file_id = st.secrets['yaml']
+        url = f'https://drive.google.com/uc?id={file_id}'
+        gdown.download(url, 'info.yaml', quiet=False)
+        with open('info.yaml') as file:
+            config = yaml.load(file, Loader=SafeLoader)
+        return config
+
+config = download_yaml()
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
+
 
 def main():
+    authenticator.logout('Salir', 'main')
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
