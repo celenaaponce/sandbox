@@ -10,29 +10,8 @@ import yaml
 from yaml.loader import SafeLoader
 from pages import Entrar
 
-@st.cache_data
-def download_yaml():
-        file_id = st.secrets['yaml']
-        url = f'https://drive.google.com/uc?id={file_id}'
-        gdown.download(url, 'info.yaml', quiet=False)
-        with open('info.yaml') as file:
-            config = yaml.load(file, Loader=SafeLoader)
-        return config
-
-config = download_yaml()
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
-
-
 def main():
-    if st.button("cerrar sesión"):
-        Entrar.logout()
-        switch_page("Pagina Principal")
+    Entrar.logout()
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")

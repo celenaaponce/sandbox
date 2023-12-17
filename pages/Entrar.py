@@ -14,7 +14,6 @@ from pages import holidays
 from pages import ASL2_semana_2
 from pages import ASLAtHome_semana_2
 
-
 def regular_sidebar():
         show_pages(
     [
@@ -28,7 +27,7 @@ def regular_sidebar():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/Entrar.py", "Entrar")
+        Page("pages/10_Entrar.py", "Entrar")
     ])
         
 def login_sidebar_ASL1():
@@ -44,7 +43,7 @@ def login_sidebar_ASL1():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/Entrar.py", "Entrar"),
+        Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion.py", "Introducción"),
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),
@@ -66,7 +65,7 @@ def login_sidebar_ASL2():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/Entrar.py", "Entrar"),
+        Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion.py", "Introducción"),
         Page("pages/Bravo_5.py", "Repaso"),
         Page("pages/Bravo_6.py", "Colores y Deletrear"),
@@ -88,7 +87,7 @@ def login_sidebar_ASLAtHome2():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/Entrar.py", "Entrar"),
+        Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/ASLAtHome.py", "Semana 1-3"),
         Page("pages/ASLAtHome_semana_2.py", "Semana 4-7")
     ]
@@ -214,4 +213,4 @@ elif authentication_status == None:
 
 
 def logout():
-     authenticator.logout('Salir', 'main')
+    authenticator.logout('Salir', 'main')
