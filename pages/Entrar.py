@@ -14,6 +14,7 @@ from pages import holidays
 from pages import ASL2_semana_2
 from pages import ASLAtHome_semana_2
 
+
 def regular_sidebar():
         show_pages(
     [
