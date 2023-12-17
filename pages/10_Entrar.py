@@ -1,4 +1,4 @@
-from ..auth_custom import streamlit_authenticator as stauth
+import auth_custom.streamlit_authenticator as stauth
 import yaml
 import gdown
 from yaml.loader import SafeLoader
