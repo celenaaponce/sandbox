@@ -2,7 +2,48 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
+from pages import holidays
+from st_pages import Page, Section,show_pages, add_page_title
 
+def main():
+    login_sidebar_ASL1()
+    st.header("Bienvenido a la clase de ASL 1.")
+    st.header("Se puede mirar nuestro curriculo aqui:")
+    st.header("Bienvenido a la clase de ASL 1.")
+    st.header("Se puede mirar nuestro curriculo aqui:")
+    tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
+                                                                ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
+
+    with tab5:
+            cuarta_semana()
+    with tab6:
+            quinta_semana()
+    with tab7:
+            holidays.thanksgiving()
+    with tab8:
+            sexta_semana()
+    with tab9:
+            septima_semana()
+
+def login_sidebar_ASL1():
+        show_pages(
+    [
+        Page("Pagina_Principal.py", "Pagina Principal"),
+        Page("pages/1_Diccionario.py", "Diccionario"),
+        Page("pages/2_Clases.py", "Clases"),
+        Page("pages/3_Libros.py", "Libros"),
+        Page("pages/4_Recursos.py", "Recursos"),
+        Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
+        Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
+        Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
+        Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
+        Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/ASL1.py", "Semana 1-3"),
+        Page("pages/ASL1_semana_2.py", "Semana 4-7")
+    ]
+)
+        
 def set_styles():
     st.write("""
         <style>
