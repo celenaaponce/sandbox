@@ -36,7 +36,8 @@ def login_sidebar_ASL1():
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),
         Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
-        Page("pages/holidays.py", "Días Festivos")
+        Page("pages/holidays.py", "Días Festivos"),
+        st.write("intro1")
     ]
 )
 def set_styles():

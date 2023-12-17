@@ -27,7 +27,8 @@ def regular_sidebar():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/10_Entrar.py", "Entrar")
+        Page("pages/10_Entrar.py", "Entrar"),
+        st.write('reg')
     ])
         
 def login_sidebar_ASL1():
@@ -48,7 +49,8 @@ def login_sidebar_ASL1():
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),
         Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
-        Page("pages/holidays.py", "Días Festivos")
+        Page("pages/holidays.py", "Días Festivos"),
+        st.write('ASL1')
     ]
 )
         
@@ -70,7 +72,8 @@ def login_sidebar_ASL2():
         Page("pages/Bravo_5.py", "Repaso"),
         Page("pages/Bravo_6.py", "Colores y Deletrear"),
         Page("pages/Bravo_7.py", "Escuela"),
-        Page("pages/holidays.py", "Días Festivos")
+        Page("pages/holidays.py", "Días Festivos"),
+        st.write("Asl2")
     ]
 )
         
@@ -89,7 +92,8 @@ def login_sidebar_ASLAtHome2():
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/ASLAtHome.py", "Semana 1-3"),
-        Page("pages/ASLAtHome_semana_2.py", "Semana 4-7")
+        Page("pages/ASLAtHome_semana_2.py", "Semana 4-7"),
+        st.write("AstAtHome")
     ]
 )
         
