@@ -150,7 +150,7 @@ if authentication_status:
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
         login_sidebar_ASL1()
-        switch_page("Introducción")
+        switch_page("Introducción", "ASL1")
 
     elif username in st.secrets['ASL2']:
         login_sidebar_ASL2()()
