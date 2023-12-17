@@ -114,6 +114,9 @@ def ChangeButtonColour(widget_label, font_color, background_color='transparent')
         </script>
         """
     components.html(f"{htmlstr}", height=0, width=0)
+    
+def logout():
+    authenticator.logout('Salir', 'main')
 
 def set_styles():
     st.write("""
@@ -184,7 +187,3 @@ elif authentication_status == False:
 elif authentication_status == None:
     st.warning('Escriba su nombre de usario y contraseña.')
     regular_sidebar()
-
-
-def logout():
-    authenticator.logout('Salir', 'main')
