@@ -5,8 +5,13 @@ import streamlit.components.v1 as components
 from pages import holidays
 from st_pages import Page, Section,show_pages, add_page_title
 
-def main():
+def main(authenticator):
     login_sidebar_ASL2()
+    logout = st.button("Salir")
+    st.write(logout)
+    if logout:
+        authenticator.logout('Salir', 'main', True)
+        switch_page("Pagina Principal")
     st.header("Bienvenido a la clase de ASL 2.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
@@ -108,4 +113,4 @@ def primera_semana():
     st.divider()
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
-main()
+main(authenticator=None)
