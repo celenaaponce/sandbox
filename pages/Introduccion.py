@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 from pages import holidays
 from st_pages import Page, Section,show_pages, add_page_title
 import gdown
-from ..auth_custom import streamlit_authenticator as stauth
+import auth_custom.streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 from pages import Entrar
