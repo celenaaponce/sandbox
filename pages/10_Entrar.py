@@ -3,16 +3,13 @@ import yaml
 import gdown
 from yaml.loader import SafeLoader
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
+from switch_page_button import switch_page
 from PIL import Image
-from st_pages import Page, Section,show_pages, add_page_title
-from streamlit.source_util import get_pages
-import streamlit.components.v1 as components
-from pages import ASL2
+from st_pages import Page, show_pages
 from pages import ASLAtHome
 from pages import holidays
-from pages import ASL2_semana_2
 from pages import ASLAtHome_semana_2
+from pages import Introduccion
 
 def regular_sidebar():
         show_pages(
@@ -116,6 +113,7 @@ if authentication_status:
     if username in st.secrets.ASL1:
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
+        Introduccion.main(authenticator)
         switch_page("Introducción_a_ASL_1")
 
     elif username in st.secrets['ASL2']:
