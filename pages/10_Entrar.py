@@ -112,7 +112,7 @@ authenticator = stauth.Authenticate(
 )
 
 name, authentication_status, username = authenticator.login('Entrar', 'main')
-
+st.write(authentication_status)
 if authentication_status:
     if username in st.secrets.ASL1:
         st.title(f'Bienvenido *{name}*')
