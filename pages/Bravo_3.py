@@ -29,7 +29,7 @@ def login_sidebar_ASL1():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/Entrar.py", "Entrar"),
         Page("pages/Introduccion.py", "Introducción"),
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),

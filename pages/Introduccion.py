@@ -8,6 +8,7 @@ import gdown
 import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
+from pages import Entrar
 
 @st.cache_data
 def download_yaml():
@@ -29,7 +30,8 @@ authenticator = stauth.Authenticate(
 
 
 def main():
-    authenticator.logout('Salir', 'main')
+    if st.button("Salir"):
+        Entrar.logout()
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
@@ -49,7 +51,7 @@ def login_sidebar_ASL1():
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/Entrar.py", "Entrar"),
         Page("pages/Introduccion.py", "Introducción"),
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),
