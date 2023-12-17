@@ -30,8 +30,9 @@ authenticator = stauth.Authenticate(
 
 def main():
     login_sidebar_ASL1()
-    logout = authenticator.logout('Salir', 'main')
-    if not logout:
+    logout = st.button("Salir")
+    if logout:
+        authenticator.logout('Salir', 'main', True)
         switch_page("Pagina Principal")
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
