@@ -20,9 +20,8 @@ show_pages(
     Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
     Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
     Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-    Page("pages/10_Entrar.py", "Entrar"),
-    st.write('let')
+    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_let"),
+    Page("pages/10_Entrar.py", "Entrar")
 ])
 ##constants
 alpha_num = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h', 9: 'i', 10: 'j', 11: 'k',
