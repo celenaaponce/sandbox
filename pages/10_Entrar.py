@@ -148,7 +148,7 @@ authenticator = stauth.Authenticate(
 name, authentication_status, username = authenticator.login('Entrar', 'main')
 
 if authentication_status:
-    authenticator.logout('Salir', 'main')
+    authenticator.logout('Salir', 'sidebar')
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
         login_sidebar_ASL1()
