@@ -9,15 +9,13 @@ def main():
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
-    tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
+    tab5, tab6, tab8, tab9 = st.tabs([":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", 
                                                                 ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
 
     with tab5:
             cuarta_semana()
     with tab6:
             quinta_semana()
-    with tab7:
-            holidays.thanksgiving()
     with tab8:
             sexta_semana()
     with tab9:
@@ -38,7 +36,8 @@ def login_sidebar_ASL1():
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/ASL1.py", "Semana 1-3"),
-        Page("pages/ASL1_semana_2.py", "Semana 4-7")
+        Page("pages/ASL1_semana_2.py", "Semana 4-7"),
+        Page("pages/holidays.py", "Días Festivos")
     ]
 )
         

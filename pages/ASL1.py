@@ -5,18 +5,17 @@ import streamlit.components.v1 as components
 from pages import holidays
 from st_pages import Page, Section,show_pages, add_page_title
 
+
 def main():
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
-    tab1, tab2, tab3, tab4 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+    tab1, tab2, tab3, tab4 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", 
                                                         ":white[Conocer la Familia Bravo Pt 2]"])
     with tab1:
             primera_semana()
     with tab2:
             segunda_semana()
-    with tab3:
-            holidays.halloween()
     with tab4:
             tercera_semana()
 
@@ -36,7 +35,8 @@ def login_sidebar_ASL1():
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/ASL1.py", "Semana 1-3"),
-        Page("pages/ASL1_semana_2.py", "Semana 4-7")
+        Page("pages/ASL1_semana_2.py", "Semana 4-7"),
+        Page("pages/holidays.py", "Días Festivos")
     ]
 )
 def set_styles():

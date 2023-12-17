@@ -2,6 +2,40 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
+from st_pages import Page, Section,show_pages, add_page_title
+
+def main():
+    login_sidebar_ASL1()
+    st.header("Bienvenido a la clase de ASL 1.")
+    st.header("Se puede mirar nuestro curriculo aqui:")
+    tab1, tab2 = st.tabs([ ":white[Halloween/Dia de los Muertos]", 
+                                                        ":white[Dia de Accion de Gracias]"])
+
+    with tab1:
+            halloween()
+    with tab2:
+            thanksgiving()
+
+
+def login_sidebar_ASL1():
+        show_pages(
+    [
+        Page("Pagina_Principal.py", "Pagina Principal"),
+        Page("pages/1_Diccionario.py", "Diccionario"),
+        Page("pages/2_Clases.py", "Clases"),
+        Page("pages/3_Libros.py", "Libros"),
+        Page("pages/4_Recursos.py", "Recursos"),
+        Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
+        Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
+        Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
+        Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
+        Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/ASL1.py", "Semana 1-3"),
+        Page("pages/ASL1_semana_2.py", "Semana 4-7"),
+        Page("pages/holidays.py", "Días Festivos")
+    ]
+)
 
 def halloween():
     clms = st.columns([1,1])
