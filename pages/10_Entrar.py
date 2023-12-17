@@ -9,7 +9,7 @@ from st_pages import Page, show_pages
 from pages import ASLAtHome
 from pages import holidays
 from pages import ASLAtHome_semana_2
-from pages import Introduccion
+from pages import Introduccion_a_ASL_1
 
 def regular_sidebar():
         show_pages(
@@ -63,7 +63,7 @@ def login_sidebar_ASL2():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_asl2"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion_2.py", "Introducción a ASL 2"),
+        Page("pages/Introduccion_a_ASL_2.py", "Introducción a ASL 2"),
         Page("pages/Bravo_5.py", "Repaso"),
         Page("pages/Bravo_6.py", "Colores y Deletrear"),
         Page("pages/Bravo_7.py", "Escuela"),
@@ -113,7 +113,7 @@ if authentication_status:
     if username in st.secrets.ASL1:
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
-        Introduccion.main(authenticator)
+        Introduccion_a_ASL_1.main(authenticator)
         switch_page("Introducción_a_ASL_1")
 
     elif username in st.secrets['ASL2']:
