@@ -10,6 +10,7 @@ from pages import ASLAtHome
 from pages import holidays
 from pages import ASLAtHome_semana_2
 from pages import Introduccion_a_ASL_1
+from pages import Introduccion_a_ASL_2
 
 def regular_sidebar():
         show_pages(
@@ -120,6 +121,7 @@ if authentication_status:
         authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
+        Introduccion_a_ASL_2.main(authenticator)
         switch_page("Introducción_a_ASL_2")
         
     else:
