@@ -32,7 +32,7 @@ def main():
 
     login_sidebar_ASL1()
     authenticator.logout('Salir', 'main')
-    st.write(authenticator.credentials)
+    st.write(authenticator.token)
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
