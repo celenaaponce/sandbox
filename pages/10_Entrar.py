@@ -116,13 +116,13 @@ if authentication_status:
     if username in st.secrets.ASL1:
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
-        switch_page("Introducción a ASL 1")
+        switch_page("Introducción_a_ASL_1")
 
     elif username in st.secrets['ASL2']:
         authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
-        switch_page("Introducción a ASL 2")
+        switch_page("Introducción_a_ASL_2")
         
     else:
         authenticator.logout('Salir', 'main')
