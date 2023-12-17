@@ -148,17 +148,21 @@ authenticator = stauth.Authenticate(
 name, authentication_status, username = authenticator.login('Entrar', 'main')
 
 if authentication_status:
-    authenticator.logout('Salir', 'sidebar')
-    st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
+        authenticator.logout('Salir', 'sidebar')
+        st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
         switch_page("Introducción")
 
     elif username in st.secrets['ASL2']:
+        authenticator.logout('Salir', 'sidebar')
+        st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
         switch_page("Introducción")
         
     else:
+        authenticator.logout('Salir', 'sidebar')
+        st.title(f'Bienvenido *{name}*')
         login_sidebar_ASLAtHome2()
         st.header("Bienvenido a la clase de ASL En Casa.")
         st.header("Se puede mirar nuestro curriculo aqui:")
