@@ -44,7 +44,7 @@ def login_sidebar_ASL1():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_asl1"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion.py", "Introducción"),
+        Page("pages/Introduccion.py", "Introducción a ASL 1"),
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),
         Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
@@ -66,7 +66,7 @@ def login_sidebar_ASL2():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_asl2"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion_2.py", "Introducción"),
+        Page("pages/Introduccion_2.py", "Introducción a ASL 2"),
         Page("pages/Bravo_5.py", "Repaso"),
         Page("pages/Bravo_6.py", "Colores y Deletrear"),
         Page("pages/Bravo_7.py", "Escuela"),
@@ -116,13 +116,13 @@ if authentication_status:
     if username in st.secrets.ASL1:
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
-        switch_page("Introducción")
+        switch_page("Introducción a ASL 1")
 
     elif username in st.secrets['ASL2']:
         authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
-        switch_page("Introducción")
+        switch_page("Introducción a ASL 2")
         
     else:
         authenticator.logout('Salir', 'main')
