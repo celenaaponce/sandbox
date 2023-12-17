@@ -147,6 +147,7 @@ if authentication_status:
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
         login_sidebar_ASL1()
+        switch_page("Semana 1-3")
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
         tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 

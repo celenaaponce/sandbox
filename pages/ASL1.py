@@ -2,6 +2,24 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
+from pages import holidays
+
+
+def main():
+    st.header("Bienvenido a la clase de ASL 1.")
+    st.header("Se puede mirar nuestro curriculo aqui:")
+    tab1, tab2, tab3, tab4 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+                                                        ":white[Conocer la Familia Bravo Pt 2]"])
+    with tab1:
+            primera_semana()
+    with tab2:
+            segunda_semana()
+    with tab3:
+            holidays.halloween()
+    with tab4:
+            tercera_semana()
+
+
 
 def set_styles():
     st.write("""
@@ -208,3 +226,5 @@ def tercera_semana():
 
     st.divider()
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTxPJGXEYZG_-N-G7ypLyhScw07aukwDGxidek6zeh1iCQYRaRfuyTZ76xHec4iOGFz9fjTX31aICJ1/embed?start=false&loop=false&delayms=3000", height=480)
+
+main()
