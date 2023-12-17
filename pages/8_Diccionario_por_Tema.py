@@ -2,6 +2,22 @@ import streamlit as st
 import pandas as pd
 import gdown
 from st_click_detector import click_detector
+from st_pages import Page, Section,show_pages, add_page_title
+
+show_pages(
+[
+    Page("Pagina_Principal.py", "Pagina Principal"),
+    Page("pages/1_Diccionario.py", "Diccionario"),
+    Page("pages/2_Clases.py", "Clases"),
+    Page("pages/3_Libros.py", "Libros"),
+    Page("pages/4_Recursos.py", "Recursos"),
+    Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
+    Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
+    Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
+    Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
+    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
+    Page("pages/10_Entrar.py", "Entrar")
+])
 st.set_page_config(layout="wide", page_title="Diccionario Por Tema")
 increment = None
 reset1 = False
@@ -122,6 +138,7 @@ def load_words_tema():
   csv_length = 0    
   for chunk in pd.read_csv('Themes2.csv', names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
         data = pd.DataFrame(chunk)
+  data = data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
   return data
 
 with open("css/style.css") as f:
@@ -139,7 +156,6 @@ if st.session_state.download_tema == False:
   st.session_state.download_tema = True
     
 word_data = load_words_tema()
-word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 
 if st.session_state.clicked == "":
     size = 20

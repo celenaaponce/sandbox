@@ -12,32 +12,6 @@ from pages import ASL1
 from pages import ASL2
 from pages import ASLAtHome
 from pages import holidays
-import tracemalloc
-from st_screen_stats import ScreenData
-
-if 'screen_width' not in st.session_state:
-    st.session_state['screen_width'] = None
-    
-def get_screen_size():
-    screenD = ScreenData()
-    return screenD
-        
-screenD = get_screen_size() 
-
-if screenD != None:
-    screen_d = screenD.st_screen_data_window_top()
-    st.session_state['screen_width'] = screen_d['innerWidth'] 
-             
-if st.session_state['screen_width'] != None:
-    if st.session_state['screen_width'] < 400:
-        st.session_state['phone'] = True
-        st.session_state['font'] = 'h6'
-    else:
-        st.session_state['phone'] = False
-        st.session_state['font'] = 'h5'
-else:
-    st.session_state['phone'] = False
-    st.session_state['font'] = 'h5'
 
 def regular_sidebar():
         show_pages(
@@ -105,26 +79,6 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
 
-def creds_entered():
-        config = download_yaml()
-        emails = config['credentials']['usernames'].keys()
-        password = 'ASL'
-        for key in emails:
-                if st.session_state['correo_electronico'].strip() == key and st.session_state['password'].strip() == password:
-                        st.session_state['authenticated'] = True
-                        st.session_state['name'] = config['credentials']['usernames'][key]['name']
-                        st.session_state['email'] = config['credentials']['usernames'][key]['email']
-                        return
-                        
-
-        st.session_state['authenticated'] = False
-        st.session_state['name'] = ""
-        if not st.session_state['password']:
-                st.warning("Haga el favor de entrar su contraseña")
-        elif not st.session_state['correo_electronico']:
-                st.warning("Haga el favor de entrar su correo electronico")
-        else:
-                st.error('Nombre/contraseña es mal')
 @st.cache_data
 def download_yaml():
         file_id = st.secrets['yaml']
@@ -133,37 +87,38 @@ def download_yaml():
         with open('info.yaml') as file:
             config = yaml.load(file, Loader=SafeLoader)
         return config
-        
-def authenticate_user():
-        if 'authenticated' not in st.session_state:
-                st.text_input(label="Correo Electronico :", value ="", key="correo_electronico")
-                st.text_input(label="Contraseña :", value ="", key="password", type="password")
-                entrar = st.button("Entrar")
-                if entrar:
-                    creds_entered()
-                return False
-        else:
-                if st.session_state['authenticated']:
-                    return True
-                else:
-                        st.text_input(label="Correo Electronico :", value ="", key="correo_electronico")
-                        st.text_input(label="Contraseña :", value ="", key="password", type="password")
-                        entrar = st.button("Entrar")
-                        if entrar:
-                            creds_entered()
-                        return False
-enter = authenticate_user()
-if enter:
-    name = st.session_state['name']
+
+config = download_yaml()
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
+
+name, authentication_status, username = authenticator.login('Entrar', 'main')
+
+if authentication_status:
+    authenticator.logout('Salir', 'main')
     st.title(f'Bienvenido *{name}*')
-    email = st.session_state['email']
-    if email in st.secrets.ASL1:
+    if username in st.secrets.ASL1:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
-        tab6, tab7, tab8, tab9 = st.tabs([":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+                                                            ":white[Conocer la Familia Bravo Pt 2]", ":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
                                                                  ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
-
+        with tab1:
+             ASL1.primera_semana()
+        with tab2:
+             ASL1.segunda_semana()
+        with tab3:
+             holidays.halloween()
+        with tab4:
+             ASL1.tercera_semana()
+        with tab5:
+             ASL1.cuarta_semana()
         with tab6:
              ASL1.quinta_semana()
         with tab7:
@@ -172,7 +127,7 @@ if enter:
              ASL1.sexta_semana()
         with tab9:
              ASL1.septima_semana()
-    elif email in st.secrets['ASL2']:
+    elif username in st.secrets['ASL2']:
         login_sidebar()
         st.header("Bienvenido a la clase de ASL 2.")
         st.header("Se puede mirar nuestro curriculo aqui:")
@@ -223,3 +178,9 @@ if enter:
         with tab7:
             holidays.thanksgiving()
 
+elif authentication_status == False:
+    st.error('Nombre/contraseña es mal')
+    regular_sidebar()
+elif authentication_status == None:
+    st.warning('Escriba su nombre de usario y contraseña.')
+    regular_sidebar()
