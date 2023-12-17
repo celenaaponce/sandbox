@@ -31,8 +31,10 @@ def login_sidebar_ASL1():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/ASL1.py", "Semana 1-3"),
-        Page("pages/ASL1_semana_2.py", "Semana 4-7"),
+        Page("pages/Introduccion.py", "Introducción"),
+        Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
+        Page("pages/Bravo_2.py", "Desayuno"),
+        Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
         Page("pages/holidays.py", "Días Festivos")
     ]
 )
@@ -113,3 +115,5 @@ def thanksgiving():
         st.markdown('<h5>La Cena Silenciosa</h5>', unsafe_allow_html=True)
     with clms5[1]:
         st.video('https://youtu.be/pKmaGwUBScA')
+
+main()
