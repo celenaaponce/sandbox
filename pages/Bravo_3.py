@@ -9,7 +9,7 @@ def main():
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
-    tab5, tab6, tab8, tab9 = st.tabs([":white[Contról Pt 1]", ":white[Contról Pt 2]"])
+    tab8, tab9 = st.tabs([":white[Contról Pt 1]", ":white[Contról Pt 2]"])
 
     with tab8:
             sexta_semana()
