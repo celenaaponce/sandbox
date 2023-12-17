@@ -66,7 +66,7 @@ def login_sidebar_ASL2():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion.py", "Introducción"),
+        Page("pages/Introduccion_2.py", "Introducción"),
         Page("pages/Bravo_5.py", "Repaso"),
         Page("pages/Bravo_6.py", "Colores y Deletrear"),
         Page("pages/Bravo_7.py", "Escuela"),
@@ -155,34 +155,8 @@ if authentication_status:
 
     elif username in st.secrets['ASL2']:
         login_sidebar_ASL2()
-        st.header("Bienvenido a la clase de ASL 2.")
-        st.header("Se puede mirar nuestro curriculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([":white[Primera Semana]", ":white[Repaso General]", ":white[Repaso Leccion 1]", ":white[Repaso Leccion 2]", 
-                                                                               ":white[Repaso Leccion 3]", ":white[Repaso Leccion 4]", ":white[Halloween/Dia de los Muertos]", 
-                                                                               ":white[Colores]", ":white[Deletrear]", ":white[Dia de Accion de Gracias]", ":white[Escuela Pt 1]"])
-        with tab1:
-             ASL2.primera_semana()
-        with tab2:
-             ASL2.repaso_general()
-        with tab3:
-             ASL2.repaso_lecc1()
-        with tab4:
-             ASL2.repaso_lecc2()
-        with tab5:
-             ASL2.repaso_lecc3()
-        with tab6:
-             ASL2.repaso_lecc4()
-        with tab7:
-             holidays.halloween()
-        with tab8:
-             ASL2.colores()
-        with tab9:
-             ASL2_semana_2.deletrear()
-        with tab10:
-             holidays.thanksgiving()
-        with tab11:
-             ASL2_semana_2.escuela1()
-
+        switch_page("Introducción")
+        
     else:
         login_sidebar_ASLAtHome2()
         st.header("Bienvenido a la clase de ASL En Casa.")
