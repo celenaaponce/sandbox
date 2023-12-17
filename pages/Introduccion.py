@@ -29,10 +29,8 @@ authenticator = stauth.Authenticate(
 )
 
 def main():
-
     login_sidebar_ASL1()
     authenticator.logout('Salir', 'main')
-    st.write('cookiename', authenticator.key, authenticator.cookie_expiry_days, authenticator.cookie_manager)
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
