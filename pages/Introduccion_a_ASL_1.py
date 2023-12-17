@@ -10,13 +10,8 @@ import yaml
 from yaml.loader import SafeLoader
 from pages import Entrar
 
-def main(authenticator):
+def main():
     login_sidebar_ASL1()
-    logout = st.button("Salir")
-    st.write(logout)
-    if logout:
-        authenticator.logout('Salir', 'main', True)
-        switch_page("Pagina Principal")
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
@@ -120,4 +115,4 @@ def primera_semana():
     
     components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQ4wlJOjhmNap4RDFiDtqNi1cv2PvEsdZnP4ANcRsVCCDgK0NrpYYLfI5BgwVZzlycwNwmvlwU4qnNt/embed?start=false&loop=false&delayms=3000", height=480)
 
-main(authenticator = None)
+main()
