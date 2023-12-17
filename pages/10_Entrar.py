@@ -12,6 +12,9 @@ from pages import ASL1
 from pages import ASL2
 from pages import ASLAtHome
 from pages import holidays
+from pages import ASL1_semana_2
+from pages import ASL2_semana_2
+from pages import ASLAtHome_semana_2
 
 def regular_sidebar():
         show_pages(
@@ -29,7 +32,7 @@ def regular_sidebar():
         Page("pages/10_Entrar.py", "Entrar")
     ])
         
-def login_sidebar():
+def login_sidebar_ASL1():
         show_pages(
     [
         Page("Pagina_Principal.py", "Pagina Principal"),
@@ -43,6 +46,46 @@ def login_sidebar():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/ASL1.py", "Semana 1-3"),
+        Page("pages/ASL1_semana_2.py", "Semana 4-7")
+    ]
+)
+        
+def login_sidebar_ASL2():
+        show_pages(
+    [
+        Page("Pagina_Principal.py", "Pagina Principal"),
+        Page("pages/1_Diccionario.py", "Diccionario"),
+        Page("pages/2_Clases.py", "Clases"),
+        Page("pages/3_Libros.py", "Libros"),
+        Page("pages/4_Recursos.py", "Recursos"),
+        Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
+        Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
+        Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
+        Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
+        Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/ASL2.py", "Semana 1-3"),
+        Page("pages/ASL2_semana_2.py", "Semana 4-7")
+    ]
+)
+        
+def login_sidebar_ASLAtHome2():
+        show_pages(
+    [
+        Page("Pagina_Principal.py", "Pagina Principal"),
+        Page("pages/1_Diccionario.py", "Diccionario"),
+        Page("pages/2_Clases.py", "Clases"),
+        Page("pages/3_Libros.py", "Libros"),
+        Page("pages/4_Recursos.py", "Recursos"),
+        Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
+        Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
+        Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
+        Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
+        Page("pages/10_Entrar.py", "Entrar"),
+        Page("pages/ASLAtHome.py", "Semana 1-3"),
+        Page("pages/ASLAtHome_semana_2.py", "Semana 4-7")
     ]
 )
         
@@ -103,7 +146,7 @@ if authentication_status:
     authenticator.logout('Salir', 'main')
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
-        login_sidebar()
+        login_sidebar_ASL1()
         st.header("Bienvenido a la clase de ASL 1.")
         st.header("Se puede mirar nuestro curriculo aqui:")
         tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
@@ -118,17 +161,17 @@ if authentication_status:
         with tab4:
              ASL1.tercera_semana()
         with tab5:
-             ASL1.cuarta_semana()
+             ASL1_semana_2.cuarta_semana()
         with tab6:
-             ASL1.quinta_semana()
+             ASL1_semana_2.quinta_semana()
         with tab7:
              holidays.thanksgiving()
         with tab8:
-             ASL1.sexta_semana()
+             ASL1_semana_2.sexta_semana()
         with tab9:
-             ASL1.septima_semana()
+             ASL1_semana_2.septima_semana()
     elif username in st.secrets['ASL2']:
-        login_sidebar()
+        login_sidebar_ASL2()()
         st.header("Bienvenido a la clase de ASL 2.")
         st.header("Se puede mirar nuestro curriculo aqui:")
         tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([":white[Primera Semana]", ":white[Repaso General]", ":white[Repaso Leccion 1]", ":white[Repaso Leccion 2]", 
@@ -151,14 +194,14 @@ if authentication_status:
         with tab8:
              ASL2.colores()
         with tab9:
-             ASL2.deletrear()
+             ASL2_semana_2.deletrear()
         with tab10:
              holidays.thanksgiving()
         with tab11:
-             ASL2.escuela1()
+             ASL2_semana_2.escuela1()
 
     else:
-        login_sidebar()
+        login_sidebar_ASLAtHome2()
         st.header("Bienvenido a la clase de ASL En Casa.")
         st.header("Se puede mirar nuestro curriculo aqui:")
         tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([":white[Primera Semana]", ":white[Capitulo 1 Pt 1]", ":white[Halloween/Dia de los Muertos]", 
@@ -172,9 +215,9 @@ if authentication_status:
         with tab4:
              ASLAtHome.tercera_semana()
         with tab5:
-             ASLAtHome.cuarta_semana()
+             ASLAtHome_semana_2.cuarta_semana()
         with tab6:
-             ASLAtHome.quinta_semana()
+             ASLAtHome_semana_2.quinta_semana()
         with tab7:
             holidays.thanksgiving()
 
