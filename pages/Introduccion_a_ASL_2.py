@@ -8,7 +8,6 @@ from st_pages import Page, Section,show_pages, add_page_title
 def main(authenticator):
     login_sidebar_ASL2()
     logout = st.button("Salir")
-    st.write(logout)
     if logout:
         authenticator.logout('Salir', 'main', True)
         switch_page("Pagina Principal")
