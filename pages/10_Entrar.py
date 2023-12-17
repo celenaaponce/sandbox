@@ -8,11 +8,9 @@ from PIL import Image
 from st_pages import Page, Section,show_pages, add_page_title
 from streamlit.source_util import get_pages
 import streamlit.components.v1 as components
-from pages import ASL1
 from pages import ASL2
 from pages import ASLAtHome
 from pages import holidays
-from pages import ASL1_semana_2
 from pages import ASL2_semana_2
 from pages import ASLAtHome_semana_2
 
@@ -68,8 +66,11 @@ def login_sidebar_ASL2():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/ASL2.py", "Semana 1-3"),
-        Page("pages/ASL2_semana_2.py", "Semana 4-7")
+        Page("pages/Introduccion.py", "Introducción"),
+        Page("pages/Bravo_5.py", "Repaso"),
+        Page("pages/Bravo_6.py", "Colores y Deletrear"),
+        Page("pages/Bravo_7.py", "Escuela"),
+        Page("pages/holidays.py", "Días Festivos")
     ]
 )
         
@@ -153,7 +154,7 @@ if authentication_status:
         switch_page("Introducción")
 
     elif username in st.secrets['ASL2']:
-        login_sidebar_ASL2()()
+        login_sidebar_ASL2()
         st.header("Bienvenido a la clase de ASL 2.")
         st.header("Se puede mirar nuestro curriculo aqui:")
         tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([":white[Primera Semana]", ":white[Repaso General]", ":white[Repaso Leccion 1]", ":white[Repaso Leccion 2]", 
