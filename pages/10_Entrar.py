@@ -92,40 +92,6 @@ def login_sidebar_ASLAtHome2():
         Page("pages/ASLAtHome_semana_2.py", "Semana 4-7")
     ]
 )
-        
-def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
-    htmlstr = f"""
-        <script>
-            var elements = window.parent.document.querySelectorAll('button');
-            for (var i = 0; i < elements.length; ++i) {{ 
-                if (elements[i].innerText == '{widget_label}') {{ 
-                    elements[i].style.color ='{font_color}';
-                    elements[i].style.background = '{background_color}'
-                }}
-            }}
-        function goTo(page) {{
-        page_links = parent.document.querySelectorAll('[data-testid="stSidebarNav"] ul li a')
-        page_links.forEach((link) => {{
-            if (link.text == page) {{
-                link.click()
-            }}
-        }})
-    }}
-        </script>
-        """
-    components.html(f"{htmlstr}", height=0, width=0)
-    
-
-def set_styles():
-    st.write("""
-        <style>
-        a {
-            background-color: #94387f;
-            color: white;
-
-            }
-        </style>
-    """, unsafe_allow_html=True)
 
 @st.cache_data
 def download_yaml():
@@ -149,19 +115,19 @@ name, authentication_status, username = authenticator.login('Entrar', 'main')
 
 if authentication_status:
     if username in st.secrets.ASL1:
-        authenticator.logout('Salir', 'sidebar')
+        authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
         switch_page("Introducción")
 
     elif username in st.secrets['ASL2']:
-        authenticator.logout('Salir', 'sidebar')
+        authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
         switch_page("Introducción")
         
     else:
-        authenticator.logout('Salir', 'sidebar')
+        authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASLAtHome2()
         st.header("Bienvenido a la clase de ASL En Casa.")
