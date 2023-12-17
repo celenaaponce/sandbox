@@ -118,11 +118,9 @@ if authentication_status:
         switch_page("Introducción_a_ASL_1")
 
     elif username in st.secrets['ASL2']:
-        authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
         Introduccion_a_ASL_2.main(authenticator)
-        switch_page("Introducción_a_ASL_2")
         
     else:
         authenticator.logout('Salir', 'main')
