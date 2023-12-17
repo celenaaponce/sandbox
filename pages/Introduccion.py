@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 from pages import holidays
 from st_pages import Page, Section,show_pages, add_page_title
 import gdown
-import streamlit_authenticator as stauth
+from ..auth_custom import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 from pages import Entrar
@@ -30,7 +30,9 @@ authenticator = stauth.Authenticate(
 
 def main():
     login_sidebar_ASL1()
-    authenticator.logout('Salir', 'main')
+    logout = authenticator.logout('Salir', 'main')
+    if not logout:
+        switch_page("Pagina Principal")
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
