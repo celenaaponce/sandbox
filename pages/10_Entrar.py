@@ -120,7 +120,7 @@ if authentication_status:
         authenticator.logout("Salir", "main")
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL2()
-        Introduccion_a_ASL_2.main()
+        Introduccion_a_ASL_2.main(authenticator=None)
         
     else:
         authenticator.logout('Salir', 'main')
