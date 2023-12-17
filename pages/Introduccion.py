@@ -11,7 +11,7 @@ from yaml.loader import SafeLoader
 from pages import Entrar
 
 def main():
-    Entrar.logout()
+
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
