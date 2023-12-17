@@ -32,6 +32,7 @@ def main():
     login_sidebar_ASL1()
     logout = st.button("Salir")
     if logout:
+        st.write(logout)
         authenticator.logout('Salir', 'main', True)
         switch_page("Pagina Principal")
     st.header("Bienvenido a la clase de ASL 1.")

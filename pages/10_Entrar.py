@@ -115,7 +115,6 @@ name, authentication_status, username = authenticator.login('Entrar', 'main')
 
 if authentication_status:
     if username in st.secrets.ASL1:
-        authenticator.logout('Salir', 'main')
         st.title(f'Bienvenido *{name}*')
         login_sidebar_ASL1()
         switch_page("Introducción")
