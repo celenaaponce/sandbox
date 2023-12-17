@@ -46,8 +46,11 @@ def login_sidebar_ASL1():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/ASL1.py", "Semana 1-3"),
-        Page("pages/ASL1_semana_2.py", "Semana 4-7")
+        Page("pages/Introduccion.py", "Introducción"),
+        Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
+        Page("pages/Bravo_2.py", "Desayuno"),
+        Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
+        Page("pages/holidays.py", "Días Festivos")
     ]
 )
         
@@ -147,30 +150,8 @@ if authentication_status:
     st.title(f'Bienvenido *{name}*')
     if username in st.secrets.ASL1:
         login_sidebar_ASL1()
-        switch_page("Semana 1-3")
-        st.header("Bienvenido a la clase de ASL 1.")
-        st.header("Se puede mirar nuestro curriculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([":white[Primera Semana]", ":white[Conocer la Familia Bravo Pt 1]", ":white[Halloween/Dia de los Muertos]", 
-                                                            ":white[Conocer la Familia Bravo Pt 2]", ":white[Desayuno Pt 1]", ":white[Desayuno Pt 2]", ":white[Dia de Accion de Gracias]",
-                                                                 ":white[Contról Pt 1]", ":white[Contról Pt 2]"])
-        with tab1:
-             ASL1.primera_semana()
-        with tab2:
-             ASL1.segunda_semana()
-        with tab3:
-             holidays.halloween()
-        with tab4:
-             ASL1.tercera_semana()
-        with tab5:
-             ASL1_semana_2.cuarta_semana()
-        with tab6:
-             ASL1_semana_2.quinta_semana()
-        with tab7:
-             holidays.thanksgiving()
-        with tab8:
-             ASL1_semana_2.sexta_semana()
-        with tab9:
-             ASL1_semana_2.septima_semana()
+        switch_page("Introducción")
+
     elif username in st.secrets['ASL2']:
         login_sidebar_ASL2()()
         st.header("Bienvenido a la clase de ASL 2.")
