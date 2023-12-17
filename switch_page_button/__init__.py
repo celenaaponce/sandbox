@@ -1,6 +1,6 @@
 import streamlit as st
 
-from .. import extra
+from . import extra
 
 
 @extra
