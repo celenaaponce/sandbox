@@ -115,8 +115,6 @@ def ChangeButtonColour(widget_label, font_color, background_color='transparent')
         """
     components.html(f"{htmlstr}", height=0, width=0)
     
-def logout():
-    authenticator.logout('Salir', 'main')
 
 def set_styles():
     st.write("""
