@@ -131,40 +131,15 @@ def check_password():
 if not check_password():
     st.stop()
 
-# Main Streamlit app starts here
-st.write("Here goes your normal Streamlit app...")
-st.button("Click me")
-
-# @st.cache_data
-# def download_yaml():
-#         file_id = st.secrets['yaml']
-#         url = f'https://drive.google.com/uc?id={file_id}'
-#         gdown.download(url, 'info.yaml', quiet=False)
-#         with open('info.yaml') as file:
-#             config = yaml.load(file, Loader=SafeLoader)
-#         return config
-
-# config = download_yaml()
-# authenticator = stauth.Authenticate(
-#     config['credentials'],
-#     config['cookie']['name'],
-#     config['cookie']['key'],
-#     config['cookie']['expiry_days'],
-#     config['preauthorized']
-# )
-
-# name, authentication_status, username = authenticator.login('Entrar', 'main')
-# if authentication_status:
 username = "celena.a.ponce@gmail.com1"
 if username in st.secrets.ASL1:
     login_sidebar_ASL1()
-    Introduccion_a_ASL_1.main()
     switch_page("Introducción_a_ASL_1")
-
+    username = ""
 elif username in st.secrets['ASL2']:
 
     login_sidebar_ASL2()
-    Introduccion_a_ASL_2.main(authenticator=None)
+    switch_page("Introduccion_a_ASL_2")
     
 else:
 
