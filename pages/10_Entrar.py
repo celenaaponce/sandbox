@@ -107,12 +107,13 @@ def check_password():
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
-
+        st.session_state['name'] = st.session_state['username']
         st.session_state['username'] = st.session_state['username'].split('@')[0].translate(str.maketrans('', '', string.punctuation))
         st.write(st.secrets['passwords'])
         if st.session_state["username"] in st.secrets[
             "passwords"] :
             st.session_state["password_correct"] = True
+            st.session_state['name'] = st.session_state['username']
             del st.session_state["password"]  # Don't store the username or password.
             del st.session_state['username']
         else:
@@ -133,7 +134,7 @@ def check_password():
 if not check_password():
     st.stop()
 
-username = "celena.a.ponce@gmail.com1"
+username = st.session_state['name']
 if username in st.secrets.ASL1:
     login_sidebar_ASL1()
     switch_page("Introducción_a_ASL_1")
