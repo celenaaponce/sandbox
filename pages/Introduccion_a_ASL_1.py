@@ -8,7 +8,6 @@ import gdown
 import auth_custom.streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
-from pages import Entrar
 
 def main():
     login_sidebar_ASL1()
