@@ -90,64 +90,101 @@ def login_sidebar_ASLAtHome2():
     ]
 )
 
-@st.cache_data
-def download_yaml():
-        file_id = st.secrets['yaml']
-        url = f'https://drive.google.com/uc?id={file_id}'
-        gdown.download(url, 'info.yaml', quiet=False)
-        with open('info.yaml') as file:
-            config = yaml.load(file, Loader=SafeLoader)
-        return config
+import hmac
+import streamlit as st
 
-config = download_yaml()
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
 
-name, authentication_status, username = authenticator.login('Entrar', 'main')
-if authentication_status:
-    if username in st.secrets.ASL1:
-        st.title(f'Bienvenido *{name}*')
-        login_sidebar_ASL1()
-        Introduccion_a_ASL_1.main(authenticator)
-        switch_page("Introducción_a_ASL_1")
+def check_password():
+    """Returns `True` if the user had a correct password."""
 
-    elif username in st.secrets['ASL2']:
-        authenticator.logout("Salir", "main")
-        st.title(f'Bienvenido *{name}*')
-        login_sidebar_ASL2()
-        Introduccion_a_ASL_2.main(authenticator=None)
-        
-    else:
-        authenticator.logout('Salir', 'main')
-        st.title(f'Bienvenido *{name}*')
-        login_sidebar_ASLAtHome2()
-        st.header("Bienvenido a la clase de ASL En Casa.")
-        st.header("Se puede mirar nuestro curriculo aqui:")
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([":white[Primera Semana]", ":white[Capitulo 1 Pt 1]", ":white[Halloween/Dia de los Muertos]", 
-                                                            ":white[Capitulo 1 Pt 2]", ":white[Capitulo 2 Pt 1]", ":white[Capitulo 2 Pt 2]", ":white[Dia de Accion de Gracias]"])
-        with tab1:
-             ASLAtHome.primera_semana()
-        with tab2:
-             ASLAtHome.segunda_semana()
-        with tab3:
-             holidays.halloween()
-        with tab4:
-             ASLAtHome.tercera_semana()
-        with tab5:
-             ASLAtHome_semana_2.cuarta_semana()
-        with tab6:
-             ASLAtHome_semana_2.quinta_semana()
-        with tab7:
-            holidays.thanksgiving()
+    def login_form():
+        """Form with widgets to collect user information"""
+        with st.form("Credentials"):
+            st.text_input("Correo Electronico", key="username")
+            st.text_input("Contraseña", type="password", key="password")
+            st.form_submit_button("Entrar", on_click=password_entered)
 
-elif authentication_status == False:
-    st.error('Nombre/contraseña es mal')
-    regular_sidebar()
-elif authentication_status == None:
-    st.warning('Escriba su nombre de usario y contraseña.')
-    regular_sidebar()
+    def password_entered():
+        """Checks whether a password entered by the user is correct."""
+        if st.session_state["username"] in st.secrets[
+            "passwords"
+        ] and hmac.compare_digest(
+            st.session_state["password"],
+            st.secrets.passwords[st.session_state["username"]],
+        ):
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]  # Don't store the username or password.
+        else:
+            st.session_state["password_correct"] = False
+
+    # Return True if the username + password is validated.
+    if st.session_state.get("password_correct", False):
+        return True
+
+    # Show inputs for username + password.
+    login_form()
+    if "password_correct" in st.session_state:
+        st.error("😕 User not known or password incorrect")
+    return False
+
+
+if not check_password():
+    st.stop()
+
+# Main Streamlit app starts here
+st.write("Here goes your normal Streamlit app...")
+st.button("Click me")
+
+# @st.cache_data
+# def download_yaml():
+#         file_id = st.secrets['yaml']
+#         url = f'https://drive.google.com/uc?id={file_id}'
+#         gdown.download(url, 'info.yaml', quiet=False)
+#         with open('info.yaml') as file:
+#             config = yaml.load(file, Loader=SafeLoader)
+#         return config
+
+# config = download_yaml()
+# authenticator = stauth.Authenticate(
+#     config['credentials'],
+#     config['cookie']['name'],
+#     config['cookie']['key'],
+#     config['cookie']['expiry_days'],
+#     config['preauthorized']
+# )
+
+# name, authentication_status, username = authenticator.login('Entrar', 'main')
+# if authentication_status:
+username = "celena.a.ponce@gmail.com1"
+if username in st.secrets.ASL1:
+    login_sidebar_ASL1()
+    Introduccion_a_ASL_1.main()
+    switch_page("Introducción_a_ASL_1")
+
+elif username in st.secrets['ASL2']:
+
+    login_sidebar_ASL2()
+    Introduccion_a_ASL_2.main(authenticator=None)
+    
+else:
+
+    login_sidebar_ASLAtHome2()
+    st.header("Bienvenido a la clase de ASL En Casa.")
+    st.header("Se puede mirar nuestro curriculo aqui:")
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([":white[Primera Semana]", ":white[Capitulo 1 Pt 1]", ":white[Halloween/Dia de los Muertos]", 
+                                                        ":white[Capitulo 1 Pt 2]", ":white[Capitulo 2 Pt 1]", ":white[Capitulo 2 Pt 2]", ":white[Dia de Accion de Gracias]"])
+    with tab1:
+            ASLAtHome.primera_semana()
+    with tab2:
+            ASLAtHome.segunda_semana()
+    with tab3:
+            holidays.halloween()
+    with tab4:
+            ASLAtHome.tercera_semana()
+    with tab5:
+            ASLAtHome_semana_2.cuarta_semana()
+    with tab6:
+            ASLAtHome_semana_2.quinta_semana()
+    with tab7:
+        holidays.thanksgiving()
+
