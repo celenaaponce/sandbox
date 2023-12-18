@@ -33,9 +33,11 @@ def login_sidebar_ASLAtHome2():
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_En_Casa.py"),
         Page("pages/ASLAtHome_c1.py", "Capitulo 1"),
-        Page("pages/ASLAtHome_c2.py", "Capitulo 2")
+        Page("pages/ASLAtHome_c2.py", "Capitulo 2"),
+        Page("pages/holidays_aah.py", "Dias Festivos")
     ]
 )
+
 def set_styles():
     st.write("""
         <style>
