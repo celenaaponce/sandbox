@@ -144,5 +144,5 @@ elif username in st.secrets['ASL2']:
 else:
 
     login_sidebar_ASLAtHome2()
-    switch_page("Introducción_a_ASL_En_Casa")
+    switch_page("Introduccion_a_ASL_En_Casa")
 
