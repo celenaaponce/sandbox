@@ -119,7 +119,7 @@ def check_password():
             del st.session_state['username']
         else:
             st.session_state["password_correct"] = False
-    st.write('corr_pass', st.session_state['password_correct'])
+        st.write('corr_pass', st.session_state['password_correct'])
     # Return True if the username + password is validated.
     if st.session_state.get("password_correct", False):
         return True
