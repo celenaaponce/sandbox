@@ -86,14 +86,11 @@ def login_sidebar_ASLAtHome2():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_aslah"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/ASLAtHome.py", "Semana 1-3"),
-        Page("pages/ASLAtHome_semana_2.py", "Semana 4-7")
+        Page("pages/Introduccion_a_ASL_En_Casa.py"),
+        Page("pages/ASLAtHome_c1.py", "Capitulo 1"),
+        Page("pages/ASLAtHome_c2.py", "Capitulo 2")
     ]
 )
-
-import hmac
-import streamlit as st
-
 
 def check_password():
     """Returns `True` if the user had a correct password."""
@@ -147,22 +144,5 @@ elif username in st.secrets['ASL2']:
 else:
 
     login_sidebar_ASLAtHome2()
-    st.header("Bienvenido a la clase de ASL En Casa.")
-    st.header("Se puede mirar nuestro curriculo aqui:")
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([":white[Primera Semana]", ":white[Capitulo 1 Pt 1]", ":white[Halloween/Dia de los Muertos]", 
-                                                        ":white[Capitulo 1 Pt 2]", ":white[Capitulo 2 Pt 1]", ":white[Capitulo 2 Pt 2]", ":white[Dia de Accion de Gracias]"])
-    with tab1:
-            ASLAtHome.primera_semana()
-    with tab2:
-            ASLAtHome.segunda_semana()
-    with tab3:
-            holidays.halloween()
-    with tab4:
-            ASLAtHome.tercera_semana()
-    with tab5:
-            ASLAtHome_semana_2.cuarta_semana()
-    with tab6:
-            ASLAtHome_semana_2.quinta_semana()
-    with tab7:
-        holidays.thanksgiving()
+    switch_page("Introducción_a_ASL_En_Casa")
 
