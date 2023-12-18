@@ -124,6 +124,7 @@ def check_password():
     # Show inputs for username + password.
     login_form()
     if "password_correct" in st.session_state:
+        st.write(st.session_state['username'])
         st.error("😕 User not known or password incorrect")
     return False
 
