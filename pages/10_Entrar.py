@@ -11,6 +11,7 @@ from pages import holidays
 from pages import ASLAtHome_semana_2
 from pages import Introduccion_a_ASL_1
 from pages import Introduccion_a_ASL_2
+import string
 def regular_sidebar():
         show_pages(
     [
@@ -106,7 +107,8 @@ def check_password():
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
-        st.session_state['username'] = st.session_state['username'].split('@')[0].strip('.')
+
+        st.session_state['username'] = st.session_state['username'].split('@')[0].translate(str.maketrans('', '', string.punctuation))
         st.write(st.secrets['passwords'])
         if st.session_state["username"] in st.secrets[
             "passwords"] :
