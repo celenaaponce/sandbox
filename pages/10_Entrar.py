@@ -142,7 +142,7 @@ if username in st.secrets.ASL1:
 elif username in st.secrets['ASL2']:
 
     login_sidebar_ASL2()
-    switch_page("Introduccion_a_ASL_2")
+    switch_page("Introducción_a_ASL_2")
     
 else:
 
