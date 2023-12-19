@@ -32,7 +32,7 @@ def login_sidebar_ASL1():
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion.py", "Introducción a ASL 1"),
+        Page("pages/Introduccion_a_ASL_1.py", "Introducción a ASL 1"),
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
         Page("pages/Bravo_2.py", "Desayuno"),
         Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
