@@ -15,7 +15,7 @@ show_pages(
     Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
     Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
     Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_tem"),
+    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
     Page("pages/10_Entrar.py", "Entrar")
 ])
 st.set_page_config(layout="wide", page_title="Diccionario Por Tema")
