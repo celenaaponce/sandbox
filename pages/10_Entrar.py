@@ -1,16 +1,7 @@
-import auth_custom.streamlit_authenticator as stauth
-import yaml
-import gdown
-from yaml.loader import SafeLoader
+
 import streamlit as st
 from switch_page_button import switch_page
-from PIL import Image
 from st_pages import Page, show_pages
-from pages import ASLAtHome
-from pages import holidays
-from pages import ASLAtHome_semana_2
-from pages import Introduccion_a_ASL_1
-from pages import Introduccion_a_ASL_2
 import string
 def regular_sidebar():
         show_pages(
