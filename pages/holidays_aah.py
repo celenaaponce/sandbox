@@ -29,7 +29,7 @@ def login_sidebar_ASLAtHome2():
         Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_aslah"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_En_Casa.py"),
         Page("pages/ASLAtHome_c1.py", "Capitulo 1"),
