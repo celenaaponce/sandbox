@@ -24,7 +24,7 @@ def regular_sidebar():
         Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_reg"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar")
     ])
         
@@ -40,7 +40,7 @@ def login_sidebar_ASL1():
         Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_asl1"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_1.py", "Introducción a ASL 1"),
         Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
@@ -62,7 +62,7 @@ def login_sidebar_ASL2():
         Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_asl2"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_2.py", "Introducción a ASL 2"),
         Page("pages/Bravo_5.py", "Repaso"),
@@ -84,7 +84,7 @@ def login_sidebar_ASLAtHome2():
         Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
         Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
         Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra_aslah"),
+        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_En_Casa.py"),
         Page("pages/ASLAtHome_c1.py", "Capitulo 1"),
@@ -106,7 +106,6 @@ def check_password():
         """Checks whether a password entered by the user is correct."""
         st.session_state['name'] = st.session_state['username']
         st.session_state['username'] = st.session_state['username'].split('@')[0].translate(str.maketrans('', '', string.punctuation))
-        st.write(st.secrets['passwords'])
         if st.session_state["username"] in st.secrets[
             "passwords"] :
             st.session_state["password_correct"] = True
@@ -115,7 +114,6 @@ def check_password():
             del st.session_state['username']
         else:
             st.session_state["password_correct"] = False
-        st.write('corr_pass', st.session_state['password_correct'])
     # Return True if the username + password is validated.
     if st.session_state.get("password_correct", False):
         return True
@@ -123,8 +121,7 @@ def check_password():
     # Show inputs for username + password.
     login_form()
     if "password_correct" in st.session_state:
-        st.write(st.session_state['username'])
-        st.error("😕 User not known or password incorrect")
+        st.error("😕 Correo Electronico o Contraseña Mal")
     return False
 
 
