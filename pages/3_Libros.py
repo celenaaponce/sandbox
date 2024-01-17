@@ -37,9 +37,7 @@ def open_page(url):
     
 def open_page_phone(url):
     open_script= """
-        <script type="text/javascript">
-            window.open('%s', '_self');
-        </script>
+        <a href='%s' target='_blank'>
     """ % (url)
     html(open_script)
 def set_styles():
