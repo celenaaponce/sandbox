@@ -125,7 +125,7 @@ if not phone:
 else:
     with outer_col[0]:
         st.image(image)
-        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/watch?v=cfetJAwPAho'))
+        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/watch?v=cfetJAwPAho',))
         ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
     
         st.image(image2)
