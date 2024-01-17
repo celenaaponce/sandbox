@@ -37,7 +37,7 @@ def open_page(url):
     
 def open_page_phone(url):
     open_script= """
-        <a href='%s' target='_blank'>
+        <a href='%s' target='_blank'></a>
     """ % (url)
     html(open_script)
 def set_styles():
