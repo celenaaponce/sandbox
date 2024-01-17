@@ -4,6 +4,7 @@ import streamlit.components.v1 as components
 from streamlit_extras.switch_page_button import switch_page
 from streamlit.components.v1 import html
 from st_pages import Page, Section,show_pages, add_page_title
+from streamlit_js_eval import streamlit_js_eval
 
 phone = False
 screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
