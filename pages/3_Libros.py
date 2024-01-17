@@ -5,6 +5,13 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit.components.v1 import html
 from st_pages import Page, Section,show_pages, add_page_title
 
+phone = False
+screen_width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
+
+if screen_width != None:
+  if screen_width < 400:
+      phone = True
+      
 show_pages(
 [
     Page("Pagina_Principal.py", "Pagina Principal"),
@@ -26,7 +33,14 @@ def open_page(url):
         </script>
     """ % (url)
     html(open_script)
-
+    
+def open_page_phone(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s',).focus();
+        </script>
+    """ % (url)
+    html(open_script)
 def set_styles():
     st.write("""
         <style>
@@ -89,20 +103,39 @@ image2 = Image.open('la arana muy ocupada.jpg')
 image3 = Image.open('el libro de colores de coneja blanca.jpeg')
 image5 = Image.open('como dan las buenas noches los dinosaurios.jpg')
 outer_col = st.columns([1,1])
-with outer_col[0]:
-    st.image(image)
-    st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page, args =('https://www.youtube.com/watch?v=cfetJAwPAho',))
-    ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
-
-    st.image(image2)
-    st.button('La Araña Muy Ocupada', key='Araña', on_click = open_page, args = ('https://www.youtube.com/watch?v=u37prsL9Rik',))
-    ChangeButtonColour('La Araña Muy Ocupada', '#fffff', '#FF725E') 
-
-with outer_col[1]:
-    st.image(image3)
-    st.button('El Libro de Colores de Coneja Blanca', key = 'Coneja', on_click = open_page, args=('https://www.youtube.com/watch?v=2qgjqhVc5Aw',))
-    ChangeButtonColour('El Libro de Colores de Coneja Blanca', '#fffff', '#FF725E') 
-
-    st.image(image5)
-    st.button('Como Dan Las Buenas Noches Los Dinosaurios', key = 'Dino', on_click = open_page, args = ('https://www.youtube.com/watch?v=wQCkUbaZLQQ',))
-    ChangeButtonColour('Como Dan Las Buenas Noches Los Dinosaurios', '#fffff', '#FF725E') 
+if not phone:
+    with outer_col[0]:
+        st.image(image)
+        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page, args =('https://www.youtube.com/watch?v=cfetJAwPAho',))
+        ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
+    
+        st.image(image2)
+        st.button('La Araña Muy Ocupada', key='Araña', on_click = open_page, args = ('https://www.youtube.com/watch?v=u37prsL9Rik',))
+        ChangeButtonColour('La Araña Muy Ocupada', '#fffff', '#FF725E') 
+    
+    with outer_col[1]:
+        st.image(image3)
+        st.button('El Libro de Colores de Coneja Blanca', key = 'Coneja', on_click = open_page, args=('https://www.youtube.com/watch?v=2qgjqhVc5Aw',))
+        ChangeButtonColour('El Libro de Colores de Coneja Blanca', '#fffff', '#FF725E') 
+    
+        st.image(image5)
+        st.button('Como Dan Las Buenas Noches Los Dinosaurios', key = 'Dino', on_click = open_page, args = ('https://www.youtube.com/watch?v=wQCkUbaZLQQ',))
+        ChangeButtonColour('Como Dan Las Buenas Noches Los Dinosaurios', '#fffff', '#FF725E') 
+else:
+    with outer_col[0]:
+        st.image(image)
+        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/watch?v=cfetJAwPAho',))
+        ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
+    
+        st.image(image2)
+        st.button('La Araña Muy Ocupada', key='Araña', on_click = open_page_phone, args = ('https://www.youtube.com/watch?v=u37prsL9Rik',))
+        ChangeButtonColour('La Araña Muy Ocupada', '#fffff', '#FF725E') 
+    
+    with outer_col[1]:
+        st.image(image3)
+        st.button('El Libro de Colores de Coneja Blanca', key = 'Coneja', on_click = open_page_phone, args=('https://www.youtube.com/watch?v=2qgjqhVc5Aw',))
+        ChangeButtonColour('El Libro de Colores de Coneja Blanca', '#fffff', '#FF725E') 
+    
+        st.image(image5)
+        st.button('Como Dan Las Buenas Noches Los Dinosaurios', key = 'Dino', on_click = open_page_phone, args = ('https://www.youtube.com/watch?v=wQCkUbaZLQQ',))
+        ChangeButtonColour('Como Dan Las Buenas Noches Los Dinosaurios', '#fffff', '#FF725E') 
