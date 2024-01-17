@@ -122,9 +122,10 @@ if not phone:
         ChangeButtonColour('Como Dan Las Buenas Noches Los Dinosaurios', '#fffff', '#FF725E') 
 else:
     with outer_col[0]:
-        st.image(image)
-        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/embeded/cfetJAwPAho',))
-        ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
+         st.markdown("<a href='https://www.youtube.com/watch?v=cfetJAwPAho' target='_blank'><img width='{size}%' src='jirafas no pueden bailar.jpg'></a>", unsafe_allow_html=True)
+        # st.image(image)
+        # st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/embeded/cfetJAwPAho',))
+        # ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
     
         st.image(image2)
         st.button('La Araña Muy Ocupada', key='Araña', on_click = open_page_phone, args = ('https://www.youtube.com/embeded/u37prsL9Rik',))
