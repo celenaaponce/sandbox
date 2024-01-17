@@ -125,18 +125,18 @@ if not phone:
 else:
     with outer_col[0]:
         st.image(image)
-        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/watch?v=cfetJAwPAho',))
+        st.button('Jirafas no Pueden Bailar', key='Jirafas', on_click = open_page_phone, args =('https://www.youtube.com/embeded/cfetJAwPAho',))
         ChangeButtonColour('Jirafas no Pueden Bailar', '#fffff', '#FF725E') 
     
         st.image(image2)
-        st.button('La Araña Muy Ocupada', key='Araña', on_click = open_page_phone, args = ('https://www.youtube.com/watch?v=u37prsL9Rik',))
+        st.button('La Araña Muy Ocupada', key='Araña', on_click = open_page_phone, args = ('https://www.youtube.com/embeded/u37prsL9Rik',))
         ChangeButtonColour('La Araña Muy Ocupada', '#fffff', '#FF725E') 
     
     with outer_col[1]:
         st.image(image3)
-        st.button('El Libro de Colores de Coneja Blanca', key = 'Coneja', on_click = open_page_phone, args=('https://www.youtube.com/watch?v=2qgjqhVc5Aw',))
+        st.button('El Libro de Colores de Coneja Blanca', key = 'Coneja', on_click = open_page_phone, args=('https://www.youtube.com/embeded/2qgjqhVc5Aw',))
         ChangeButtonColour('El Libro de Colores de Coneja Blanca', '#fffff', '#FF725E') 
     
         st.image(image5)
-        st.button('Como Dan Las Buenas Noches Los Dinosaurios', key = 'Dino', on_click = open_page_phone, args = ('https://www.youtube.com/watch?v=wQCkUbaZLQQ',))
+        st.button('Como Dan Las Buenas Noches Los Dinosaurios', key = 'Dino', on_click = open_page_phone, args = ('https://www.youtube.com/embeded/wQCkUbaZLQQ',))
         ChangeButtonColour('Como Dan Las Buenas Noches Los Dinosaurios', '#fffff', '#FF725E') 
