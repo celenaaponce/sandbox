@@ -38,7 +38,7 @@ def open_page(url):
 def open_page_phone(url):
     open_script= """
         <script type="text/javascript">
-            window.location.replace('%s');
+            window.open('%s', '_self');
         </script>
     """ % (url)
     html(open_script)
