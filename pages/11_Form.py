@@ -82,7 +82,14 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
-
+def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
+    
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.starttls()
+    server.login(sender, password)
+    text = email_message.as_string()
+    server.sendmail(sender, receiver, text)
+    server.quit()
 
 if __name__ == '__main__':
     message = ""
@@ -239,11 +246,3 @@ if __name__ == '__main__':
 
             send_email(sender = st.secrets[SENDER_ADDRESS], password = st.secrets[SENDER_PASSWORD], receiver = "celena.a.ponce@gmail.com", smtp_server = st.secrets[SMTP_SERVER_ADDRESS], smtp_port = st.secrets[PORT], email_message = msg, subject = "")
             
-def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
-    
-    server = smtplib.SMTP(smtp_server, smtp_port)
-    server.starttls()
-    server.login(sender, password)
-    text = email_message.as_string()
-    server.sendmail(sender, receiver, text)
-    server.quit()
