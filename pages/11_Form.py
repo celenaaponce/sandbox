@@ -49,7 +49,18 @@ def set_styles():
             background-color: #92E3A9;
 
             }
-
+            audio::-webkit-media-controls-timeline,
+            video::-webkit-media-controls-timeline {
+                display: none;
+                max-width: 20%;
+            }
+            audio::-webkit-media-controls-current-time-display,
+            audio::-webkit-media-controls-time-remaining-display {
+                display: none;
+            }
+            audio::-webkit-media-controls-panel {
+              max-width: 20%;
+            }
 
         </style>
     """, unsafe_allow_html=True)
@@ -85,10 +96,7 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
-st.markdown("""<div id="audio-player-container">
-  <p>audio player ish</p>
-  <button id="play-icon"></button>
-</div>""", unsafe_allow_html=True)
+
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
