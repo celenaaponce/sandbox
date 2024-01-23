@@ -3,8 +3,6 @@ import streamlit.components.v1 as components
 from streamlit_extras.switch_page_button import switch_page
 from streamlit.components.v1 import html
 from st_pages import Page,show_pages
-from pages.utils.helper import send_email
-from pages.utils.constants import (SMTP_SERVER_ADDRESS, PORT, SENDER_ADDRESS, SENDER_PASSWORD)
 import csv
 from email.mime.multipart import MIMEMultipart
 import mimetypes
@@ -240,3 +238,12 @@ if __name__ == '__main__':
 
 
             send_email(sender = SENDER_ADDRESS, password = SENDER_PASSWORD, receiver = "celena.a.ponce@gmail.com", smtp_server =SMTP_SERVER_ADDRESS, smtp_port = PORT, email_message = msg, subject = "")
+            
+def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
+    
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.starttls()
+    server.login(sender, password)
+    text = email_message.as_string()
+    server.sendmail(sender, receiver, text)
+    server.quit()
