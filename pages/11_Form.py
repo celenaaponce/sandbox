@@ -143,8 +143,12 @@ if __name__ == '__main__':
         with col2:
             st.audio('clases.m4a')
         clases_antes = st.radio(label = "", options = ["Si", "No"], label_visibility= "collapsed")
-
-        st.header("¿Cual temas ya sabe usted?")
+        
+        col1, col2, col3= st.columns([.3, .1, .6])
+        with col1:
+            st.header("¿Cual temas ya sabe usted?")
+        with col2:
+            st.audio('temas.m4a')
         bravo1 = st.checkbox("familia y básicos (Bravo 1)")
         bravo2 = st.checkbox("desayuno (Bravo 2)")
         bravo3 = st.checkbox("casa (Bravo 3)")
