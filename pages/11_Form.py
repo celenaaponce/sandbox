@@ -51,7 +51,7 @@ def set_styles():
             }
             audio::-webkit-media-controls-timeline,
             video::-webkit-media-controls-timeline {
-                max-width: 5%;
+                display: none;
             }
             audio::-webkit-media-controls-current-time-display,
             audio::-webkit-media-controls-time-remaining-display {
@@ -117,7 +117,7 @@ if __name__ == '__main__':
     img1pm = Image.open('1pm.jpeg')
     img10am = Image.open('10am.jpeg')
     with st.form("Tomar clase de ASL"):
-        col1, col2, col3= st.columns([.33, .33, .33])
+        col1, col2, col3= st.columns([.5, .1, .4])
         with col1:
             st.header("¿Como se llama usted?")
         with col2:
