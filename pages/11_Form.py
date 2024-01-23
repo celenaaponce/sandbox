@@ -123,20 +123,20 @@ if __name__ == '__main__':
     img1pm = Image.open('1pm.jpeg')
     img10am = Image.open('10am.jpeg')
     with st.form("Tomar clase de ASL"):
-        col1, col2, col3= st.columns([.5, .2, .3])
+        col1, col2, col3= st.columns([.6, .2, .2])
         with col1:
             st.header("¿Como se llama usted?")
         with col2:
             st.audio('nombre.m4a')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
-        col1, col2, col3= st.columns([.4, .1, .5])
+        col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
             st.header("¿Cual es su correo electronico?")
         with col2:
             st.audio('email.m4a')
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
-        col1, col2, col3= st.columns([.5, .1, .4])
+        col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
             st.header("¿Cual es su número de teléfono?")
         with col2:
