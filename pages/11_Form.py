@@ -49,23 +49,17 @@ def set_styles():
             background-color: #92E3A9;
 
             }
-            audio::-webkit-media-controls-timeline,
-            video::-webkit-media-controls-timeline {
-                display: none;
-            }
-            audio::-webkit-media-controls-current-time-display,
-            audio::-webkit-media-controls-time-remaining-display {
-                display: none;
-            }
-            audio::-webkit-media-controls-panel {
-              max-width: 20%;
-            }
-            audio::-webkit-media-controls-timeline-container {
-                max-width: 20%;
-            }
-            audio::-webkit-media-controls-volume-slider-container {
-                max-width: 20%;
-            }
+        audio {
+          display: none; /* Hide the default audio controls */
+        }
+        
+        audio::-webkit-media-controls-start-playback-button {
+          display: inline-block; /* Show only the play button for WebKit browsers (e.g., Chrome) */
+        }
+        
+        audio::-webkit-media-controls-enclosure {
+          width: 30px; /* Adjust the width of the play button container if needed */
+        }
 
         </style>
     """, unsafe_allow_html=True)
