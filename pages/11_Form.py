@@ -49,7 +49,7 @@ def set_styles():
             background-color: #92E3A9;
 
             }
-           audio::-webkit-media-controls-timeline,
+            audio::-webkit-media-controls-timeline,
             video::-webkit-media-controls-timeline {
                 display: none;
             }
@@ -63,7 +63,9 @@ def set_styles():
             audio::-webkit-media-controls-timeline-container {
                 max-width: 20%;
             }
-
+            audio::-webkit-media-controls-volume-slider-container {
+                max-width: 20%;
+            }
 
         </style>
     """, unsafe_allow_html=True)
@@ -110,7 +112,7 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.quit()
 
 if __name__ == '__main__':
-
+    set_styles()
     message = ""
     img5pm = Image.open('5pm.jpeg')
     img6pm = Image.open('6pm.jpeg')
