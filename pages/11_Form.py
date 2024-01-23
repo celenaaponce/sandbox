@@ -13,6 +13,7 @@ from email.mime.base import MIMEBase
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from PIL import Image
+import smtplib
 
 show_pages(
 [
