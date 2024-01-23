@@ -59,7 +59,7 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 audio::-webkit-media-controls-time-remaining-display,
 audio::-webkit-media-controls-current-time-display {
-    max-width: 50%;}
+    max-width: 10%;}
         </style>
     """, unsafe_allow_html=True)
 
