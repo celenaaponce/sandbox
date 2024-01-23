@@ -49,17 +49,23 @@ def set_styles():
             background-color: #92E3A9;
 
             }
-        audio {
-          display: none; /* Hide the default audio controls */
-        }
-        
-        audio::-webkit-media-controls-start-playback-button {
-          display: inline-block; /* Show only the play button for WebKit browsers (e.g., Chrome) */
-        }
-        
-        audio::-webkit-media-controls-enclosure {
-          width: 30px; /* Adjust the width of the play button container if needed */
-        }
+           audio::-webkit-media-controls-timeline,
+            video::-webkit-media-controls-timeline {
+                display: none;
+            }
+            audio::-webkit-media-controls-current-time-display,
+            audio::-webkit-media-controls-time-remaining-display {
+                display: none;
+            }
+            audio::-webkit-media-controls-panel {
+              max-width: 20%;
+            }
+            audio::-webkit-media-controls-timeline-container {
+                max-width: 20%;
+            }
+            audio::-webkit-media-controls-volume-slider-container {
+                max-width: 20%;
+            }
 
         </style>
     """, unsafe_allow_html=True)
@@ -95,51 +101,7 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
-st.markdown("""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Audio Player</title>
-  <style>
-    /* Optional styling for the image */
-    #playButton {
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
 
-<!-- Image that serves as the play button -->
-<img id="playButton" src="dictionary.png">
-
-<!-- Audio element initially hidden -->
-<audio id="audioPlayer" controls style="display: none;">
-  <source src="email.m4a">
-  Your browser does not support the audio tag.
-</audio>
-
-<script>
-  // Get references to the image and audio elements
-  const playButton = document.getElementById('playButton');
-  const audioPlayer = document.getElementById('audioPlayer');
-
-  // Add a click event listener to the image
-  playButton.addEventListener('click', function() {
-    // Check if audio is currently playing
-    if (audioPlayer.paused) {
-      // If paused, play the audio
-      audioPlayer.play();
-    } else {
-      // If playing, pause the audio
-      audioPlayer.pause();
-    }
-  });
-</script>
-
-</body>
-</html>
-""", unsafe_allow_html=True)
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
