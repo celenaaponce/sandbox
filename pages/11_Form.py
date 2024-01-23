@@ -51,7 +51,7 @@ def set_styles():
             }
             audio::-webkit-media-controls-time-remaining-display,
         audio::-webkit-media-controls-enclosure {
-            max-width: 50%;
+            max-width: 25%;
         }
         </style>
     """, unsafe_allow_html=True)
