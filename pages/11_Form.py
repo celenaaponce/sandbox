@@ -95,7 +95,51 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
+st.markdown("""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Audio Player</title>
+  <style>
+    /* Optional styling for the image */
+    #playButton {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
+<!-- Image that serves as the play button -->
+<img id="playButton" src="dictionary.png" alt="Play Button">
+
+<!-- Audio element initially hidden -->
+<audio id="audioPlayer" controls style="display: none;">
+  <source src="email.m4a" type="audio/m4a">
+  Your browser does not support the audio tag.
+</audio>
+
+<script>
+  // Get references to the image and audio elements
+  const playButton = document.getElementById('playButton');
+  const audioPlayer = document.getElementById('audioPlayer');
+
+  // Add a click event listener to the image
+  playButton.addEventListener('click', function() {
+    // Check if audio is currently playing
+    if (audioPlayer.paused) {
+      // If paused, play the audio
+      audioPlayer.play();
+    } else {
+      // If playing, pause the audio
+      audioPlayer.pause();
+    }
+  });
+</script>
+
+</body>
+</html>
+""", unsafe_allow_html=True)
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
