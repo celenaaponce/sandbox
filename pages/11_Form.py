@@ -111,11 +111,11 @@ st.markdown("""<!DOCTYPE html>
 <body>
 
 <!-- Image that serves as the play button -->
-<img id="playButton" src="dictionary.png" alt="Play Button">
+<img id="playButton" src="dictionary.png">
 
 <!-- Audio element initially hidden -->
 <audio id="audioPlayer" controls style="display: none;">
-  <source src="email.m4a" type="audio/m4a">
+  <source src="email.m4a">
   Your browser does not support the audio tag.
 </audio>
 
