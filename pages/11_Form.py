@@ -103,7 +103,7 @@ if __name__ == '__main__':
     img1pm = Image.open('1pm.jpeg')
     img10am = Image.open('10am.jpeg')
     with st.form("Tomar clase de ASL"):
-        st.header("¿Como se llama usted?")
+        st.header("¿Como se llama usted?"), st.audio('pronunciation_es_nombre.mp3')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
 
         st.header("¿Cual es su correo electronico?")
