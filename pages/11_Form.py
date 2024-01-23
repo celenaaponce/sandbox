@@ -149,7 +149,12 @@ if __name__ == '__main__':
             st.header("¿Cual temas ya sabe usted?")
         with col2:
             st.audio('temas.m4a')
-        bravo1 = st.checkbox("familia y básicos (Bravo 1)")
+
+        col1, col2, col3= st.columns([.4, .1, .5])
+        with col1:
+            bravo1 = st.checkbox("familia y básicos (Bravo 1)")
+        with col2:
+            st.audio('bravo1.m4a')
         bravo2 = st.checkbox("desayuno (Bravo 2)")
         bravo3 = st.checkbox("casa (Bravo 3)")
         bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
