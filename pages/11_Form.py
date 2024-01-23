@@ -49,18 +49,7 @@ def set_styles():
             background-color: #92E3A9;
 
             }
-            audio::-webkit-media-controls-timeline,
-            video::-webkit-media-controls-timeline {
-                display: none;
-                max-width: 20%;
-            }
-            audio::-webkit-media-controls-current-time-display,
-            audio::-webkit-media-controls-time-remaining-display {
-                display: none;
-            }
-            audio::-webkit-media-controls-panel {
-              max-width: 20%;
-            }
+
 
         </style>
     """, unsafe_allow_html=True)
