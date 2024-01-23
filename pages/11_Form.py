@@ -122,7 +122,7 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Como se llama usted?")
         with col2:
-            st.audio('pronunciation_es_nombre.mp3')
+            st.audio('nombre.m4a')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
 
         st.header("¿Cual es su correo electronico?")
