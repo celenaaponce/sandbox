@@ -212,7 +212,7 @@ if __name__ == '__main__':
                 writer.writerow(field)
                 writer.writerow([nombre, correo, telefono, clases_antes, bravo1, bravo2, bravo3, bravo4, bravo6, bravo7, asl1, asl2, asl3, asl4, hijo_edad,
                 lunes1, martes15, martes16, martes7, miercoles6, miercoles7, lunes6, lunes7, lunes2, martes2, viernes7, martes3, martes730, jueves12, sabado11, lunes7, miercoles5, viernesother,sabadoother12, sabadoother1,
-                domingoother10,domingoother11, domingoother12])
+                domingoother10,domingoother11, domingoother12, llamar, texto, correo])
             
             msg = MIMEMultipart()
             fileToSend = 'profiles1.csv'
