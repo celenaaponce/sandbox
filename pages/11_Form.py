@@ -150,7 +150,7 @@ if __name__ == '__main__':
         with col2:
             st.audio('temas.m4a')
 
-        col1, col2, col3= st.columns([.3, .1, .6])
+        col1, col2, col3= st.columns([.2, .1, .7])
         with col1:
             bravo1 = st.checkbox("familia y básicos (Bravo 1)")
         with col2:
