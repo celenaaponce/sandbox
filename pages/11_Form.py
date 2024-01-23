@@ -88,10 +88,10 @@ def ChangeButtonColour(widget_label, font_color, background_color='transparent')
             }}
         }})
     }}
-      function play(){
+      function play(){{
        var audio = document.getElementById('audio');
        audio.play();
-                 }
+                 }}
         </script>
         """
     components.html(f"{htmlstr}", height=0, width=0)
