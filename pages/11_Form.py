@@ -137,7 +137,7 @@ if __name__ == '__main__':
             st.audio('telefono.m4a')
         telefono = st.text_input(label = "", placeholder = "Entrar su número de teléfono", label_visibility= "collapsed")
 
-        col1, col2, col3= st.columns([.7, .1, .2])
+        col1, col2, col3= st.columns([.6, .1, .3])
         with col1:
             st.header("¿Usted ha tomado clases de lengua de señas antes?")
         with col2:
