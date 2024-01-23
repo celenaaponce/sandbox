@@ -57,6 +57,9 @@ def set_styles():
 audio::-webkit-media-controls-time-remaining-display {
     display: none;
 }
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-current-time-display {
+    max-width: 50%;}
         </style>
     """, unsafe_allow_html=True)
 
