@@ -49,10 +49,10 @@ def set_styles():
             background-color: #92E3A9;
 
             }
-            audio::-webkit-media-controls-time-remaining-display,
-        audio::-webkit-media-controls-enclosure {
-            max-width: 25%;
-        }
+            audio::-webkit-media-controls-timeline,
+            video::-webkit-media-controls-timeline {
+                display: none;
+            }
         </style>
     """, unsafe_allow_html=True)
 
@@ -97,6 +97,7 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.quit()
 
 if __name__ == '__main__':
+    set_styles()
     message = ""
     img5pm = Image.open('5pm.jpeg')
     img6pm = Image.open('6pm.jpeg')
