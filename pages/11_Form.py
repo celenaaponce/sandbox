@@ -53,6 +53,10 @@ def set_styles():
             video::-webkit-media-controls-timeline {
                 display: none;
             }
+            audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
         </style>
     """, unsafe_allow_html=True)
 
