@@ -123,7 +123,7 @@ if __name__ == '__main__':
     img1pm = Image.open('1pm.jpeg')
     img10am = Image.open('10am.jpeg')
     with st.form("Tomar clase de ASL"):
-        col1, col2, col3= st.columns([.3, .1, .6])
+        col1, col2, col3= st.columns([.4, .1, .5])
         with col1:
             st.header("¿Como se llama usted?")
         with col2:
