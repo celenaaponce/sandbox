@@ -51,7 +51,6 @@ def set_styles():
             }
             audio::-webkit-media-controls-timeline,
             video::-webkit-media-controls-timeline {
-                display: none;
                 max-width: 5%;
             }
             audio::-webkit-media-controls-current-time-display,
