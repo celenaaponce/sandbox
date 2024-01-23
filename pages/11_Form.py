@@ -130,7 +130,11 @@ if __name__ == '__main__':
             st.audio('email.m4a')
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
-        st.header("¿Cual es su número de teléfono?")
+        col1, col2, col3= st.columns([.4, .1, .5])
+        with col1:
+            st.header("¿Cual es su número de teléfono?")
+        with col2:
+            st.audio('telefono.m4a')
         telefono = st.text_input(label = "", placeholder = "Entrar su número de teléfono", label_visibility= "collapsed")
 
         st.header("¿Usted ha tomado clases de lengua de señas antes?")
