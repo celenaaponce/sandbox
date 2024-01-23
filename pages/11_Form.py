@@ -63,6 +63,9 @@ def set_styles():
             audio::-webkit-media-controls-timeline-container {
                 max-width: 20%;
             }
+            audio::-webkit-media-controls-volume-slider-container {
+                max-width: 20%;
+            }
 
         </style>
     """, unsafe_allow_html=True)
