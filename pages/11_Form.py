@@ -52,6 +52,7 @@ def set_styles():
             audio::-webkit-media-controls-timeline,
             video::-webkit-media-controls-timeline {
                 display: none;
+                max-width: 20%;
             }
             audio::-webkit-media-controls-current-time-display,
             audio::-webkit-media-controls-time-remaining-display {
@@ -59,9 +60,6 @@ def set_styles():
             }
             audio::-webkit-media-controls-panel {
               max-width: 20%;
-            }
-            audio::-webkit-media-controls-timeline-container{
-                max-width: 20%;
             }
 
         </style>
