@@ -96,6 +96,18 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
+
+st.markdown("""<!DOCTYPE html>
+<html>
+<body>
+ <audio id="player" src="horse.ogg"></audio>
+<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pause</button>
+    <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button>
+</div>
+</body>
+</html>""", unsafe_allow_html=True)
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
