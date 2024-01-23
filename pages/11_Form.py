@@ -49,6 +49,10 @@ def set_styles():
             background-color: #92E3A9;
 
             }
+            audio::-webkit-media-controls-time-remaining-display,
+        audio::-webkit-media-controls-enclosure {
+            max-width: 50%;
+        }
         </style>
     """, unsafe_allow_html=True)
 
