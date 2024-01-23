@@ -110,7 +110,7 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     text = email_message.as_string()
     server.sendmail(sender, receiver, text)
     server.quit()
-st.markdown("""<body>
+st.markdown('''<body>
 
     <script>
   function play(){
@@ -121,7 +121,7 @@ st.markdown("""<body>
 
 <img src="5pm.jpeg" value="PLAY"  onclick="play()">
 <audio id="audio" src="nombre.m4a" ></audio>
- </body>""", unsafe_allow_html=True)
+ </body>''', unsafe_allow_html=True)
 if __name__ == '__main__':
 
     message = ""
