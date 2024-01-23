@@ -112,7 +112,15 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.quit()
 
 if __name__ == '__main__':
-    set_styles()
+    audio_file = "nombre.m4a"
+
+    # Display the play button image
+    play_button_image = st.image("5pm.jpeg", caption="Click to play", use_column_width=True)
+
+    # Check if the play button is clicked
+    if play_button_image.button("Click to Play"):
+        # Play the audio
+        st.audio(audio_file, start_time=0)
     message = ""
     img5pm = Image.open('5pm.jpeg')
     img6pm = Image.open('6pm.jpeg')
