@@ -54,12 +54,11 @@ def set_styles():
                 display: none;
             }
             audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    display: none;
-}
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-current-time-display {
-    max-width: 10%;}
+            audio::-webkit-media-controls-time-remaining-display {
+                display: none;
+                max-width:20%;
+            }
+
         </style>
     """, unsafe_allow_html=True)
 
