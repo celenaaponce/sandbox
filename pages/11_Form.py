@@ -70,17 +70,6 @@ def set_styles():
 # Display the image using raw HTML
 image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
 
-def audio(git_audio_url):
-    # JavaScript code for playing audio on image click
-    audio_code = f"""
-    <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
-    <script>
-        function playAudio() {{
-            var audio = document.getElementById('myAudio');
-            audio.play();
-        }}
-    </script>
-    """
 
 # Display the image and attach the JavaScript code
 
@@ -109,7 +98,7 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Como se llama usted?") 
         with col2:
-            audio("https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a")
+            github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
             html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
@@ -273,3 +262,13 @@ if __name__ == '__main__':
 
             send_email(sender = st.secrets["SENDER_ADDRESS"], password = st.secrets["SENDER_PASSWORD"], receiver = "celena.a.ponce@gmail.com", smtp_server = st.secrets["SMTP_SERVER_ADDRESS"], smtp_port = st.secrets["PORT"], email_message = msg, subject = "")
             
+# JavaScript code for playing audio on image click
+audio_code = f"""
+<audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+<script>
+    function playAudio() {{
+        var audio = document.getElementById('myAudio');
+        audio.play();
+    }}
+</script>
+"""
