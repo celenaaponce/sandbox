@@ -107,7 +107,7 @@ div.stButton > button:first-child {
 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
 
 # Display the image using raw HTML
-image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.jpeg"  # Replace with the URL of your image
+image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
 
 # JavaScript code for playing audio on image click
 audio_code = f"""
