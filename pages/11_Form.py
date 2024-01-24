@@ -66,13 +66,6 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
 
-
-# Display the image using raw HTML
-image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
-
-
-# Display the image and attach the JavaScript code
-
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
@@ -120,15 +113,15 @@ if __name__ == '__main__':
             github_audio_url_2 = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
             image_url_2 = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
             audio_code_2 = f"""
-            <audio id="myAudio" src="{github_audio_url_2}" height="5"></audio>
+            <audio id="myAudio_2" src="{github_audio_url_2}" height="5"></audio>
             <script>
                 function playAudio() {{
-                    var audio = document.getElementById('myAudio');
+                    var audio = document.getElementById('myAudio_2');
                     audio.play();
                 }}
             </script>
             """
-            html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url_2}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code_2}', height=50)
+            html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage_2" src="{image_url_2}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code_2}', height=50)
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
         col1, col2, col3= st.columns([.5, .2, .3])
