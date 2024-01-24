@@ -65,6 +65,21 @@ def set_styles():
 
         </style>
     """, unsafe_allow_html=True)
+github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
+
+# Display the image using raw HTML
+image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
+
+# JavaScript code for playing audio on image click
+audio_code = f"""
+<audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+<script>
+    function playAudio() {{
+        var audio = document.getElementById('myAudio');
+        audio.play();
+    }}
+</script>
+"""
 
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
@@ -93,35 +108,17 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Como se llama usted?") 
         with col2:
-            image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
             github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
-            audio_code = f"""
-            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
-            <script>
-                function playAudio() {{
-                    var audio = document.getElementById('myAudio');
-                    audio.play();
-                }}
-            </script>
-            """
+
             html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
             st.header("¿Cual es su correo electronico?")
         with col2:
-            github_audio_url_2 = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
-            image_url_2 = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
-            audio_code_2 = f"""
-            <audio id="myAudio_2" src="{github_audio_url_2}" height="5"></audio>
-            <script>
-                function playAudio() {{
-                    var audio = document.getElementById('myAudio_2');
-                    audio.play();
-                }}
-            </script>
-            """
-            html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage_2" src="{image_url_2}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code_2}', height=50)
+            github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
+
+            html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
         col1, col2, col3= st.columns([.5, .2, .3])
