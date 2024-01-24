@@ -93,6 +93,16 @@ if __name__ == '__main__':
     img12pm = Image.open('12pm.jpeg')
     img1pm = Image.open('1pm.jpeg')
     img10am = Image.open('10am.jpeg')
+        # JavaScript code for playing audio on image click
+    audio_code = f"""
+    <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+    <script>
+        function playAudio() {{
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        }}
+    </script>
+    """
     with st.form("Tomar clase de ASL"):
         col1, col2 = st.columns([.55, .45])
         with col1:
@@ -262,13 +272,4 @@ if __name__ == '__main__':
 
             send_email(sender = st.secrets["SENDER_ADDRESS"], password = st.secrets["SENDER_PASSWORD"], receiver = "celena.a.ponce@gmail.com", smtp_server = st.secrets["SMTP_SERVER_ADDRESS"], smtp_port = st.secrets["PORT"], email_message = msg, subject = "")
             
-# JavaScript code for playing audio on image click
-audio_code = f"""
-<audio id="myAudio" src="{github_audio_url}" height="5"></audio>
-<script>
-    function playAudio() {{
-        var audio = document.getElementById('myAudio');
-        audio.play();
-    }}
-</script>
-"""
+
