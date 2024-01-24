@@ -112,10 +112,10 @@ if __name__ == '__main__':
         # JavaScript code for playing audio on image click
 
     with st.form("Tomar clase de ASL"):
-        col1, col2 = st.columns([.55, .45])
-        with col1:
-            st.header("¿Como se llama usted?") 
+        col1, col2 = st.columns([.45, .55])
         with col2:
+            st.header("¿Como se llama usted?") 
+        with col1:
             if not phone:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
                 audio_code = f"""
