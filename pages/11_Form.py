@@ -121,9 +121,7 @@ audio_code = f"""
 """
 
 # Display the image and attach the JavaScript code
-st.markdown(f'<img id="customImage" src="{image_url}" style="cursor: pointer;" onmouseover="playAudio()" />', unsafe_allow_html=True)
-st.markdown(audio_code, unsafe_allow_html=True)
-
+st.html(f'<div onmouseover="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" /></div>{audio_code}')
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
