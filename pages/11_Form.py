@@ -130,8 +130,7 @@ def play():
         # Update status
         status_placeholder.text("Playing...")
 
-        # Play the audio
-        play()
+
 
         # Your code to execute when the play button is pressed
         # Replace this with your actual functionality
