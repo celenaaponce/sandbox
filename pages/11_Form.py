@@ -51,8 +51,6 @@ def play_audio():
         </head>
         <body>
         
-        <button onclick="playAudio()">Play Audio</button>
-        
         <script>
         function playAudio() {
             // Create an Audio element
@@ -141,37 +139,38 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.quit()
     
 def play_sound():
-    st.title("Audio Player Example")
+    htmlstr = """        
+        <button onclick="playAudio()">Play Audio</button>"""
+    html(htmlstr)
+    # st.title("Audio Player Example")
 
-    # Load the audio file
-    audio = AudioSegment.from_file('pronunciation_es_nombre.mp3', 'mp3')
-    # Create a button to play/pause
-    play_button = st.button("Play")
+    # # Load the audio file
+    # audio = AudioSegment.from_file('pronunciation_es_nombre.mp3', 'mp3')
+    # # Create a button to play/pause
+    # play_button = st.button("Play")
 
-    # Placeholder for displaying play/pause status
-    status_placeholder = st.empty()
-    if play_button:
-        play_audio()
-    # # Main loop
+    # # Placeholder for displaying play/pause status
+    # status_placeholder = st.empty()
     # if play_button:
-    #     # Update status
-    #     status_placeholder.text("Playing...")
+    #     play_audio()
+    # # # Main loop
+    # # if play_button:
+    # #     # Update status
+    # #     status_placeholder.text("Playing...")
 
-    #     play(audio)
+    # #     play(audio)
 
-    #     # Your code to execute when the play button is pressed
-    #     # Replace this with your actual functionality
-    #     time.sleep(1)
+    # #     # Your code to execute when the play button is pressed
+    # #     # Replace this with your actual functionality
+    # #     time.sleep(1)
 
-    #     # Check if the button is still pressed
-    #     play_button = st.button("Pause")
+    # #     # Check if the button is still pressed
+    # #     play_button = st.button("Pause")
 
-    #     # Clear the status placeholder
-    #     status_placeholder.text("")
+    # #     # Clear the status placeholder
+    # #     status_placeholder.text("")
 play_sound()
-st.markdown("""<script>
 
-</script>""", unsafe_allow_html = True)
 if __name__ == '__main__':
     set_styles()
     message = ""
