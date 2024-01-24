@@ -113,23 +113,24 @@ if __name__ == '__main__':
 
     with st.form("Tomar clase de ASL"):
         col1, col2 = st.columns([.1, .9])
-        with col2:
+        if not phone:
+            with col2:
+                st.header("¿Como se llama usted?") 
+            with col1:
+                    github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
+                    audio_code = f"""
+                    <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                    <script>
+                        function playAudio() {{
+                            var audio = document.getElementById('myAudio');
+                            audio.play();
+                        }}
+                    </script>
+                    """
+                    html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
+        else:
             st.header("¿Como se llama usted?") 
-        with col1:
-            if not phone:
-                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
-                audio_code = f"""
-                <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
-                <script>
-                    function playAudio() {{
-                        var audio = document.getElementById('myAudio');
-                        audio.play();
-                    }}
-                </script>
-                """
-                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
-            else:
-                st.audio('nombre.m4a')
+            st.audio('nombre.m4a')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2 = st.columns([.75, .25])
         with col1:
