@@ -136,7 +136,7 @@ def play_sound():
     if play_button:
         js_code = f"""
         <script>
-            var audio = new Audio('https://raw.githubusercontent.com/celenaaponce/sandbox/main/pronunciation_es_nombre.mp3');
+            var audio = new Audio('pronunciation_es_nombre.mp3');
     
             function playAudio() {{
                 audio.play();
