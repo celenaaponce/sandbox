@@ -210,7 +210,7 @@ if __name__ == '__main__':
             else:
                 st.audio('temas.m4a')
 
-        col1, col2 = st.columns([.4, .6])
+        col1, col2 = st.columns([.3, .7])
         with col1:
             bravo1 = st.checkbox("familia y básicos (Bravo 1)")
         with col2:
@@ -225,7 +225,7 @@ if __name__ == '__main__':
                                 }}
                             </script>
                             """
-                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=25)
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)
             else:
                 st.audio('bravo1.m4a')
         bravo2 = st.checkbox("desayuno (Bravo 2)")
