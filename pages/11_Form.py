@@ -110,7 +110,31 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     text = email_message.as_string()
     server.sendmail(sender, receiver, text)
     server.quit()
+    
+def play():
+    st.title("Play Button Example")
 
+    # Create a button to play/pause
+    play_button = st.button("Play")
+
+    # Placeholder for displaying play/pause status
+    status_placeholder = st.empty()
+
+    # Main loop
+    while play_button:
+        # Update status
+        status_placeholder.text("Playing...")
+
+        # Your code to execute when the play button is pressed
+        # Replace this with your actual functionality
+        time.sleep(1)
+
+        # Check if the button is still pressed
+        play_button = st.button("Pause")
+
+        # Clear the status placeholder
+        status_placeholder.text("")
+play()
 if __name__ == '__main__':
     set_styles()
     message = ""
