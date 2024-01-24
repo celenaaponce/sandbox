@@ -131,7 +131,10 @@ def play_sound():
     # Button to play audio
     play_button = st.button("Play Audio")
 
-    js_code = f"""
+
+    # Button triggers JavaScript function
+    if play_button:
+            js_code = f"""
     <script>
         var audio = new Audio('{github_audio_url}');
 
@@ -143,10 +146,6 @@ def play_sound():
 
     # Embed JavaScript code in Streamlit app
     st.markdown(js_code, unsafe_allow_html=True)
-
-    # Button triggers JavaScript function
-    if play_button:
-        st.markdown("Play Audio", unsafe_allow_html=True)
 play_sound()
 
 if __name__ == '__main__':
