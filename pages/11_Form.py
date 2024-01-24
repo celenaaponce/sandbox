@@ -191,7 +191,7 @@ if __name__ == '__main__':
                 st.audio('clases.m4a')
         clases_antes = st.radio(label = "", options = ["Si", "No"], label_visibility= "collapsed")
         
-        col1, col2= st.columns([.5, .5])
+        col1, col2= st.columns([.7, .3])
         with col1:
             st.header("¿Cual temas ya sabe usted?")
         with col2:
@@ -210,11 +210,24 @@ if __name__ == '__main__':
             else:
                 st.audio('temas.m4a')
 
-        col1, col2 = st.columns([.7, .3])
+        col1, col2 = st.columns([.4, .6])
         with col1:
             bravo1 = st.checkbox("familia y básicos (Bravo 1)")
         with col2:
-            st.audio('bravo1.m4a')
+            if not phone:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo1.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
+            else:
+                st.audio('bravo1.m4a')
         bravo2 = st.checkbox("desayuno (Bravo 2)")
         bravo3 = st.checkbox("casa (Bravo 3)")
         bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
