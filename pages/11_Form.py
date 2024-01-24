@@ -118,7 +118,7 @@ def play_sound():
     st.title("Audio Player Example")
 
     # Load the audio file
-    audio = AudioSegment.from_file('pronunciation_es_nombre.mp3')
+    audio = AudioSegment.from_file('https://github.com/celenaaponce/sandbox/blob/main/pronunciation_es_nombre.mp3')
     # Create a button to play/pause
     play_button = st.button("Play")
 
