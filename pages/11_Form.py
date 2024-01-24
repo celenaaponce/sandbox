@@ -108,7 +108,7 @@ github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/nombr
 
 # Display the image
 image_url = "5pm.jpeg"  # Replace with the URL of your image
-st.image(image_url, use_container_width=True)
+st.image(image_url)
 
 # JavaScript code for playing audio on image click
 audio_code = f"""
