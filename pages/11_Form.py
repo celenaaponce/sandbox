@@ -131,7 +131,7 @@ if __name__ == '__main__':
             else:
                 st.audio('nombre.m4a')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
-        col1, col2, col3= st.columns([.5, .2, .3])
+        col1, col2 = st.columns([.5, .5])
         with col1:
             st.header("¿Cual es su correo electronico?")
         with col2:
@@ -151,7 +151,7 @@ if __name__ == '__main__':
                 st.audio('email.m4a')
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
-        col1, col2, col3= st.columns([.5, .2, .3])
+        col1, col2 = st.columns([.5, .5])
         with col1:
             st.header("¿Cual es su número de teléfono?")
         with col2:
