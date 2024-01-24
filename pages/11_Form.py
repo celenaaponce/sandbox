@@ -151,7 +151,7 @@ if __name__ == '__main__':
                 st.audio('email.m4a')
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
-        col1, col2 = st.columns([.85, .15])
+        col1, col2 = st.columns([.81, .19])
         with col1:
             st.header("¿Cual es su número de teléfono?")
         with col2:
