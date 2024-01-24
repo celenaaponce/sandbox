@@ -74,7 +74,7 @@ image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.pn
 
 # JavaScript code for playing audio on image click
 audio_code = f"""
-<audio id="myAudio" src="{github_audio_url}"></audio>
+<audio id="myAudio" src="{github_audio_url}" height="5"></audio>
 <script>
     function playAudio() {{
         var audio = document.getElementById('myAudio');
