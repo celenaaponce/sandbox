@@ -107,7 +107,7 @@ div.stButton > button:first-child {
 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
 
 # Display the image using raw HTML
-image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
+image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.jpeg"  # Replace with the URL of your image
 
 # JavaScript code for playing audio on image click
 audio_code = f"""
@@ -121,7 +121,7 @@ audio_code = f"""
 """
 
 # Display the image and attach the JavaScript code
-html(f'<div onmouseover="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" width="10"/></div>{audio_code}')
+html(f'<div onmouseover="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" width="100"/></div>{audio_code}')
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
