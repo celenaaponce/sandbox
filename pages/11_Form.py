@@ -131,7 +131,14 @@ play_button = st.button("Play Audio")
 
 # Trigger JavaScript function to play audio
 if play_button:
-    st.write(f'<audio src="{github_audio_url}" controls autoplay></audio>', unsafe_allow_html=True)
+    audio_code = f"""
+        <audio id="myAudio" src="{github_audio_url}" autoplay></audio>
+        <script>
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        </script>
+        """
+    st.write(audio_code, unsafe_allow_html=True)
 if __name__ == '__main__':
     set_styles()
     message = ""
