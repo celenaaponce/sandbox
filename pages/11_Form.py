@@ -16,7 +16,7 @@ from PIL import Image
 import smtplib
 from pydub import AudioSegment
 from pydub.playback import play
-
+import time
 
 show_pages(
 [
