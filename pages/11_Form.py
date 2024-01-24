@@ -118,7 +118,7 @@ def play_sound():
     st.title("Audio Player Example")
 
     # Load the audio file
-    audio = AudioSegment.from_file('asl1.m4a')
+    audio = AudioSegment.from_file('https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl1.m4a')
     # Create a button to play/pause
     play_button = st.button("Play")
 
