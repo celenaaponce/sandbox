@@ -108,18 +108,18 @@ github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/
 
 # Display the image using raw HTML
 image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/5pm.jpeg"  # Replace with the URL of your image
-st.write(f'<img id="customImage" src="{image_url}" style="cursor: pointer;" />', unsafe_allow_html=True)
+st.write(f'<img id="customImage" src="{image_url}" style="cursor: pointer;" onclick="playAudio()" />', unsafe_allow_html=True)
 
 # JavaScript code for playing audio on image click
 audio_code = f"""
-<audio id="myAudio" src="{github_audio_url}"></audio>
-<script>
-    var audio = document.getElementById('myAudio');
-    document.getElementById('customImage').addEventListener('click', function() {{
-        audio.play();
-    }});
-</script>
-"""
+    <audio id="myAudio" src="{github_audio_url}"></audio>
+    <script>
+        function playAudio() {{
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        }}
+    </script>
+    """
 
 st.write(audio_code, unsafe_allow_html=True)
 
