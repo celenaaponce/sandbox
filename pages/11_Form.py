@@ -114,14 +114,6 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.sendmail(sender, receiver, text)
     server.quit()
     
-def play_audio(url):
-    """Play audio using JavaScript."""
-    return components.ComponentRequest(
-        key="play_audio",
-        method="play_audio",
-        args=(url,),
-        kwargs={},
-    )
 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/pronunciation_es_nombre.mp3"
 
 st.title("Audio Player Example")
