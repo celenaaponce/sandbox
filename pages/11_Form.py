@@ -33,13 +33,6 @@ show_pages(
     Page("pages/10_Entrar.py", "Entrar"),
     Page("pages/11_Form.py", "Formulario")
 ])
-def open_page(url):
-    open_script= """
-        <script type="text/javascript">
-            window.open('%s', '_blank').focus();
-        </script>
-    """ % (url)
-    html(open_script)
 
 def set_styles():
     st.write("""
@@ -73,37 +66,7 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
 
-def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
-    htmlstr = f"""
-        <script>
-            var elements = window.parent.document.querySelectorAll('button');
-            for (var i = 0; i < elements.length; ++i) {{ 
-                if (elements[i].innerText == '{widget_label}') {{ 
-                    elements[i].style.color ='{font_color}';
-                    elements[i].style.background = '{background_color}'
-                }}
-            }}
-        function goTo(page) {{
-        page_links = parent.document.querySelectorAll('[data-testid="stSidebarNav"] ul li a')
-        page_links.forEach((link) => {{
-            if (link.text == page) {{
-                link.click()
-            }}
-        }})
-    }}
-        </script>
-        """
-    components.html(f"{htmlstr}", height=0, width=0)
 
-m = st.markdown("""
-<style>
-div.stButton > button:first-child {
-  border: none;
-  display: block;
-  width: 200px; 
-  margin: 0 auto;
-}
-</style>""", unsafe_allow_html=True)
 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
 
 # Display the image using raw HTML
