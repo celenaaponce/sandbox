@@ -15,6 +15,8 @@ from email.mime.text import MIMEText
 from PIL import Image
 import smtplib
 import time
+from pydub import AudioSegment
+from pydub.playback import play
 
 
 show_pages(
@@ -114,7 +116,10 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.quit()
     
 def play():
-    st.title("Play Button Example")
+    st.title("Audio Player Example")
+
+    # Load the audio file
+    audio = AudioSegment.from_file('nombre.m4a')
 
     # Create a button to play/pause
     play_button = st.button("Play")
@@ -126,6 +131,9 @@ def play():
     while play_button:
         # Update status
         status_placeholder.text("Playing...")
+
+        # Play the audio
+        play(audio)
 
         # Your code to execute when the play button is pressed
         # Replace this with your actual functionality
