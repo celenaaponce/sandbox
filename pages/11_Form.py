@@ -114,15 +114,8 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.sendmail(sender, receiver, text)
     server.quit()
     
-github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/pronunciation_es_nombre.mp3"
-
-st.title("Audio Player Example")
-
-# Button to play audio
-play_button = st.button("Play Audio")
-
 # Trigger JavaScript function to play audio
-if play_button:
+def play_audio(github_audio_url):
     audio_code = f"""
         <audio id="myAudio" src="{github_audio_url}" autoplay></audio>
         <script>
@@ -147,7 +140,10 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Como se llama usted?")
         with col2:
-            st.audio('nombre.m4a')
+            nombre_btn = st.button(":arrow_forward:")
+            if nombre_btn:
+                play_audio("https://raw.githubusercontent.com/celenaaponce/sandbox/nombre.m4a")
+
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
