@@ -191,7 +191,7 @@ if __name__ == '__main__':
                 st.audio('clases.m4a')
         clases_antes = st.radio(label = "", options = ["Si", "No"], label_visibility= "collapsed")
         
-        col1, col2, col3= st.columns([.4, .1, .5])
+        col1, col2= st.columns([.5, .5])
         with col1:
             st.header("¿Cual temas ya sabe usted?")
         with col2:
@@ -210,7 +210,7 @@ if __name__ == '__main__':
             else:
                 st.audio('temas.m4a')
 
-        col1, col2, col3= st.columns([.2, .1, .7])
+        col1, col2 = st.columns([.7, .3])
         with col1:
             bravo1 = st.checkbox("familia y básicos (Bravo 1)")
         with col2:
