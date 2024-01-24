@@ -17,7 +17,7 @@ import smtplib
 from pydub import AudioSegment
 from pydub.playback import play
 import time
-from streamlit.components.v1 import ComponentRequest
+
 show_pages(
 [
     Page("Pagina_Principal.py", "Pagina Principal"),
@@ -116,7 +116,7 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     
 def play_audio(url):
     """Play audio using JavaScript."""
-    return ComponentRequest(
+    return components.ComponentRequest(
         key="play_audio",
         method="play_audio",
         args=(url,),
