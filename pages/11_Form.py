@@ -104,7 +104,24 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
+github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/nombre.m4a"
 
+# Display the image
+image_url = "5pm.jpeg"  # Replace with the URL of your image
+st.image(image_url, use_container_width=True)
+
+# JavaScript code for playing audio on image click
+audio_code = f"""
+<audio id="myAudio" src="{github_audio_url}"></audio>
+<script>
+    var audio = document.getElementById('myAudio');
+    document.getElementById('stImage').addEventListener('click', function() {{
+        audio.play();
+    }});
+</script>
+"""
+
+st.write(audio_code, unsafe_allow_html=True)
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
@@ -139,10 +156,10 @@ if __name__ == '__main__':
         col1, col2, col3= st.columns([.6, .2, .2])
         with col1:
             st.header("¿Como se llama usted?")
-        with col2:
-            nombre_btn = st.button(":arrow_forward:")
-            if nombre_btn:
-                play_audio("https://raw.githubusercontent.com/celenaaponce/sandbox/nombre.m4a")
+        # with col2:
+        #     nombre_btn = st.button(":arrow_forward:")
+        #     if nombre_btn:
+        #         play_audio("https://raw.githubusercontent.com/celenaaponce/sandbox/nombre.m4a")
 
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
