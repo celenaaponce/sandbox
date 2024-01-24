@@ -114,7 +114,7 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.sendmail(sender, receiver, text)
     server.quit()
     
-def play():
+def play_sound():
     st.title("Audio Player Example")
 
     # Load the audio file
@@ -130,7 +130,7 @@ def play():
         # Update status
         status_placeholder.text("Playing...")
 
-
+        play()
 
         # Your code to execute when the play button is pressed
         # Replace this with your actual functionality
@@ -141,7 +141,7 @@ def play():
 
         # Clear the status placeholder
         status_placeholder.text("")
-play()
+play_sound()
 if __name__ == '__main__':
     set_styles()
     message = ""
