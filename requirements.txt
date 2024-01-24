@@ -4,5 +4,6 @@ streamlit_extras==0.2.7
 st_click_detector==0.1.3
 streamlit==1.28.0
 pydub==0.25.1
+ffmpeg==1.4
 streamlit_authenticator
 st_pages
