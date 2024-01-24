@@ -109,9 +109,6 @@ github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/
 # Display the image using raw HTML
 image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/5pm.jpeg"  # Replace with the URL of your image
 
-st.write(f'<img id="customImage" src="{image_url}" style="cursor: pointer;" onclick="playAudio()" />', unsafe_allow_html=True)
-
-# JavaScript code for playing audio on image click
 audio_code = f"""
 <audio id="myAudio" src="{github_audio_url}"></audio>
 <script>
@@ -122,7 +119,9 @@ audio_code = f"""
 </script>
 """
 
-st.write(audio_code, unsafe_allow_html=True)
+# Display the image and attach the JavaScript code
+st.markdown(f'<img id="customImage" src="{image_url}" style="cursor: pointer;" onclick="playAudio()" />', unsafe_allow_html=True)
+st.markdown(audio_code, unsafe_allow_html=True)
 
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
