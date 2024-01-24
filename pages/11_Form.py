@@ -43,7 +43,7 @@ def open_page(url):
 
 def play_audio():
     open_script= """       
-        <script>
+        <script type="text/javascript">
             // Create an Audio element
             var audio = new Audio('pronunciation_es_nombre.mp3');
         
