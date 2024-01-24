@@ -112,7 +112,7 @@ if __name__ == '__main__':
         # JavaScript code for playing audio on image click
 
     with st.form("Tomar clase de ASL"):
-        col1, col2 = st.columns([.45, .55])
+        col1, col2 = st.columns([.2, .8])
         with col2:
             st.header("¿Como se llama usted?") 
         with col1:
