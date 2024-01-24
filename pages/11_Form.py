@@ -41,6 +41,14 @@ def open_page(url):
     """ % (url)
     html(open_script)
 
+def play_audio():
+    open_script= """
+    <script>
+        var audio = new Audio('pronunciation_es_nombre.mp3');
+        audio.play();
+    </script>
+    """ 
+    html(open_script)
 def set_styles():
     st.write("""
         <style>
@@ -124,27 +132,27 @@ def play_sound():
 
     # Placeholder for displaying play/pause status
     status_placeholder = st.empty()
-
-    # Main loop
     if play_button:
-        # Update status
-        status_placeholder.text("Playing...")
+        play_audio()
+    # # Main loop
+    # if play_button:
+    #     # Update status
+    #     status_placeholder.text("Playing...")
 
-        play(audio)
+    #     play(audio)
 
-        # Your code to execute when the play button is pressed
-        # Replace this with your actual functionality
-        time.sleep(1)
+    #     # Your code to execute when the play button is pressed
+    #     # Replace this with your actual functionality
+    #     time.sleep(1)
 
-        # Check if the button is still pressed
-        play_button = st.button("Pause")
+    #     # Check if the button is still pressed
+    #     play_button = st.button("Pause")
 
-        # Clear the status placeholder
-        status_placeholder.text("")
+    #     # Clear the status placeholder
+    #     status_placeholder.text("")
 play_sound()
 st.markdown("""<script>
-var audio = new Audio('pronunciation_es_nombre.mp3');
-audio.play();
+
 </script>""", unsafe_allow_html = True)
 if __name__ == '__main__':
     set_styles()
