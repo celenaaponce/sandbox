@@ -107,7 +107,7 @@ div.stButton > button:first-child {
 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
 
 # Display the image using raw HTML
-image_url = "5pm.jpeg"  # Replace with the URL of your image
+image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/5pm.jpeg"  # Replace with the URL of your image
 st.write(f'<img id="customImage" src="{image_url}" style="cursor: pointer;" />', unsafe_allow_html=True)
 
 # JavaScript code for playing audio on image click
