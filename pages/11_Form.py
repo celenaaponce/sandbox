@@ -17,7 +17,7 @@ import smtplib
 from pydub import AudioSegment
 from pydub.playback import play
 import time
-
+from streamlit.components.v1 import ComponentRequest
 show_pages(
 [
     Page("Pagina_Principal.py", "Pagina Principal"),
