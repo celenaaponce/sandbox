@@ -109,7 +109,7 @@ if __name__ == '__main__':
         st.header("¿Como se llama usted?") 
 
         github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
-        html(f'<div onclick="playAudio()" style="cursor: pointer;" height="50"><img id="customImage" src="{image_url}" width="50"/></div>{audio_code}')
+        html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50"/></div>{audio_code}')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
