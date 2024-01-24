@@ -126,7 +126,7 @@ def play_sound():
     status_placeholder = st.empty()
 
     # Main loop
-    while play_button:
+    if play_button:
         # Update status
         status_placeholder.text("Playing...")
 
@@ -142,6 +142,10 @@ def play_sound():
         # Clear the status placeholder
         status_placeholder.text("")
 play_sound()
+st.markdown("""<script>
+var audio = new Audio('pronunciation_es_nombre.mp3');
+audio.play();
+</script>""", unsafe_allow_html = True)
 if __name__ == '__main__':
     set_styles()
     message = ""
