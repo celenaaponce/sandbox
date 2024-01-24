@@ -7,3 +7,4 @@ streamlit_authenticator
 st_pages
 pydub
 ffmpeg
+ffprobe
