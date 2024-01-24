@@ -117,7 +117,8 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Cual es su correo electronico?")
         with col2:
-            st.audio('email.m4a')
+            github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
+            html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
         col1, col2, col3= st.columns([.5, .2, .3])
