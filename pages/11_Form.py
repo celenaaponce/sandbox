@@ -17,7 +17,7 @@ import smtplib
 from pydub import AudioSegment
 from pydub.playback import play
 import time
-import streamlit_js_eval
+from streamlit_js_eval import streamlit_js_eval
 
 show_pages(
 [
