@@ -121,7 +121,7 @@ audio_code = f"""
 """
 
 # Display the image and attach the JavaScript code
-html(f'<div onclick="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" width="100"/></div>{audio_code}')
+
 def send_email(sender, password, receiver, smtp_server, smtp_port, email_message, subject, attachments=None):
     
     server = smtplib.SMTP(smtp_server, smtp_port)
@@ -131,16 +131,6 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.sendmail(sender, receiver, text)
     server.quit()
     
-# Trigger JavaScript function to play audio
-def play_audio(github_audio_url):
-    audio_code = f"""
-        <audio id="myAudio" src="{github_audio_url}" autoplay></audio>
-        <script>
-            var audio = document.getElementById('myAudio');
-            audio.play();
-        </script>
-        """
-    st.write(audio_code, unsafe_allow_html=True)
 if __name__ == '__main__':
     set_styles()
     message = ""
@@ -156,7 +146,9 @@ if __name__ == '__main__':
         col1, col2, col3= st.columns([.6, .2, .2])
         with col1:
             st.header("¿Como se llama usted?") 
-
+        with col2:
+            github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
+            html(f'<div onclick="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" width="100"/></div>{audio_code}')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
