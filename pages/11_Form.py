@@ -42,27 +42,14 @@ def open_page(url):
     html(open_script)
 
 def play_audio():
-    open_script= """
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Audio Player</title>
-        </head>
-        <body>
-        
+    open_script= """       
         <script>
-        function playAudio() {
             // Create an Audio element
             var audio = new Audio('pronunciation_es_nombre.mp3');
         
             // Play the audio
             audio.play();
-        }
         </script>
-        
-        </body>
-        </html>
     """ 
     html(open_script)
 def set_styles():
