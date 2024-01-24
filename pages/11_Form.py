@@ -132,24 +132,25 @@ if __name__ == '__main__':
             st.header("¿Como se llama usted?") 
             st.audio('nombre.m4a')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
-        col1, col2 = st.columns([.75, .25])
-        with col1:
+        if not phone:
+            col2, col1 = st.columns([.1, .9])
+            with col1:
+                st.header("¿Cual es su correo electronico?")
+            with col2:
+                    github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/email.m4a"
+                    audio_code = f"""
+                                <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                                <script>
+                                    function playAudio() {{
+                                        var audio = document.getElementById('myAudio');
+                                        audio.play();
+                                    }}
+                                </script>
+                                """
+                    html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
+        else:
             st.header("¿Cual es su correo electronico?")
-        with col2:
-            if not phone:
-                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/email.m4a"
-                audio_code = f"""
-                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
-                            <script>
-                                function playAudio() {{
-                                    var audio = document.getElementById('myAudio');
-                                    audio.play();
-                                }}
-                            </script>
-                            """
-                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
-            else:
-                st.audio('email.m4a')
+            st.audio('email.m4a')
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
 
         col1, col2 = st.columns([.75, .25])
