@@ -14,8 +14,8 @@ from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from PIL import Image
 import smtplib
-import time
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 
 
 show_pages(
@@ -118,7 +118,7 @@ def play():
     st.title("Audio Player Example")
 
     # Load the audio file
-
+    audio = AudioSegment.from_file('asl1.m4a')
     # Create a button to play/pause
     play_button = st.button("Play")
 
@@ -131,7 +131,7 @@ def play():
         status_placeholder.text("Playing...")
 
         # Play the audio
-        playsound('nombre.m4a')
+        play()
 
         # Your code to execute when the play button is pressed
         # Replace this with your actual functionality
