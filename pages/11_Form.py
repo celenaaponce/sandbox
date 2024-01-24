@@ -175,14 +175,40 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Usted ha tomado clases de lengua de señas antes?")
         with col2:
-            st.audio('clases.m4a')
+            if not phone:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/clases.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
+            else:
+                st.audio('clases.m4a')
         clases_antes = st.radio(label = "", options = ["Si", "No"], label_visibility= "collapsed")
         
         col1, col2, col3= st.columns([.4, .1, .5])
         with col1:
             st.header("¿Cual temas ya sabe usted?")
         with col2:
-            st.audio('temas.m4a')
+            if not phone:    
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/temas.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
+            else:
+                st.audio('temas.m4a')
 
         col1, col2, col3= st.columns([.2, .1, .7])
         with col1:
