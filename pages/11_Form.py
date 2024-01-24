@@ -106,12 +106,10 @@ if __name__ == '__main__':
     img1pm = Image.open('1pm.jpeg')
     img10am = Image.open('10am.jpeg')
     with st.form("Tomar clase de ASL"):
-        col1, col2= st.columns([.6, .4])
-        with col1:
-            st.header("¿Como se llama usted?") 
-        with col2:
-            github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
-            html(f'<div onclick="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" width="50"/></div>{audio_code}')
+        st.header("¿Como se llama usted?") 
+
+        github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
+        html(f'<div onclick="playAudio()" style="cursor: pointer;"><img id="customImage" src="{image_url}" width="50"/></div>{audio_code}')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
         with col1:
