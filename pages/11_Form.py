@@ -126,36 +126,14 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.quit()
     
 def play_sound():
-    htmlstr = """        
-        <button onclick="playAudio()">Play Audio</button>"""
-    html(htmlstr)
-    # st.title("Audio Player Example")
+    github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/pronunciation_es_nombre.mp3"
 
-    # # Load the audio file
-    # audio = AudioSegment.from_file('pronunciation_es_nombre.mp3', 'mp3')
-    # # Create a button to play/pause
-    # play_button = st.button("Play")
+    # Button to play audio
+    play_button = st.button("Play Audio")
 
-    # # Placeholder for displaying play/pause status
-    # status_placeholder = st.empty()
-    # if play_button:
-    #     play_audio()
-    # # # Main loop
-    # # if play_button:
-    # #     # Update status
-    # #     status_placeholder.text("Playing...")
-
-    # #     play(audio)
-
-    # #     # Your code to execute when the play button is pressed
-    # #     # Replace this with your actual functionality
-    # #     time.sleep(1)
-
-    # #     # Check if the button is still pressed
-    # #     play_button = st.button("Pause")
-
-    # #     # Clear the status placeholder
-    # #     status_placeholder.text("")
+    # Audio player
+    if play_button:
+        st.audio(github_audio_url, format="audio/mp3")
 play_sound()
 
 if __name__ == '__main__':
