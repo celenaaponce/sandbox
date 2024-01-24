@@ -14,6 +14,8 @@ from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from PIL import Image
 import smtplib
+import time
+
 
 show_pages(
 [
