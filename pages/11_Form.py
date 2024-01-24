@@ -225,7 +225,7 @@ if __name__ == '__main__':
                                 }}
                             </script>
                             """
-                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=40)
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)
             else:
                 st.audio('bravo1.m4a')
         bravo2 = st.checkbox("desayuno (Bravo 2)")
