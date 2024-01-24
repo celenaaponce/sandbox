@@ -155,11 +155,7 @@ if __name__ == '__main__':
     with st.form("Tomar clase de ASL"):
         col1, col2, col3= st.columns([.6, .2, .2])
         with col1:
-            st.header("¿Como se llama usted?")
-        # with col2:
-        #     nombre_btn = st.button(":arrow_forward:")
-        #     if nombre_btn:
-        #         play_audio("https://raw.githubusercontent.com/celenaaponce/sandbox/nombre.m4a")
+            st.header("¿Como se llama usted?") 
 
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         col1, col2, col3= st.columns([.5, .2, .3])
