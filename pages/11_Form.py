@@ -100,6 +100,7 @@ if __name__ == '__main__':
         with col1:
             st.header("¿Como se llama usted?") 
         with col2:
+            image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
             github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
             audio_code = f"""
             <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
@@ -117,6 +118,7 @@ if __name__ == '__main__':
             st.header("¿Cual es su correo electronico?")
         with col2:
             github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
+            image_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/play.png"  # Replace with the URL of your image
             audio_code = f"""
             <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
             <script>
