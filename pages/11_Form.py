@@ -41,17 +41,6 @@ def open_page(url):
     """ % (url)
     html(open_script)
 
-def play_audio():
-    open_script= """       
-        <script type="text/javascript">
-            // Create an Audio element
-            var audio = new Audio('pronunciation_es_nombre.mp3');
-        
-            // Play the audio
-            audio.play();
-        </script>
-    """ 
-    html(open_script)
 def set_styles():
     st.write("""
         <style>
@@ -125,29 +114,24 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.sendmail(sender, receiver, text)
     server.quit()
     
-def play_sound():
-    github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/pronunciation_es_nombre.mp3"
+def play_audio(url):
+    """Play audio using JavaScript."""
+    return ComponentRequest(
+        key="play_audio",
+        method="play_audio",
+        args=(url,),
+        kwargs={},
+    )
+github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/pronunciation_es_nombre.mp3"
 
-    # Button to play audio
-    play_button = st.button("Play Audio")
+st.title("Audio Player Example")
 
+# Button to play audio
+play_button = st.button("Play Audio")
 
-    # Button triggers JavaScript function
-    if play_button:
-        js_code = f"""
-        <script>
-            var audio = new Audio('pronunciation_es_nombre.mp3');
-    
-            function playAudio() {{
-                audio.play();
-            }}
-        </script>
-        """
-
-        # Embed JavaScript code in Streamlit app
-        st.markdown(js_code, unsafe_allow_html=True)
-play_sound()
-
+# Trigger JavaScript function to play audio
+if play_button:
+    play_audio(github_audio_url)
 if __name__ == '__main__':
     set_styles()
     message = ""
