@@ -228,7 +228,24 @@ if __name__ == '__main__':
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)
             else:
                 st.audio('bravo1.m4a')
-        bravo2 = st.checkbox("desayuno (Bravo 2)")
+        col1, col2 = st.columns([.35, .65])
+        with col1:
+            bravo2 = st.checkbox("desayuno (Bravo 2)")
+        with col2:            
+            if not phone:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo2.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+            else:
+                st.audio('bravo2.m4a')
         bravo3 = st.checkbox("casa (Bravo 3)")
         bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
         bravo6 = st.checkbox("colores y letras (Bravo 6)")
