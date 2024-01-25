@@ -231,11 +231,11 @@ if __name__ == '__main__':
         else:
             bravo1 = st.checkbox("familia y básicos (Bravo 1)")
             st.audio('bravo1.m4a')
-        col1, col2 = st.columns([.35, .65])
-        with col1:
-            bravo2 = st.checkbox("desayuno (Bravo 2)")
-        with col2:            
-            if not phone:
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:
+                bravo2 = st.checkbox("desayuno (Bravo 2)")
+            with col1:            
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo2.m4a"
                 audio_code = f"""
                             <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
@@ -247,16 +247,161 @@ if __name__ == '__main__':
                             </script>
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
-            else:
-                st.audio('bravo2.m4a')
-        bravo3 = st.checkbox("casa (Bravo 3)")
-        bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
-        bravo6 = st.checkbox("colores y letras (Bravo 6)")
-        bravo7 = st.checkbox("escuela (Bravo 7)")
-        asl1 = st.checkbox("hora de comer (ASL En Casa 1)")
-        asl2 = st.checkbox("hora de bañar (ASL En Casa 2)")
-        asl3 = st.checkbox("hora de cambiar el pañal (ASL En Casa 3)")
-        asl4 = st.checkbox("hora de leer (ASL En Casa 4)")
+        else:
+            bravo2 = st.checkbox("desayuno (Bravo 2)")
+            st.audio('bravo2.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:
+                bravo3 = st.checkbox("casa (Bravo 3)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo3.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            bravo3 = st.checkbox("casa (Bravo 3)")
+            st.audio('bravo3.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:
+                bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo4.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
+            st.audio('bravo4.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:
+                bravo6 = st.checkbox("colores y letras (Bravo 6)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo6.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            bravo6 = st.checkbox("colores y letras (Bravo 6)")
+            st.audio('bravo6.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:
+                bravo7 = st.checkbox("escuela (Bravo 7)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/bravo7.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            bravo7 = st.checkbox("escuela (Bravo 7)")
+            st.audio('bravo7.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:
+                asl1 = st.checkbox("hora de comer (ASL En Casa 1)")
+            with col1:
+                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl1.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            asl1 = st.checkbox("hora de comer (ASL En Casa 1)")
+            st.audio('asl1.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:  
+                asl2 = st.checkbox("hora de bañar (ASL En Casa 2)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl2.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            asl2 = st.checkbox("hora de bañar (ASL En Casa 2)")
+            st.audio('asl2.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:             
+                asl3 = st.checkbox("hora de cambiar el pañal (ASL En Casa 3)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl3.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            asl3 = st.checkbox("hora de cambiar el pañal (ASL En Casa 3)")
+            st.audio('asl3.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2: 
+                asl4 = st.checkbox("hora de leer (ASL En Casa 4)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl4.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+         else:
+             asl4 = st.checkbox("hora de leer (ASL En Casa 4)")
+             st.audio('asl4.m4a')
 
         st.header("¿Cuantos años tiene su hijo sordo?")
         hijo_edad = st.radio(label="", label_visibility = "collapsed", options = ["0-4 años", "5+ años", "Soy maestro"])
