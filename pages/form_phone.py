@@ -19,7 +19,7 @@ def form_phone():
   bravo2 = st.checkbox("desayuno (Bravo 2)")
   st.audio('bravo2.m4a')
   bravo3 = st.checkbox("casa (Bravo 3)")
-  st.audio('bravo3.m4a')
+  st.audio('casa.m4a')
   bravo4 = st.checkbox("comida y ir de compras (Bravo 4)")
   st.audio('bravo4.m4a')
   bravo6 = st.checkbox("colores y letras (Bravo 6)")
