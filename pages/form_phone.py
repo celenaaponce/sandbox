@@ -4,7 +4,7 @@ from PIL import Image
 class Register: 
     def __init__(self): 
         self.nombre = None
-        self.correo = None
+        self.email = None
         self.telefono = None
         self.clases_antes = None
         self.bravo1 = None
