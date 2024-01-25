@@ -20,6 +20,49 @@ import time
 from streamlit_js_eval import streamlit_js_eval
 from pages.form_phone import form_phone
 
+class Register: 
+    def __init__(self): 
+        self.nombre = None
+        self.correo = None
+        self.telefono = None
+        self.clases_antes = None
+        self.bravo1 = None
+        self.bravo2 = None
+        self.bravo3 = None
+        self.bravo4 = None
+        self.bravo6 = None
+        self.bravo7 = None
+        self.asl1 = None
+        self.asl2 = None
+        self.asl3 = None
+        self.asl4 = None
+        self.hijo_edad = None
+        self.lunes1 = None
+        self.martes15 = None
+        self.martes16 = None
+        self.martes7 = None
+        self.miercoles6 = None
+        self.miercoles7 = None
+        self.lunes6 = None
+        self.lunes7=None
+        self.lunes2 = None
+        self.martes2 = None
+        self.viernes7=None
+        self.martes3 = None
+        self.martes730 = None
+        self.jueves12 = None
+        self.sabado11 = None
+        self.lunes7=None
+        self.miercoles5 = None
+        self.sabadoother12 = None
+        self.sabadoother1 = None
+        self.domingoother10 = None
+        self.domingoother11 = None
+        self.domingoother12 = None
+        self.llamar=None
+        self.texto=None
+        self.correo = None
+  
 show_pages(
 [
     Page("Pagina_Principal.py", "Pagina Principal"),
@@ -114,7 +157,7 @@ if __name__ == '__main__':
 
     with st.form("Tomar clase de ASL"):
         if phone:
-            nombre, correo, telefono, clases_antes, bravo1, bravo2, bravo3, bravo4, bravo6, bravo7, asl1, asl2, asl3, asl4, hijo_edad, 
+            nombre, email, telefono, clases_antes, bravo1, bravo2, bravo3, bravo4, bravo6, bravo7, asl1, asl2, asl3, asl4, hijo_edad, 
             lunes1, martes15, martes16, martes7, miercoles6, miercoles7, lunes6, lunes7, lunes2, martes2, viernes7, martes3, martes730, jueves12, sabado11, lunes7, miercoles5, sabadoother12, sabadoother1, 
             domingoother10,domingoother11, domingoother12, llamar, texto, correo = form_phone() 
         else:
