@@ -725,7 +725,7 @@ if __name__ == '__main__':
         else:
             st.subheader("ASL 3 (Tercer Semestre)")
             st.audio('tercer.m4a')   
-         if not phone:
+        if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
                 martes3 = st.checkbox("Martes a las 5 pm", key="martes3")
