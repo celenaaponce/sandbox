@@ -129,13 +129,13 @@ if __name__ == '__main__':
                     """
                     html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         else:
-            st.header("¿Como se llama usted?") 
+            st.header("¿Cómo se llama usted?") 
             st.audio('nombre.m4a')
         nombre = st.text_input(label = "", placeholder = "Entrar su nombre", label_visibility= "collapsed")
         if not phone:
             col2, col1 = st.columns([.1, .9])
             with col1:
-                st.header("¿Cual es su correo electronico?")
+                st.header("¿Cuál es su correo electronico?")
             with col2:
                     github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/email.m4a"
                     audio_code = f"""
@@ -149,13 +149,13 @@ if __name__ == '__main__':
                                 """
                     html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         else:
-            st.header("¿Cual es su correo electronico?")
+            st.header("¿Cuál es su correo electronico?")
             st.audio('email.m4a')
         email = st.text_input(label = "", placeholder = "Entrar su correo electronico", label_visibility= "collapsed")
         if not phone:
             col2, col1 = st.columns([.1, .9])
             with col1:
-                st.header("¿Cual es su número de teléfono?")
+                st.header("¿Cuál es su número de teléfono?")
             with col2:
                     github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/telefono.m4a"
                     audio_code = f"""
@@ -169,7 +169,7 @@ if __name__ == '__main__':
                                 """
                     html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         else:
-            st.header("¿Cual es su número de teléfono?")
+            st.header("¿Cuál es su número de teléfono?")
             st.audio('telefono.m4a')
         telefono = st.text_input(label = "", placeholder = "Entrar su número de teléfono", label_visibility= "collapsed")
 
@@ -196,7 +196,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2= st.columns([.1, .9])
             with col2:
-                st.header("¿Cual temas ya sabe usted?")
+                st.header("¿Cuál temas ya sabe usted?")
             with col1:
                     github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/temas.m4a"
                     audio_code = f"""
@@ -210,7 +210,7 @@ if __name__ == '__main__':
                                 """
                     html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=50)
         else:
-            st.header("¿Cual temas ya sabe usted?")
+            st.header("¿Cuál temas ya sabe usted?")
             st.audio('temas.m4a')
         if not phone:
             col1, col2 = st.columns([.1, .9])
@@ -426,8 +426,8 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:         
-                st.header("¿Cuando se puede tomar clases? (Escoja todos que se puede)")
-                st.subheader("Las horas son de tiempo Pacifico.  Mira a la mapa para saber tiempo en su area.")
+                st.header("¿Cuándo se puede tomar clases? (Escoja todos que se puede)")
+                st.subheader("Las horas son de tiempo Pacífico.  Mira a la mapa para saber la hora en su area.")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/tiempo.m4a"
                 audio_code = f"""
@@ -441,8 +441,8 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            st.header("¿Cuando se puede tomar clases? (Escoja todos que se puede)")
-            st.subheader("Las horas son de tiempo Pacifico.  Mira a la mapa para saber tiempo en su area.")
+            st.header("¿Cuándo se puede tomar clases? (Escoja todos que se puede)")
+            st.subheader("Las horas son de tiempo Pacífico.  Mira a la mapa para saber la hora en su area.")
             st.audio('tiempo.m4a')
         st.write("")
         if not phone:
@@ -992,7 +992,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                st.subheader("¿Cual es el mejor modo de contacto?")
+                st.subheader("¿Cuál es el mejor modo de contacto?")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/contacto.m4a"
                 audio_code = f"""
@@ -1006,7 +1006,7 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            st.subheader("¿Cual es el mejor modo de contacto?")
+            st.subheader("¿Cuál es el mejor modo de contacto?")
             st.audio('contacto.m4a')
         if not phone:
             col1, col2 = st.columns([.1, .9])
