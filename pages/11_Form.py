@@ -331,7 +331,7 @@ if __name__ == '__main__':
             with col2:
                 asl1 = st.checkbox("hora de comer (ASL En Casa 1)")
             with col1:
-                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl1.m4a"
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/asl1.m4a"
                 audio_code = f"""
                             <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
                             <script>
