@@ -1,4 +1,14 @@
 import streamlit as st
+from PIL import Image
+
+img5pm = Image.open('5pm.jpeg')
+img6pm = Image.open('6pm.jpeg')
+img7pm = Image.open('7pm.jpeg')
+img730pm = Image.open('730pm.jpeg')
+img11am = Image.open('11am.jpeg')
+img12pm = Image.open('12pm.jpeg')
+img1pm = Image.open('1pm.jpeg')
+img10am = Image.open('10am.jpeg')
 def form_phone():
   st.header("¿Cómo se llama usted?") 
   st.audio('nombre.m4a')
