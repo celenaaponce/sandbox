@@ -896,7 +896,7 @@ if __name__ == '__main__':
               nombre = r.nombre
               email = r.email
               telefono = r.telefono
-              clases_antes = r.clase_antes 
+              clases_antes = r.clases_antes 
               bravo1 = r.bravo1
               bravo2 = r.bravo2
               bravo3 = r.bravo3
