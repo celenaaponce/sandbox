@@ -881,17 +881,59 @@ if __name__ == '__main__':
 
 
         if submit_res:
-            with open('profiles1.csv', 'w', newline='') as file:
-                writer = csv.writer(file)
-                field = ["name", "email", "phone number", "Previous classes", "Bravo1", "Bravo2", "Bravo3", "Bravo4", "Bravo6", "Bravo7", "ASL1", "ASL2", "ASL3", "ASL4", "Child Age", 
-                "L7", "M5", "M6", "M7", "Mi6", "Mi7", "L5", "L6", "L7_2", "M6_2", "V7", "M5_3", "M730", "J12", "S12", "L7_Casa", "Mi5", "S12",
-                "S1", "D10", "D11", "D12", "Llamar", "Texto", "Correo"]
-                
-                writer.writerow(field)
-                writer.writerow([nombre, correo, telefono, clases_antes, bravo1, bravo2, bravo3, bravo4, bravo6, bravo7, asl1, asl2, asl3, asl4, hijo_edad,
-                lunes1, martes15, martes16, martes7, miercoles6, miercoles7, lunes6, lunes7, lunes2, martes2, viernes7, martes3, martes730, jueves12, sabado11, lunes7, miercoles5, sabadoother12, sabadoother1,
-                domingoother10,domingoother11, domingoother12, llamar, texto, correo])
-            
+            if not phone:
+              with open('profiles1.csv', 'w', newline='') as file:
+                  writer = csv.writer(file)
+                  field = ["name", "email", "phone number", "Previous classes", "Bravo1", "Bravo2", "Bravo3", "Bravo4", "Bravo6", "Bravo7", "ASL1", "ASL2", "ASL3", "ASL4", "Child Age", 
+                  "L7", "M5", "M6", "M7", "Mi6", "Mi7", "L5", "L6", "L7_2", "M6_2", "V7", "M5_3", "M730", "J12", "S12", "L7_Casa", "Mi5", "S12",
+                  "S1", "D10", "D11", "D12", "Llamar", "Texto", "Correo"]
+                  
+                  writer.writerow(field)
+                  writer.writerow([nombre, email, telefono, clases_antes, bravo1, bravo2, bravo3, bravo4, bravo6, bravo7, asl1, asl2, asl3, asl4, hijo_edad,
+                  lunes1, martes15, martes16, martes7, miercoles6, miercoles7, lunes6, lunes7, lunes2, martes2, viernes7, martes3, martes730, jueves12, sabado11, lunes7, miercoles5, sabadoother12, sabadoother1,
+                  domingoother10,domingoother11, domingoother12, llamar, texto, correo])
+            else:
+              nombre = r.nombre
+              email = r.email
+              telefono = r.telefono
+              clases_antes = r.clase_antes 
+              bravo1 = r.bravo1
+              bravo2 = = r.bravo2
+              bravo3 = r.bravo3
+              bravo4 = r.bravo4
+              bravo6 = r.bravo6
+              bravo7 = r.bravo7
+              asl1 = r.asl1
+              asl2 = r.asl2
+              asl3 = r.asl3
+              asl4 = r.asl4
+              hijo_edad = r.hijo_edad
+              lunes1 = r.lunes1
+              martes15 = r.martes15
+              martes16 = r.martes16
+              martes7 = r.martes7
+              miercoles6 = r.miercoles6
+              miercoles7 = r.miercoles7
+              lunes6 = r.lunes6
+              lunes7 = r.lunes7
+              lunes2 = r.lunes2
+              martes2 = r.martes2
+              viernes7 = r.viernes7
+              martes3 = r.martes3 
+              martes730 = r.martes730
+              jueves12 = r.jueves12
+              sabado11 = r.sabado11
+              lunes7 = r.lunes7
+              miercoles5 = r.miercoles5
+              sabadoother12 = r.sabadoother12
+              sabadoother1 = r.sabadoother1
+              domingoother10 = r.domingoother10
+              domingoother11 = r.domingoother11
+              domingoother12 = r.domingoother12
+              llamar = r.llamar
+              texto = r.texto
+              correo = r.correo
+              
             msg = MIMEMultipart()
             fileToSend = 'profiles1.csv'
             ctype, encoding = mimetypes.guess_type('profiles1.csv')
