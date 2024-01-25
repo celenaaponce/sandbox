@@ -115,7 +115,7 @@ if __name__ == '__main__':
         col1, col2 = st.columns([.1, .9])
         if not phone:
             with col2:
-                st.header("¿Como se llama usted?") 
+                st.header("¿Cómo se llama usted?") 
             with col1:
                     github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/nombre.m4a"
                     audio_code = f"""
