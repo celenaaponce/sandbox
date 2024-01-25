@@ -18,7 +18,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 import time
 from streamlit_js_eval import streamlit_js_eval
-from pages/form_phone import form_phone
+from pages.form_phone import form_phone
 
 show_pages(
 [
