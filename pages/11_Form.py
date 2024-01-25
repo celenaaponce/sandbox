@@ -547,7 +547,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                miercoles6 = st.checkbox("Miercoles a las 6 pm")
+                miercoles6 = st.checkbox("Miércoles a las 6 pm")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/miercoles6.m4a"
                 audio_code = f"""
@@ -561,13 +561,13 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            miercoles6 = st.checkbox("Miercoles a las 6 pm")
+            miercoles6 = st.checkbox("Miércoles a las 6 pm")
             st.audio('miercoles6.m4a') 
         st.image(img6pm, width=400)
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                miercoles7 = st.checkbox("Miercoles a las 7 pm")
+                miercoles7 = st.checkbox("Miércoles a las 7 pm")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/miercoles7.m4a"
                 audio_code = f"""
@@ -581,7 +581,7 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            miercoles7 = st.checkbox("Miercoles a las 7 pm")
+            miercoles7 = st.checkbox("Miércoles a las 7 pm")
             st.audio('miercoles7.m4a')         
         st.image(img7pm, width=400)
         st.divider()
@@ -788,7 +788,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                sabado11 = st.checkbox("Sabado a las 11 am")
+                sabado11 = st.checkbox("sábado a las 11 am")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/sabado11.m4a"
                 audio_code = f"""
@@ -802,7 +802,7 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            sabado11 = st.checkbox("Sabado a las 11 am")
+            sabado11 = st.checkbox("sábado a las 11 am")
             st.audio('sabado11.m4a')        
         st.image(img11am, width=400)
         st.divider()
@@ -849,7 +849,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                miercoles5 = st.checkbox("Miercoles a las 5 pm")
+                miercoles5 = st.checkbox("Miércoles a las 5 pm")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/miercoles5.m4a"
                 audio_code = f"""
@@ -863,7 +863,7 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            miercoles5 = st.checkbox("Miercoles a las 5 pm")
+            miercoles5 = st.checkbox("Miércoles a las 5 pm")
             st.audio('miercoles5.m4a')       
         st.image(img5pm, width=400)
         st.divider()
@@ -890,7 +890,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                sabadoother12 = st.checkbox("Sabado a las 12 pm", key='sabadoother12')
+                sabadoother12 = st.checkbox("Sábado a las 12 pm", key='sabadoother12')
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/sabado12.m4a"
                 audio_code = f"""
@@ -904,13 +904,13 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            sabadoother12 = st.checkbox("Sabado a las 12 pm", key='sabadoother12')
+            sabadoother12 = st.checkbox("Sábado a las 12 pm", key='sabadoother12')
             st.audio('sabado12.m4a')      
         st.image(img12pm, width=400)
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                sabadoother1 = st.checkbox("Sabado a la 1 pm", key='sabadoother1')
+                sabadoother1 = st.checkbox("Sábado a la 1 pm", key='sabadoother1')
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/sabado1.m4a"
                 audio_code = f"""
@@ -924,7 +924,7 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            sabadoother1 = st.checkbox("Sabado a la 1 pm", key='sabadoother1')
+            sabadoother1 = st.checkbox("Sábado a la 1 pm", key='sabadoother1')
             st.audio('sabado1.m4a')     
         st.image(img1pm, width=400)
         if not phone:
@@ -992,7 +992,7 @@ if __name__ == '__main__':
         if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
-                st.write("¿Cual es el mejor modo de contacto?")
+                st.subheader("¿Cual es el mejor modo de contacto?")
             with col1:
                 github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/contacto.m4a"
                 audio_code = f"""
@@ -1006,7 +1006,7 @@ if __name__ == '__main__':
                             """
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
-            st.write("¿Cual es el mejor modo de contacto?")
+            st.subheader("¿Cual es el mejor modo de contacto?")
             st.audio('contacto.m4a')
         if not phone:
             col1, col2 = st.columns([.1, .9])
@@ -1051,7 +1051,7 @@ if __name__ == '__main__':
             with col2:                
                 correo = st.checkbox("Correo Electronico")
             with col1:
-                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correoelectronico.m4a"
                 audio_code = f"""
                             <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
                             <script>
@@ -1064,7 +1064,7 @@ if __name__ == '__main__':
                 html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
         else:
             correo = st.checkbox("Correo Electronico")
-            st.audio('correo.m4a')        
+            st.audio('correoelectronico.m4a')        
         
             
         submit_res = st.form_submit_button(label="Entregar")
