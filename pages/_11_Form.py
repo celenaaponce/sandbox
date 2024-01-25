@@ -18,50 +18,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 import time
 from streamlit_js_eval import streamlit_js_eval
-from pages.form_phone import form_phone
-
-class Register: 
-    def __init__(self): 
-        self.nombre = None
-        self.correo = None
-        self.telefono = None
-        self.clases_antes = None
-        self.bravo1 = None
-        self.bravo2 = None
-        self.bravo3 = None
-        self.bravo4 = None
-        self.bravo6 = None
-        self.bravo7 = None
-        self.asl1 = None
-        self.asl2 = None
-        self.asl3 = None
-        self.asl4 = None
-        self.hijo_edad = None
-        self.lunes1 = None
-        self.martes15 = None
-        self.martes16 = None
-        self.martes7 = None
-        self.miercoles6 = None
-        self.miercoles7 = None
-        self.lunes6 = None
-        self.lunes7=None
-        self.lunes2 = None
-        self.martes2 = None
-        self.viernes7=None
-        self.martes3 = None
-        self.martes730 = None
-        self.jueves12 = None
-        self.sabado11 = None
-        self.lunes7=None
-        self.miercoles5 = None
-        self.sabadoother12 = None
-        self.sabadoother1 = None
-        self.domingoother10 = None
-        self.domingoother11 = None
-        self.domingoother12 = None
-        self.llamar=None
-        self.texto=None
-        self.correo = None
+from pages.form_phone import form_phone, Register
   
 show_pages(
 [
