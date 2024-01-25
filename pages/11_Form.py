@@ -806,31 +806,266 @@ if __name__ == '__main__':
             st.audio('sabado11.m4a')        
         st.image(img11am, width=400)
         st.divider()
-
-        st.subheader("ASL En Casa (niños de 0-4 años)")
-        lunes7 = st.checkbox("Lunes a las 7 pm")
+        
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                st.subheader("ASL En Casa (niños de 0-4 años)")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/encasa.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            st.subheader("ASL En Casa (niños de 0-4 años)")
+            st.audio('encasa.m4a') 
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                lunes7 = st.checkbox("Lunes a las 7 pm")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/lunes7.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            lunes7 = st.checkbox("Lunes a las 7 pm")
+            st.audio('lunes7.m4a')                
         st.image(img7pm, width=400)
-        miercoles5 = st.checkbox("Miercoles a las 5 pm")
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                miercoles5 = st.checkbox("Miercoles a las 5 pm")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/miercoles5.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            miercoles5 = st.checkbox("Miercoles a las 5 pm")
+            st.audio('miercoles5.m4a')       
         st.image(img5pm, width=400)
         st.divider()
-
-        st.subheader("Necesito otra horario.  Estoy disponible...")
-        sabadoother12 = st.checkbox("Sabado a las 12 pm", key='sabadoother12')
+        
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                st.subheader("Necesito otra horario.  Estoy disponible...")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/otro.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            st.subheader("Necesito otra horario.  Estoy disponible...")
+            st.audio('otro.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                sabadoother12 = st.checkbox("Sabado a las 12 pm", key='sabadoother12')
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/sabado12.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            sabadoother12 = st.checkbox("Sabado a las 12 pm", key='sabadoother12')
+            st.audio('sabado12.m4a')      
         st.image(img12pm, width=400)
-        sabadoother1 = st.checkbox("Sabado a la 1 pm", key='sabadoother1')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                sabadoother1 = st.checkbox("Sabado a la 1 pm", key='sabadoother1')
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/sabado1.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            sabadoother1 = st.checkbox("Sabado a la 1 pm", key='sabadoother1')
+            st.audio('sabado1.m4a')     
         st.image(img1pm, width=400)
-        domingoother10 = st.checkbox("Domingo a las 10 am", key='domingoother10')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                domingoother10 = st.checkbox("Domingo a las 10 am", key='domingoother10')
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/domingo10.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            domingoother10 = st.checkbox("Domingo a las 10 am", key='domingoother10')
+            st.audio('domingo10.m4a')        
         st.image(img10am, width=400)
-        domingoother11 = st.checkbox("Domingo a las 11 am", key='domingoother11')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                domingoother11 = st.checkbox("Domingo a las 11 am", key='domingoother11')
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/domingo11.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            domingoother11 = st.checkbox("Domingo a las 11 am", key='domingoother11')
+            st.audio('domingo11.m4a') 
         st.image(img11am, width=400)
-        domingoother12 = st.checkbox("Domingo a las 12 pm", key='domingoother12')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                domingoother12 = st.checkbox("Domingo a las 12 pm", key='domingoother12')
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/domingo12.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            domingoother12 = st.checkbox("Domingo a las 12 pm", key='domingoother12')
+            st.audio('domingo12.m4a') 
         st.image(img12pm, width=400)
         st.divider()
 
-        st.write("¿Cual es el mejor modo de contacto?")
-        llamar = st.checkbox("Llamada")
-        texto = st.checkbox("Texto")
-        correo = st.checkbox("Correo Electronico")
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                st.write("¿Cual es el mejor modo de contacto?")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/contacto.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            st.write("¿Cual es el mejor modo de contacto?")
+            st.audio('contacto.m4a')
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                llamar = st.checkbox("Llamada")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/llamada.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            llamar = st.checkbox("Llamada")
+            st.audio('llamada.m4a')        
+         if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                texto = st.checkbox("Texto")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/texto.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            texto = st.checkbox("Texto")
+            st.audio('texto.m4a')         
+        if not phone:
+            col1, col2 = st.columns([.1, .9])
+            with col2:                
+                correo = st.checkbox("Correo Electronico")
+            with col1:
+                github_audio_url = "https://raw.githubusercontent.com/celenaaponce/sandbox/main/correo.m4a"
+                audio_code = f"""
+                            <audio id="myAudio" src="{github_audio_url}" height="5"></audio>
+                            <script>
+                                function playAudio() {{
+                                    var audio = document.getElementById('myAudio');
+                                    audio.play();
+                                }}
+                            </script>
+                            """
+                html(f'<div onclick="playAudio()" style="cursor: pointer;" height="5"><img id="customImage" src="{image_url}" width="50" style="position: absolute; bottom: 0;"/></div>{audio_code}', height=30)  
+        else:
+            correo = st.checkbox("Correo Electronico")
+            st.audio('correo.m4a')        
+        
             
         submit_res = st.form_submit_button(label="Entregar")
 
