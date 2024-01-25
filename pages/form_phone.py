@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from pages.11_Form import Register
+from pages.'11_Form' import Register
 
 img5pm = Image.open('5pm.jpeg')
 img6pm = Image.open('6pm.jpeg')
