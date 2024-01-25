@@ -1027,7 +1027,7 @@ if __name__ == '__main__':
         else:
             llamar = st.checkbox("Llamada")
             st.audio('llamada.m4a')        
-         if not phone:
+        if not phone:
             col1, col2 = st.columns([.1, .9])
             with col2:                
                 texto = st.checkbox("Texto")
