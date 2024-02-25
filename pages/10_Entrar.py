@@ -102,16 +102,6 @@ def check_password():
                     st.session_state["password_correct"] = True
         else:
                 st.session_state["password_correct"] = False
-        # st.session_state['name'] = st.session_state['username']
-        # st.session_state['username'] = st.session_state['username'].split('@')[0].translate(str.maketrans('', '', string.punctuation))
-        # if st.session_state["username"] in st.secrets[
-        #     "passwords"] :
-        #     st.session_state["password_correct"] = True
-        #     st.session_state['name'] = st.session_state['username']
-        #     del st.session_state["password"]  # Don't store the username or password.
-        #     del st.session_state['username']
-        # else:
-        #     st.session_state["password_correct"] = False
     # Return True if the username + password is validated.
     if st.session_state.get("password_correct", False):
         return True
@@ -122,7 +112,7 @@ def check_password():
         st.error("😕 Contraseña Mal")
     return False
 
-
+st.write(check_password())
 if not check_password():
     st.stop()
 
