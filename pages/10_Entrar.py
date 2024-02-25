@@ -108,8 +108,8 @@ def check_password():
 
     # Show inputs for username + password.
     login_form()
-    if "password_correct" in st.session_state:
-        st.error("😕 Contraseña Mal")
+    # if "password_correct" in st.session_state:
+    #     st.error("😕 Contraseña Mal")
     return False
 
 if not check_password():
