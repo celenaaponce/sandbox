@@ -133,8 +133,8 @@ if classoption == 'ASL 1':
     # username = ""
 elif classoption == 'ASL 2':
 
-    login_sidebar_ASL2()
-    # switch_page("Introducción_a_ASL_2")
+        login_sidebar_ASL2()
+        switch_page("Introducción_a_ASL_2")
     
 else:
 
