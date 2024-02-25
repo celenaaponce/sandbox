@@ -104,7 +104,7 @@ def check_password():
                 st.session_state["password_correct"] = False
     # Return True if the username + password is validated.
     if st.session_state.get("password_correct", False):
-        return True
+        return False
 
     # Show inputs for username + password.
     login_form()
