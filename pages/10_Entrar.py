@@ -126,7 +126,10 @@ def check_password():
 if not check_password():
     st.stop()
 
-classoption = st.session_state['option']
+if 'option' in st.session_state.keys():
+        classoption = st.session_state['option']
+else:
+        check_password()
 if classoption == 'ASL 1':
     login_sidebar_ASL1()
     # switch_page("Introducción_a_ASL_1")
