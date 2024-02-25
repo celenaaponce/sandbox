@@ -92,7 +92,7 @@ def check_password():
         with st.form("Credentials"):
             option = st.selectbox(
                     '¿Cual clase?',
-                    ('ASL 1', 'ASL 2', 'ASL 3', ASL En Casa), key='option')
+                    ('ASL 1', 'ASL 2', 'ASL 3', 'ASL En Casa'), key='option')
             st.text_input("Contraseña", type="password", key="password")
             st.form_submit_button("Entrar", on_click=password_entered)
 
