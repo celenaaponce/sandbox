@@ -35,9 +35,9 @@ def login_sidebar_ASL1():
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_1.py", "Introducción a ASL 1"),
-        Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
-        Page("pages/Bravo_2.py", "Desayuno"),
-        Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
+        # Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
+        # Page("pages/Bravo_2.py", "Desayuno"),
+        # Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
         Page("pages/holidays.py", "Días Festivos")
     ]
 )
@@ -57,9 +57,9 @@ def login_sidebar_ASL2():
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_2.py", "Introducción a ASL 2"),
-        Page("pages/Bravo_5.py", "Repaso"),
-        Page("pages/Bravo_6.py", "Colores y Deletrear"),
-        Page("pages/Bravo_7.py", "Escuela"),
+        # Page("pages/Bravo_5.py", "Repaso"),
+        # Page("pages/Bravo_6.py", "Colores y Deletrear"),
+        # Page("pages/Bravo_7.py", "Escuela"),
         Page("pages/holidays_2.py", "Días Festivos")
     ]
 )
@@ -79,8 +79,8 @@ def login_sidebar_ASLAtHome2():
         Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
         Page("pages/10_Entrar.py", "Entrar"),
         Page("pages/Introduccion_a_ASL_En_Casa.py"),
-        Page("pages/ASLAtHome_c1.py", "Capitulo 1"),
-        Page("pages/ASLAtHome_c2.py", "Capitulo 2")
+        # Page("pages/ASLAtHome_c1.py", "Capitulo 1"),
+        # Page("pages/ASLAtHome_c2.py", "Capitulo 2")
     ]
 )
 
