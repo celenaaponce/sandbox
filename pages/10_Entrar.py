@@ -122,8 +122,8 @@ else:
         check_password()
 if classoption == 'ASL 1':
     login_sidebar_ASL1()
-    # switch_page("Introducción_a_ASL_1")
-    # username = ""
+    switch_page("Introducción_a_ASL_1")
+
 elif classoption == 'ASL 2':
 
         login_sidebar_ASL2()
