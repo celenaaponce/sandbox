@@ -113,6 +113,7 @@ def check_password():
     return False
 
 st.write(check_password())
+st.write(st.session_state)
 if not check_password():
     st.stop()
 
