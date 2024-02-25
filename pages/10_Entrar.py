@@ -112,8 +112,6 @@ def check_password():
         st.error("😕 Contraseña Mal")
     return False
 
-st.write(check_password())
-st.write(st.session_state)
 if not check_password():
     st.stop()
 
