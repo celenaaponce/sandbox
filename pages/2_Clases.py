@@ -5,6 +5,7 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit.components.v1 import html
 from st_pages import Page, Section,show_pages, add_page_title
 
+st.session_state['password_correct'] = False
 show_pages(
 [
     Page("Pagina_Principal.py", "Pagina Principal"),
