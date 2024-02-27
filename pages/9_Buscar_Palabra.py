@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import sys
 import gdown
+from st_pages import Page, Section,show_pages, add_page_title
 sys.path.append('streamlit_website/check')
 
 from check.spanish_word_freq import SpanishWordFreq
