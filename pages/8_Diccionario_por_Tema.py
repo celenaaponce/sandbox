@@ -132,19 +132,17 @@ def get_content(size):
          </div>
          """
       return content
-
-def download_csv(file_id, output_file):
-    url = f'https://drive.google.com/uc?id={file_id}'
-    gdown.download(url, output_file, quiet=False)
-    st.session_state.download = True
+    
+if st.session_state.download_letter == False:
+  download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
 
 @st.cache_data
-def load_words_tema():
-  csv_length = 0    
-  for chunk in pd.read_csv('Themes2.csv', names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
-        data = pd.DataFrame(chunk)
-  data = data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
-  return data
+def download_csv(file_id, output_file):
+    path = f'https://drive.google.com/uc?export=download&id={file_id}'
+    for chunk in pd.read_csv(path, names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
+      data = pd.DataFrame(chunk)
+    st.session_state.download_tema = True
+    return data
 
 with open("css/style.css") as f:
     style = f.read()
@@ -160,7 +158,7 @@ if st.session_state.download_tema == False:
   download_csv(st.secrets['diccionario_tema'], 'Themes2.csv')
   st.session_state.download_tema = True
     
-word_data = load_words_tema()
+word_data = download_csv(st.secrets['diccionario_tema'], 'Themes2.csv')
 
 if st.session_state.clicked == "":
     size = 20
