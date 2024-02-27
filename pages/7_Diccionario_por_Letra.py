@@ -168,6 +168,7 @@ def print_list(next_list):
 
 word_data = download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
+word_data = word_data.sort_values(by=['Palabra'])
 
 #set up main page with images  
 empty()
