@@ -71,14 +71,8 @@ def download_csv(file_id, output_file):
     
 if st.session_state.download_completo == False:
     download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
-
-@st.cache_data
-def load_words_completo():  
-  for chunk in pd.read_csv('Small Preview2.csv', names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
-          data = pd.DataFrame(chunk)
-  return data
     
-word_data = download_csv('1uT_M5uyD3EYpStLpiEPr_MedzxiksvIC', 'Small Preview2.csv')
+word_data = download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 word_data = word_data.sort_values(by=['Palabra'])
 
