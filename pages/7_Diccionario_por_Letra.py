@@ -79,11 +79,16 @@ def empty():
     placeholder.empty()
     sleep(0.01)
 
+@st.cache_data
 def download_csv(file_id, output_file):
-    url = f'https://drive.google.com/uc?id={file_id}'
-    gdown.download(url, output_file, quiet=False)
-    st.session_state.download_letter = True
-  
+    path = f'https://drive.google.com/uc?export=download&id={file_id}'
+    for chunk in pd.read_csv(path, names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
+      data = pd.DataFrame(chunk)
+    st.session_state.download_completo = True
+    return data
+    
+if st.session_state.download_letter == False:
+  download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
 @st.cache_data
 def load_words_letra():
   csv_length = 0    
@@ -160,8 +165,7 @@ def print_list(next_list):
           unsafe_allow_html=True)
   
 #start with download
-if st.session_state.download_letter == False:
-  download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
+
 word_data = download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 
