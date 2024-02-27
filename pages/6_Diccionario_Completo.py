@@ -78,7 +78,7 @@ def load_words_completo():
           data = pd.DataFrame(chunk)
   return data
     
-word_data = download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
+word_data = download_csv('1uT_M5uyD3EYpStLpiEPr_MedzxiksvIC', 'Small Preview2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 word_data.sort_values(by=['Palabra'])
 
