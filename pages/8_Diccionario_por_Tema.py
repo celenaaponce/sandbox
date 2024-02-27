@@ -132,9 +132,6 @@ def get_content(size):
          </div>
          """
       return content
-    
-if st.session_state.download_letter == False:
-  download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
 
 @st.cache_data
 def download_csv(file_id, output_file):
