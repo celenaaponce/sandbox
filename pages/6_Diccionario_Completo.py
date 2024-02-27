@@ -80,8 +80,7 @@ def load_words_completo():
     
 word_data = download_csv('1uT_M5uyD3EYpStLpiEPr_MedzxiksvIC', 'Small Preview2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
-word_data.sort_values(by=['Palabra'])
-st.write(word_data[word_data['Palabra']=='abuela'])
+word_data = word_data.sort_values(by=['Palabra'])
 
 #change states
 def set_start(i):
