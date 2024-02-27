@@ -190,7 +190,6 @@ if st.session_state.clicked != "" and not (reset1 or reset2):
            
 if increment:
     page_one.empty()
-    word_data = load_words_tema()
     tema = themes[int(st.session_state.clicked[6:])]
     alpha_list = word_data.loc[word_data['Tema']== tema]
     alpha_list.sort_values(by=['Tema'])
@@ -209,6 +208,7 @@ if increment:
         col1, col2, col3 = st.columns([1,1,1])
         reset2 = col1.button("Palabras Anteriores", key="Second")
         reset1 = col2.button("Empezar de Nuevo")
+
 
 if reset1 or reset2:
     page_one.empty()
