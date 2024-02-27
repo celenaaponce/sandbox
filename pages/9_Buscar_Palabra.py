@@ -61,7 +61,7 @@ def download_csv(file_id, output_file):
     st.session_state.download_completo = True
     return data
     
-if st.session_state.download_letter == False:
+if st.session_state.download_completo == False:
   download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
 
   
