@@ -126,6 +126,10 @@ def get_content(size):
          <a href='#' id='Image 20'><img class = "cat" width='{size}%' src='https://images.unsplash.com/photo-1500042600524-37ecb686c775?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29sb3JzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'></a>
          <p class="caption">Colores</p> 
          </div>
+        <div class="cat-container">
+         <a href='#' id='Image 21'><img class = "cat" width='{size}%' src='https://images.unsplash.com/photo-1609253932702-796cbf3d3171?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></a>
+         <p class="caption">Familia</p> 
+         </div>
          """
       return content
 
