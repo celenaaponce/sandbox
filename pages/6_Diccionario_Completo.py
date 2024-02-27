@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path 
 import gdown
 from st_pages import Page, Section,show_pages, add_page_title
-
+st.session_state['password_correct'] = False
 show_pages(
 [
     Page("Pagina_Principal.py", "Pagina Principal"),
@@ -19,7 +19,7 @@ show_pages(
     Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
     Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
     Page("pages/10_Entrar.py", "Entrar"),
-    Page("pages/11_Form.py", "Formulario")
+    Page("pages/11_Form.py", "Registrar para Clases")
 ])
 #formatting
 offset = 20
@@ -61,10 +61,13 @@ if 'download_completo' not in st.session_state:
 if 'start' not in st.session_state:
    st.session_state.start = 0   
 
+@st.cache_data
 def download_csv(file_id, output_file):
-    url = f'https://drive.google.com/uc?id={file_id}'
-    gdown.download(url, output_file, quiet=False)
+    path = f'https://drive.google.com/uc?export=download&id={file_id}'
+    for chunk in pd.read_csv(path, names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
+      data = pd.DataFrame(chunk)
     st.session_state.download_completo = True
+    return data
     
 if st.session_state.download_completo == False:
     download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
@@ -75,7 +78,7 @@ def load_words_completo():
           data = pd.DataFrame(chunk)
   return data
     
-word_data = load_words_completo()
+word_data = download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 word_data.sort_values(by=['Palabra'])
 
