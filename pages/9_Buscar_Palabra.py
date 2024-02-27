@@ -52,7 +52,9 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
+if 'download' not in st.session_state:
+   st.session_state.download = False
+    
 @st.cache_data
 def download_csv(file_id, output_file):
     path = f'https://drive.google.com/uc?export=download&id={file_id}'
@@ -81,8 +83,7 @@ with open("css/bootstrap.css") as file:
 with open("css/responsive.css") as file2:
     resp = file2.read()
     
-if 'download' not in st.session_state:
-   st.session_state.download = False
+
     
 
 word_data = download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
