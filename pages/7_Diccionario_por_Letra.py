@@ -88,7 +88,7 @@ def download_csv(file_id, output_file):
     return data
     
 if st.session_state.download_letter == False:
-  download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
+  download_csv(st.secrets['diccionario_letras'], 'Search List2.csv')
 
 def set_start(i):
    st.session_state.letter = i
@@ -160,7 +160,7 @@ def print_list(next_list):
   
 #start with download
 
-word_data = download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
+word_data = download_csv(st.secrets['diccionario_letras'], 'Search List2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 word_data = word_data.sort_values(by=['Palabra'])
 
