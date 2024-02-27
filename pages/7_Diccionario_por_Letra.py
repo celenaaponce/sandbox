@@ -89,12 +89,6 @@ def download_csv(file_id, output_file):
     
 if st.session_state.download_letter == False:
   download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
-@st.cache_data
-def load_words_letra():
-  csv_length = 0    
-  for chunk in pd.read_csv('Search List2.csv', names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
-          data = pd.DataFrame(chunk)
-  return data
 
 def set_start(i):
    st.session_state.letter = i
