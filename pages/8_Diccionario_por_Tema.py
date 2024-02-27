@@ -152,10 +152,10 @@ with open("css/responsive.css") as file2:
 
 #start with download
 if st.session_state.download_tema == False:
-  download_csv(st.secrets['diccionario_tema'], 'Themes2.csv')
+  download_csv('1bjlsnPGGm3HE8D6wya75eBSpACv7YZG0', 'Themes2.csv')
   st.session_state.download_tema = True
     
-word_data = download_csv(st.secrets['diccionario_tema'], 'Themes2.csv')
+word_data = download_csv('1bjlsnPGGm3HE8D6wya75eBSpACv7YZG0', 'Themes2.csv')
 
 if st.session_state.clicked == "":
     size = 20
