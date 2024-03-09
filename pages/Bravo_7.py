@@ -2,51 +2,17 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
-from pages import holidays
-from st_pages import Page, Section,show_pages, add_page_title
-
+from pages.sidebars import login_sidebar_ASL3, set_styles
+st.write(st.session_state)
 def main():
-        login_sidebar_ASL2()
-        st.header("Bienvenido a la clase de ASL 2.")
+        login_sidebar_ASL3()
+        st.header("Bienvenido a la clase de ASL 3.")
         st.header("Se puede mirar nuestro curriculo aqui:")
         escuela1()
 
-def set_styles():
-    st.write("""
-        <style>
-        a {
-            background-color: #94387f;
-            color: white;
-
-            }
-
-        </style>
-    """, unsafe_allow_html=True)
-
-def login_sidebar_ASL2():
-        show_pages(
-    [
-        Page("Pagina_Principal.py", "Pagina Principal"),
-        Page("pages/1_Diccionario.py", "Diccionario"),
-        Page("pages/2_Clases.py", "Clases"),
-        Page("pages/3_Libros.py", "Libros"),
-        Page("pages/4_Recursos.py", "Recursos"),
-        Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-        Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-        Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-        Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion_a_ASL_2.py", "Introducción a ASL 2"),
-        Page("pages/Bravo_5.py", "Repaso"),
-        Page("pages/Bravo_6.py", "Colores y Deletrear"),
-        Page("pages/Bravo_7.py", "Escuela"),
-        Page("pages/holidays_2.py", "Días Festivos")
-    ]
-)
-
 def escuela1():
-    set_styles()
+    style_html = set_styles('#94387f')
+    st.write(style_html, unsafe_allow_html=True)
     st.subheader('Lección 7: Escuela')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms21 = st.columns([1,1])
@@ -60,7 +26,7 @@ def escuela1():
         st.title('')
         st.markdown('<h5>Repaso y Explicacion</h5>', unsafe_allow_html=True)
     with clms23[1]:
-        st.video('https://youtu.be/U0I58rdwlDkg')
+        st.video('https://youtu.be/U0I58rdwlDk')
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
@@ -94,9 +60,9 @@ def escuela1():
         st.title('')
         st.markdown('<h5>Practica</h5>', unsafe_allow_html=True)
     with clms28[1]:
-        st.markdown("<a href='https://edpuzzle.com/media/656832c8714d964171966867' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
-        st.markdown("<a href='https://edpuzzle.com/media/65683015dc1e1641a09708ad' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/sandbox/main/pages/Images/Screenshot%202023-10-22%20at%203.32.28%20PM.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/656832c8714d964171966867' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/mobile_practice/main/pages/puzzle.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
+        st.markdown("<a href='https://edpuzzle.com/media/65683015dc1e1641a09708ad' target='_blank'><img style='float: left;' src='https://raw.githubusercontent.com/celenaaponce/mobile_practice/main/pages/puzzle.png' width='100' height='100'/></a>", unsafe_allow_html=True)     
 
     st.divider()
-    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTaL-csLK4bnmmbonxNSjLb0lgzB22X8rQahAOtdtEo0zRHKgQ6RTWEBwIOw2yy4DXaI6PauEFEDu78/embed?start=false&loop=false&delayms=3000", height=480)
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vSZrC1cnCuye5H_A68XhXhBj1jBeVSiGdbVDTMa-NI30NP5Xc07czMc5RKwIBZYC265aM0gjoMWGofO/embed?start=false&loop=false&delayms=3000", height=480)
 main()
