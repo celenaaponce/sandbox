@@ -2,9 +2,7 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
-from pages import holidays
-from st_pages import Page, Section,show_pages, add_page_title
-
+from pages.sidebars import login_sidebar_ASL1, set_styles
 def main():
     login_sidebar_ASL1()
     st.header("Bienvenido a la clase de ASL 1.")
@@ -15,42 +13,10 @@ def main():
             cuarta_semana()
     with tab6:
             quinta_semana()
-
-def login_sidebar_ASL1():
-        show_pages(
-    [
-        Page("Pagina_Principal.py", "Pagina Principal"),
-        Page("pages/1_Diccionario.py", "Diccionario"),
-        Page("pages/2_Clases.py", "Clases"),
-        Page("pages/3_Libros.py", "Libros"),
-        Page("pages/4_Recursos.py", "Recursos"),
-        Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-        Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-        Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-        Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-        Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-        Page("pages/10_Entrar.py", "Entrar"),
-        Page("pages/Introduccion_a_ASL_1.py", "Introducción a ASL 1"),
-        Page("pages/Bravo_1.py", "Conocer la Familia Bravo"),
-        Page("pages/Bravo_2.py", "Desayuno"),
-        Page("pages/Bravo_3.py", "¿Dónde está el contról?"),
-        Page("pages/holidays.py", "Días Festivos")
-    ]
-)
         
-def set_styles():
-    st.write("""
-        <style>
-        a {
-            background-color: #94387f;
-            color: white;
-
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
 def cuarta_semana():
-    set_styles()
+    style_html = set_styles('#94387f')
+    st.write(style_html, unsafe_allow_html=True)
     st.subheader('Desayuno Pt 1')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms21 = st.columns([1,1])
@@ -58,13 +24,13 @@ def cuarta_semana():
         st.title('')
         st.markdown('<h5>Introducción a La Lección</h5>', unsafe_allow_html=True)
     with clms21[1]:
-        st.video('https://youtu.be/69GxKWg_Sfw')
+        st.video('https://youtu.be/f68mvaF_gws?si=Kcbiev1FHJTIpsGE')
     clms23 = st.columns([1,1])
     with clms23[0]:
         st.title('')
         st.markdown('<h5>Repaso y Explicación</h5>', unsafe_allow_html=True)
     with clms23[1]:
-        st.video('https://youtu.be/UITBHk6W-Vg')
+        st.video('https://youtu.be/w-KsR7K_w_M?si=WcbY9r_-96VFdAil')
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
@@ -76,13 +42,13 @@ def cuarta_semana():
         st.title('')
         st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms25[1]: 
-        st.video('https://youtu.be/PdDmd0emQ40')
+        st.video('https://youtu.be/gUJVfoSiZzE?si=bRYITTgBsJi_Q9Ip')
     clms26 = st.columns([1,1])
     with clms26[0]:
         st.title('')
         st.markdown('<h5>Cultura Sorda</h5>', unsafe_allow_html=True)
     with clms26[1]:
-        st.video('https://youtu.be/5dW7MzA8hRY')
+        st.video('https://youtu.be/I2crdjlUNxw?si=VQsOsXBNPxZmYPv9')
 
     st.divider()
 
@@ -92,7 +58,7 @@ def cuarta_semana():
         st.title('')
         st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
     with clms27[1]:
-        st.video('https://youtu.be/uGtS3_zEGV8')
+        st.video('https://youtu.be/xB9HOC3pbP0?si=5AOESCZ7Ba9tlP01')
     clms28 = st.columns([1,1])
     with clms28[0]:
         st.title('')
@@ -104,10 +70,11 @@ def cuarta_semana():
 
     st.divider()
             
-    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTFT1lpMkQ8BK-lt6v60NsP5ILZCDlxvaQ-gGrMX_GIEMXmDupalvjNxglS0hS1ar2c97U7Hpm9RLJO/embed?start=false&loop=false&delayms=3000", height=480)
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vRx-1f0WLaGB1vDldBCMIeTmoSYp4jv-bM5m7XaNxyNnitfni5OLSj9bqGMdK27tIpFhsOc1tti7K80/embed?start=false&loop=false&delayms=3000", height=480)
 
 def quinta_semana():
-    set_styles()
+    style_html = set_styles('#94387f')
+    st.write(style_html, unsafe_allow_html=True)
     st.subheader('Desayuno Pt 2')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms23 = st.columns([1,1])
@@ -115,7 +82,7 @@ def quinta_semana():
         st.title('')
         st.markdown('<h5>Vocabulario</h5>', unsafe_allow_html=True)
     with clms23[1]:
-        st.video('https://youtu.be/UITBHk6W-Vg')
+        st.video('https://youtu.be/xB9HOC3pbP0?si=Pfvh6swcBAHzQUq7')
     clms24 = st.columns([1,1])
     with clms24[0]:
         st.title('')
@@ -127,13 +94,13 @@ def quinta_semana():
         st.title('')
         st.markdown('<h5>Conversación (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms25[1]: 
-        st.video('https://youtu.be/6Hxpc-49B3Q')
+        st.video('https://youtu.be/VvuDyUDuNlM?si=H7oijLhwIVssjt1B')
     clms26 = st.columns([1,1])
     with clms26[0]:
         st.title('')
         st.markdown('<h5>Gramatica</h5>', unsafe_allow_html=True)
     with clms26[1]:
-        st.video('https://youtu.be/bWqtdt6RMKs')
+        st.video('https://youtu.be/PwvwsmPIb4s?si=HZiIl1qC24rvmCr3')
     clms29 = st.columns([1,1])
     with clms29[0]:
         st.title('')
@@ -151,7 +118,7 @@ def quinta_semana():
         st.title('')
         st.markdown('<h5>Cuento (con subtítulos) 🔈</h5>', unsafe_allow_html=True)
     with clms31[1]: 
-        st.video('https://youtu.be/QLsApezec98')        
+        st.video('https://youtu.be/G_4yn3R_znc?si=QJrUdPsktJw_OXqs')        
     st.divider()
 
     st.markdown("<h4 style='text-align: center; color: white;'><u>Tarea</u></h4>", unsafe_allow_html=True)
@@ -160,7 +127,7 @@ def quinta_semana():
         st.title('')
         st.markdown('<h5>Vocabulario para la semana que viene</h5>', unsafe_allow_html=True)
     with clms27[1]:
-        st.video('https://youtu.be/Ffrz8E11BtY')
+        st.video('https://youtu.be/ykezTSbSjag?si=ETtun6CRGq1uGLHK')
     clms28 = st.columns([1,1])
     with clms28[0]:
         st.title('')
@@ -171,6 +138,6 @@ def quinta_semana():
 
     st.divider()
             
-    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTSFKvUdTSTKb6VdPLTwvsTT4Pzn0L_DH_lfc6GBTp-mgi3uNN8GZZyL-AnDGrpNkLlFy2K4TfGIqvc/embed?start=false&loop=false&delayms=3000", height=480)
+    components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vQo7o9uHbvupTeQvsZeZ9gAJjYRvSdixH_4IQSFOsfs8zcl92dx7bNm-uVBa5r04EHKREl6G_KuuUUN/embed?start=false&loop=false&delayms=3000", height=480)
 
 main()
