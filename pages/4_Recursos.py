@@ -1,25 +1,10 @@
 import streamlit as st
 from PIL import Image
-import streamlit.components.v1 as components
-from streamlit_extras.switch_page_button import switch_page
+from pages.sidebars import regular_sidebar, set_styles
 from streamlit.components.v1 import html
-from st_pages import Page, Section,show_pages, add_page_title
 
-show_pages(
-[
-    Page("Pagina_Principal.py", "Pagina Principal"),
-    Page("pages/1_Diccionario.py", "Diccionario"),
-    Page("pages/2_Clases.py", "Clases"),
-    Page("pages/3_Libros.py", "Libros"),
-    Page("pages/4_Recursos.py", "Recursos"),
-    Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-    Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-    Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-    Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-    Page("pages/10_Entrar.py", "Entrar"),
-    Page("pages/11_Form.py", "Formulario")
-])
+st.session_state['password_correct'] = False
+regular_sidebar()
 def open_page(url):
     open_script= """
         <script type="text/javascript">
@@ -27,42 +12,6 @@ def open_page(url):
         </script>
     """ % (url)
     html(open_script)
-
-def set_styles():
-    st.write("""
-        <style>
-        h5 {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        a {
-            background-color: #C53F3F;
-
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
-def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
-    htmlstr = f"""
-        <script>
-            var elements = window.parent.document.querySelectorAll('button');
-            for (var i = 0; i < elements.length; ++i) {{ 
-                if (elements[i].innerText == '{widget_label}') {{ 
-                    elements[i].style.color ='{font_color}';
-                    elements[i].style.background = '{background_color}'
-                }}
-            }}
-        function goTo(page) {{
-        page_links = parent.document.querySelectorAll('[data-testid="stSidebarNav"] ul li a')
-        page_links.forEach((link) => {{
-            if (link.text == page) {{
-                link.click()
-            }}
-        }})
-    }}
-        </script>
-        """
-    components.html(f"{htmlstr}", height=0, width=0)
 
 m = st.markdown("""
 <style>
@@ -79,10 +28,11 @@ outer_col_5 = st.columns([1, 1])
 
     
 with outer_col_5[0]:
-    set_styles()
+    style_html = set_styles('#C53F3F')
+    st.write(style_html, unsafe_allow_html=True)
     st.markdown("<h2 style='text-align: center; color: white;'>Recursos</h1>", unsafe_allow_html=True)
 
-    st.markdown("<h5 style='text-align: center; color: white;'>Recursos para familias Latinos con hijos Sordos </h5>", unsafe_allow_html=True)
+    st.markdown("<h5 style='text-align: center; color: white;'>Recursos para familias latinas con hijos sordos </h5>", unsafe_allow_html=True)
 
 with outer_col_5[1]:
     inner_col_5 = st.columns([1, 6, 1])
@@ -97,14 +47,14 @@ st.markdown("<h3>Manos y Voces</h3> \
 
 st.divider()
 st.markdown("<h3>Escuelas para los Sordos</h3>\
-              <p><a href='https://www.asd-1817.org/deaf-schools' target='_blank'>Escuelas para los Sordos</a> son escuelas de varias niveles, \
-            kinder al 12 grado. Algunos son publicos.  Los que son publicos son gratis y algunos tienen dormitorios donde niños pueden quedar \
-                si no viven cerca. Es un lugar buenisimo para niños sordos aprender más de su cultura y su idioma.</p>", unsafe_allow_html = True)
+              <p><a href='https://www.asd-1817.org/deaf-schools' target='_blank'>Escuelas para los Sordos</a> son escuelas de varías niveles, \
+            desde kinder al 12vo grado. Algunas son publicas.  Las que son públicos son gratis y algunos tienen dormitorios donde los niños pueden quedar \
+                si no viven cerca. Es un lugar buenisimo para niños sordos para aprender más de su cultura y su idioma.</p>", unsafe_allow_html = True)
 
 st.divider()
 st.markdown("<h3>Centros para Sordos</h3>\
               <p><a href='https://www.nad.org/resources/directories/state-agencies-of-deaf-hoh/' target='_blank'>Centros para Sordos</a> son\
-                  lugares que ayudan personas sordos encontrar recursos de cualquier tipo.  Algunos también tienen actividades o otros \
+                  lugares que ayudan a personas sordas a encontrar recursos de cualquier tipo.  Algunos también tienen actividades u otros \
                     servicios.</p>", unsafe_allow_html=True)
 
 st.divider()
