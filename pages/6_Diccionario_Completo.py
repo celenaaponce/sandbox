@@ -1,26 +1,11 @@
 import streamlit as st
 import streamlit.components.v1 as com
-import base64
+
 import pandas as pd
 from pathlib import Path 
-import gdown
-from st_pages import Page, Section,show_pages, add_page_title
+from pages.sidebars import regular_sidebar
 st.session_state['password_correct'] = False
-show_pages(
-[
-    Page("Pagina_Principal.py", "Pagina Principal"),
-    Page("pages/1_Diccionario.py", "Diccionario"),
-    Page("pages/2_Clases.py", "Clases"),
-    Page("pages/3_Libros.py", "Libros"),
-    Page("pages/4_Recursos.py", "Recursos"),
-    Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-    Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-    Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-    Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-    Page("pages/10_Entrar.py", "Entrar"),
-    Page("pages/11_Form.py", "Registrar para Clases")
-])
+regular_sidebar()
 #formatting
 offset = 20
 st.set_page_config(layout="wide", page_title="Diccionario Completo")
@@ -71,10 +56,16 @@ def download_csv(file_id, output_file):
     
 if st.session_state.download_completo == False:
     download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
+
+@st.cache_data
+def load_words_completo():  
+  for chunk in pd.read_csv('Small Preview2.csv', names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
+          data = pd.DataFrame(chunk)
+  return data
     
 word_data = download_csv(st.secrets["diccionario_completo"], 'Small Preview2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
-word_data = word_data.sort_values(by=['Palabra'])
+word_data.sort_values(by=['Palabra'])
 
 #change states
 def set_start(i):
@@ -98,9 +89,9 @@ st.markdown(
 start += offset
 col1, col2, col3 = st.columns([1,1,1])
 if start == offset:
-    increment = col3.button("Proximas Palabras", on_click=set_start, args=[start])
+    increment = col3.button("Próximas Palabras", on_click=set_start, args=[start])
 
 else:              
-    increment = col3.button("Proximas Palabras", on_click=set_start, args=[start])
+    increment = col3.button("Próximas Palabras", on_click=set_start, args=[start])
     reset1 = col2.button("Empezar de Nuevo", on_click=set_start, args=[0])
     reset2 = col1.button("Palabras Anteriores", on_click=back_start, args=[start])
