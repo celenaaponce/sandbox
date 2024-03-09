@@ -1,27 +1,14 @@
 import streamlit as st
 import pandas as pd
 import sys
-import gdown
-from st_pages import Page, Section,show_pages, add_page_title
-sys.path.append('streamlit_website/check')
+from pages.sidebars import regular_sidebar
 
+sys.path.append('streamlit_website/check')
+st.session_state['password_correct'] = False
 from check.spanish_word_freq import SpanishWordFreq
 from check.word_chekcer import WordChecker
-show_pages(
-[
-    Page("Pagina_Principal.py", "Pagina Principal"),
-    Page("pages/1_Diccionario.py", "Diccionario"),
-    Page("pages/2_Clases.py", "Clases"),
-    Page("pages/3_Libros.py", "Libros"),
-    Page("pages/4_Recursos.py", "Recursos"),
-    Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-    Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-    Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-    Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-    Page("pages/10_Entrar.py", "Entrar"),
-    Page("pages/11_Form.py", "Formulario")
-])
+from st_pages import Page, Section,show_pages
+regular_sidebar()
 st.set_page_config(layout="wide", page_title="Buscar Palabra")
 
 hide_streamlit_style = """
@@ -52,9 +39,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-if 'download' not in st.session_state:
-   st.session_state.download = False
-    
+
 @st.cache_data
 def download_csv(file_id, output_file):
     path = f'https://drive.google.com/uc?export=download&id={file_id}'
@@ -62,10 +47,6 @@ def download_csv(file_id, output_file):
       data = pd.DataFrame(chunk)
     st.session_state.download = True
     return data
-    
-if st.session_state.download == False:
-  download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
-
   
 @st.cache_data
 def load_words():
@@ -83,10 +64,14 @@ with open("css/bootstrap.css") as file:
 with open("css/responsive.css") as file2:
     resp = file2.read()
     
-
+if 'download' not in st.session_state:
+   st.session_state.download = False
     
+#start with download
+if st.session_state.download == False:
+  download_csv(st.secrets['diccionario_letras'], 'Search List2.csv')
 
-word_data = download_csv('1c9583j6P25bmdrYSb_1x_mEjDsUQ8k6-', 'Search List2.csv')
+word_data = download_csv(st.secrets['diccionario_letras'], 'Search List2.csv')
 word_data = word_data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
 
 st.write("")
