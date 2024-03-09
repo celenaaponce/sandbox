@@ -20,7 +20,7 @@ def regular_sidebar():
             ])
                 
 def login_sidebar_ASL1():
-        if st.sesson_state['option'] == "ASL1":
+        if st.sesson_state['option'] == "ASL 1":
                 show_pages(
             [
                 Page("Pagina_Principal.py", "Pagina Principal"),
