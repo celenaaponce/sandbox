@@ -2,7 +2,7 @@ from st_pages import Page, show_pages
 import streamlit as st
 
 def regular_sidebar():
-        if st.session_state['password_correct'] == False:
+
             show_pages(
             [
                 Page("Pagina_Principal.py", "Pagina Principal"),
