@@ -1,24 +1,10 @@
 import streamlit as st
 import pandas as pd
-import gdown
+from pages.sidebars import regular_sidebar
 from st_click_detector import click_detector
-from st_pages import Page, Section,show_pages, add_page_title
 
-show_pages(
-[
-    Page("Pagina_Principal.py", "Pagina Principal"),
-    Page("pages/1_Diccionario.py", "Diccionario"),
-    Page("pages/2_Clases.py", "Clases"),
-    Page("pages/3_Libros.py", "Libros"),
-    Page("pages/4_Recursos.py", "Recursos"),
-    Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-    Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-    Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-    Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-    Page("pages/10_Entrar.py", "Entrar"),
-    Page("pages/11_Form.py", "Formulario")
-])
+st.session_state['password_correct'] = False
+regular_sidebar()
 st.set_page_config(layout="wide", page_title="Diccionario Por Tema")
 increment = None
 reset1 = False
@@ -37,7 +23,7 @@ if 'download_tema' not in st.session_state:
     st.session_state.download_tema = False
 
 themes = {1: 'Plano de Casa', 2: 'Día de los Muertos', 4: 'Dia de San Valentin', 3: 'Halloween', 5: 'Primavera', 6: 'Quehaceres', 7: 'Exterior de Casa', 8: 'Más Comida', 9: 'Día de Acción de Gracias', 
-          10: 'Frutas', 11: 'Verduras', 12: 'Carnes', 13: 'Interior de Casa', 14: 'Bravo 1', 15: 'Bravo 2', 16: 'Bravo 3', 17: 'Bravo 4', 18: 'Números', 19: "Pascua", 20: "Colores", 21: "Familia"}
+          10: 'Frutas', 11: 'Verduras', 12: 'Carnes', 13: 'Interior de Casa', 14: 'Bravo 1', 15: 'Bravo 2', 16: 'Bravo 3', 17: 'Bravo 4', 18: 'Números', 19: "Pascua", 20: "Colores"}
 
 def get_content(size):
       content= f"""
@@ -126,19 +112,17 @@ def get_content(size):
          <a href='#' id='Image 20'><img class = "cat" width='{size}%' src='https://images.unsplash.com/photo-1500042600524-37ecb686c775?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29sb3JzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'></a>
          <p class="caption">Colores</p> 
          </div>
-        <div class="cat-container">
-         <a href='#' id='Image 21'><img class = "cat" width='{size}%' src='https://images.unsplash.com/photo-1609253932702-796cbf3d3171?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></a>
-         <p class="caption">Familia</p> 
-         </div>
          """
       return content
 
 @st.cache_data
 def download_csv(file_id, output_file):
+    csv_length=0
     path = f'https://drive.google.com/uc?export=download&id={file_id}'
     for chunk in pd.read_csv(path, names=['Palabra', 'Tema', 'Video', 'Imagen', 'Sinómino'], chunksize=10000, skiprows=1):
       data = pd.DataFrame(chunk)
-    st.session_state.download_tema = True
+    data = data[['Palabra', 'Imagen', 'Video', 'Tema', 'Sinómino']]
+    st.session_state.download = True
     return data
 
 with open("css/style.css") as f:
@@ -152,10 +136,10 @@ with open("css/responsive.css") as file2:
 
 #start with download
 if st.session_state.download_tema == False:
-  download_csv(st.secrets['diccionario_tema'], 'Themes2.csv')
+  download_csv(st.secrets['diccionario_tema'], 'GitThemeLinks.csv')
   st.session_state.download_tema = True
     
-word_data = download_csv(st.secrets['diccionario_tema'], 'Themes2.csv')
+word_data = download_csv(st.secrets['diccionario_tema'], 'GitThemeLinks.csv')
 
 if st.session_state.clicked == "":
     size = 20
@@ -208,7 +192,6 @@ if increment:
         col1, col2, col3 = st.columns([1,1,1])
         reset2 = col1.button("Palabras Anteriores", key="Second")
         reset1 = col2.button("Empezar de Nuevo")
-
 
 if reset1 or reset2:
     page_one.empty()
