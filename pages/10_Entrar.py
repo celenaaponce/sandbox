@@ -39,7 +39,7 @@ st.write(st.session_state)
 # else:       
 #     classoption = ""
 #     check_password()
-if 'password_correct' not in st.session_state.keys():
+if 'password_correct' not in st.session_state:
     st.session_state['password_correct] = False
 def password_entered():
         """Checks whether a password entered by the user is correct."""
