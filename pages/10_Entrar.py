@@ -54,7 +54,7 @@ with st.form("Credentials"):
             ('ASL 1', 'ASL 2', 'ASL 3', 'ASL En Casa'), key='option')
     st.text_input("Contraseña", type="password", key="password")
     st.form_submit_button("Entrar", on_click=password_entered)
-if st.session_state['password_correct]:    
+if st.session_state.password_correct == True:    
     if st.session_state['option'] == 'ASL 1':
         login_sidebar_ASL1()
         switch_page("Introducción_a_ASL_1")
