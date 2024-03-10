@@ -4,7 +4,6 @@ from streamlit_extras.switch_page_button import switch_page
 from pages.sidebars import regular_sidebar, login_sidebar_ASL1, login_sidebar_ASL2, login_sidebar_ASL3, login_sidebar_ASLAtHome2
 st.write(st.session_state)
 
-@st.cache_data
 regular_sidebar()
 # def check_password():
 #     """Returns `True` if the user had a correct password."""
