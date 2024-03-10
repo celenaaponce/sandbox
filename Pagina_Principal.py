@@ -47,7 +47,8 @@ with cont_1:
         with inner_cols[1]:
             st.image(image)
         quien = st.button('Quien Soy', key='Quien')
-        ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
+        htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
+        components.html(f"{htmlstr}", height=0, width=0)
         if quien:
             switch_page('Sobre_Yo')
 
@@ -69,7 +70,8 @@ with cont_2:
         with inner_col_2[1]:
             st.image(image2)
         dict = st.button('Diccionario', key='Dict')
-        ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
+        htmlstr = ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
+        components.html(f"{htmlstr}", height=0, width=0)
         if dict:
             switch_page('Diccionario')
 
@@ -89,7 +91,8 @@ with cont_3:
         with inner_col_3[1]:
             st.image(image3)
         classes = st.button('Clases', key='Clases')
-        ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
+        htmlstr = ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
+        components.html(f"{htmlstr}", height=0, width=0)
         if classes:
             switch_page('Clases')
 
@@ -110,7 +113,8 @@ with cont_4:
         with inner_col_4[1]:
             st.image(image4)
         books = st.button('Libros', key='Libros')
-        ChangeButtonColour('Libros', '#fffff', '#FF725E') 
+        htmlstr = ChangeButtonColour('Libros', '#fffff', '#FF725E') 
+        components.html(f"{htmlstr}", height=0, width=0)
         if books:
             switch_page('Libros')
 
@@ -130,6 +134,7 @@ with cont_5:
         with inner_col_5[1]:
             st.image(image5)
         resources = st.button('Recursos', key='Recursos')
-        ChangeButtonColour('Recursos', '#fffff', '#C53F3F') 
+        htmlstr = ChangeButtonColour('Recursos', '#fffff', '#C53F3F') 
+        components.html(f"{htmlstr}", height=0, width=0)
         if resources:
             switch_page('Recursos')
