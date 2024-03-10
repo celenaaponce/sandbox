@@ -2,17 +2,17 @@ from st_pages import Page, show_pages
 import streamlit as st
 
 def regular_sidebar():
-            st.sidebar.page_link("Pagina_Principal.py", "Pagina Principal")
-            st.sidebar.page_link("pages/1_Diccionario.py", "Diccionario")
-            st.sidebar.page_link("pages/2_Clases.py", "Clases")
-            st.sidebar.page_link("pages/3_Libros.py", "Libros")
-            st.sidebar.page_link("pages/4_Recursos.py", "Recursos")
-            st.sidebar.page_link("pages/5_Sobre_Yo.py", "Sobre Yo")
-            st.sidebar.page_link("pages/6_Diccionario_Completo.py", "Diccionario Completo")
-            st.sidebar.page_link("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra")
-            st.sidebar.page_link("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema")
-            st.sidebar.page_link("pages/9_Buscar_Palabra.py", "Buscar Palabra")
-            st.sidebar.page_link("pages/10_Entrar.py", "Entrar")
+            st.sidebar.page_link("Pagina_Principal.py", label="Pagina Principal")
+            st.sidebar.page_link("pages/1_Diccionario.py", label="Diccionario")
+            st.sidebar.page_link("pages/2_Clases.py", label="Clases")
+            st.sidebar.page_link("pages/3_Libros.py", label="Libros")
+            st.sidebar.page_link("pages/4_Recursos.py", label="Recursos")
+            st.sidebar.page_link("pages/5_Sobre_Yo.py", label="Sobre Yo")
+            st.sidebar.page_link("pages/6_Diccionario_Completo.py", label="Diccionario Completo")
+            st.sidebar.page_link("pages/7_Diccionario_por_Letra.py", label="Diccionario Por Letra")
+            st.sidebar.page_link("pages/8_Diccionario_por_Tema.py", label="Diccionario Por Tema")
+            st.sidebar.page_link("pages/9_Buscar_Palabra.py", label="Buscar Palabra")
+            st.sidebar.page_link("pages/10_Entrar.py", label="Entrar")
                 
 def login_sidebar_ASL1():
             st.sidebar.page_link("Pagina_Principal.py", "Pagina Principal")
