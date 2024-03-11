@@ -7,25 +7,25 @@ from st_pages import Page, Section,show_pages, add_page_title
 
 regular_sidebar()
 
-m = st.markdown("""
-<style>
-div.stButton > button:first-child {
-  border: none;
-  display: block;
-  width: 200px; 
-  margin: 0 auto;
-}
-</style>""", unsafe_allow_html=True)
+# m = st.markdown("""
+# <style>
+# div.stButton > button:first-child {
+#   border: none;
+#   display: block;
+#   width: 200px; 
+#   margin: 0 auto;
+# }
+# </style>""", unsafe_allow_html=True)
 
-def set_styles():
-    st.write("""
-        <style>
-        h5 {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        </style>
-    """, unsafe_allow_html=True)
+# def set_styles():
+#     st.write("""
+#         <style>
+#         h5 {
+#             margin-top: 20px;
+#             margin-bottom: 20px;
+#         }
+#         </style>
+#     """, unsafe_allow_html=True)
   
 image = Image.open('Online world-cuate (2).png')
 cont_1 = st.container()
