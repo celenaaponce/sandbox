@@ -53,7 +53,8 @@ with cont_1:
     with outer_cols[1]:
         inner_cols = st.columns([1, 6, 1])
         with inner_cols[1]:
-            st.image('./web_img/Online world-cuate (2).png')
+            # st.image('./web_img/Online world-cuate (2).png')
+            st.markdown('<img src="./web_img/Online world-cuate (2).png" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
         quien = st.button('Quien Soy', key='Quien')
         htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
         components.html(f"{htmlstr}", height=0, width=0)
@@ -77,7 +78,7 @@ with cont_2:
         inner_col_2 = st.columns([1, 6, 1])
         with inner_col_2[1]:
             # st.image('./web_img/dictionary.png')
-            st.markdown("<img src="./web_img/dictionary.png" alt="Girl in a jacket" width="500" height="600">", unsafe_allow_html=True)
+            st.markdown('<img src='./web_img/dictionary.png' alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
         dict = st.button('Diccionario', key='Dict')
         htmlstr = ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
         components.html(f"{htmlstr}", height=0, width=0)
@@ -97,7 +98,7 @@ with cont_3:
     with outer_col_3[1]:
         inner_col_3 = st.columns([1, 6, 1])
         with inner_col_3[1]:
-            st.markdown("<img src="./web_img/Online learning-rafiki.png" alt="Girl in a jacket" width="500" height="600">", unsafe_allow_html=True)
+            st.markdown('<img src="./web_img/Online learning-rafiki.png" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
             # st.image('./web_img/Online learning-rafiki.png')
         classes = st.button('Clases', key='Clases')
         htmlstr = ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
@@ -119,7 +120,7 @@ with cont_4:
     with outer_col_4[0]:
         inner_col_4 = st.columns([1, 6, 1])
         with inner_col_4[1]:
-            st.markdown("<img src="./web_img/Absorbed in-pana.png" alt="Girl in a jacket" width="500" height="600">", unsafe_allow_html=True)
+            st.markdown('<img src="./web_img/Absorbed in-pana.png" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
 
             # st.image('./web_img/Absorbed in-pana.png')
         books = st.button('Libros', key='Libros')
@@ -142,7 +143,7 @@ with cont_5:
         inner_col_5 = st.columns([1, 6, 1])
         with inner_col_5[1]:
             # st.image('./web_img/Selecting team-pana.png')
-            st.markdown("<img src="./web_img/Selecting team-pana.png" alt="Girl in a jacket" width="500" height="600">", unsafe_allow_html=True)
+            st.markdown('<img src="./web_img/Selecting team-pana.png" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
         resources = st.button('Recursos', key='Recursos')
         htmlstr = ChangeButtonColour('Recursos', '#fffff', '#C53F3F') 
         components.html(f"{htmlstr}", height=0, width=0)
