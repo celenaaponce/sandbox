@@ -21,7 +21,7 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
-image2 = Image.open('dictionary.png')
+
 
 outer_col_2 = st.columns([1, 1])            
 
@@ -35,7 +35,7 @@ with outer_col_2[1]:
 with outer_col_2[0]:
     inner_col_2 = st.columns([1, 6, 1])
     with inner_col_2[1]:
-        st.image(image2)
+          st.image('https://raw.githubusercontent.com/celenaaponce/sandbox/main/web_img/dictionary.png')
 st.divider()
 outer_col = st.columns([1,1])
 st.divider()
