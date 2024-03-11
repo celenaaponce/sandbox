@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 from pages.sidebars import regular_sidebar
 from st_click_detector import click_detector
-
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 regular_sidebar()
 st.set_page_config(layout="wide", page_title="Diccionario Por Tema")
 increment = None
