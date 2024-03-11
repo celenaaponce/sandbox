@@ -5,6 +5,13 @@ import streamlit.components.v1 as components
 from pages.sidebars import login_sidebar_ASL1, set_styles
 from modules.nav import MenuButtons
 from pages.account import get_roles
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 st.write(st.session_state)
 def main():
     MenuButtons('ASL1')
