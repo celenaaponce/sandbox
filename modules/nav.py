@@ -3,16 +3,16 @@ from streamlit import session_state as ss
 
 def regular_sidebar():
             st.sidebar.page_link("Pagina_Principal.py", label="Pagina Principal")
-            st.sidebar.page_link("pages/1_Diccionario.py", label="Diccionario")
-            st.sidebar.page_link("pages/2_Clases.py", label="Clases")
-            st.sidebar.page_link("pages/3_Libros.py", label="Libros")
-            st.sidebar.page_link("pages/4_Recursos.py", label="Recursos")
-            st.sidebar.page_link("pages/5_Sobre_Yo.py", label="Sobre Yo")
-            st.sidebar.page_link("pages/6_Diccionario_Completo.py", label="Diccionario Completo")
-            st.sidebar.page_link("pages/7_Diccionario_por_Letra.py", label="Diccionario Por Letra")
-            st.sidebar.page_link("pages/8_Diccionario_por_Tema.py", label="Diccionario Por Tema")
-            st.sidebar.page_link("pages/9_Buscar_Palabra.py", label="Buscar Palabra")
-            st.sidebar.page_link("pages/10_Entrar.py", label="Entrar")
+            st.sidebar.page_link("pages/Diccionario.py", label="Diccionario")
+            st.sidebar.page_link("pages/Clases.py", label="Clases")
+            st.sidebar.page_link("pages/Libros.py", label="Libros")
+            st.sidebar.page_link("pages/Recursos.py", label="Recursos")
+            st.sidebar.page_link("pages/Sobre_Yo.py", label="Sobre Yo")
+            st.sidebar.page_link("pages/Diccionario_Completo.py", label="Diccionario Completo")
+            st.sidebar.page_link("pages/Diccionario_por_Letra.py", label="Diccionario Por Letra")
+            st.sidebar.page_link("pages/Diccionario_por_Tema.py", label="Diccionario Por Tema")
+            st.sidebar.page_link("pages/Buscar_Palabra.py", label="Buscar Palabra")
+            st.sidebar.page_link("pages/Entrar.py", label="Entrar")
 
 
 def Page1Nav():
