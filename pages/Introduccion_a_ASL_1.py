@@ -3,9 +3,11 @@ from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from pages.sidebars import login_sidebar_ASL1, set_styles
+from modules.nav import MenuButtons
+from pages.account import get_roles
 st.write(st.session_state)
 def main():
-    login_sidebar_ASL1()
+    MenuButtons(get_roles())
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
