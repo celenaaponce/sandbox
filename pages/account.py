@@ -8,7 +8,7 @@ from modules.nav import MenuButtons
 st.markdown("""
     <style>
         div[data-testid="stSidebarNav"][aria-expanded="true"]{
-            display: none;
+            display: none !important;
         }
     </style>
     """, unsafe_allow_html=True)
