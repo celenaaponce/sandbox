@@ -4,6 +4,7 @@ import streamlit.components.v1 as com
 import pandas as pd
 from pathlib import Path 
 from pages.sidebars import regular_sidebar
+st.set_page_config(layout="wide", page_title="Diccionario Completo")
 st.markdown("""
     <style>
         div[data-testid="stSidebarNav"]{
@@ -14,7 +15,7 @@ st.markdown("""
 regular_sidebar()
 #formatting
 offset = 20
-st.set_page_config(layout="wide", page_title="Diccionario Completo")
+
 hide_streamlit_style = """
 <style>
     #root > div:nth-child(1) > div > div > div > div > section > div {padding-top: 0rem; padding-left: 0rem;}
