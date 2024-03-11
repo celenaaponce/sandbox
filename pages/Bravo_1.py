@@ -4,9 +4,10 @@ from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from pages.sidebars import login_sidebar_ASL1, set_styles
 from st_pages import Page, Section,show_pages, add_page_title
+from modules.nav import MenuButtons
 st.write(st.session_state)
 def main():
-    login_sidebar_ASL1()
+    MenuButtons('ASL1')
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     tab2, tab4 = st.tabs([":white[Conocer la Familia Bravo Pt 1]", 
@@ -21,7 +22,7 @@ def segunda_semana():
     
     style_html = set_styles('#94387f')
     st.write(style_html, unsafe_allow_html=True)
-    login_sidebar_ASL1()
+    Menu
     st.subheader('Conocer La Familia Bravo Pt 1')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms21 = st.columns([1,1])
