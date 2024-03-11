@@ -4,7 +4,39 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 from modules.nav import MenuButtons
+hide_class = """
+.hide {
+    display: none;
+}
+"""
 
+# Write the CSS class to the Streamlit app
+st.write(hide_class, unsafe_allow_html=True)
+
+# Define the data-testid value
+div_test_id = "stSidebarNav"
+
+# Write the HTML <div> with the specified data-testid
+st.write("""
+    <div data-testid="{}">
+        This div is hidden.
+    </div>
+""".format(div_test_id), unsafe_allow_html=True)
+
+# Use JavaScript to assign the .hide class to the <div> with the specific data-testid
+hide_script = """
+    <script>
+        // Get the <div> element by its data-testid attribute
+        var divToHide = document.querySelector('[data-testid="{}"]');
+        // Add the .hide class to hide the <div>
+        if (divToHide !== null) {{
+            divToHide.classList.add('hide');
+        }}
+    </script>
+""".format(div_test_id)
+
+# Write the JavaScript to the Streamlit app
+st.write(hide_script, unsafe_allow_html=True)
 
 CONFIG_FILENAME = 'config.yaml'
 
