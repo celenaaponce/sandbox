@@ -11,12 +11,14 @@ from pages.account import get_roles
 
 hide_script = """
     <script>
-        // Get the element by its id
-        var elementToHide = document.getElementById('stSidebarNavItems');
+        // Get the element by its data-testid attribute
+        var elementToHide = document.querySelector('[data-testid="{}"]');
         // Set its display property to 'none' to hide it
-        elementToHide.style.display = 'none';
+        if (elementToHide !== null) {{
+            elementToHide.style.display = 'none';
+        }}
     </script>
-"""
+""".format('stSidebarNav')
 
 # Inject the JavaScript to hide the element
 st.write(hide_script, unsafe_allow_html=True)
