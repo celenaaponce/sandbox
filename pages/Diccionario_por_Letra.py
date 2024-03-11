@@ -4,6 +4,7 @@ from pathlib import Path
 from time import sleep
 from st_click_detector import click_detector
 from pages.sidebars import regular_sidebar
+st.set_page_config(layout="wide", page_title="Diccionario Por Letra")
 st.session_state['password_correct'] = False
 st.markdown("""
     <style>
@@ -22,7 +23,7 @@ alpha_tuple = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
                'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
 
 ##page configs
-st.set_page_config(layout="wide", page_title="Diccionario Por Letra")
+
 
 hide_streamlit_style = """
 <style>
