@@ -8,39 +8,13 @@ import streamlit as st
 from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
-hide_class = """
-.hide {
-    display: none;
-}
-"""
-
-# Write the CSS class to the Streamlit app
-st.write(hide_class, unsafe_allow_html=True)
-
-# Define the data-testid value
-div_test_id = "stSidebarNav"
-
-# Write the HTML <div> with the specified data-testid
-st.write("""
-    <div data-testid="{}">
-        This div is hidden.
-    </div>
-""".format(div_test_id), unsafe_allow_html=True)
-
-# Use JavaScript to assign the .hide class to the <div> with the specific data-testid
-hide_script = """
-    <script>
-        // Get the <div> element by its data-testid attribute
-        var divToHide = document.querySelector('[data-testid="{}"]');
-        // Add the .hide class to hide the <div>
-        if (divToHide !== null) {{
-            divToHide.classList.add('hide');
-        }}
-    </script>
-""".format(div_test_id)
-
-# Write the JavaScript to the Streamlit app
-st.write(hide_script, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        section[data-testid="stSidebar"][aria-expanded="true"]{
+            display: none;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
