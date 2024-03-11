@@ -3,7 +3,13 @@ from PIL import Image
 import streamlit.components.v1 as components
 from streamlit.components.v1 import html
 from pages.sidebars import regular_sidebar, set_styles
-
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 regular_sidebar()
 
 def open_page(url):
