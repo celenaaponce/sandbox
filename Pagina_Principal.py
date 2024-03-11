@@ -54,7 +54,7 @@ with cont_1:
         inner_cols = st.columns([1, 6, 1])
         with inner_cols[1]:
             # st.image('./web_img/Online world-cuate (2).png')
-            st.markdown('<img src="./web_img/Online world-cuate (2).png" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
+            components.html('<img src="./web_img/Online world-cuate (2).png" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
         quien = st.button('Quien Soy', key='Quien')
         htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
         components.html(f"{htmlstr}", height=0, width=0)
