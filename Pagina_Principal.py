@@ -8,7 +8,11 @@ import streamlit as st
 from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
+element_test_id = "stSidebarNav"
 
+st.write("""
+    <div data-testid="{}">This is the element I want to hide</div>
+""".format(element_test_id), unsafe_allow_html=True)
 hide_script = """
     <script>
         // Get the element by its data-testid attribute
@@ -22,7 +26,7 @@ hide_script = """
 
 # Inject the JavaScript to hide the element
 st.write(hide_script, unsafe_allow_html=True)
-st.write(hide_script)
+
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
 # if 'authentication_status' not in ss:
