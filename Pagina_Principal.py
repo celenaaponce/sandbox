@@ -7,15 +7,15 @@ from st_pages import Page, Section,show_pages, add_page_title
 
 regular_sidebar()
 
-# m = st.markdown("""
-# <style>
-# div.stButton > button:first-child {
-#   border: none;
-#   display: block;
-#   width: 200px; 
-#   margin: 0 auto;
-# }
-# </style>""", unsafe_allow_html=True)
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+  border: none;
+  display: block;
+  width: 200px; 
+  margin: 0 auto;
+}
+</style>""", unsafe_allow_html=True)
 
 def set_styles():
     st.write("""
