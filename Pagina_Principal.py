@@ -8,51 +8,34 @@ import streamlit as st
 from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
-element_test_id = "stSidebarNav"
+st.set_page_config(initial_sidebar_state="collapsed")
 
-div_test_id = "stSidebarNav"
-
-st.write("""
-    <div data-testid="{}">
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ul>
-    </div>
-""".format(div_test_id), unsafe_allow_html=True)
-
-hide_script = """
-    <script>
-        // Get the <div> element by its data-testid attribute
-        var divToHide = document.querySelector('[data-testid="{}"]');
-        // Print the content of the div to the console
-        console.log(divToHide);
-        // Set its display property to 'none' to hide it
-        if (divToHide !== null) {{
-            divToHide.style.display = 'none';
-        }}
-    </script>
-""".format(div_test_id)
-
-# Embed the JavaScript to hide the <div> element using st.markdown
-st.markdown(hide_script, unsafe_allow_html=True)
+st.markdown(
+    """
+<style>
+    [data-testid="collapsedControl"] {
+        display: none
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
-# if 'authentication_status' not in ss:
-#     st.switch_page('./pages/account.py')
+if 'authentication_status' not in ss:
+    st.switch_page('./pages/account.py')
 
 
-# MenuButtons(get_roles())
-# st.header('Home page')
+MenuButtons(get_roles())
+st.header('Home page')
 
 
-# # Protected content in home page.
-# if ss.authentication_status:
-#     st.write('This content is only accessible for logged in users.')
-# else:
-#     st.write('Please log in on login page.')
+# Protected content in home page.
+if ss.authentication_status:
+    st.write('This content is only accessible for logged in users.')
+else:
+    st.write('Please log in on login page.')
 
 # regular_sidebar()
 
