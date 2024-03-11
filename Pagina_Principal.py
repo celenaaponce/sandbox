@@ -8,7 +8,6 @@ import streamlit as st
 from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
-st.set_page_config(initial_sidebar_state="collapsed")
 
 st.markdown(
     """
