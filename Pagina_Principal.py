@@ -6,15 +6,15 @@ from pages.sidebars import regular_sidebar, ChangeButtonColour
 from st_pages import Page, Section,show_pages, add_page_title
 
 
-# st.markdown("""
-#     <style>
-#         div[data-testid="stSidebarNav"]{
-#             display: none !important;
-#         }
-#     </style>
-#     """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-# regular_sidebar()
+regular_sidebar()
 
 m = st.markdown("""
 <style>
