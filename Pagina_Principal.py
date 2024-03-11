@@ -4,11 +4,15 @@ import streamlit.components.v1 as components
 from streamlit_extras.switch_page_button import switch_page
 from pages.sidebars import regular_sidebar, ChangeButtonColour
 from st_pages import Page, Section,show_pages, add_page_title
-import streamlit as st
-from streamlit import session_state as ss
-from modules.nav import MenuButtons
-from pages.account import get_roles
 
+
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
