@@ -26,7 +26,7 @@ hide_script = """
 """.format('stSidebarNav')
 
 # Inject the JavaScript to hide the element
-st.write(hide_script, unsafe_allow_html=True)
+st.markdown(hide_script, unsafe_allow_html=True)
 
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
