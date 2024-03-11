@@ -7,7 +7,7 @@ from modules.nav import MenuButtons
 from pages.account import get_roles
 st.write(st.session_state)
 def main():
-    MenuButtons(get_roles())
+    MenuButtons('ASL1')
     st.header("Bienvenido a la clase de ASL 1.")
     st.header("Se puede mirar nuestro curriculo aqui:")
     primera_semana()
