@@ -66,29 +66,29 @@ MenuButtons(get_roles())
 #                 st.session_state["password_correct"] = True
 #         else:
 #                 st.session_state["password_correct"] = False
-# with st.form("Credentials"):
+with st.form("Credentials"):
 
-#     option = st.selectbox(
-#             '¿Cual clase?',
-#             ('ASL 1', 'ASL 2', 'ASL 3', 'ASL En Casa'), key='option')
-#     st.text_input("Contraseña", type="password", key="password")
-#     st.form_submit_button("Entrar", on_click=password_entered)
-# if st.session_state.password_correct == True:    
-#     if st.session_state['option'] == 'ASL 1':
-#         login_sidebar_ASL1()
-#         switch_page("Introducción_a_ASL_1")
+    option = st.selectbox(
+            '¿Cual clase?',
+            ('ASL 1', 'ASL 2', 'ASL 3', 'ASL En Casa'), key='option')
+    st.text_input("Contraseña", type="password", key="password")
+    st.form_submit_button("Entrar", on_click=password_entered)
+if st.session_state.password_correct == True:    
+    if st.session_state['option'] == 'ASL 1':
+        login_sidebar_ASL1()
+        switch_page("Introducción_a_ASL_1")
     
-#     elif st.session_state['option'] == 'ASL 2':
-#         login_sidebar_ASL2()
-#         switch_page("Introducción_a_ASL_2")
+    elif st.session_state['option'] == 'ASL 2':
+        login_sidebar_ASL2()
+        switch_page("Introducción_a_ASL_2")
         
-#     elif st.session_state['option'] == 'ASL En Casa':
-#         login_sidebar_ASLAtHome2()
-#         switch_page("Introduccion_a_ASL_En_Casa")
+    elif st.session_state['option'] == 'ASL En Casa':
+        login_sidebar_ASLAtHome2()
+        switch_page("Introduccion_a_ASL_En_Casa")
     
-#     elif st.session_state['option'] == 'ASL 3':
-#         login_sidebar_ASL3()
-#         switch_page("Introducción_a_ASL_3")
+    elif st.session_state['option'] == 'ASL 3':
+        login_sidebar_ASL3()
+        switch_page("Introducción_a_ASL_3")
 # else:
 
 #     st.write('wrong password')
