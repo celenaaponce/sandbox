@@ -7,7 +7,13 @@ import streamlit as st
 from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
-
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 regular_sidebar()
 def open_page(url):
     open_script= """
