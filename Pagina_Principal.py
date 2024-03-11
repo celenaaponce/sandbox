@@ -10,22 +10,32 @@ from modules.nav import MenuButtons
 from pages.account import get_roles
 element_test_id = "stSidebarNav"
 
+div_test_id = "stSidebarNav"
+
 st.write("""
-    <div data-testid="{}">This is the element I want to hide</div>
-""".format(element_test_id), unsafe_allow_html=True)
+    <div data-testid="{}">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+""".format(div_test_id), unsafe_allow_html=True)
+
 hide_script = """
     <script>
-        // Get the element by its data-testid attribute
-        var elementToHide = document.querySelector('[data-testid="{}"]');
-        // Set its display property to 'none' to hide it
+        // Get the <div> element by its data-testid attribute
+        var divToHide = document.querySelector('[data-testid="{}"]');
+        // Print the content of the div to the console
         console.log(divToHide);
-        if (elementToHide !== null) {{
-            elementToHide.style.display = 'none';
+        // Set its display property to 'none' to hide it
+        if (divToHide !== null) {{
+            divToHide.style.display = 'none';
         }}
     </script>
-""".format('stSidebarNav')
+""".format(div_test_id)
 
-# Inject the JavaScript to hide the element
+# Embed the JavaScript to hide the <div> element using st.markdown
 st.markdown(hide_script, unsafe_allow_html=True)
 
 # If user refreshes the page, go to the login page because
