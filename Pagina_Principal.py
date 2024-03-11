@@ -9,7 +9,17 @@ from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
 
+hide_script = """
+    <script>
+        // Get the element by its id
+        var elementToHide = document.getElementById('stSidebarNavItems');
+        // Set its display property to 'none' to hide it
+        elementToHide.style.display = 'none';
+    </script>
+"""
 
+# Inject the JavaScript to hide the element
+st.write(hide_script, unsafe_allow_html=True)
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
 if 'authentication_status' not in ss:
