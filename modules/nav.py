@@ -51,15 +51,10 @@ def MenuButtons(user_roles=None):
     # Always show the home and login navigators.
     regular_sidebar()
 
-    # Show the other page navigators depending on the users' role.
-    if ss["authentication_status"]:
 
-        # (1) Only the admin role can access page 1 and other pages.
-        # In a user roles get all the usernames with admin role.
-        admins = [k for k, v in user_roles.items() if v == 'admin']
 
-        # Show page 1 if the username that logged in is an admin.
-        if user_roles == 'ASL1':
-            ASL1_sidebar()
+# Show page 1 if the username that logged in is an admin.
+     if user_roles == 'ASL1':
+        ASL1_sidebar()
 
     
