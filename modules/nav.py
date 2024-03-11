@@ -15,7 +15,22 @@ def regular_sidebar():
             st.sidebar.page_link("pages/Diccionario_por_Tema.py", label="Diccionario Por Tema")
             st.sidebar.page_link("pages/Buscar_Palabra.py", label="Buscar Palabra")
             st.sidebar.page_link("pages/Entrar.py", label="Entrar")
-
+            
+def ASL1_sidebar():
+            st.sidebar.page_link("Pagina_Principal.py", label="Pagina Principal")
+            st.sidebar.page_link("pages/Diccionario.py", label="Diccionario")
+            st.sidebar.page_link("pages/Clases.py", label="Clases")
+            st.sidebar.page_link("pages/Libros.py", label="Libros")
+            st.sidebar.page_link("pages/Recursos.py", label="Recursos")
+            st.sidebar.page_link("pages/Sobre_Yo.py", label="Sobre Yo")
+            st.sidebar.page_link("pages/Diccionario_Completo.py", label="Diccionario Completo")
+            st.sidebar.page_link("pages/Diccionario_por_Letra.py", label="Diccionario Por Letra")
+            st.sidebar.page_link("pages/Diccionario_por_Tema.py", label="Diccionario Por Tema")
+            st.sidebar.page_link("pages/Buscar_Palabra.py", label="Buscar Palabra")
+            st.sidebar.page_link("pages/Entrar.py", label="Entrar")
+            st.sidebar.page_link("pages/helper/Introduccion_a_ASL_1.py", label="Introducción a ASL 1")
+            st.sidebar.page_link("pages/helper/Bravo_1.py", label="Conocer la Familia Bravo")
+            st.sidebar.page_link("pages/helper/holidays_spring.py", label="Días Festivos")
 
 def Page1Nav():
     st.sidebar.page_link("pages/page1.py", label="Page 1", icon='✈️')
@@ -43,8 +58,7 @@ def MenuButtons(user_roles=None):
         admins = [k for k, v in user_roles.items() if v == 'admin']
 
         # Show page 1 if the username that logged in is an admin.
-        if ss.username in admins:
-            Page1Nav()
+        if ss.option == 'ASL1':
+            ASL1_sidebar()
 
-        # (2) users with user and admin roles have access to page 2.
-        Page2Nav()     
+    
