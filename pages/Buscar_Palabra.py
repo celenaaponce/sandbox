@@ -8,19 +8,15 @@ from modules.nav import MenuButtons
 from pages.account import get_roles
 
 
-# If user refreshes the page, go to the login page because
-# in there we have the facility to check the login status.
-if 'authentication_status' not in ss:
-    st.switch_page('./pages/account.py')
-
-MenuButtons(get_roles())
-sys.path.append('streamlit_website/check')
-st.session_state['password_correct'] = False
-from check.spanish_word_freq import SpanishWordFreq
-from check.word_chekcer import WordChecker
-from st_pages import Page, Section,show_pages
-# regular_sidebar()
 st.set_page_config(layout="wide", page_title="Buscar Palabra")
+regular_sidebar()
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 hide_streamlit_style = """
 <style>
