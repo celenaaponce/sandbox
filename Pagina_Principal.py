@@ -76,7 +76,7 @@ with cont_2:
     with outer_col_2[0]:
         inner_col_2 = st.columns([1, 6, 1])
         with inner_col_2[1]:
-            st.image(./web_img/dictionary.png)
+            st.image('./web_img/dictionary.png')
         dict = st.button('Diccionario', key='Dict')
         htmlstr = ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
         components.html(f"{htmlstr}", height=0, width=0)
