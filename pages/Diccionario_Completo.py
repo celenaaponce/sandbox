@@ -4,7 +4,13 @@ import streamlit.components.v1 as com
 import pandas as pd
 from pathlib import Path 
 from pages.sidebars import regular_sidebar
-
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 regular_sidebar()
 #formatting
 offset = 20
