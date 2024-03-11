@@ -3,8 +3,19 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from pages.sidebars import regular_sidebar, login_sidebar_ASL1, login_sidebar_ASL2, login_sidebar_ASL3, login_sidebar_ASLAtHome2
 st.write(st.session_state)
+import streamlit as st
+from streamlit import session_state as ss
+from modules.nav import MenuButtons
+from pages.account import get_roles
 
-regular_sidebar()
+
+# If user refreshes the page, go to the login page because
+# in there we have the facility to check the login status.
+if 'authentication_status' not in ss:
+    st.switch_page('./pages/account.py')
+
+MenuButtons(get_roles())
+# regular_sidebar()
 # def check_password():
 #     """Returns `True` if the user had a correct password."""
 
