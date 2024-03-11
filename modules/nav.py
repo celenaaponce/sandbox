@@ -2,29 +2,8 @@ import streamlit as st
 from streamlit import session_state as ss
 
 
-st.markdown(
-    """
-<style>
-    [data-testid="collapsedControl"] {
-        display: none
-    }
-</style>
-""",
-    unsafe_allow_html=True,
-)
 def regular_sidebar():
 
-        
-            st.markdown(
-            """
-        <style>
-            [data-testid="collapsedControl"] {
-                display: none
-            }
-        </style>
-        """,
-            unsafe_allow_html=True,
-        )
             st.sidebar.page_link("Pagina_Principal.py", label="Pagina Principal")
             st.sidebar.page_link("pages/Diccionario.py", label="Diccionario")
             st.sidebar.page_link("pages/Clases.py", label="Clases")
