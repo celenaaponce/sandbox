@@ -59,7 +59,7 @@ def MenuButtons(user_roles=None):
         admins = [k for k, v in user_roles.items() if v == 'admin']
 
         # Show page 1 if the username that logged in is an admin.
-        if ss.option == 'ASL1':
+        if user_roles == 'ASL1':
             ASL1_sidebar()
 
     
