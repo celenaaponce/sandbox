@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image
 import streamlit.components.v1 as components
 from streamlit_extras.switch_page_button import switch_page
 from pages.sidebars import regular_sidebar, ChangeButtonColour
@@ -54,7 +53,7 @@ with cont_1:
         inner_cols = st.columns([1, 6, 1])
         with inner_cols[1]:
             # st.image('./web_img/Online world-cuate (2).png')
-            components.html('<img src="./web_img/Online world-cuate (2).png" alt="Girl in a jacket" width="500" height="600">')
+            components.html("""<img src="./web_img/Online world-cuate (2).png" alt="Girl in a jacket" width="500" height="600">""", height=0, width=0)
         quien = st.button('Quien Soy', key='Quien')
         htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
         components.html(f"{htmlstr}", height=0, width=0)
