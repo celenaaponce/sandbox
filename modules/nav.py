@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit import session_state as ss
-st.set_page_config(initial_sidebar_state="collapsed")
+
 
 st.markdown(
     """
@@ -13,7 +13,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 def regular_sidebar():
-            st.set_page_config(initial_sidebar_state="collapsed")
+
         
             st.markdown(
             """
