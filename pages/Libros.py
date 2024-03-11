@@ -2,8 +2,14 @@ import streamlit as st
 from PIL import Image
 from pages.sidebars import regular_sidebar, set_styles
 from streamlit.components.v1 import html
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-st.session_state['password_correct'] = False
 regular_sidebar()
 
 def open_page(url):
@@ -23,7 +29,7 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
-image4 = Image.open('Absorbed in-pana.png')
+
 outer_col_4 = st.columns([1, 1])      
 with outer_col_4[1]:
     style_html = set_styles('#FF725E')
@@ -35,7 +41,8 @@ with outer_col_4[1]:
 with outer_col_4[0]:
     inner_col_4 = st.columns([1, 6, 1])
     with inner_col_4[1]:
-        st.image(image4)
+        st.image('https://raw.githubusercontent.com/celenaaponce/sandbox/main/web_img/Absorbed%20in-pana.png')
+
 
 outer_col = st.columns([1,1])
 with outer_col[0]:
