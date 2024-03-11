@@ -96,7 +96,7 @@ with cont_3:
     with outer_col_3[1]:
         inner_col_3 = st.columns([1, 6, 1])
         with inner_col_3[1]:
-            st.image('/web_img/Online learning-rafiki.png)
+            st.image('/web_img/Online learning-rafiki.png')
         classes = st.button('Clases', key='Clases')
         htmlstr = ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
         components.html(f"{htmlstr}", height=0, width=0)
