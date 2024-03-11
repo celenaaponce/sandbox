@@ -19,22 +19,33 @@ from pydub.playback import play
 import time
 from streamlit_js_eval import streamlit_js_eval
 from pages.form_phone import form_phone, Register
-  
-show_pages(
-[
-    Page("Pagina_Principal.py", "Pagina Principal"),
-    Page("pages/1_Diccionario.py", "Diccionario"),
-    Page("pages/2_Clases.py", "Clases"),
-    Page("pages/3_Libros.py", "Libros"),
-    Page("pages/4_Recursos.py", "Recursos"),
-    Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
-    Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
-    Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
-    Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
-    Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
-    Page("pages/10_Entrar.py", "Entrar"),
-    Page("pages/11_Form.py", "Formulario")
-])
+  import streamlit as st
+from streamlit import session_state as ss
+from modules.nav import MenuButtons
+from pages.account import get_roles
+
+
+# If user refreshes the page, go to the login page because
+# in there we have the facility to check the login status.
+if 'authentication_status' not in ss:
+    st.switch_page('./pages/account.py')
+
+MenuButtons(get_roles())
+# show_pages(
+# [
+#     Page("Pagina_Principal.py", "Pagina Principal"),
+#     Page("pages/1_Diccionario.py", "Diccionario"),
+#     Page("pages/2_Clases.py", "Clases"),
+#     Page("pages/3_Libros.py", "Libros"),
+#     Page("pages/4_Recursos.py", "Recursos"),
+#     Page("pages/5_Sobre_Yo.py", "Sobre Yo"),
+#     Page("pages/6_Diccionario_Completo.py", "Diccionario Completo"),
+#     Page("pages/7_Diccionario_por_Letra.py", "Diccionario Por Letra"),
+#     Page("pages/8_Diccionario_por_Tema.py", "Diccionario Por Tema"),
+#     Page("pages/9_Buscar_Palabra.py", "Buscar Palabra"),
+#     Page("pages/10_Entrar.py", "Entrar"),
+#     Page("pages/11_Form.py", "Formulario")
+# ])
 
 def set_styles():
     st.write("""
