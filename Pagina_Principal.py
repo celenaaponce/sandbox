@@ -54,7 +54,7 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
   
-image = Image.open('Online world-cuate (2).png')
+image = Image.open('./web_img/Online world-cuate (2).png')
 cont_1 = st.container()
 cont_2 = st.container()
 cont_3 = st.container()
@@ -81,7 +81,7 @@ with cont_1:
 
 
 st.divider()
-image2 = Image.open('dictionary.png')
+image2 = Image.open('./web_img/dictionary.png')
 
 outer_col_2 = st.columns([1, 1])            
 with cont_2:
@@ -92,76 +92,76 @@ with cont_2:
     
         st.markdown("<h5 style='text-align: center; color: white;'>Buscar señas y frases en un diccionario de Español a ASL </h5>", unsafe_allow_html=True)
     
-#     with outer_col_2[0]:
-#         inner_col_2 = st.columns([1, 6, 1])
-#         with inner_col_2[1]:
-#             st.image(image2)
-#         dict = st.button('Diccionario', key='Dict')
-#         htmlstr = ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
-#         components.html(f"{htmlstr}", height=0, width=0)
-#         if dict:
-#             switch_page('Diccionario')
+    with outer_col_2[0]:
+        inner_col_2 = st.columns([1, 6, 1])
+        with inner_col_2[1]:
+            st.image(image2)
+        dict = st.button('Diccionario', key='Dict')
+        htmlstr = ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
+        components.html(f"{htmlstr}", height=0, width=0)
+        if dict:
+            switch_page('Diccionario')
 
-# st.divider()
-# image3 = Image.open('Online learning-rafiki.png')
-# outer_col_3 = st.columns([1, 1])            
-# with cont_3:
+st.divider()
+image3 = Image.open('./web_img/Online learning-rafiki.png')
+outer_col_3 = st.columns([1, 1])            
+with cont_3:
     
-#     with outer_col_3[0]:
-#         set_styles()
-#         st.markdown("<h2 style='text-align: center; color: white;'>Clases</h1>", unsafe_allow_html=True)
+    with outer_col_3[0]:
+        set_styles()
+        st.markdown("<h2 style='text-align: center; color: white;'>Clases</h1>", unsafe_allow_html=True)
     
-#         st.markdown("<h5 style='text-align: center; color: white;'>Tomar clases gratis en español para aprender lengua de señas americana. </h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: center; color: white;'>Tomar clases gratis en español para aprender lengua de señas americana. </h5>", unsafe_allow_html=True)
     
-#     with outer_col_3[1]:
-#         inner_col_3 = st.columns([1, 6, 1])
-#         with inner_col_3[1]:
-#             st.image(image3)
-#         classes = st.button('Clases', key='Clases')
-#         htmlstr = ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
-#         components.html(f"{htmlstr}", height=0, width=0)
-#         if classes:
-#             switch_page('Clases')
+    with outer_col_3[1]:
+        inner_col_3 = st.columns([1, 6, 1])
+        with inner_col_3[1]:
+            st.image(image3)
+        classes = st.button('Clases', key='Clases')
+        htmlstr = ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
+        components.html(f"{htmlstr}", height=0, width=0)
+        if classes:
+            switch_page('Clases')
 
-# st.divider()
-# image4 = Image.open('Absorbed in-pana.png')
+st.divider()
+image4 = Image.open('./web_img/Absorbed in-pana.png')
 
-# outer_col_4 = st.columns([1, 1])            
-# with cont_4:
+outer_col_4 = st.columns([1, 1])            
+with cont_4:
     
-#     with outer_col_4[1]:
-#         set_styles()
-#         st.markdown("<h2 style='text-align: center; color: white;'>Libros</h1>", unsafe_allow_html=True)
+    with outer_col_4[1]:
+        set_styles()
+        st.markdown("<h2 style='text-align: center; color: white;'>Libros</h1>", unsafe_allow_html=True)
     
-#         st.markdown("<h5 style='text-align: center; color: white;'>Mirar videos de libros en español con ASL </h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: center; color: white;'>Mirar videos de libros en español con ASL </h5>", unsafe_allow_html=True)
     
-#     with outer_col_4[0]:
-#         inner_col_4 = st.columns([1, 6, 1])
-#         with inner_col_4[1]:
-#             st.image(image4)
-#         books = st.button('Libros', key='Libros')
-#         htmlstr = ChangeButtonColour('Libros', '#fffff', '#FF725E') 
-#         components.html(f"{htmlstr}", height=0, width=0)
-#         if books:
-#             switch_page('Libros')
+    with outer_col_4[0]:
+        inner_col_4 = st.columns([1, 6, 1])
+        with inner_col_4[1]:
+            st.image(image4)
+        books = st.button('Libros', key='Libros')
+        htmlstr = ChangeButtonColour('Libros', '#fffff', '#FF725E') 
+        components.html(f"{htmlstr}", height=0, width=0)
+        if books:
+            switch_page('Libros')
 
-# st.divider()
-# image5 = Image.open('Selecting team-pana.png')
-# outer_col_5 = st.columns([1, 1])            
-# with cont_5:
+st.divider()
+image5 = Image.open('./web_img/Selecting team-pana.png')
+outer_col_5 = st.columns([1, 1])            
+with cont_5:
     
-#     with outer_col_5[0]:
-#         set_styles()
-#         st.markdown("<h2 style='text-align: center; color: white;'>Recursos</h1>", unsafe_allow_html=True)
+    with outer_col_5[0]:
+        set_styles()
+        st.markdown("<h2 style='text-align: center; color: white;'>Recursos</h1>", unsafe_allow_html=True)
     
-#         st.markdown("<h5 style='text-align: center; color: white;'>Recursos para familias Latinos con hijos Sordos </h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: center; color: white;'>Recursos para familias Latinos con hijos Sordos </h5>", unsafe_allow_html=True)
     
-#     with outer_col_5[1]:
-#         inner_col_5 = st.columns([1, 6, 1])
-#         with inner_col_5[1]:
-#             st.image(image5)
-#         resources = st.button('Recursos', key='Recursos')
-#         htmlstr = ChangeButtonColour('Recursos', '#fffff', '#C53F3F') 
-#         components.html(f"{htmlstr}", height=0, width=0)
-#         if resources:
-#             switch_page('Recursos')
+    with outer_col_5[1]:
+        inner_col_5 = st.columns([1, 6, 1])
+        with inner_col_5[1]:
+            st.image(image5)
+        resources = st.button('Recursos', key='Recursos')
+        htmlstr = ChangeButtonColour('Recursos', '#fffff', '#C53F3F') 
+        components.html(f"{htmlstr}", height=0, width=0)
+        if resources:
+            switch_page('Recursos')
