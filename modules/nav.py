@@ -31,6 +31,7 @@ def ASL1_sidebar():
             st.sidebar.page_link("pages/helper/Introduccion_a_ASL_1.py", label="Introducción a ASL 1")
             st.sidebar.page_link("pages/helper/Bravo_1.py", label="Conocer la Familia Bravo")
             st.sidebar.page_link("pages/helper/holidays_spring.py", label="Días Festivos")
+            st.switch_page('pages/helper/Introduccion_a_ASL_1.py')
 
 def Page1Nav():
     st.sidebar.page_link("pages/page1.py", label="Page 1", icon='✈️')
