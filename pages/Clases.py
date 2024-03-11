@@ -8,15 +8,7 @@ from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
 
-
-# If user refreshes the page, go to the login page because
-# in there we have the facility to check the login status.
-if 'authentication_status' not in ss:
-    st.switch_page('./pages/account.py')
-
-MenuButtons(get_roles())
-st.session_state['password_correct'] = False
-# regular_sidebar()
+regular_sidebar()
 def open_page(url):
     open_script= """
         <script type="text/javascript">
@@ -34,7 +26,7 @@ div.stButton > button:first-child {
   margin: 0 auto;
 }
 </style>""", unsafe_allow_html=True)
-image3 = Image.open('Online learning-rafiki.png')
+
 outer_col_3 = st.columns([1, 1])            
 
 with outer_col_3[0]:
@@ -47,7 +39,7 @@ with outer_col_3[0]:
 with outer_col_3[1]:
     inner_col_3 = st.columns([1, 6, 1])
     with inner_col_3[1]:
-        st.image(image3)
+            st.image('https://raw.githubusercontent.com/celenaaponce/sandbox/main/web_img/Online%20learning-rafiki.png')
     st.button('Registrarse para Clases', key='Clases', on_click = open_page, args =('https://aslparalatinos.streamlit.app/Registrar%20para%20Clases',))
     htmlstr = ChangeButtonColour('Registrarse para Clases', '#fffff', '#92E3A9') 
     components.html(f"{htmlstr}", height=0, width=0)
