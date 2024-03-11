@@ -2,7 +2,13 @@ import streamlit as st
 from PIL import Image
 from pages.sidebars import regular_sidebar, set_styles
 from streamlit.components.v1 import html
-
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 regular_sidebar()
 def open_page(url):
     open_script= """
@@ -22,7 +28,6 @@ div.stButton > button:first-child {
 }
 </style>""", unsafe_allow_html=True)
 
-image5 = Image.open('Selecting team-pana.png')
 outer_col_5 = st.columns([1, 1])            
 
     
@@ -36,7 +41,7 @@ with outer_col_5[0]:
 with outer_col_5[1]:
     inner_col_5 = st.columns([1, 6, 1])
     with inner_col_5[1]:
-        st.image(image5)
+            st.image('https://raw.githubusercontent.com/celenaaponce/sandbox/main/web_img/Selecting%20team-pana.png')
 
 st.divider()
 st.markdown("<h3>Manos y Voces</h3> \
