@@ -37,7 +37,7 @@ outer_cols = st.columns([1, 1])
 
 with cont_1:
     with outer_cols[0]:
-        set_styles()
+        # set_styles()
         st.markdown("<h1 style='text-align: center; color: white;'>¡Aprender Lengua de Señas Americana en Su Propia Idioma!</h1>", unsafe_allow_html=True)
     
         st.markdown("<h5 style='text-align: center; color: white;'>Para padres Latinos de niños Sordos, sé que hay muchos retos.  Hay bastante que aprender, no solo idioma, pero cultura y más. Mi meta es ayudar padres Latinos entender la lengua de señas americana, sin necesitar saber ingles.  También, quiero ayudar encontrar los recursos que necesitan para que sus hijos pueden tener exitó. </h5>", unsafe_allow_html=True)
@@ -60,7 +60,7 @@ outer_col_2 = st.columns([1, 1])
 with cont_2:
     
     with outer_col_2[1]:
-        set_styles()
+        # set_styles()
         st.markdown("<h2 style='text-align: center; color: white;'>Diccionario</h1>", unsafe_allow_html=True)
     
         st.markdown("<h5 style='text-align: center; color: white;'>Buscar señas y frases en un diccionario de Español a ASL </h5>", unsafe_allow_html=True)
@@ -81,7 +81,7 @@ outer_col_3 = st.columns([1, 1])
 with cont_3:
     
     with outer_col_3[0]:
-        set_styles()
+        # set_styles()
         st.markdown("<h2 style='text-align: center; color: white;'>Clases</h1>", unsafe_allow_html=True)
     
         st.markdown("<h5 style='text-align: center; color: white;'>Tomar clases gratis en español para aprender lengua de señas americana. </h5>", unsafe_allow_html=True)
@@ -103,7 +103,7 @@ outer_col_4 = st.columns([1, 1])
 with cont_4:
     
     with outer_col_4[1]:
-        set_styles()
+        # set_styles()
         st.markdown("<h2 style='text-align: center; color: white;'>Libros</h1>", unsafe_allow_html=True)
     
         st.markdown("<h5 style='text-align: center; color: white;'>Mirar videos de libros en español con ASL </h5>", unsafe_allow_html=True)
@@ -124,7 +124,7 @@ outer_col_5 = st.columns([1, 1])
 with cont_5:
     
     with outer_col_5[0]:
-        set_styles()
+        # set_styles()
         st.markdown("<h2 style='text-align: center; color: white;'>Recursos</h1>", unsafe_allow_html=True)
     
         st.markdown("<h5 style='text-align: center; color: white;'>Recursos para familias Latinos con hijos Sordos </h5>", unsafe_allow_html=True)
