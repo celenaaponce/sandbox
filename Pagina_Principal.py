@@ -10,12 +10,7 @@ from modules.nav import MenuButtons
 from pages.account import get_roles
 pages = ["Buscar_Palabra", "Clases", "Diccionario"]
 st.sidebar.markdown("## Clases")
-# Define a function to hide selected pages
-def hide_pages(pages_to_hide):
-    for page in pages_to_hide:
-        st.sidebar.markdown(f"## {page}")
-        st.sidebar.markdown("This page is hidden.")
-hide_pages(pages)
+
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
 if 'authentication_status' not in ss:
