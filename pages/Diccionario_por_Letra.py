@@ -5,7 +5,13 @@ from time import sleep
 from st_click_detector import click_detector
 from pages.sidebars import regular_sidebar
 st.session_state['password_correct'] = False
-
+st.markdown("""
+    <style>
+        div[data-testid="stSidebarNav"]{
+            display: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 regular_sidebar()
 ##constants
 alpha_num = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h', 9: 'i', 10: 'j', 11: 'k',
