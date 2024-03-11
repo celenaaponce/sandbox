@@ -36,7 +36,7 @@ def set_styles():
         </style>
     """, unsafe_allow_html=True)
   
-image = Image.open('./web_img/Online world-cuate (2).png')
+# image = Image.open('./web_img/Online world-cuate (2).png')
 cont_1 = st.container()
 cont_2 = st.container()
 cont_3 = st.container()
@@ -53,8 +53,8 @@ with cont_1:
     
     with outer_cols[1]:
         inner_cols = st.columns([1, 6, 1])
-        with inner_cols[1]:
-            st.image(image)
+        # with inner_cols[1]:
+        #     st.image(image)
         quien = st.button('Quien Soy', key='Quien')
         htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
         components.html(f"{htmlstr}", height=0, width=0)
@@ -63,7 +63,7 @@ with cont_1:
 
 
 st.divider()
-image2 = Image.open('./web_img/dictionary.png')
+# image2 = Image.open('./web_img/dictionary.png')
 
 outer_col_2 = st.columns([1, 1])            
 with cont_2:
@@ -76,8 +76,8 @@ with cont_2:
     
     with outer_col_2[0]:
         inner_col_2 = st.columns([1, 6, 1])
-        with inner_col_2[1]:
-            st.image(image2)
+        # with inner_col_2[1]:
+        #     st.image(image2)
         dict = st.button('Diccionario', key='Dict')
         htmlstr = ChangeButtonColour('Diccionario', '#fffff', '#407bff') 
         components.html(f"{htmlstr}", height=0, width=0)
@@ -85,7 +85,7 @@ with cont_2:
             switch_page('Diccionario')
 
 st.divider()
-image3 = Image.open('./web_img/Online learning-rafiki.png')
+# image3 = Image.open('./web_img/Online learning-rafiki.png')
 outer_col_3 = st.columns([1, 1])            
 with cont_3:
     
@@ -97,8 +97,8 @@ with cont_3:
     
     with outer_col_3[1]:
         inner_col_3 = st.columns([1, 6, 1])
-        with inner_col_3[1]:
-            st.image(image3)
+        # with inner_col_3[1]:
+        #     st.image(image3)
         classes = st.button('Clases', key='Clases')
         htmlstr = ChangeButtonColour('Clases', '#fffff', '#92E3A9') 
         components.html(f"{htmlstr}", height=0, width=0)
@@ -106,7 +106,7 @@ with cont_3:
             switch_page('Clases')
 
 st.divider()
-image4 = Image.open('./web_img/Absorbed in-pana.png')
+# image4 = Image.open('./web_img/Absorbed in-pana.png')
 
 outer_col_4 = st.columns([1, 1])            
 with cont_4:
@@ -119,8 +119,8 @@ with cont_4:
     
     with outer_col_4[0]:
         inner_col_4 = st.columns([1, 6, 1])
-        with inner_col_4[1]:
-            st.image(image4)
+        # with inner_col_4[1]:
+        #     st.image(image4)
         books = st.button('Libros', key='Libros')
         htmlstr = ChangeButtonColour('Libros', '#fffff', '#FF725E') 
         components.html(f"{htmlstr}", height=0, width=0)
@@ -128,7 +128,7 @@ with cont_4:
             switch_page('Libros')
 
 st.divider()
-image5 = Image.open('./web_img/Selecting team-pana.png')
+# image5 = Image.open('./web_img/Selecting team-pana.png')
 outer_col_5 = st.columns([1, 1])            
 with cont_5:
     
@@ -140,8 +140,8 @@ with cont_5:
     
     with outer_col_5[1]:
         inner_col_5 = st.columns([1, 6, 1])
-        with inner_col_5[1]:
-            st.image(image5)
+        # with inner_col_5[1]:
+        #     st.image(image5)
         resources = st.button('Recursos', key='Recursos')
         htmlstr = ChangeButtonColour('Recursos', '#fffff', '#C53F3F') 
         components.html(f"{htmlstr}", height=0, width=0)
