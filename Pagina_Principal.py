@@ -18,6 +18,7 @@ hide_script = """
         // Get the element by its data-testid attribute
         var elementToHide = document.querySelector('[data-testid="{}"]');
         // Set its display property to 'none' to hide it
+        console.log(divToHide);
         if (elementToHide !== null) {{
             elementToHide.style.display = 'none';
         }}
