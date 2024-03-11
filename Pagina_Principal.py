@@ -18,79 +18,79 @@ st.markdown("""
 
 # If user refreshes the page, go to the login page because
 # in there we have the facility to check the login status.
-if 'authentication_status' not in ss:
-    st.switch_page('./pages/account.py')
+# if 'authentication_status' not in ss:
+#     st.switch_page('./pages/account.py')
 
 
-MenuButtons(get_roles())
-st.header('Home page')
+# MenuButtons(get_roles())
+# st.header('Home page')
 
 
-# Protected content in home page.
-if ss.authentication_status:
-    st.write('This content is only accessible for logged in users.')
-else:
-    st.write('Please log in on login page.')
+# # Protected content in home page.
+# if ss.authentication_status:
+#     st.write('This content is only accessible for logged in users.')
+# else:
+#     st.write('Please log in on login page.')
 
-# regular_sidebar()
+regular_sidebar()
 
-# m = st.markdown("""
-# <style>
-# div.stButton > button:first-child {
-#   border: none;
-#   display: block;
-#   width: 200px; 
-#   margin: 0 auto;
-# }
-# </style>""", unsafe_allow_html=True)
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+  border: none;
+  display: block;
+  width: 200px; 
+  margin: 0 auto;
+}
+</style>""", unsafe_allow_html=True)
 
-# def set_styles():
-#     st.write("""
-#         <style>
-#         h5 {
-#             margin-top: 20px;
-#             margin-bottom: 20px;
-#         }
-#         </style>
-#     """, unsafe_allow_html=True)
+def set_styles():
+    st.write("""
+        <style>
+        h5 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
   
-# image = Image.open('Online world-cuate (2).png')
-# cont_1 = st.container()
-# cont_2 = st.container()
-# cont_3 = st.container()
-# cont_4 = st.container()
-# cont_5 = st.container()
-# outer_cols = st.columns([1, 1])
+image = Image.open('Online world-cuate (2).png')
+cont_1 = st.container()
+cont_2 = st.container()
+cont_3 = st.container()
+cont_4 = st.container()
+cont_5 = st.container()
+outer_cols = st.columns([1, 1])
 
-# with cont_1:
-#     with outer_cols[0]:
-#         set_styles()
-#         st.markdown("<h1 style='text-align: center; color: white;'>¡Aprender Lengua de Señas Americana en Su Propia Idioma!</h1>", unsafe_allow_html=True)
+with cont_1:
+    with outer_cols[0]:
+        set_styles()
+        st.markdown("<h1 style='text-align: center; color: white;'>¡Aprender Lengua de Señas Americana en Su Propia Idioma!</h1>", unsafe_allow_html=True)
     
-#         st.markdown("<h5 style='text-align: center; color: white;'>Para padres Latinos de niños Sordos, sé que hay muchos retos.  Hay bastante que aprender, no solo idioma, pero cultura y más. Mi meta es ayudar padres Latinos entender la lengua de señas americana, sin necesitar saber ingles.  También, quiero ayudar encontrar los recursos que necesitan para que sus hijos pueden tener exitó. </h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: center; color: white;'>Para padres Latinos de niños Sordos, sé que hay muchos retos.  Hay bastante que aprender, no solo idioma, pero cultura y más. Mi meta es ayudar padres Latinos entender la lengua de señas americana, sin necesitar saber ingles.  También, quiero ayudar encontrar los recursos que necesitan para que sus hijos pueden tener exitó. </h5>", unsafe_allow_html=True)
     
-#     with outer_cols[1]:
-#         inner_cols = st.columns([1, 6, 1])
-#         with inner_cols[1]:
-#             st.image(image)
-#         quien = st.button('Quien Soy', key='Quien')
-#         htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
-#         components.html(f"{htmlstr}", height=0, width=0)
-#         if quien:
-#             switch_page('Sobre_Yo')
+    with outer_cols[1]:
+        inner_cols = st.columns([1, 6, 1])
+        with inner_cols[1]:
+            st.image(image)
+        quien = st.button('Quien Soy', key='Quien')
+        htmlstr = ChangeButtonColour('Quien Soy', '#fffff', '#94387f') 
+        components.html(f"{htmlstr}", height=0, width=0)
+        if quien:
+            switch_page('Sobre_Yo')
 
 
-# st.divider()
-# image2 = Image.open('dictionary.png')
+st.divider()
+image2 = Image.open('dictionary.png')
 
-# outer_col_2 = st.columns([1, 1])            
-# with cont_2:
+outer_col_2 = st.columns([1, 1])            
+with cont_2:
     
-#     with outer_col_2[1]:
-#         set_styles()
-#         st.markdown("<h2 style='text-align: center; color: white;'>Diccionario</h1>", unsafe_allow_html=True)
+    with outer_col_2[1]:
+        set_styles()
+        st.markdown("<h2 style='text-align: center; color: white;'>Diccionario</h1>", unsafe_allow_html=True)
     
-#         st.markdown("<h5 style='text-align: center; color: white;'>Buscar señas y frases en un diccionario de Español a ASL </h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: center; color: white;'>Buscar señas y frases en un diccionario de Español a ASL </h5>", unsafe_allow_html=True)
     
 #     with outer_col_2[0]:
 #         inner_col_2 = st.columns([1, 6, 1])
