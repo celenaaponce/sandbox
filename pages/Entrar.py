@@ -35,7 +35,7 @@ with st.form("Credentials"):
 if st.session_state.password_correct == True:    
     if st.session_state['option'] == 'ASL 1':
         MenuButtons(get_roles())
-        st.switch_page('./pages/helper/Introduccion_a_ASL_1.py')
+        st.switch_page('/pages/helper/Introduccion_a_ASL_1.py')
     
     elif st.session_state['option'] == 'ASL 2':
         login_sidebar_ASL2()
