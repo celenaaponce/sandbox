@@ -31,8 +31,7 @@ def MenuButtons(user_roles=None):
         ss.authentication_status = False
 
     # Always show the home and login navigators.
-    HomeNav()
-    LoginNav()
+    regular_sidebar()
 
     # Show the other page navigators depending on the users' role.
     if ss["authentication_status"]:
