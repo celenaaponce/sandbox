@@ -43,13 +43,13 @@ def Page2Nav():
 
 def MenuButtons(user_roles=None):
     if user_roles is None:
-        user_roles = {}
+        regular_sidebar()
 
     if 'authentication_status' not in ss:
         ss.authentication_status = False
 
     # Always show the home and login navigators.
-    regular_sidebar()
+    
 
 
 
