@@ -19,7 +19,7 @@ st.session_state['password_correct'] = False
 from check.spanish_word_freq import SpanishWordFreq
 from check.word_chekcer import WordChecker
 from st_pages import Page, Section,show_pages
-regular_sidebar()
+# regular_sidebar()
 st.set_page_config(layout="wide", page_title="Buscar Palabra")
 
 hide_streamlit_style = """
