@@ -34,7 +34,7 @@ with st.form("Credentials"):
     st.form_submit_button("Entrar", on_click=password_entered)
 if st.session_state.password_correct == True:    
     if st.session_state['option'] == 'ASL 1':
-        MenuButtons('ASL1')
+        # MenuButtons('ASL1')
         st.switch_page('./pages/Introduccion_a_ASL_1.py')
     
     elif st.session_state['option'] == 'ASL 2':
