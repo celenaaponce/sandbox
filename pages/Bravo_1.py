@@ -29,7 +29,6 @@ def segunda_semana():
     
     style_html = set_styles('#94387f')
     st.write(style_html, unsafe_allow_html=True)
-    Menu
     st.subheader('Conocer La Familia Bravo Pt 1')
     st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     clms21 = st.columns([1,1])
