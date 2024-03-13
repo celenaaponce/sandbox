@@ -41,20 +41,15 @@ def Page2Nav():
     st.sidebar.page_link("pages/page2.py", label="Page 2", icon='📚')
 
 
-def MenuButtons(user_roles=None):
-    if user_roles is None:
+def MenuButtons(user_roles = ''):
+    if user_roles != 'ASL1':
         regular_sidebar()
 
+    elif user_roles == 'ASL1':
+        ASL1_sidebar()
+                
     if 'authentication_status' not in ss:
         ss.authentication_status = False
 
-    # Always show the home and login navigators.
-    
-
-
-
-# Show page 1 if the username that logged in is an admin.
-    if user_roles == 'ASL1':
-        ASL1_sidebar()
 
     
