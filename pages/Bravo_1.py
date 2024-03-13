@@ -93,7 +93,6 @@ def segunda_semana():
 def tercera_semana():
     style_html = set_styles('#94387f')
     st.write(style_html, unsafe_allow_html=True)
-    login_sidebar_ASL1()
     # st.subheader('Conocer La Familia Bravo Pt 2')
     # st.markdown("<h4 style='text-align: center; color: white;'><u>Videos</u></h4>", unsafe_allow_html=True)
     # clms23 = st.columns([1,1])
