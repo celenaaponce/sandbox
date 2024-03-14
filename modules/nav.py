@@ -47,16 +47,9 @@ def ASL2_sidebar():
             st.sidebar.page_link("pages/Introduccion_a_ASL_2.py", label="Introducción a ASL 2")
             st.sidebar.page_link("pages/Bravo_4.py", label="Ir de Compras")
             st.sidebar.page_link("pages/holidays_spring_2.py", label="Días Festivos")
-def Page1Nav():
-    st.sidebar.page_link("pages/page1.py", label="Page 1", icon='✈️')
-
-
-def Page2Nav():
-    st.sidebar.page_link("pages/page2.py", label="Page 2", icon='📚')
 
 
 def MenuButtons(user_roles = ''):
-    st.write('here menu')
     if user_roles == '':
         regular_sidebar()
 
@@ -64,7 +57,6 @@ def MenuButtons(user_roles = ''):
         ASL1_sidebar()
 
     elif user_roles == 'ASL2':
-            st.write('here')
             ASL2_sidebar()
                 
     if 'authentication_status' not in ss:
