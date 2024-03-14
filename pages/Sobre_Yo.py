@@ -3,6 +3,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 from streamlit.components.v1 import html
 from pages.sidebars import regular_sidebar, set_styles
+from modules.nav import MenuButtons
 st.markdown("""
     <style>
         div[data-testid="stSidebarNav"]{
@@ -10,7 +11,7 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-regular_sidebar()
+MenuButtons('')
 
 def open_page(url):
     open_script= """
