@@ -13,6 +13,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 def main():
+    st.write('here')
     MenuButtons('ASL2')
     st.header("Bienvenido a la clase de ASL 2.")
     st.header("Se puede mirar nuestro curriculo aqui:")
