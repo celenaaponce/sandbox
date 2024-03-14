@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as com
-
+from modules.nav import MenuButtons
 import pandas as pd
 from pathlib import Path 
 from pages.sidebars import regular_sidebar
@@ -12,7 +12,7 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-regular_sidebar()
+MenuButtons('')
 #formatting
 offset = 20
 
