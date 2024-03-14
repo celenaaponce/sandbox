@@ -10,6 +10,7 @@ from pages.account import get_roles
 
 
 ss.password_correct = False
+MenuButtons()
 st.write(st.session_state)
 st.markdown("""
     <style>
