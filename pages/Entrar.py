@@ -8,6 +8,8 @@ from streamlit import session_state as ss
 from modules.nav import MenuButtons
 from pages.account import get_roles
 
+if 'password_correct' not in ss:
+    ss.password_correct = False
 MenuButtons()
 st.write(st.session_state)
 st.markdown("""
