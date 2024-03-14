@@ -56,6 +56,7 @@ def Page2Nav():
 
 
 def MenuButtons(user_roles = ''):
+    st.write('here menu')
     if user_roles != 'ASL1':
         regular_sidebar()
 
