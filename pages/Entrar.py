@@ -40,7 +40,7 @@ if st.session_state.password_correct == True:
     
     elif st.session_state['option'] == 'ASL 2':
 
-        st.switch_page("./pages/helper/Introducción_a_ASL_2.py")
+        st.switch_page("./pages/Introducción_a_ASL_2.py")
         
     elif st.session_state['option'] == 'ASL En Casa':
 
