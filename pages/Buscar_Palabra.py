@@ -9,7 +9,7 @@ from pages.account import get_roles
 
 
 st.set_page_config(layout="wide", page_title="Buscar Palabra")
-regular_sidebar()
+MenuButtons('')
 st.markdown("""
     <style>
         div[data-testid="stSidebarNav"]{
