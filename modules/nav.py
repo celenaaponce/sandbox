@@ -45,7 +45,7 @@ def ASL2_sidebar():
             st.sidebar.page_link("pages/Buscar_Palabra.py", label="Buscar Palabra")
             st.sidebar.page_link("pages/Entrar.py", label="Entrar")
             st.sidebar.page_link("pages/Introduccion_a_ASL_2.py", label="Introducción a ASL 2")
-            st.sidebar.page_link("pages/Bravo_4.py", label="Conocer la Familia Bravo")
+            st.sidebar.page_link("pages/Bravo_4.py", label="Ir de Compras")
             st.sidebar.page_link("pages/holidays_spring_2.py", label="Días Festivos")
 def Page1Nav():
     st.sidebar.page_link("pages/page1.py", label="Page 1", icon='✈️')
