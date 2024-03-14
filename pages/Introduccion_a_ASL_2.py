@@ -3,6 +3,7 @@ from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 from pages.sidebars import login_sidebar_ASL2, set_styles
+from modules.nav import MenuButtons
 st.write(st.session_state)
 st.markdown("""
     <style>
