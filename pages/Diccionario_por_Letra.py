@@ -4,6 +4,7 @@ from pathlib import Path
 from time import sleep
 from st_click_detector import click_detector
 from pages.sidebars import regular_sidebar
+from modules.nav import MenuButtons
 st.set_page_config(layout="wide", page_title="Diccionario Por Letra")
 st.session_state['password_correct'] = False
 st.markdown("""
@@ -13,7 +14,7 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-regular_sidebar()
+MenuButtons('')
 ##constants
 alpha_num = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h', 9: 'i', 10: 'j', 11: 'k',
              12: 'l', 13: 'm', 14: 'n', 15: 'o', 16: 'p', 17: 'q', 18: 'r', 19: 's', 20: 't', 21: 'u',
