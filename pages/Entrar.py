@@ -39,15 +39,15 @@ if st.session_state.password_correct == True:
         st.switch_page('./pages/Introduccion_a_ASL_1.py')
     
     elif st.session_state['option'] == 'ASL 2':
-        login_sidebar_ASL2()
-        switch_page("Introducción_a_ASL_2")
+
+        st.switch_page("./pages/helper/Introducción_a_ASL_2.py")
         
     elif st.session_state['option'] == 'ASL En Casa':
-        login_sidebar_ASLAtHome2()
+
         switch_page("Introduccion_a_ASL_En_Casa")
     
     elif st.session_state['option'] == 'ASL 3':
-        login_sidebar_ASL3()
+
         switch_page("Introducción_a_ASL_3")
 # else:
 
