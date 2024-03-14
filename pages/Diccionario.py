@@ -16,7 +16,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-regular_sidebar()
+MenuButtons('')
 
 m = st.markdown("""
 <style>
