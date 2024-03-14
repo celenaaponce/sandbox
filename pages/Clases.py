@@ -14,7 +14,7 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-regular_sidebar()
+MenuButtons('')
 def open_page(url):
     open_script= """
         <script type="text/javascript">
