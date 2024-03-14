@@ -63,6 +63,7 @@ def MenuButtons(user_roles = ''):
         ASL1_sidebar()
 
     elif user_roles == 'ASL2':
+            st.write('here')
             ASL2_sidebar()
                 
     if 'authentication_status' not in ss:
