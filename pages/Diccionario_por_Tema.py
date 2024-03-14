@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from pages.sidebars import regular_sidebar
 from st_click_detector import click_detector
+from modules.nav import MenuButtons
 st.set_page_config(layout="wide", page_title="Diccionario Por Tema")
 st.markdown("""
     <style>
@@ -10,7 +11,7 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-regular_sidebar()
+MenuButtons('')
 
 increment = None
 reset1 = False
